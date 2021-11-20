@@ -25,7 +25,7 @@ public class ALAP extends Scheduler {
         int min = lmax;
 
         for (Node nd : sg)
-            if (nd.leaf())
+            if (nd.isLeaf())
                 queue.put(nd, new Interval(lmax + 1 - nd.getDelay(), lmax));
         if(queue.size() == 0)
             System.out.println("No leaf in Graph found. Empty or cyclic graph");

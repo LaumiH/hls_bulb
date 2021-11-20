@@ -5,15 +5,16 @@ import java.util.Map;
 
 public class ASAP extends Scheduler {
 
-    public Schedule schedule(final Graph sg) {
+    public Schedule schedule(final Graph sourceGraph) {
         Map<Node, Interval> queue = new HashMap<>();
         Map<Node, Interval> qq;
         Map<Node, Interval> minslot = new HashMap<>();
         Schedule schedule = new Schedule();
 
-        for (Node nd : sg) {
-            if (nd.root())
-                queue.put(nd, new Interval(0, nd.getDelay() - 1));
+        for (Node node : sourceGraph) {
+            if (node.isRoot())
+                // interval is as long as resource type duration
+                queue.put(node, new Interval(0, node.getDelay() - 1));
         }
         if(queue.size() == 0)
             System.out.println("No root in Graph found. Empty or cyclic graph");
@@ -21,36 +22,36 @@ public class ASAP extends Scheduler {
         while (queue.size() > 0) {
             qq = new HashMap<>();
 
-            for (Node nd : queue.keySet()) {
-                Interval slot = queue.get(nd);
-                schedule.add(nd, slot);
+            for (Node node : queue.keySet()) {
+                Interval slot = queue.get(node);
+                schedule.add(node, slot);
 
-                for (Node l : nd.successors()) {
-                    sg.handle(nd, l);
+                for (Node successor : node.successors()) {
+                    sourceGraph.handle(node, successor);
 
-                    Interval ii = minslot.get(l);
+                    Interval ii = minslot.get(successor);
                     if (ii == null)
-                        minslot.put(l, new Interval(slot.ubound + 1,
-                            slot.ubound + l.getDelay()));
+                        minslot.put(successor, new Interval(slot.ubound + 1,
+                            slot.ubound + successor.getDelay()));
                     else if (ii.lbound.compareTo(slot.ubound) <= 0)
-                        minslot.put(l, new Interval(slot.ubound + 1,
-                            slot.ubound + l.getDelay()));
+                        minslot.put(successor, new Interval(slot.ubound + 1,
+                            slot.ubound + successor.getDelay()));
 
-                    if (!l.top())
+                    if (!successor.top())
                         continue;
-                    ii = minslot.get(l);
-                    if ((queue.get(l) == null)) {
-                        if (qq.get(l) == null)
-                            qq.put(l, ii);
-                        else if (qq.get(l).lbound <= slot.ubound)
-                            qq.put(l, ii);
-                    } else if (queue.get(l).lbound <= slot.ubound)
-                        qq.put(l, ii);
+                    ii = minslot.get(successor);
+                    if ((queue.get(successor) == null)) {
+                        if (qq.get(successor) == null)
+                            qq.put(successor, ii);
+                        else if (qq.get(successor).lbound <= slot.ubound)
+                            qq.put(successor, ii);
+                    } else if (queue.get(successor).lbound <= slot.ubound)
+                        qq.put(successor, ii);
                 }
             }
             queue = qq;
         }
-        sg.reset();
+        sourceGraph.reset();
 
         return schedule;
     }

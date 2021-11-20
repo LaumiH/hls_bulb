@@ -3,7 +3,10 @@ package scheduler;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.TreeMap;
 import java.util.Set;
 import java.util.Map;
@@ -36,30 +39,31 @@ public class Schedule {
   }
 
   /**
-   * Add a node and to the schedule during the given interval
+   * Add a node to the schedule during the given interval
    *
-   * @param nd - the node to be scheduled
-   * @param i - the interval the node will be scheduled in
+   * @param node - the node to be scheduled
+   * @param interval - the interval the node will be scheduled in
    */
-  public void add(Node nd, Interval i) {
-    if (nodes.containsKey(nd)) remove(nd);
+  public void add(Node node, Interval interval) {
+    if (nodes.containsKey(node)) remove(node);
 
-    nodes.put(nd, i);
+    nodes.put(node, interval);
 
-    for (int ii = i.lbound; ii <= i.ubound; ii++) {
-      Set<Node> ss = slots.get(ii);
-      if (ss == null) ss = new HashSet<>();
-      ss.add(nd);
-      slots.put(ii, ss);
+    for (int ii = interval.lbound; ii <= interval.ubound; ii++) {
+      //get all nodes in the slot
+      Set<Node> nodesInSlot = slots.get(ii);
+      if (nodesInSlot == null) nodesInSlot = new HashSet<>();
+      nodesInSlot.add(node);
+      slots.put(ii, nodesInSlot);
 
       {
         TreeMap<Resource, Integer> rmm = sort_res
-            .computeIfAbsent(nd.getResourceType(), k -> new TreeMap<>());
+            .computeIfAbsent(node.getResourceType(), k -> new TreeMap<>());
         Map<Integer, Resource> rtm = tsort_res
-            .computeIfAbsent(nd.getResourceType(), k -> new HashMap<>());
+            .computeIfAbsent(node.getResourceType(), k -> new HashMap<>());
         Resource rss = rtm.get(ii);
         if (rss == null) {
-          rss = new Resource(nd.getResourceType(), ii);
+          rss = new Resource(node.getResourceType(), ii);
           rss.inc();
           rmm.put(rss, ii);
           rtm.put(ii, rss);
@@ -82,6 +86,11 @@ public class Schedule {
   public void add(Node nd, Interval i, String resource) {
     resources.put(nd, resource);
     add(nd, i);
+  }
+
+  public boolean obeysResourceConstraint(int step) {
+
+    return false;
   }
 
   /**
@@ -199,6 +208,19 @@ public class Schedule {
   /** @return a set of all currently scheduled nodes */
   public Set<Node> nodes() {
     return nodes.keySet();
+  }
+
+  public List<Node> nodesDescOrder() {
+    List<Node> nodesDesc = new ArrayList<>(size());
+
+    for (Map.Entry<Integer, Set<Node>> entry : slots.entrySet()) {
+      for (Node node : entry.getValue()) {
+        if (!nodesDesc.contains(node)) nodesDesc.add(node);
+      }
+    }
+    Collections.reverse(nodesDesc);
+    System.out.println(nodesDesc.size());
+    return nodesDesc;
   }
 
   @Override

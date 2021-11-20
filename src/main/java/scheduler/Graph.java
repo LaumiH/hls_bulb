@@ -139,7 +139,7 @@ public class Graph implements Iterable<Node> {
         System.out.printf("Validating graph%n");
         Integer s;
         for (Node nd: nodes.keySet()) {
-            if (nd.root()) {
+            if (nd.isRoot()) {
                 s = dijkstra(nd);
                 if (s.compareTo(Integer.MAX_VALUE) != 0)
                     return nd;

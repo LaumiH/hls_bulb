@@ -100,7 +100,7 @@ public class Node {
      *
      * @return true iff this node is a root
      */
-    public boolean root() {
+    public boolean isRoot() {
         for (Node n : predecessors.keySet()) if (predecessors.get(n) == 0) return false;
         return true;
     }
@@ -110,13 +110,13 @@ public class Node {
      *
      * @return true iff this node is a leaf
      */
-    public boolean leaf() {
+    public boolean isLeaf() {
         for (Node n : successors.keySet()) if (successors.get(n) == 0) return false;
         return true;
     }
 
     /**
-     * Checks if any unhandled predecessors are left. For scheduling only - use root() to test for
+     * Checks if any unhandled predecessors are left. For scheduling only - use isRoot() to test for
      * graph properties!
      *
      * @return true if this node has no unhandled predecessors, false otherwise.
@@ -126,7 +126,7 @@ public class Node {
     }
 
     /**
-     * TRUE if no unhandled successors are left. For scheduling only! Use leaf() to test for graph
+     * TRUE if no unhandled successors are left. For scheduling only! Use isLeaf() to test for graph
      * properties!
      *
      * @return TRUE if this node has no unhandled successors, FALSE otherwise.
@@ -220,14 +220,14 @@ public class Node {
             f.format("  successors%n");
             for (Node nd : successors.keySet())
                 f.format(
-                    "   %s \t%d%n", nd, successors.get(nd)); // write the successors plus the edge weight
+                    "   %s \t%d%n", nd, getSuccWeight(nd)); // write the successors plus the edge weight
         }
         if (predecessors.size() > 0) {
             f.format("  predecessors%n");
             for (Node nd : predecessors.keySet())
                 f.format(
                     "   %s \t%d%n",
-                    nd, predecessors.get(nd)); // write the predecessors plus the edge weight
+                    nd, getPredWeight(nd)); // write the predecessors plus the edge weight
         }
 
         String ret = f.toString();
