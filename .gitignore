@@ -1,5 +1,10 @@
+/graphPictures
+/graphs
+/resources
+/schedules
+/target
+
 *.class
-*.pdf
 *.png
 *.dot
 
