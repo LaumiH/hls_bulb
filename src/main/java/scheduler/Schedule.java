@@ -28,7 +28,7 @@ public class Schedule {
   private final Map<ResourceType, TreeMap<Resource, Integer>> sort_res;
   /** Map of resource types and a sorted mapping of the time steps and resource that is used */
   private final Map<ResourceType, Map<Integer, Resource>> tsort_res;
-  /** Map of nodes and the resource used for this node */
+  /** Map of nodes and the real resource used for this node */
   private final Map<Node, String> resources = new HashMap<>();
 
   public Schedule() {
@@ -50,17 +50,18 @@ public class Schedule {
     nodes.put(node, interval);
 
     for (int ii = interval.lbound; ii <= interval.ubound; ii++) {
-      //get all nodes in the slot
+      // get all nodes in the slot
       Set<Node> nodesInSlot = slots.get(ii);
       if (nodesInSlot == null) nodesInSlot = new HashSet<>();
       nodesInSlot.add(node);
       slots.put(ii, nodesInSlot);
 
       {
-        TreeMap<Resource, Integer> rmm = sort_res
-            .computeIfAbsent(node.getResourceType(), k -> new TreeMap<>());
-        Map<Integer, Resource> rtm = tsort_res
-            .computeIfAbsent(node.getResourceType(), k -> new HashMap<>());
+        TreeMap<Resource, Integer> rmm =
+            sort_res.computeIfAbsent(node.getResourceType(), k -> new TreeMap<>());
+        Map<Integer, Resource> rtm =
+            tsort_res.computeIfAbsent(node.getResourceType(), k -> new HashMap<>());
+        // get resource used in time slot ii
         Resource rss = rtm.get(ii);
         if (rss == null) {
           rss = new Resource(node.getResourceType(), ii);
@@ -77,7 +78,7 @@ public class Schedule {
   }
 
   /**
-   * Add a node to the schedule during the given interval and using the given resource
+   * Add a node to the schedule during the given interval and using the given real resource
    *
    * @param nd - node to be scheduled
    * @param i - interval to schedule it in
@@ -88,9 +89,43 @@ public class Schedule {
     add(nd, i);
   }
 
-  public boolean obeysResourceConstraint(int step) {
+  /**
+   *
+   * @param node
+   * @param i
+   * @param rc
+   * @return hw resource to allocate
+   */
+  public String checkResourceConstraints(Node node, Interval i, ResourceConstraint rc) {
+    // TODO: assumtion: we have disjunct hardware resources
+    // i.e. if two resources have an operation in common, they have exactly the same operations
 
-    return false;
+    Map<String, Set<ResourceType>> availableResourcesInConstraint = rc.getAllRes();
+
+    //allocation
+    Set<Node> nodesInStep = this.slots.get(i.lbound);
+    for (Node n : nodesInStep) {
+      Set<String> compatibleResources = rc.getRes(n.getResourceType());
+      for (String resource : compatibleResources) {
+        availableResourcesInConstraint.remove(resource);
+      }
+    }
+
+    if (availableResourcesInConstraint.size() == 0) return ""; //all resources allocated in step
+
+    for (Map.Entry<String, Set<ResourceType>> entry : availableResourcesInConstraint.entrySet()) {
+      if (entry.getValue().contains(node.getResourceType())) return entry.getKey();
+    }
+
+    //no hw resource left that can allocate the operation
+    return "";
+
+    //Map<Integer, Resource> resourceTypeUsage = tsort_res.get(node.getResourceType());
+    // check if scheduling the node in this time step violates resource constraints
+    // rc.getRes(node.getResourceType()) returns all resources from the constraints
+    // that can schedule the operation
+    // if there is at least one free resource available, we can schedule the operation in this step
+    //return resourceTypeUsage.get(step).getResourceCount() < rc.getRes(node.getResourceType()).size();
   }
 
   /**
@@ -210,17 +245,16 @@ public class Schedule {
     return nodes.keySet();
   }
 
-  public List<Node> nodesDescOrder() {
-    List<Node> nodesDesc = new ArrayList<>(size());
+  public List<Node> orderNodes(String order) {
+    List<Node> nodesOrder = new ArrayList<>(size());
 
     for (Map.Entry<Integer, Set<Node>> entry : slots.entrySet()) {
       for (Node node : entry.getValue()) {
-        if (!nodesDesc.contains(node)) nodesDesc.add(node);
+        if (!nodesOrder.contains(node)) nodesOrder.add(node);
       }
     }
-    Collections.reverse(nodesDesc);
-    System.out.println(nodesDesc.size());
-    return nodesDesc;
+    if (order.equals("desc")) Collections.reverse(nodesOrder);
+    return nodesOrder;
   }
 
   @Override

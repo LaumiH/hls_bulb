@@ -46,7 +46,7 @@ public class Resource implements Comparable<Resource> {
   }
 
   /** @return the current resource count */
-  public Integer get() {
+  public Integer getResourceCount() {
     return num;
   }
 
