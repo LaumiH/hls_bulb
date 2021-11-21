@@ -1,4 +1,4 @@
-## Collestion of questions
+## Collection of questions
 
 1. How to not bind operations to the wrong real resource? So in a way that blocks further operatrions from being bound?
 
