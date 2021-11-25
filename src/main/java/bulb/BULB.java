@@ -34,10 +34,6 @@ public class BULB extends Scheduler {
     asapValues = new HashMap<>();
   }
 
-  private synchronized void updateBestLatency(int latency) {
-    this.bestLatency = latency;
-  }
-
   /**
    * Use the graph given to create a schedule with the BULB algorithm.
    *
@@ -63,18 +59,8 @@ public class BULB extends Scheduler {
     nodes = alapSchedule.orderNodes("asc");
 
     Schedule schedule = new Schedule();
-    updateBestLatency(alapSchedule.length()); // TODO: replace with list scheduler length
+    this.bestLatency = alapSchedule.length(); // TODO: replace with list scheduler length
     System.out.println(bestLatency);
-
-    /*
-    1. run ASAP
-    2. run ALAP
-    3. try all possible starting times for a node, adhere to resource constraints
-    4. try to schedule all successors
-    5. evaluate upper and lower bound for subtree
-    6. if == -> do not traverse
-    7. if != -> pick another schedulable node in subtree
-     */
 
     enumerate(schedule, 0);
 
@@ -98,7 +84,7 @@ public class BULB extends Scheduler {
     if (i > sg.size()) {
       if (bestLatency > partial.length()) {
         bestSchedule = partial;
-        updateBestLatency(partial.length());
+        this.bestLatency = partial.length();
       }
     }
 
@@ -119,7 +105,7 @@ public class BULB extends Scheduler {
         int l_bound = lowerBound(partial);
         int u_bound = upperBound(partial);
         if (u_bound < this.bestLatency) {
-          updateBestLatency(u_bound);
+          this.bestLatency = u_bound ;
           this.bestSchedule = upperBoundSchedule(partial);
         }
         if (l_bound < this.bestLatency) {
