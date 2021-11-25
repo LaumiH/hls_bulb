@@ -1,6 +1,7 @@
 package scheduler;
 
 public enum ResourceType {
+
     MEM (2, 9.0, "Mem"),
     ADD (1, 1.0, "Add"),
     SUB (1, 1.4, "Sub"),
