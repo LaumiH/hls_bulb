@@ -44,5 +44,6 @@ public class Main {
     */
     Scheduler s = new BULB(rc);
     Schedule sched = s.schedule(g);
+
   }
 }
