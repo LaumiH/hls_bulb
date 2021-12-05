@@ -104,7 +104,7 @@ public class BULB extends Scheduler {
       bulbGraph.addNode(parent, currentBulbNode);
 
       // save asap values for later reset
-      Map<Node,Interval> saveAsap = asapValues;
+      Map<Node,Interval> saveAsap = new HashMap<>(asapValues);
 
       //ResourceUsed(step,res type) < M_type
       Interval duration = new Interval(step, step+currentOperation.getDelay()-1);
@@ -144,8 +144,8 @@ public class BULB extends Scheduler {
   private int calculateBound(String kind, Schedule sched, BulbNode currentBulbNode, Node currentOperation, int i,
                          Interval duration, String resName) {
 
-    Map<Integer, List<Resource>> saveResourceUsage = this.resourceUsage; //store old resource usage
-    Map<Integer, Set<String>> saveAllocation = this.allocation; //store old allocation
+    Map<Integer, List<Resource>> saveResourceUsage = new HashMap<>(this.resourceUsage); //store old resource usage
+    Map<Integer, Set<String>> saveAllocation = new HashMap<>(this.allocation); //store old allocation
 
     //latency estimation based on critical path
     int latencyEstimate = 0;
@@ -181,7 +181,7 @@ public class BULB extends Scheduler {
       duration = new Interval(k, k+unscheduledNode.getDelay()-1);
       while(!checkResConstraint(unscheduledNode.getResourceType(), duration)) {
         k++;
-        duration = new Interval(k, k+unscheduledNode.getDelay()-1);
+        duration = duration.shift(1);
       }
       //finally found a slot to schedule operation
       //add resource of operation type to used resources in this step
@@ -224,7 +224,7 @@ public class BULB extends Scheduler {
           r.inc();
           Set<String> allocatedInStep = allocation.computeIfAbsent(step, k -> new HashSet<>());
           allocatedInStep.add(resName);
-          allocation.replace(step, allocatedInStep);
+          //allocation.replace(step, allocatedInStep);
           resInUse = true;
           break;
         }
@@ -237,7 +237,7 @@ public class BULB extends Scheduler {
         this.resourceUsage.replace(step, usedInStep);
         Set<String> allocatedInStep = allocation.computeIfAbsent(step, k -> new HashSet<>());
         allocatedInStep.add(resName);
-        allocation.replace(step, allocatedInStep);
+        //allocation.replace(step, allocatedInStep);
       }
     }
   }
@@ -273,9 +273,9 @@ public class BULB extends Scheduler {
       //AND they are not allocated for another operation!!
       //e.g. there is 1 div, and 2 compatible MUL real resources -> go ahead!
       Set<String> allocatedInStep = this.allocation.get(step);
-      if (!allocatedInStep.containsAll(compatible)) {
-        if (step == interval.ubound) return true;
-      }
+      if (allocatedInStep.containsAll(compatible)) {
+        return false;
+      } else if (step == interval.ubound) return true;
     }
     System.out.printf("%nThere are not enough resources available to allocate the operation %s in interval %s%n",
             resourceToCheck, interval);
