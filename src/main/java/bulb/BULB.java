@@ -168,13 +168,14 @@ public class BULB extends Scheduler {
         HashSet<BulbNode> predecessors = currentBulbNode.predecessors();
 
         //while there is a member of T_pred (predecessors of the current BulbNode) scheduled on or after step k
+        //get latest slot of predecessors
+        int latestSlotInSchedule = 0;
         for (BulbNode bn : predecessors) {
-          int latestSlotInSchedule = i+1;
           for (Node temp : bn.getSchedule().nodes()) {
             latestSlotInSchedule = Math.max(bn.getSchedule().slot(temp).ubound, latestSlotInSchedule);
           }
-          while(k <= latestSlotInSchedule) k++;
         }
+        k = latestSlotInSchedule+1;
       }
 
       duration = new Interval(k, k+unscheduledNode.getDelay()-1);
