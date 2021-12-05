@@ -12,7 +12,7 @@ public class BULB extends Scheduler {
   private Schedule alapSchedule;
   private Graph dfg;
 
-  private Map<Node, Integer> asapValues;
+  private Map<Node, Interval> asapValues;
 
   private int bestLatency;
   private Schedule bestSchedule;
@@ -26,7 +26,9 @@ public class BULB extends Scheduler {
 
   public BULB(ResourceConstraint rc) {
     this.resourceConstraint = rc;
-    asapValues = new HashMap<>();
+    this.asapValues = new HashMap<>();
+    this.resourceUsage = new HashMap<>();
+    this.allocation = new HashMap<>();
     this.bulbGraph = new BulbGraph(new HashSet<>());
   }
 
@@ -40,11 +42,10 @@ public class BULB extends Scheduler {
   public Schedule schedule(final Graph sg) {
     this.dfg = sg;
 
-    // get nodes in decreasing ASAP order
     Scheduler asap = new ASAP();
     this.asapSchedule = asap.schedule(sg);
     for (Node n : asapSchedule.nodes()) {
-      asapValues.put(n, asapSchedule.slot(n).ubound);
+      asapValues.put(n, asapSchedule.slot(n));
     }
 
     Scheduler alap = new ALAP();
@@ -52,6 +53,7 @@ public class BULB extends Scheduler {
     for (Node node : alapSchedule.nodes()) {
       System.out.printf("%s : %s%n", node, asapSchedule.slot(node));
     }
+
     nodesDFG = alapSchedule.orderNodes("asc");
 
     Schedule schedule = new Schedule();
@@ -81,7 +83,7 @@ public class BULB extends Scheduler {
     Node currentOperation = nodesDFG.get(i);
 
     // end recursion condition
-    if (i > dfg.size()) {
+    if (i == dfg.size()) {
       if (bestLatency > partial.length()) {
         bestSchedule = partial;
         this.bestLatency = partial.length();
@@ -99,7 +101,7 @@ public class BULB extends Scheduler {
       bulbGraph.addNode(parent, currentBulbNode);
 
       // save asap values for later reset
-      Map<Node,Integer> saveAsap = asapValues;
+      Map<Node,Interval> saveAsap = asapValues;
 
       //ResourceUsed(step,res type) < M_type
       boolean canBeScheduled = checkResConstraint(currentOperation.getResourceType(), i);
@@ -107,8 +109,8 @@ public class BULB extends Scheduler {
         // operation can be scheduled in this time step
         // find out free resource name
         String resName = findAllocation(currentOperation.getResourceType(), step);
-        int l_bound = lowerBound(partial,currentBulbNode, currentOperation, i, resName);
-        int u_bound = upperBound(partial,currentBulbNode, currentOperation, i, resName);
+        int l_bound = lowerBound(partial, currentOperation, i);
+        int u_bound = upperBound(partial,currentBulbNode, currentOperation, i);
         if (u_bound < this.bestLatency) {
           this.bestLatency = u_bound ;
           this.bestSchedule = upperBoundSchedule(partial, resName);
@@ -133,7 +135,7 @@ public class BULB extends Scheduler {
    * @param sched - the partial schedule to be estimated
    * @return the upper bound for needed clock cycles
    */
-  private int upperBound(Schedule sched, BulbNode currentBulbNode, Node currentOperation, int i, String resName) {
+  private int upperBound(Schedule sched, BulbNode currentBulbNode, Node currentOperation, int i) {
     // must work on partially scheduled graphs
     // must yield a legal schedule
     Map<Integer, List<Resource>> saveResourceUsage = this.resourceUsage; //store old resource usage
@@ -150,7 +152,7 @@ public class BULB extends Scheduler {
     //move dependent nodes to later steps to fulfill constraint
     //estimate constraint dependent latency
     for (Node n : nodesDFG.subList(i+1, nodesDFG.size()-1)) {
-      int k = asapValues.get(n);
+      int k = asapValues.get(n).lbound;
       //get predecessors of bulb node in bulb tree
       HashSet<BulbNode> predecessors = currentBulbNode.predecessors();
       //while there is a member of T_pred (predecessors of the current BulbNode) scheduled on or step k
@@ -161,13 +163,15 @@ public class BULB extends Scheduler {
         }
         while(k <= latestSlotInSchedule) k++;
       }
-      while(!checkResConstraint(currentOperation.getResourceType(), i)) {
+      while(!checkResConstraint(currentOperation.getResourceType(), k)) {
         k++;
+
       }
       //finally found a slot to schedule operation
       //add resource of operation type to used resources in this step
       //AND all the following steps for the duration of the operation!!
-      incrementResourceUsed(i, currentOperation.getResourceType(), resName);
+      String resName = findAllocation(currentOperation.getResourceType(), k);
+      incrementResourceUsed(k, currentOperation.getResourceType(), resName);
       latencyEstimate = Math.max(latencyEstimate, k);
     }
 
@@ -189,9 +193,9 @@ public class BULB extends Scheduler {
     return delayCP;
   }
 
-  private void incrementResourceUsed(int step, ResourceType rt, String resName) {
-    for (int i=step; i<step+rt.delay-1; i++) {
-      List<Resource> usedInStep = this.resourceUsage.get(step);
+  private void incrementResourceUsed(int i, ResourceType rt, String resName) {
+    for (int step=i; step<=i+rt.delay-1; step++) {
+      List<Resource> usedInStep = this.resourceUsage.computeIfAbsent(step, k -> new ArrayList<>());
       boolean resInUse = false;
       for (Resource r : usedInStep) {
         if (r.rt == rt) {
@@ -209,11 +213,14 @@ public class BULB extends Scheduler {
         newResource.inc();
         usedInStep.add(newResource);
         this.resourceUsage.replace(step, usedInStep);
+        Set<String> allocatedInStep = allocation.computeIfAbsent(step, k -> new HashSet<>());
+        allocatedInStep.add(resName);
+        allocation.replace(step, allocatedInStep);
       }
     }
   }
-  private void decrementResourceUsed(int step, ResourceType rt, String resName) {
-    for (int i=step; i<step+rt.delay-1; i++) {
+  private void decrementResourceUsed(int i, ResourceType rt, String resName) {
+    for (int step=i; step<i+rt.delay-1; step++) {
       List<Resource> usedInStep = this.resourceUsage.get(step);
       for (Resource r : usedInStep) {
         if (r.rt == rt) {
@@ -234,6 +241,8 @@ public class BULB extends Scheduler {
   private boolean checkResConstraint(ResourceType resourceToCheck, int step) {
     //get resources used in this step
     List<Resource> usedInStep = this.resourceUsage.get(step);
+    if (usedInStep == null) return true;
+
     boolean typeAlreadyInUse = false;
     for (Resource r : usedInStep) {
       if (r.rt == resourceToCheck) {
@@ -256,9 +265,13 @@ public class BULB extends Scheduler {
 
   private String findAllocation(ResourceType resourceToCheck, int step) {
     //return name of any compatible, free resource for allocation (do not allocate yet)
+    Set<String> allocated = this.allocation.get(step);
     Set<String> compatible = this.resourceConstraint.getCompatibleRes(resourceToCheck);
-    compatible.removeAll(this.allocation.get(step));
+    if (allocated != null) {
+      compatible.removeAll(allocated);
+    }
     if (compatible.size() > 0) {
+      //just return the first compatible real resource
       return compatible.iterator().next();
     }
     return null;
@@ -270,7 +283,7 @@ public class BULB extends Scheduler {
    * @param sched - the partial schedule to be estimated
    * @return the lower bound for needed clock cycles
    */
-  private int lowerBound(Schedule sched, BulbNode currentBulbNode, Node currentOperation, int i, String resName) {
+  private int lowerBound(Schedule sched, Node currentOperation, int i) {
     // quality has huge influence on bulb runtime
     // can use resource numbers
     Map<Integer, List<Resource>> saveResourceUsage = this.resourceUsage; //store old resource usage
@@ -287,14 +300,15 @@ public class BULB extends Scheduler {
     //move dependent nodes to later steps to fulfill constraint
     //estimate constraint dependent latency
     for (Node n : nodesDFG.subList(i+1, nodesDFG.size()-1)) {
-      int k = asapValues.get(n);
-      while(!checkResConstraint(currentOperation.getResourceType(), i)) {
+      int k = asapValues.get(n).lbound;
+      while(!checkResConstraint(currentOperation.getResourceType(), k)) {
         k++;
       }
       //finally found a slot to schedule operation
       //add resource of operation type to used resources in this step
       //AND all the following steps for the duration of the operation!!
-      incrementResourceUsed(i, currentOperation.getResourceType(), resName);
+      String resName = findAllocation(currentOperation.getResourceType(), k);
+      incrementResourceUsed(k, currentOperation.getResourceType(), resName);
       latencyEstimate = Math.max(latencyEstimate, k);
     }
 
@@ -314,9 +328,11 @@ public class BULB extends Scheduler {
     for (int j = i+1; j< nodesDFG.size(); j++) {
       Node succ = nodesDFG.get(j);
       if (nodesDFG.get(i).allSuccessors().containsKey(succ)) {
-        int asapJ = asapValues.get(succ);
+        Interval asapJ = asapValues.get(succ);
         //longest path from i to j
-        asapValues.replace(succ, asapJ, Math.max(asapJ+succ.getDelay()-1, step + nodesDFG.get(i).allSuccessors().get(succ)));
+        int longestPath = nodesDFG.get(i).allSuccessors().get(succ);
+        Interval shifted = asapValues.get(succ).shift(Math.max(0, (step + longestPath)-asapJ.lbound));
+        asapValues.replace(succ, asapJ, shifted);
       }
     }
   }
