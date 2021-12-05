@@ -166,7 +166,8 @@ public class BULB extends Scheduler {
       if ("upper".equals(kind)) {
         //get predecessors of bulb node in bulb tree
         HashSet<BulbNode> predecessors = currentBulbNode.predecessors();
-        //while there is a member of T_pred (predecessors of the current BulbNode) scheduled on or step k
+
+        //while there is a member of T_pred (predecessors of the current BulbNode) scheduled on or after step k
         for (BulbNode bn : predecessors) {
           int latestSlotInSchedule = i+1;
           for (Node temp : bn.getSchedule().nodes()) {
@@ -179,6 +180,7 @@ public class BULB extends Scheduler {
       duration = new Interval(k, k+unscheduledNode.getDelay()-1);
       while(!checkResConstraint(unscheduledNode.getResourceType(), duration)) {
         k++;
+        duration = new Interval(k, k+unscheduledNode.getDelay()-1);
       }
       //finally found a slot to schedule operation
       //add resource of operation type to used resources in this step
