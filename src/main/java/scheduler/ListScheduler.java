@@ -4,7 +4,8 @@ import java.util.*;
 
 public class ListScheduler {
 
-    public Schedule schedule(final Graph sourceGraph, ResourceConstraint alpha) {
+    public Schedule schedule(List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer,
+            List<Resource>> resUsage, Map<Integer, Set<String>> allocation) {
         int t = 0;
         boolean all_nodes_scheduled = false;
         boolean free_resources = true; // all resources used
@@ -16,7 +17,7 @@ public class ListScheduler {
 
         List<Node> nodes;
         int nmbr_of_successors = 0;
-        for (Node nd : sourceGraph) { // Sort the nodes after number of successors
+        for (Node nd : nodesToSchedule) { // Sort the nodes after number of successors
 
             nmbr_of_successors = nd.allSuccessors().size();
             nodes = priority_sorted_list.get(nmbr_of_successors);
@@ -47,7 +48,7 @@ public class ListScheduler {
                 res_to_check = ResourceType.valueOf(type);
 
                 // check if res has free spot
-                if ((res_used.getRes(res_to_check).size() + 1) <= alpha.getRes(res_to_check).size()) { // free resource
+                if ((res_used.getCompatibleRes(res_to_check).size() + 1) <= alpha.getCompatibleRes(res_to_check).size()) { // free resource
 
                     //loop until all res are used or all nodes are checked
                     for (Integer key : priority_sorted_list.keySet()) { // loop through the all priorities
