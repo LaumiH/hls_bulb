@@ -114,7 +114,7 @@ public class BULB extends Scheduler {
             if (canBeScheduled) {
                 // operation can be scheduled in this time step
                 // find out free resource name
-                String resName = findAllocation(currentOperation.getResourceType(), step);
+                String resName = findAllocation(currentOperation.getResourceType(), duration);
 
                 //schedule operation in this interval on the returned real resource
                 updatedPartial.nodes().remove(currentOperation);
@@ -193,7 +193,7 @@ public class BULB extends Scheduler {
             //finally found a slot to schedule operation
             //add resource of operation type to used resources in this step
             //AND all the following steps for the duration of the operation!!
-            resName = findAllocation(unscheduledNode.getResourceType(), k);
+            resName = findAllocation(unscheduledNode.getResourceType(), duration);
             incrementResourceUsed(duration, unscheduledNode.getResourceType(), resName);
 
             if ("upper".equals(kind)) {
@@ -291,21 +291,21 @@ public class BULB extends Scheduler {
         return false;
     }
 
-    private String findAllocation(ResourceType resourceToCheck, int step) {
+    private String findAllocation(ResourceType resourceToCheck, Interval interval) {
         //return name of any compatible, free resource for allocation (do not allocate yet)
 
-        //TODO: is it ok to only check the lower interval step here?
-
-        Set<String> allocated = this.allocation.get(step);
-        Set<String> compatible = this.resourceConstraint.getCompatibleRes(resourceToCheck);
-        //do not mutate resourceConstraint!
-        Set<String> compatibleClone = new HashSet<>(compatible);
-        if (allocated != null) {
-            compatibleClone.removeAll(allocated);
-        }
-        if (compatibleClone.size() > 0) {
-            //just return the first compatible real resource
-            return compatibleClone.iterator().next();
+        for (int step = interval.lbound; step <= interval.ubound; step++) {
+            Set<String> allocated = this.allocation.get(step);
+            Set<String> compatible = this.resourceConstraint.getCompatibleRes(resourceToCheck);
+            //do not mutate resourceConstraint!
+            Set<String> compatibleClone = new HashSet<>(compatible);
+            if (allocated != null) {
+                compatibleClone.removeAll(allocated);
+            }
+            if (compatibleClone.size() > 0) {
+                //just return the first compatible real resource
+                return compatibleClone.iterator().next();
+            }
         }
         return null;
     }
