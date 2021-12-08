@@ -57,11 +57,12 @@ public class BULB extends Scheduler {
     nodesDFG = alapSchedule.orderNodes("asc");
 
     Schedule schedule = new Schedule();
-    this.bestLatency = alapSchedule.length(); // TODO: replace with list scheduler length
+    ListScheduler listScheduler = new ListScheduler();
+    this.bestLatency = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, resourceUsage, allocation).length();
     System.out.println(bestLatency);
 
     //add first node with empty schedule
-    BulbNode root = new BulbNode(new HashSet<>(), schedule, asapSchedule.length(), alapSchedule.length());
+    BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), asapSchedule.length(), bestLatency);
     bulbGraph.addNode(null, root);
 
     enumerate(schedule, 0, root);
@@ -76,8 +77,6 @@ public class BULB extends Scheduler {
    * @param i - the current node in the DFG
    */
   private void enumerate(final Schedule partial, int i, BulbNode parent) {
-
-    Schedule updatedPartial = partial.clone();
 
     System.out.printf("%nBULB partial%n%s%n", partial.diagnose());
 
@@ -99,38 +98,46 @@ public class BULB extends Scheduler {
          step < alapSchedule.slot(currentOperation).ubound;
          step++) {
 
+      Schedule updatedPartial = partial.clone();
+      Interval duration = new Interval(step, step+currentOperation.getDelay()-1);
+      updatedPartial.add(currentOperation, duration);
+
       //add new node to BULB tree
-      BulbNode currentBulbNode = new BulbNode(new HashSet<>(), partial, step, alapSchedule.length()); //TODO: replace with list scheduler
+      BulbNode currentBulbNode = new BulbNode(new HashSet<>(), updatedPartial, -1, -1);
       bulbGraph.addNode(parent, currentBulbNode);
 
       // save asap values for later reset
       Map<Node,Interval> saveAsap = new HashMap<>(asapValues);
 
       //ResourceUsed(step,res type) < M_type
-      Interval duration = new Interval(step, step+currentOperation.getDelay()-1);
       boolean canBeScheduled = checkResConstraint(currentOperation.getResourceType(), duration);
       if (canBeScheduled) {
         // operation can be scheduled in this time step
         // find out free resource name
         String resName = findAllocation(currentOperation.getResourceType(), step);
 
+        //schedule operation in this interval on the returned real resource
+        updatedPartial.nodes().remove(currentOperation);
+        updatedPartial.add(currentOperation, duration, resName);
+
         int l_bound = calculateBound("lower", partial, currentBulbNode, currentOperation, i, duration, resName);
         int u_bound = calculateBound("upper", partial, currentBulbNode, currentOperation, i, duration, resName);
 
+        currentBulbNode.setL_bound(l_bound);
+        currentBulbNode.setU_bound(u_bound);
+
         if (u_bound < this.bestLatency) {
           this.bestLatency = u_bound ;
-          this.bestSchedule = upperBoundSchedule(partial, resName);
+          this.bestSchedule = upperBoundSchedule(updatedPartial, i);
         }
         if (l_bound < this.bestLatency) {
-          //schedule operation in this interval on the returned real resource
-          updatedPartial.add(currentOperation, duration, resName);
           incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
           updateAsap(step, i);
           enumerate(updatedPartial, i++, currentBulbNode);
           decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
         }
       }
-      //done with investigating this node of the BULB tree
+      //done with investigating this step
       asapValues = saveAsap;
     }
   }
@@ -301,7 +308,7 @@ public class BULB extends Scheduler {
     return null;
   }
 
-  private Schedule upperBoundSchedule(Schedule partial, String resName) {
+  private Schedule upperBoundSchedule(Schedule partial, int node) {
     // take existing partial schedule and schedule all the missing nodes according to rc
     // do not update resUsage and allocation Maps
     // TODO: replace with list scheduler
