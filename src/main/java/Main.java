@@ -44,6 +44,9 @@ public class Main {
     */
     Scheduler s = new BULB(rc);
     Schedule sched = s.schedule(g);
+    System.out.printf("%nASAP%n%s%n", sched.diagnose());
+    System.out.printf("cost = %s%n", sched.cost());
 
+    sched.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
   }
 }

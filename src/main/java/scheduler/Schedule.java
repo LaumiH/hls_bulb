@@ -105,7 +105,7 @@ public class Schedule {
     //allocation
     Set<Node> nodesInStep = this.slots.get(i.lbound);
     for (Node n : nodesInStep) {
-      Set<String> compatibleResources = rc.getRes(n.getResourceType());
+      Set<String> compatibleResources = rc.getCompatibleRes(n.getResourceType());
       for (String resource : compatibleResources) {
         availableResourcesInConstraint.remove(resource);
       }
@@ -249,6 +249,8 @@ public class Schedule {
     List<Node> nodesOrder = new ArrayList<>(size());
 
     for (Map.Entry<Integer, Set<Node>> entry : slots.entrySet()) {
+      //operations longer than 1 clock cycle are in multiple slots
+      //therefore only add the first occurrence
       for (Node node : entry.getValue()) {
         if (!nodesOrder.contains(node)) nodesOrder.add(node);
       }

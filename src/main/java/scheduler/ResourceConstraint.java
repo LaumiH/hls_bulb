@@ -64,7 +64,6 @@ public class ResourceConstraint {
             System.exit(-1);
         }
 
-
         // Print ops
         System.out.println("Available resources:");
         for(String resName: res.keySet()){
@@ -76,7 +75,7 @@ public class ResourceConstraint {
         }
         System.out.println();
 
-        // Print resS für each OP
+        // Print resS for each OP
         System.out.println("Available operations:");
         for(ResourceType op: operations.keySet()){
             System.out.print(op.name+":\t\t");
@@ -113,11 +112,11 @@ public class ResourceConstraint {
 
     /**
      * Get compatible resources for the supplied resource type.
-     * @param op - Resource type of interest
+     * @param operation - Resource type of interest
      * @return a set of compatible resources
      */
-    public Set<String> getRes(ResourceType op){
-        return operations.get(op);
+    public Set<String> getCompatibleRes(ResourceType operation){
+        return operations.get(operation);
     }
 
 }

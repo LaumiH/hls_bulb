@@ -1,8 +1,6 @@
 package bulb;
 
-import java.util.ArrayList;
 import java.util.Set;
-import scheduler.Schedule;
 
 public class BulbGraph {
 
@@ -14,10 +12,10 @@ public class BulbGraph {
         this.nodes = nodes;
     }
 
-    public void addNode(BulbNode parent, Schedule schedule, int u_bound, int l_bound) {
-        BulbNode newNode = new BulbNode(parent, new ArrayList<>(), schedule, u_bound, l_bound);
-        parent.getChildren().add(newNode);
+    public void addNode(BulbNode parent, BulbNode node) {
+        if (parent != null) parent.getChildren().add(node);
+        node.setParent(parent);
         inspectedNodes++;
-        nodes.add(newNode);
+        nodes.add(node);
     }
 }
