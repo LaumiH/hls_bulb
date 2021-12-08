@@ -310,9 +310,10 @@ public class BULB extends Scheduler {
 
   private Schedule upperBoundSchedule(Schedule partial, int node) {
     // take existing partial schedule and schedule all the missing nodes according to rc
-    // do not update resUsage and allocation Maps
-    // TODO: replace with list scheduler
-    return alapSchedule;
+    // do not update resUsage and allocation Map
+    ListScheduler listScheduler = new ListScheduler();
+    return listScheduler.schedule(nodesDFG.subList(node+1, nodesDFG.size()-1), partial,
+            this.resourceConstraint, this.resourceUsage, this.allocation);
   }
 
   private void updateAsap(int step, int i) {
