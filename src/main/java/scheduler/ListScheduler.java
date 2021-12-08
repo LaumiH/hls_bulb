@@ -20,7 +20,7 @@ public class ListScheduler {
         for (Node nd : nodesToSchedule) { // Sort the nodes after number of successors
 
             nmbr_of_successors = nd.allSuccessors().size();
-            nodes = priority_sorted_list.get(nmbr_of_successors);
+            nodes = priority_sorted_list.get(-nmbr_of_successors);
 
             if (nodes == null) {
                 System.out.println("Empty List with priority : " + nmbr_of_successors);
