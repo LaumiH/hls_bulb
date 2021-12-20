@@ -6,20 +6,30 @@ public class ListScheduler {
     int test = 0;
     int runs = 0;
 
-    public Schedule schedule(List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha,
-                             Map<Integer, List<Resource>> resUsage, Map<Integer, Set<String>> allocation) {
+    public Schedule schedule(List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
+        System.out.println("START OF LIST SCHEDULING !!!");
+
+
+
         int t = 0;
         boolean all_nodes_scheduled = false;
-
         Map<Integer, List<Node>> priority_sorted_list = new TreeMap<>();
-
-        Schedule schedule = new Schedule();
-        int lmax = 0; // need to set value?
-        ResourceConstraint res_used = new ResourceConstraint(); // currently working
-
+        Schedule schedule = partial.clone();
         List<Node> nodes;
-        HashSet<Node> d;
         int nmbr_of_successors = 0;
+        ResourceType needed_res = null;
+        Set<ResourceType> res_to_check = null;
+        Set<String> constraint_res_types = alpha.getAllRes().keySet(); // all res constraint types
+        Interval ii = null;
+        Map<Node, String> curr_working_nodes = new HashMap<Node, String>(); // Node und echte Resource
+        Map<Node, Interval> working_node_end_track = new HashMap<Node, Interval>(); // Node und Intervall
+        List<String> curr_free_res = new ArrayList<String>();
+        Node curr_working_node_w_min_delay = null;
+        Set<ResourceType> p;
+        //int lmax = 0; // need to set value?
+        //ResourceConstraint res_used = new ResourceConstraint(); // currently working
+        //HashSet<Node> d;
+
         for (Node nd : nodesToSchedule) { // Sort the nodes after number of successors
             test = 0;
             amnt_of_successors(nd);
@@ -38,21 +48,16 @@ public class ListScheduler {
 
         }
 
-        ResourceType needed_res = null;
-        Set<ResourceType> res_to_check = null;
-        Set<String> constraint_res_types = alpha.getAllRes().keySet(); // all res constraint types
-        Interval ii = null;
-        Map<Node, String> curr_working_nodes = new HashMap<Node, String>();
-        Map<Node, Interval> working_node_end_track = new HashMap<Node, Interval>();
-        List<String> curr_free_res = new ArrayList<String>();
-        Node curr_working_node_w_min_delay = null;
-
-        if (constraint_res_types.isEmpty()) {
-            System.out.println("empty");
-            return null;
+        //finde frühestes t zu dem noch was frei ist
+        //finde dort geschedulte nodes und allocation
+        for (int i=0; i<partial.length(); i++) {
+            Set<String> allocated = allocation.get(i);
+            if (allocated != null && allocated.size() < constraint_res_types.size()) {
+                t = i;
+                break;
+            }
         }
 
-        Set<ResourceType> p;
         for (String s : constraint_res_types) {
             System.out.println(s);
             if (allocation.get(t) == null || !allocation.get(t).contains(s)){
@@ -64,6 +69,15 @@ public class ListScheduler {
                 System.out.println(res);
             }
         }
+
+        if (partial.size() > 0) {
+            for (Node node : partial.nodes(t)) {
+                curr_working_nodes.put(node, partial.getResources().get(node));
+                working_node_end_track.put(node, new Interval(t, t + node.getDelay() - 1));
+            }
+        }
+        System.out.println("Allocation" + allocation);
+        System.out.println("Currently Free res before loop"+curr_free_res);
         boolean res_scheduled = false;
         do {
              //  check which restype is free
@@ -190,8 +204,6 @@ public class ListScheduler {
                 amnt_of_successors(nd2);
             }
         }
-
-
     }
 
     boolean check_if_res_fits(Set<ResourceType> fromRes, ResourceType from_Node) {
