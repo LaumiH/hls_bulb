@@ -8,6 +8,12 @@ public class ListScheduler {
 
     public Schedule schedule(List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
         System.out.println("START OF LIST SCHEDULING !!!");
+        System.out.println("DISPLAY PARTIAL SCHEDULE");
+        System.out.println(partial.diagnose());
+        System.out.println("DISPLAY ALLOCATED RES");
+        for(Integer i : allocation.keySet()){
+            System.out.println(allocation.get(i));
+        }
 
 
 
