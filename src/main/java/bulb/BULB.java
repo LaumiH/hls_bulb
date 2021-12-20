@@ -54,18 +54,18 @@ public class BULB extends Scheduler {
             System.out.printf("%s : %s%n", node, asapSchedule.slot(node));
         }
 
+
         nodesDFG = alapSchedule.orderNodes("asc");
 
-        Schedule schedule = new Schedule();
-        ListScheduler listScheduler = new ListScheduler();
-        this.bestLatency = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, resourceUsage, allocation).length();
-        System.out.println(bestLatency);
+    ListScheduler listScheduler = new ListScheduler();
+    this.bestLatency = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, allocation).length();
+    System.out.println(bestLatency);
 
         //add first node with empty schedule
         BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), asapSchedule.length(), bestLatency);
         bulbGraph.addNode(null, root);
 
-        enumerate(schedule, 0, root);
+    enumerate(new Schedule(), 0, root);
 
         return bestSchedule;
     }
@@ -310,13 +310,12 @@ public class BULB extends Scheduler {
         return null;
     }
 
-    private Schedule upperBoundSchedule(Schedule partial, int node) {
-        // take existing partial schedule and schedule all the missing nodes according to rc
-        // do not update resUsage and allocation Map
-        ListScheduler listScheduler = new ListScheduler();
-        return listScheduler.schedule(nodesDFG.subList(node + 1, nodesDFG.size() - 1), partial,
-                this.resourceConstraint, this.resourceUsage, this.allocation);
-    }
+  private Schedule upperBoundSchedule(Schedule partial, int node) {
+    // take existing partial schedule and schedule all the missing nodes according to rc
+    // do not update resUsage and allocation Map
+    ListScheduler listScheduler = new ListScheduler();
+    return listScheduler.schedule(nodesDFG.subList(node+1, nodesDFG.size()-1), partial, this.resourceConstraint, this.allocation);
+  }
 
     private void updateAsap(int step, int i) {
         for (int j = i + 1; j < nodesDFG.size(); j++) {

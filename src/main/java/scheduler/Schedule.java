@@ -38,6 +38,10 @@ public class Schedule {
     tsort_res = new HashMap<>();
   }
 
+  public Map<Node, String> getResources() {
+    return this.resources;
+  }
+
   /**
    * Add a node to the schedule during the given interval
    *

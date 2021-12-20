@@ -55,7 +55,9 @@ public class ListScheduler {
         Set<ResourceType> p;
         for (String s : constraint_res_types) {
             System.out.println(s);
-            curr_free_res.add(s);
+            if (allocation.get(t) == null || !allocation.get(t).contains(s)){
+                curr_free_res.add(s);
+            }
             System.out.println(alpha.getAllRes().get(s));
             p = alpha.getAllRes().get(s);
             for (ResourceType res : p) {
@@ -83,7 +85,7 @@ public class ListScheduler {
                             if (check_if_res_fits(res_to_check, needed_res)) {
                                 // all predecessors of the node are finished
                                 // schedule node
-                                ii = new Interval(t, t + nd.getDelay());
+                                ii = new Interval(t, t + nd.getDelay()-1);
                                 schedule.add(nd, ii, resource);
                                 res_scheduled = true;
                                 curr_working_nodes.put(nd, resource);
@@ -136,9 +138,7 @@ public class ListScheduler {
                         n2.handle(nd);
                     }
                 }else {
-                    if(curr_free_res.contains(curr_working_nodes.get(nd))){
-                        curr_free_res.remove(curr_working_nodes.get(nd));
-                    }
+                    curr_free_res.remove(curr_working_nodes.get(nd));
                 }
 
             }
