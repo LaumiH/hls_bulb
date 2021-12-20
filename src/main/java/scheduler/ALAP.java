@@ -18,13 +18,16 @@ public class ALAP extends Scheduler {
     }
 
     public Schedule schedule(final Graph sg) {
+
+        Graph g = sg;
+
         Map<Node, Interval> queue = new HashMap<>();
         Map<Node, Interval> qq;
         Map<Node, Interval> min_queue = new HashMap<>();
         Schedule schedule = new Schedule();
         int min = lmax;
 
-        for (Node nd : sg)
+        for (Node nd : g)
             if (nd.isLeaf())
                 queue.put(nd, new Interval(lmax + 1 - nd.getDelay(), lmax));
         if(queue.size() == 0)
@@ -41,7 +44,7 @@ public class ALAP extends Scheduler {
 
                 schedule.add(nd, slot);
                 for (Node l : nd.predecessors()) {
-                    sg.handle(l, nd);
+                    g.handle(l, nd);
                     Interval ii = min_queue.get(l);
                     if (ii == null || slot.lbound <= ii.ubound) {
                         ii = new Interval(slot.lbound-l.getDelay(), slot.lbound-1);
@@ -62,7 +65,7 @@ public class ALAP extends Scheduler {
             }
             queue = qq;
         }
-        sg.reset();
+        g.reset();
 
         if (lmax == 0)
             return schedule.shift(-(min));

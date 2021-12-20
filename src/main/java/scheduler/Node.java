@@ -3,6 +3,7 @@ package scheduler;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Formatter;
+import java.util.Map;
 
 /** This class represents a single node. */
 public class Node {
@@ -43,6 +44,37 @@ public class Node {
         predecessors = new HashMap<>();
         unhandled_succ = new HashSet<>();
         unhandled_pred = new HashSet<>();
+    }
+
+    public Node clone() {
+        Node clone = new Node(this.id, this.rt);
+        HashMap<Node, Integer> predecessors = new HashMap<>(this.predecessors);
+        HashMap<Node, Integer> successors = new HashMap<>(this.successors);
+        for (Map.Entry<Node, Integer> entry : predecessors.entrySet()) {
+            clone.prepend(entry.getKey(), entry.getValue());
+            entry.getKey().remove(this);
+            entry.getKey().append(clone, entry.getValue());
+        }
+        for (Map.Entry<Node, Integer> entry : successors.entrySet()) {
+            clone.append(entry.getKey(), entry.getValue());
+            entry.getKey().remove(this);
+            entry.getKey().prepend(clone, entry.getValue());
+        }
+        for (Node node : this.unhandled_pred) {
+            clone.unhandled_pred.add(node);
+        }
+        for (Node node : this.unhandled_succ) {
+            clone.unhandled_succ.add(node);
+        }
+        return clone;
+    }
+
+    public void setUnhandled_succ(HashSet<Node> unhandled_succ) {
+        this.unhandled_succ = unhandled_succ;
+    }
+
+    public void setUnhandled_pred(HashSet<Node> unhandled_pred) {
+        this.unhandled_pred = unhandled_pred;
     }
 
     /**

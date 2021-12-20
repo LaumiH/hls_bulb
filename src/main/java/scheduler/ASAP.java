@@ -11,7 +11,9 @@ public class ASAP extends Scheduler {
         Map<Node, Interval> minslot = new HashMap<>();
         Schedule schedule = new Schedule();
 
-        for (Node node : sourceGraph) {
+        Graph g = sourceGraph;
+
+        for (Node node : g) {
             if (node.isRoot())
                 // interval is as long as resource type duration
                 queue.put(node, new Interval(0, node.getDelay() - 1));
@@ -27,7 +29,7 @@ public class ASAP extends Scheduler {
                 schedule.add(node, slot);
 
                 for (Node successor : node.successors()) {
-                    sourceGraph.handle(node, successor);
+                    g.handle(node, successor);
 
                     Interval ii = minslot.get(successor);
                     if (ii == null)
@@ -51,7 +53,7 @@ public class ASAP extends Scheduler {
             }
             queue = qq;
         }
-        sourceGraph.reset();
+        g.reset();
 
         return schedule;
     }
