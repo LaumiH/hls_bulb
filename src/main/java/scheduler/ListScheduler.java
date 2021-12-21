@@ -6,7 +6,7 @@ public class ListScheduler {
     int test = 0;
     int runs = 0;
 
-    public Schedule schedule(List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
+    public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
         System.out.println("START OF LIST SCHEDULING !!!");
         System.out.println("DISPLAY PARTIAL SCHEDULE");
         System.out.println(partial.diagnose());
@@ -15,12 +15,14 @@ public class ListScheduler {
             System.out.println(allocation.get(i));
         }
 
-
+        List<Node> clone = new ArrayList<>(nodesToSchedule);
 
         int t = 0;
         boolean all_nodes_scheduled = false;
         Map<Integer, List<Node>> priority_sorted_list = new TreeMap<>();
         Schedule schedule = partial.clone();
+        schedule.getResources().putAll(partial.getResources());
+
         List<Node> nodes;
         int nmbr_of_successors = 0;
         ResourceType needed_res = null;
@@ -36,7 +38,7 @@ public class ListScheduler {
         //ResourceConstraint res_used = new ResourceConstraint(); // currently working
         //HashSet<Node> d;
 
-        for (Node nd : nodesToSchedule) { // Sort the nodes after number of successors
+        for (Node nd : clone) { // Sort the nodes after number of successors
             test = 0;
             amnt_of_successors(nd);
             nmbr_of_successors = test;
@@ -56,7 +58,7 @@ public class ListScheduler {
 
         //finde frühestes t zu dem noch was frei ist
         //finde dort geschedulte nodes und allocation
-        for (int i=0; i<partial.length(); i++) {
+        for (int i = 0; i < schedule.length(); i++) {
             Set<String> allocated = allocation.get(i);
             if (allocated != null && allocated.size() < constraint_res_types.size()) {
                 t = i;
@@ -66,27 +68,27 @@ public class ListScheduler {
 
         for (String s : constraint_res_types) {
             System.out.println(s);
-            if (allocation.get(t) == null || !allocation.get(t).contains(s)){
+            if (allocation.get(t) == null || !allocation.get(t).contains(s)) {
                 curr_free_res.add(s);
             }
-            System.out.println(alpha.getAllRes().get(s));
-            p = alpha.getAllRes().get(s);
-            for (ResourceType res : p) {
-                System.out.println(res);
-            }
+            //System.out.println(alpha.getAllRes().get(s));
+            //p = alpha.getAllRes().get(s);
+            //for (ResourceType res : p) {
+            //    System.out.println(res);
+            //}
         }
 
-        if (partial.size() > 0) {
-            for (Node node : partial.nodes(t)) {
-                curr_working_nodes.put(node, partial.getResources().get(node));
+        if (schedule.size() > 0) {
+            for (Node node : schedule.nodes(t)) {
+                curr_working_nodes.put(node, schedule.getResources().get(node));
                 working_node_end_track.put(node, new Interval(t, t + node.getDelay() - 1));
             }
         }
         System.out.println("Allocation" + allocation);
-        System.out.println("Currently Free res before loop"+curr_free_res);
+        System.out.println("Currently Free res before loop" + curr_free_res);
         boolean res_scheduled = false;
         do {
-             //  check which restype is free
+            //  check which restype is free
             // check which node with the highest priority can use it
             for (String resource : curr_free_res) {
                 res_to_check = alpha.getAllRes().get(resource);
@@ -99,18 +101,21 @@ public class ListScheduler {
                     nodes = priority_sorted_list.get(key); // nodes with currently the highest priority
                     for (Node nd : nodes) {
                         System.out.println("Currently checked Node: " + nd);
+                        if ("N3_MUL".equals(nd.id)) {
+                            System.out.println("N3");
+                        }
                         needed_res = nd.getResourceType();
                         if (nd.top()) {
 
                             if (check_if_res_fits(res_to_check, needed_res)) {
                                 // all predecessors of the node are finished
                                 // schedule node
-                                ii = new Interval(t, t + nd.getDelay()-1);
+                                ii = new Interval(t, t + nd.getDelay() - 1);
                                 schedule.add(nd, ii, resource);
                                 res_scheduled = true;
                                 curr_working_nodes.put(nd, resource);
                                 priority_sorted_list.get(key).remove(nd); // remove object from list
-                                System.out.println("Currently Working Nodes and Res: "+curr_working_nodes);
+                                System.out.println("Currently Working Nodes and Res: " + curr_working_nodes);
                                 working_node_end_track.put(nd, ii);
                             }
                         } else {
@@ -130,7 +135,7 @@ public class ListScheduler {
             System.out.println("");
 
             int min_delay = Integer.MAX_VALUE;
-            System.out.println("Nodes in List with Intervall "+working_node_end_track);
+            System.out.println("Nodes in List with Intervall " + working_node_end_track);
             for (Node nd : working_node_end_track.keySet()) { // finding earliest end of a node
                 if (working_node_end_track.get(nd).ubound < min_delay) {
                     min_delay = working_node_end_track.get(nd).ubound;
@@ -139,31 +144,31 @@ public class ListScheduler {
             }
 
 
-
-
             Map<Node, Interval> copy_test = new HashMap<Node, Interval>(working_node_end_track);
-            t =  min_delay+1;
-            System.out.println("currently free Res "+curr_free_res);
+            t = min_delay + 1;
+            System.out.println("currently free Res " + curr_free_res);
 
-            System.out.println("Next Time Step "+ t);
-            for (Node nd :copy_test.keySet()){
-                if(copy_test.get(nd).ubound < t){
+            System.out.println("Next Time Step " + t);
+            for (Node nd : copy_test.keySet()) {
+                if (copy_test.get(nd).ubound < t) {
                     System.out.println(nd);
-                    if(!curr_free_res.contains(curr_working_nodes.get(nd))){
+                    if (!curr_free_res.contains(curr_working_nodes.get(nd))) {
                         curr_free_res.add(curr_working_nodes.get(nd));
                     }
                     curr_working_nodes.remove(nd);
                     working_node_end_track.remove(nd);
                     for (Node n2 : nd.successors()) {
-                        n2.handle(nd);
+                        boolean success = n2.handle(nd);
+                        System.out.println(success);
                     }
-                }else {
-                    curr_free_res.remove(curr_working_nodes.get(nd));
+                } else {
+                    boolean success = curr_free_res.remove(curr_working_nodes.get(nd));
+                    System.out.println(success);
                 }
 
             }
-            System.out.println("Nodes in List with Intervall "+working_node_end_track);
-            System.out.println("currently free Res "+curr_free_res);
+            System.out.println("Nodes in List with Intervall " + working_node_end_track);
+            System.out.println("currently free Res " + curr_free_res);
             System.out.println();
             copy_test.clear();
 

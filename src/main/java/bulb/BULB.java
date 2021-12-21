@@ -7,12 +7,13 @@ import scheduler.*;
 public class BULB extends Scheduler {
 
     private final ResourceConstraint resourceConstraint;
-    private List<Node> nodesDFG;
-    private Schedule asapSchedule;
-    private Schedule alapSchedule;
+
     private Graph dfg;
 
     private Map<Node, Interval> asapValues;
+
+    private final Schedule asapSchedule;
+    private final Schedule alapSchedule;
 
     private int bestLatency;
     private Schedule bestSchedule;
@@ -24,9 +25,17 @@ public class BULB extends Scheduler {
 
     private final BulbGraph bulbGraph;
 
-    public BULB(ResourceConstraint rc) {
+    public BULB(final ResourceConstraint rc, final Schedule asap, final Schedule alap) {
         this.resourceConstraint = rc;
+
+        this.asapSchedule = asap;
+        this.alapSchedule = alap;
+
         this.asapValues = new HashMap<>();
+        for (Node n : asap.nodes()) {
+            asapValues.put(n, asap.slot(n));
+        }
+
         this.resourceUsage = new HashMap<>();
         this.allocation = new HashMap<>();
         this.bulbGraph = new BulbGraph(new HashSet<>());
@@ -42,30 +51,33 @@ public class BULB extends Scheduler {
     public Schedule schedule(final Graph sg) {
         this.dfg = sg;
 
-        Scheduler asap = new ASAP();
-        this.asapSchedule = asap.schedule(sg);
-        for (Node n : asapSchedule.nodes()) {
-            asapValues.put(n, asapSchedule.slot(n));
+        ListScheduler listScheduler = new ListScheduler();
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
-        Scheduler alap = new ALAP();
-        this.alapSchedule = alap.schedule(sg);
-        for (Node node : alapSchedule.nodes()) {
-            System.out.printf("%s : %s%n", node, asapSchedule.slot(node));
+        List<Node> nodesDFG = this.alapSchedule.orderNodes("asc");
+
+        List<Node> cloneThisGodDammit = new ArrayList<>(nodesDFG.size());
+
+        for (Node node : nodesDFG) {
+            cloneThisGodDammit.add(node.clone());
         }
 
-
-        nodesDFG = alapSchedule.orderNodes("asc");
-
-    ListScheduler listScheduler = new ListScheduler();
-    this.bestLatency = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, allocation).length();
-    System.out.println(bestLatency);
+        Schedule listSchedule = listScheduler.schedule(cloneThisGodDammit, new Schedule(), resourceConstraint, allocation);
+        this.bestLatency = listSchedule.length();
+        System.out.println(bestLatency);
 
         //add first node with empty schedule
-        BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), asapSchedule.length(), bestLatency);
+        BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), bestLatency, asapSchedule.length());
         bulbGraph.addNode(null, root);
 
-    enumerate(new Schedule(), 0, root);
+
+
+        enumerate(new Schedule(), 0, root, nodesDFG);
 
         return bestSchedule;
     }
@@ -76,9 +88,11 @@ public class BULB extends Scheduler {
      * @param partial - the (partial) schedule, which is a BulbNode in the BulbGraph
      * @param i       - the current node in the DFG
      */
-    private void enumerate(final Schedule partial, int i, BulbNode parent) {
+    private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) {
 
         System.out.printf("%nBULB partial%n%s%n", partial.diagnose());
+
+        List<Node> nodesDFG = new ArrayList<>(nodes);
 
         //get current operation to schedule
         Node currentOperation = nodesDFG.get(i);
@@ -99,6 +113,8 @@ public class BULB extends Scheduler {
              step++) {
 
             Schedule updatedPartial = partial.clone();
+            partial.getResources().putAll(updatedPartial.getResources());
+
             Interval duration = new Interval(step, step + currentOperation.getDelay() - 1);
             updatedPartial.add(currentOperation, duration);
 
@@ -117,23 +133,28 @@ public class BULB extends Scheduler {
                 String resName = findAllocation(currentOperation.getResourceType(), duration);
 
                 //schedule operation in this interval on the returned real resource
-                updatedPartial.nodes().remove(currentOperation);
+                updatedPartial.remove(currentOperation);
+
                 updatedPartial.add(currentOperation, duration, resName);
 
-                int l_bound = calculateBound("lower", partial, currentBulbNode, currentOperation, i, duration, resName);
-                int u_bound = calculateBound("upper", partial, currentBulbNode, currentOperation, i, duration, resName);
+                int l_bound = calculateBound("lower", partial, currentBulbNode, currentOperation, i, duration, resName, nodesDFG.subList(i + 1, nodesDFG.size()));
+                System.out.println("Lower bound is: " + l_bound);
+                int u_bound = calculateBound("upper", partial, currentBulbNode, currentOperation, i, duration, resName, nodesDFG.subList(i + 1, nodesDFG.size()));
+                System.out.println("Upper bound is: " + u_bound);
 
                 currentBulbNode.setL_bound(l_bound);
                 currentBulbNode.setU_bound(u_bound);
 
                 if (u_bound < this.bestLatency) {
                     this.bestLatency = u_bound;
-                    this.bestSchedule = upperBoundSchedule(updatedPartial, i);
+                    incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                    this.bestSchedule = upperBoundSchedule(updatedPartial, i, nodesDFG.subList(i + 1, nodesDFG.size()));
+                    decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                 }
                 if (l_bound < this.bestLatency) {
                     incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
-                    updateAsap(step, i);
-                    enumerate(updatedPartial, i++, currentBulbNode);
+                    updateAsap(step, i, nodesDFG);
+                    enumerate(updatedPartial, i++, currentBulbNode, nodesDFG);
                     decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                 }
             }
@@ -149,7 +170,7 @@ public class BULB extends Scheduler {
      * @return the upper bound for needed clock cycles
      */
     private int calculateBound(String kind, Schedule sched, BulbNode currentBulbNode, Node currentOperation, int i,
-                               Interval duration, String resName) {
+                               Interval duration, String resName, List<Node> unschedNodes) {
 
         Map<Integer, List<Resource>> saveResourceUsage = new HashMap<>(this.resourceUsage); //store old resource usage
         Map<Integer, Set<String>> saveAllocation = new HashMap<>(this.allocation); //store old allocation
@@ -167,7 +188,7 @@ public class BULB extends Scheduler {
 
         //move dependent nodes to later steps to fulfill constraint
         //estimate constraint dependent latency
-        for (Node unscheduledNode : nodesDFG.subList(i + 1, nodesDFG.size() - 1)) {
+        for (Node unscheduledNode : unschedNodes) {
             int k = asapValues.get(unscheduledNode).lbound;
 
             if ("upper".equals(kind)) {
@@ -310,14 +331,15 @@ public class BULB extends Scheduler {
         return null;
     }
 
-  private Schedule upperBoundSchedule(Schedule partial, int node) {
-    // take existing partial schedule and schedule all the missing nodes according to rc
-    // do not update resUsage and allocation Map
-    ListScheduler listScheduler = new ListScheduler();
-    return listScheduler.schedule(nodesDFG.subList(node+1, nodesDFG.size()-1), partial, this.resourceConstraint, this.allocation);
-  }
+    private Schedule upperBoundSchedule(Schedule partial, int node, List<Node> unschedNodes) {
+        // take existing partial schedule and schedule all the missing nodes according to rc
+        // do not update resUsage and allocation Map
+        ListScheduler listScheduler = new ListScheduler();
+        return listScheduler.schedule(unschedNodes, partial, this.resourceConstraint, this.allocation);
+    }
 
-    private void updateAsap(int step, int i) {
+    private void updateAsap(int step, int i, List<Node> nodes) {
+        List<Node> nodesDFG = new ArrayList<>(nodes);
         for (int j = i + 1; j < nodesDFG.size(); j++) {
             Node succ = nodesDFG.get(j);
             if (nodesDFG.get(i).allSuccessors().containsKey(succ)) {

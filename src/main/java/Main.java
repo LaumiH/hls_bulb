@@ -27,26 +27,25 @@ public class Main {
     Graph g = dr.parse(args[0]);
     System.out.printf("Input graph:%n%n%s%n", g.diagnose());
 
-    /*
-        Scheduler s = new ASAP();
-        Schedule sched = s.schedule(g);
-        System.out.printf("%nASAP%n%s%n", sched.diagnose());
-        System.out.printf("cost = %s%n", sched.cost());
+    Scheduler s = new ASAP();
+    Schedule asap = s.schedule(g);
+    System.out.printf("%nASAP%n%s%n", asap.diagnose());
+    System.out.printf("cost = %s%n", asap.cost());
 
-        sched.draw("schedules/ASAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+    asap.draw("schedules/ASAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
 
-        s = new ALAP();
-        sched = s.schedule(g);
-        System.out.printf("%nALAP%n%s%n", sched.diagnose());
-        System.out.printf("cost = %s%n", sched.cost());
+    s = new ALAP();
+    Schedule alap = s.schedule(g);
+    System.out.printf("%nALAP%n%s%n", alap.diagnose());
+    System.out.printf("cost = %s%n", alap.cost());
 
-        sched.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
-    */
-    Scheduler s = new BULB(rc);
-    Schedule sched = s.schedule(g);
-    System.out.printf("%nASAP%n%s%n", sched.diagnose());
-    System.out.printf("cost = %s%n", sched.cost());
+    alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
 
-    sched.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+    s = new BULB(rc, asap, alap);
+    Schedule bulb = s.schedule(g);
+    System.out.printf("%nASAP%n%s%n", bulb.diagnose());
+    System.out.printf("cost = %s%n", bulb.cost());
+
+    bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
   }
 }
