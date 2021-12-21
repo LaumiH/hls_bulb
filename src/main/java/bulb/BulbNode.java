@@ -1,9 +1,6 @@
 package bulb;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import scheduler.Schedule;
 
@@ -15,8 +12,7 @@ public class BulbNode {
     private int u_bound;
     private int l_bound;
 
-    public BulbNode(HashSet<BulbNode> children, Schedule schedule, int u_bound,
-                    int l_bound) {
+    public BulbNode(HashSet<BulbNode> children, Schedule schedule, int l_bound, int u_bound) {
         this.children = children;
         this.schedule = schedule;
         this.u_bound = u_bound;
@@ -71,5 +67,26 @@ public class BulbNode {
 
     public void setL_bound(int l_bound) {
         this.l_bound = l_bound;
+    }
+
+    public String toString() {
+        StringBuilder buffer = new StringBuilder(50);
+        print(buffer, "", "");
+        return buffer.toString();
+    }
+
+    private void print(StringBuilder buffer, String prefix, String childrenPrefix) {
+        buffer.append(prefix);
+        buffer.append("l_bound: ").append(l_bound).append("\n");
+        buffer.append("u_bound: ").append(u_bound);
+        buffer.append("\n").append(this.schedule.diagnose()).append("\n");
+        for (Iterator<BulbNode> it = children.iterator(); it.hasNext();) {
+            BulbNode next = it.next();
+            if (it.hasNext()) {
+                next.print(buffer, childrenPrefix + "├── ", childrenPrefix + "│   ");
+            } else {
+                next.print(buffer, childrenPrefix + "└── ", childrenPrefix + "    ");
+            }
+        }
     }
 }
