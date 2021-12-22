@@ -30,6 +30,7 @@ public class BULB extends Scheduler {
     }
 
     public BULB(final ResourceConstraint rc, final Schedule asap, final Schedule alap) {
+        System.out.println("CALL OF BULB CONSTRUCTOR");
         this.resourceConstraint = rc;
 
         this.asapSchedule = asap;
@@ -53,12 +54,14 @@ public class BULB extends Scheduler {
      */
     @Override
     public Schedule schedule(final Graph sg) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB SCHEDULE "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         this.dfg = sg;
-
         List<Node> nodesDFG = this.alapSchedule.orderNodes("asc");
 
         ListScheduler listScheduler = new ListScheduler();
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF LIST SCHEDULER FROM BULB SCHEDULE "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         Schedule listSchedule = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, allocation);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF LIST SCHEDULER FROM BULB SCHEDULE "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         this.bestLatency = listSchedule.length();
         this.bestSchedule = listSchedule;
         System.out.println(bestLatency);
@@ -79,7 +82,7 @@ public class BULB extends Scheduler {
      * @param i       - the current node in the DFG
      */
     private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) {
-
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB ENUMERATE "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.printf("%nBULB partial%n%s%n", partial.diagnose());
 
         List<Node> nodesDFG = new ArrayList<>(nodes);
@@ -177,7 +180,7 @@ public class BULB extends Scheduler {
      */
     private int calculateBound(String kind, Schedule sched, BulbNode currentBulbNode, Node currentOperation,
                                Interval duration, String resName, List<Node> unschedNodes) {
-
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB CALCULATE_BOUND"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         Map<Integer, List<Resource>> saveResourceUsage = new HashMap<>(this.resourceUsage); //store old resource usage
         Map<Integer, Set<String>> saveAllocation = new HashMap<>(this.allocation); //store old allocation
 
@@ -239,11 +242,13 @@ public class BULB extends Scheduler {
 
         this.resourceUsage = saveResourceUsage;
         this.allocation = saveAllocation;
-
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB CALCULATE_BOUND"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         return latencyEstimate;
     }
 
     private int criticalPath(Set<Node> nodes) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB CRITICAL_PATH"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
         //find critical path in DFG for nodes successors and add up delay
         //critical path -> mobility==0
         //mobility: (ALAP - ASAP) != 0
@@ -269,11 +274,12 @@ public class BULB extends Scheduler {
             }
             */
         }
-
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB CRITICAL_PATH"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         return delay;
     }
 
     private void incrementResourceUsed(Interval interval, ResourceType rt, String resName) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB INCREMENT_RES_USED"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         for (int step = interval.lbound; step <= interval.ubound; step++) {
             List<Resource> usedInStep = this.resourceUsage.computeIfAbsent(step, k -> new ArrayList<>());
             boolean resInUse = false;
@@ -298,9 +304,11 @@ public class BULB extends Scheduler {
                 //allocation.replace(step, allocatedInStep);
             }
         }
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB INCREMENT_RES_USED"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 
     private void decrementResourceUsed(Interval interval, ResourceType rt, String resName) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB DECREMENT_RES_USED"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         for (int step = interval.lbound; step <= interval.ubound; step++) {
             List<Resource> usedInStep = this.resourceUsage.get(step);
             for (Resource r : usedInStep) {
@@ -311,6 +319,7 @@ public class BULB extends Scheduler {
             }
             this.allocation.get(step).remove(resName);
         }
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB DECREMENT_RES_USED"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 
     /**
@@ -321,6 +330,7 @@ public class BULB extends Scheduler {
      * @return the name of the real resource to allocate the operation to
      */
     private boolean checkResConstraint(ResourceType resourceToCheck, Interval interval) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB CHECK_RES_CONSTRAINT"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         Set<String> compatible = this.resourceConstraint.getCompatibleRes(resourceToCheck);
 
         for (int step = interval.lbound; step <= interval.ubound; step++) {
@@ -339,12 +349,13 @@ public class BULB extends Scheduler {
         }
         System.out.printf("%nThere are not enough resources available to allocate the operation %s in interval %s%n",
                 resourceToCheck, interval);
+
         return false;
     }
 
     private String findAllocation(ResourceType resourceToCheck, Interval interval) {
         //return name of any compatible, free resource for allocation (do not allocate yet)
-
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB FIND_ALLOCATION"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         for (int step = interval.lbound; step <= interval.ubound; step++) {
             Set<String> allocated = this.allocation.get(step);
             Set<String> compatible = this.resourceConstraint.getCompatibleRes(resourceToCheck);
@@ -355,20 +366,25 @@ public class BULB extends Scheduler {
             }
             if (compatibleClone.size() > 0) {
                 //just return the first compatible real resource
+                System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB FIND_ALLOCATION"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
                 return compatibleClone.iterator().next();
             }
         }
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB FIND_ALLOCATION"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         return null;
     }
 
     private Schedule upperBoundSchedule(Schedule partial, int node, List<Node> unschedNodes) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+"CALL OF BULB UPPER_BOUND_SCHEDULE"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         // take existing partial schedule and schedule all the missing nodes according to rc
         // do not update resUsage and allocation Map
         ListScheduler listScheduler = new ListScheduler();
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+"END OF BULB UPPER_BOUND_SCHEDULE"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         return listScheduler.schedule(unschedNodes, partial, this.resourceConstraint, this.allocation);
     }
 
     private void updateAsap(int step, int i, List<Node> nodes) {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+"START OF BULB UPDATE_ASAP"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         for (int j = i + 1; j < nodes.size(); j++) {
             Node succ = nodes.get(j);
             if (nodes.get(i).reallyAllSuccessors().contains(succ)) {
@@ -379,6 +395,6 @@ public class BULB extends Scheduler {
                 Interval shifted = asapValues.get(succ).shift(l_asap - asapJ.lbound);
                 asapValues.replace(succ, asapJ, shifted);
             }
-        }
+        }System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+"END OF BULB UPDATE_ASAP"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
