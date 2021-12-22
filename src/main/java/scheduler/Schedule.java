@@ -354,11 +354,14 @@ public class Schedule {
         os.add(nd);
         f.format("%s : %s%n", nd, nodes.get(nd));
       }
+
+    /*
     f.format("%nRegistered resources%n");
     for (ResourceType rt : sort_res.keySet()) {
       for (Resource r : sort_res.get(rt).keySet())
         f.format(" %s %s %s %n", rt, r.step(), r.weight());
     }
+    */
 
     String str = f.toString();
     f.close();

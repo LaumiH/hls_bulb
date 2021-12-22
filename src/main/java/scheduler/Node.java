@@ -1,9 +1,6 @@
 package scheduler;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Formatter;
-import java.util.Map;
+import java.util.*;
 
 /** This class represents a single node. */
 public class Node {
@@ -117,6 +114,17 @@ public class Node {
         return successors.remove(n) != null || predecessors.remove(n) != null;
     }
 
+    public boolean removeById(String id) {
+        for (Node n : unhandled_pred) {
+            if (id.equals(n.id)) return unhandled_pred.remove(n);
+        }
+
+        for (Node n : unhandled_succ) {
+            if (id.equals(n.id)) return unhandled_succ.remove(n);
+        }
+        return false;
+    }
+
     /**
      * Mark a node as handled. Useful during scheduling.
      *
@@ -195,6 +203,22 @@ public class Node {
     @SuppressWarnings("unchecked")
     public HashMap<Node, Integer> allSuccessors() {
         return (HashMap<Node, Integer>) successors.clone();
+    }
+
+    public Set<Node> reallyAllSuccessors() {
+        Set<Node> successors = new HashSet<>(this.successors.keySet());
+        for (Node node : successors) {
+            successors.addAll(node.reallyAllSuccessors());
+        }
+        return successors;
+    }
+
+    public Set<Node> reallyAllPredecessors() {
+        Set<Node> predecessors = new HashSet<>(this.predecessors.keySet());
+        for (Node node : predecessors) {
+            predecessors.addAll(node.reallyAllPredecessors());
+        }
+        return predecessors;
     }
 
     /**

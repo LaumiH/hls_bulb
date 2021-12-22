@@ -43,9 +43,8 @@ public class Main {
 
     s = new BULB(rc, asap, alap);
     Schedule bulb = s.schedule(g);
-    System.out.printf("%nASAP%n%s%n", bulb.diagnose());
-    System.out.printf("cost = %s%n", bulb.cost());
-
+    System.out.printf("%nBULB%n%s%n", bulb.diagnose());
+    ((BULB) s).getBulbGraph().print();
     bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
   }
 }
