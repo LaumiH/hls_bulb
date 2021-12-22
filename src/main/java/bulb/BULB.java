@@ -188,7 +188,7 @@ public class BULB extends Scheduler {
         int latencyEstimate = 0;
         for (Node scheduled : sched.nodes()) {
             int Xi = duration.ubound;  //current step plus duration
-            int delayCP = criticalPath(scheduled);
+            int delayCP = criticalPath(scheduled) - scheduled.getDelay();
             latencyEstimate = Math.max(latencyEstimate, Xi + delayCP);
         }
         System.out.printf("%s latency estimate based on CP of scheduled nodes: %d", kind, latencyEstimate);
