@@ -206,7 +206,7 @@ public class Node {
     }
 
     public Set<Node> reallyAllSuccessors() {
-        Set<Node> successors = new HashSet<>(this.successors.keySet());
+        Set<Node> successors = new HashSet<>(this.predecessors.keySet());
         for (Node node : successors) {
             successors.addAll(node.reallyAllSuccessors());
         }

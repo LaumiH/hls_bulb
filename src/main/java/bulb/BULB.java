@@ -248,26 +248,43 @@ public class BULB extends Scheduler {
     }
 
     private int criticalPath(Node node) {
-        System.out.printf("Calculating CP for node %s%n", node);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB CRITICAL_PATH"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
         //find critical path in DFG for nodes successors and add up delay
         //critical path -> mobility==0
         //mobility: (ALAP - ASAP) != 0
-        int cp = 0;
-        for (Node successor : node.allSuccessors().keySet()) {
-            System.out.printf("Node %s is a successor of %s%n", successor, node);
+        //critical path -> has no mobility
+
+        List<Node> successors = new ArrayList<>(node.reallyAllSuccessors());
+
+        //find out if there are parallel critical paths
+        Set<Node> directSuccessors = node.allSuccessors().keySet();
+        boolean oneSuccessorTreated = false;
+
+        int delay = 0;
+        for (int i=0; i< successors.size(); i++) {
+            Node successor = successors.get(i);
+            if (successor == null) continue;
+            if (directSuccessors.contains(successor) && oneSuccessorTreated) {
+                for (Node n : successor.reallyAllSuccessors()) {
+                    successors.remove(n);
+                }
+                successors.remove(successor);
+                continue;
+            } else if (directSuccessors.contains(successor)) {
+                oneSuccessorTreated = true;
+            }
+
+            int delayCP = node.getDelay();
             int asap = asapSchedule.slot(successor).lbound;
             int alap = alapSchedule.slot(successor).lbound;
-            int delay = 0;
             if (asap - alap == 0) {
-                System.out.printf("Node %s is on critical path.%n", successor);
-                delay = cp + successor.getDelay() + criticalPath(successor);
+                delayCP += successor.getDelay();
+                delay = Math.max(delay, delayCP);
             }
-            return Math.max(delay, cp);
         }
-        //System.out.printf("Maximum delay on CP is %d.", delay);
-        //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB CRITICAL_PATH "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        //return delay;
-        return cp;
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB CRITICAL_PATH"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        return delay;
     }
 
     private void incrementResourceUsed(Interval interval, ResourceType rt, String resName) {
