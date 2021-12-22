@@ -64,7 +64,7 @@ public class BULB extends Scheduler {
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF LIST SCHEDULER FROM BULB SCHEDULE "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         this.bestLatency = listSchedule.length();
         this.bestSchedule = listSchedule;
-        System.out.println(bestLatency);
+        System.out.printf("Best schedule length at beginning: %d%n", bestLatency);
 
         //add first node with empty schedule
         BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), asapSchedule.length(), bestLatency);
@@ -187,10 +187,11 @@ public class BULB extends Scheduler {
         //latency estimation based on critical path
         int latencyEstimate = 0;
         for (Node scheduled : sched.nodes()) {
-            int Xi = duration.lbound + duration.length();  //current step plus duration
-            int delayCP = criticalPath(scheduled.allSuccessors().keySet());
+            int Xi = duration.ubound;  //current step plus duration
+            int delayCP = criticalPath(scheduled);
             latencyEstimate = Math.max(latencyEstimate, Xi + delayCP);
         }
+        System.out.printf("%s latency estimate based on CP of scheduled nodes: %d", kind, latencyEstimate);
 
         //to calculate the dependent nodes, the current operation has to be added to the res constraints!
         incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
@@ -237,7 +238,7 @@ public class BULB extends Scheduler {
                 latencyEstimate = Math.max(latencyEstimate, k + criticalPath);
 
             }
-            System.out.printf("New latancy estimate for node %s: %d%n", unscheduledNode, latencyEstimate);
+            System.out.printf("New %s latency estimate for node %s: %d%n", kind, unscheduledNode, latencyEstimate);
         }
 
         this.resourceUsage = saveResourceUsage;
@@ -252,27 +253,17 @@ public class BULB extends Scheduler {
         //find critical path in DFG for nodes successors and add up delay
         //critical path -> mobility==0
         //mobility: (ALAP - ASAP) != 0
-        //critical path -> has no mobility
-        int delay = 0;
-        for (Node node : nodes) {
-            int delayCP = node.getDelay();
-            Set<Node> successors = dfg.get(node).reallyAllSuccessors();
-            for (Node sgn : successors) {
-                int asap = asapSchedule.slot(sgn).lbound;
-                int alap = alapSchedule.slot(sgn).lbound;
-                if (asap - alap == 0) {
-                    delayCP += sgn.getDelay();
-                    delay = Math.max(delay, delayCP);
-                }
+        int cp = 0;
+        for (Node successor : node.allSuccessors().keySet()) {
+            System.out.printf("Node %s is a successor of %s%n", successor, node);
+            int asap = asapSchedule.slot(successor).lbound;
+            int alap = alapSchedule.slot(successor).lbound;
+            int delay = 0;
+            if (asap - alap == 0) {
+                System.out.printf("Node %s is on critical path.%n", successor);
+                delay = cp + successor.getDelay() + criticalPath(successor);
             }
-            /*
-            Set<Node> predecessors = dfg.get(node).reallyAllPredecessors();
-            for (Node sgn : predecessors) {
-                int asap = asapSchedule.slot(sgn).lbound;
-                int alap = alapSchedule.slot(sgn).lbound;
-                if (asap - alap == 0) delay = Math.max(delay, delayCP + sgn.getDelay());
-            }
-            */
+            return Math.max(delay, cp);
         }
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB CRITICAL_PATH"+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         return delay;
