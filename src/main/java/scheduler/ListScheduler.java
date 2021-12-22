@@ -251,4 +251,19 @@ public class ListScheduler {
         return false;
 
     }
+
+    int calc_CP_of_successors(Node nd,int cp) {
+        int max_cp_of_succ = 0;
+        int delay = 0;
+        if (nd != null) {
+
+            for (Node nd2 : nd.allSuccessors().keySet()) {
+                delay = calc_CP_of_successors(nd2,cp);
+                if(max_cp_of_succ < delay ){
+                    max_cp_of_succ = delay;
+                }
+            }
+        }
+        return cp+max_cp_of_succ;
+    }
 }
