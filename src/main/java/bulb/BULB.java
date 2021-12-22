@@ -231,10 +231,12 @@ public class BULB extends Scheduler {
             incrementResourceUsed(duration, unscheduledNode.getResourceType(), resName);
 
             if ("upper".equals(kind)) {
-                int criticalPath = criticalPath(unscheduledNode);
-                latencyEstimate = Math.max(latencyEstimate, k + unscheduledNode.getDelay() + criticalPath);
+                int criticalPath = criticalPath(unscheduledNode) - unscheduledNode.getDelay();
+                System.out.println("Critical Path" + criticalPath);
+                latencyEstimate = Math.max(latencyEstimate, k + criticalPath + unscheduledNode.getDelay());
             } else {
-                int criticalPath = criticalPath(unscheduledNode);
+                int criticalPath = criticalPath(unscheduledNode) - unscheduledNode.getDelay();
+                System.out.println("Critical Path" + criticalPath);
                 latencyEstimate = Math.max(latencyEstimate, k + criticalPath);
 
             }
@@ -247,12 +249,13 @@ public class BULB extends Scheduler {
         return latencyEstimate;
     }
 
-    private int criticalPath(Node node) {
-        System.out.printf("Calculating CP for node %s%n", node);
+    private int
+    criticalPath(Node nd) {
+
         //find critical path in DFG for nodes successors and add up delay
         //critical path -> mobility==0
         //mobility: (ALAP - ASAP) != 0
-        int cp = 0;
+        /*int cp = 0;
         for (Node successor : node.allSuccessors().keySet()) {
             System.out.printf("Node %s is a successor of %s%n", successor, node);
             int asap = asapSchedule.slot(successor).lbound;
@@ -267,8 +270,35 @@ public class BULB extends Scheduler {
         //System.out.printf("Maximum delay on CP is %d.", delay);
         //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" END OF BULB CRITICAL_PATH "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         //return delay;
-        return cp;
+        return cp;*/
+        int asap_nd = asapSchedule.slot(nd).lbound;
+        int alap_nd = alapSchedule.slot(nd).lbound;
+        int cp = 0;
+        int max_cp_of_succ = 0;
+        int delay = 0;
+        if (nd != null && (asap_nd - alap_nd == 0)) {
+            System.out.printf("Calculating CP for node %s%n", nd);
+            cp = nd.getDelay();
+            for (Node nd2 : nd.allSuccessors().keySet()) {
+                System.out.println("Succesor node " + nd2);
+                int asap = asapSchedule.slot(nd2).lbound;
+                int alap = alapSchedule.slot(nd2).lbound;
+                if(asap - alap == 0) {
+                    delay = criticalPath(nd2);
+                    System.out.println("Delay for Node " + nd2 + ":" + delay);
+                    if (max_cp_of_succ < delay) {
+                        max_cp_of_succ  = delay;
+                    }
+                }
+            }
+        }else{
+            System.out.println("Node "+ nd + " is not on critical Path!!");
+            return -1;
+        }
+        System.out.println("max_cp_of_succ: "+ (max_cp_of_succ+cp));
+        return cp+  max_cp_of_succ;
     }
+
 
     private void incrementResourceUsed(Interval interval, ResourceType rt, String resName) {
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+" START OF BULB INCREMENT_RES_USED "+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
