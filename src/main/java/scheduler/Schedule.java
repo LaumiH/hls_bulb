@@ -372,6 +372,32 @@ public class Schedule {
     return str;
   }
 
+  public String diagnose(String prefix) {
+    if (nodes.keySet().size() <= 0) return "%n";
+
+    Formatter f = new Formatter();
+    f.format("Found schedule of length %d%n", length());
+    Set<Node> os = new HashSet<>();
+    for (Integer ii : slots.keySet())
+      for (Node nd : slots.get(ii)) {
+        if (os.contains(nd)) continue;
+        os.add(nd);
+        f.format("%s%s : %s%n", prefix, nd, nodes.get(nd));
+      }
+
+    /*
+    f.format("%nRegistered resources%n");
+    for (ResourceType rt : sort_res.keySet()) {
+      for (Resource r : sort_res.get(rt).keySet())
+        f.format(" %s %s %s %n", rt, r.step(), r.weight());
+    }
+    */
+
+    String str = f.toString();
+    f.close();
+    return str;
+  }
+
   /**
    * Write a dot-file of the schedule. If a resource is specified for each node each column of the
    * schedule represents one resource.

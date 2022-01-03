@@ -11,6 +11,7 @@ public class Main {
 
   public static void main(String[] args) {
     System.out.println("START OF PROGRAM");
+
     ResourceConstraint rc = new ResourceConstraint();
     if (args.length > 1) {
       System.out.println("Reading resource constraints from " + args[1] + "\n");
@@ -40,19 +41,30 @@ public class Main {
     System.out.println("DOING ALAP SCHEDULE");
     s = new ALAP();
     Schedule alap = s.schedule(g);
-    //System.out.printf("%nALAP%n%s%n", alap.diagnose());
-    System.out.printf("cost = %s%n", alap.cost());
+    System.out.printf("%nALAP%n%s%n", alap.diagnose());
+    //System.out.printf("cost = %s%n", alap.cost());
     alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
     System.out.println("FINISHED ALAP SCHEDULE");
     System.out.println("");
 
+
     System.out.println("STARTING BULB SCHEDULE");
-    System.out.println("");
-    s = new BULB(rc, asap, alap);
+    s = new BULB("ASAP", rc, asap, alap);
     Schedule bulb = s.schedule(g);
     System.out.printf("%nBULB%n%s%n", bulb.diagnose());
     ((BULB) s).getBulbGraph().print();
     bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
     System.out.println("END OF BULB SCHEDULE");
+
+
+    System.out.println("STARTING BULB SCHEDULE");
+    System.out.println("");
+    s = new BULB("PAPER", rc, asap, alap);
+    bulb = s.schedule(g);
+    System.out.printf("%nBULB%n%s%n", bulb.diagnose());
+    ((BULB) s).getBulbGraph().print();
+    bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+    System.out.println("END OF BULB SCHEDULE");
+
   }
 }
