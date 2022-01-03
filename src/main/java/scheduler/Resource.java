@@ -14,6 +14,16 @@ public class Resource implements Comparable<Resource> {
     num = 0;
   }
 
+  public Resource(ResourceType rt, Integer step, Integer num) {
+    this.rt = rt;
+    this.tstep = step;
+    this.num = num;
+  }
+
+  public Resource clone() {
+    return new Resource(this.rt, this.step(), this.num);
+  }
+
   /**
    * Set the number of resources
    *
