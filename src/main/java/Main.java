@@ -10,6 +10,10 @@ import scheduler.Scheduler;
 public class Main {
 
   public static void main(String[] args) {
+    long timend;
+    final long timestart = System.currentTimeMillis();
+
+
     System.out.println("START OF PROGRAM");
     ResourceConstraint rc = new ResourceConstraint();
     if (args.length > 1) {
@@ -48,11 +52,22 @@ public class Main {
 
     System.out.println("STARTING BULB SCHEDULE");
     System.out.println("");
-    s = new BULB(rc, asap, alap);
+    BULB bulb_sched =new BULB(rc, asap, alap,50);
+    s = bulb_sched;
+
     Schedule bulb = s.schedule(g);
+
     System.out.printf("%nBULB%n%s%n", bulb.diagnose());
     ((BULB) s).getBulbGraph().print();
     bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
     System.out.println("END OF BULB SCHEDULE");
+
+    timend = System.currentTimeMillis()-timestart;
+    System.out.println(timend);
+    System.out.println("Duration of Bulb :" +(timend/60) + " S" );
+    timend = timend % 60;
+    System.out.println("Duration of Bulb :" +(timend) + " mS" );
+
+
   }
 }

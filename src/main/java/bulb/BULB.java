@@ -4,15 +4,16 @@ import java.util.*;
 
 import scheduler.*;
 
-public class BULB extends Scheduler {
+public class BULB extends Scheduler{
 
     private final ResourceConstraint resourceConstraint;
 
     private Graph dfg;
-
+    private final long startTimeOfBULB;
+    private final long endTimeOfBULB;
+    private final long maxDurationOfBULB;
     private Map<Node, Interval> asapValues;
     private Map<Node, Interval> alapValues;
-
     private final Schedule asapSchedule;
     private final Schedule alapSchedule;
 
@@ -30,7 +31,10 @@ public class BULB extends Scheduler {
         return bulbGraph;
     }
 
-    public BULB(final ResourceConstraint rc, final Schedule asap, final Schedule alap) {
+    public BULB(final ResourceConstraint rc, final Schedule asap, final Schedule alap, final long maxDurationOfBulb) {
+        this.startTimeOfBULB = System.currentTimeMillis();
+        this.maxDurationOfBULB =  maxDurationOfBulb;
+        this.endTimeOfBULB = startTimeOfBULB + this.maxDurationOfBULB;
         this.resourceConstraint = rc;
 
         this.asapSchedule = asap;
@@ -77,7 +81,7 @@ public class BULB extends Scheduler {
 
         enumerate(new Schedule(), 0, root, nodesDFG);
 
-        return bestSchedule;
+       return bestSchedule;
     }
 
     /**
@@ -87,7 +91,12 @@ public class BULB extends Scheduler {
      * @param i       - the current node in the DFG
      */
     private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) {
-        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " START OF BULB ENUMERATE " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " START OF BULB ENUMERATE at " +(this.endTimeOfBULB-System.currentTimeMillis()) + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        // check if time is over
+        if(this.endTimeOfBULB <= System.currentTimeMillis()){
+            return;
+        }
         System.out.printf("%nBULB partial%n%s%n", partial.diagnose());
 
         List<Node> nodesDFG = new ArrayList<>(nodes);
@@ -163,6 +172,8 @@ public class BULB extends Scheduler {
                     this.bestSchedule = upperBoundSchedule(updatedPartial, i, nodesDFG.subList(i + 1, nodesDFG.size()));
                     decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                 }
+
+
 
                 //at this point the algo stops if u_bound == l_bound, and we have the best schedule
                 if (l_bound < this.bestLatency) {
@@ -446,4 +457,6 @@ public class BULB extends Scheduler {
         }
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " END OF BULB UPDATE_ASAP " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
+
+
 }
