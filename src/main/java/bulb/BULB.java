@@ -150,6 +150,8 @@ public class BULB extends Scheduler {
                 updatedPartial.remove(currentOperation);
                 updatedPartial.add(currentOperation, duration, resName);
 
+                //TODO: frist update ASAP is missing! move first (empty) bulb node inspection inside enumerate
+
                 System.out.printf("i=%d; Calculating lower bound for %s in interval %s%n", i, currentOperation, duration);
                 int l_bound = 0;
                 switch (this.lBoundEstimator) {
