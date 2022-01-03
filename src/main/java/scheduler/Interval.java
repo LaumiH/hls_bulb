@@ -53,6 +53,10 @@ public final class Interval {
     }
   }
 
+  public Interval copy() {
+    return new Interval(this.lbound, this.ubound);
+  }
+
   /**
    * Returns TRUE iff N is contained in the interval.
    *

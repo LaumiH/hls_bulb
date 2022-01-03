@@ -1,10 +1,6 @@
 package scheduler;
 
-import java.util.Iterator;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Formatter;
+import java.util.*;
 
 public class Graph implements Iterable<Node> {
     private final HashMap<Node, Node> nodes;
@@ -121,6 +117,29 @@ public class Graph implements Iterable<Node> {
             }
         }
         return dist.get(src);
+    }
+
+    /**
+     * Calculates how many steps are in between the nodes,
+     * so basically u_bound pred - l_bound succ
+     * @param pred
+     * @param succ
+     * @return
+     */
+    public int distance(Node pred, Node succ) {
+        if (!pred.reallyAllSuccessors().contains(succ)) {
+            System.out.printf("%s is no successor of %s!!%n", succ, pred);
+            return 0;
+        }
+        int distance = 0;
+        int currentDistance = pred.getDelay();
+        if (pred.allSuccessors().containsKey(succ)) return currentDistance;  //succ is direct successor
+        if (pred.allSuccessors().isEmpty()) return -Integer.MAX_VALUE; //went down wrong path
+        //otherwise there are nodes in between
+        for (Node node : pred.allSuccessors().keySet()) {
+            distance = Math.max(distance, currentDistance + distance(node, succ));
+        }
+        return distance;
     }
 
     public Node find_node(HashMap<Node, Integer>dist, Set<Node> Q, Node src) {

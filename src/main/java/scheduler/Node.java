@@ -1,8 +1,6 @@
 package scheduler;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Formatter;
+import java.util.*;
 
 /** This class represents a single node. */
 public class Node {
@@ -45,6 +43,37 @@ public class Node {
         unhandled_pred = new HashSet<>();
     }
 
+    public Node clone() {
+        Node clone = new Node(this.id, this.rt);
+        HashMap<Node, Integer> predecessors = new HashMap<>(this.predecessors);
+        HashMap<Node, Integer> successors = new HashMap<>(this.successors);
+        for (Map.Entry<Node, Integer> entry : predecessors.entrySet()) {
+            clone.prepend(entry.getKey(), entry.getValue());
+            entry.getKey().remove(this);
+            entry.getKey().append(clone, entry.getValue());
+        }
+        for (Map.Entry<Node, Integer> entry : successors.entrySet()) {
+            clone.append(entry.getKey(), entry.getValue());
+            entry.getKey().remove(this);
+            entry.getKey().prepend(clone, entry.getValue());
+        }
+        for (Node node : this.unhandled_pred) {
+            clone.unhandled_pred.add(node);
+        }
+        for (Node node : this.unhandled_succ) {
+            clone.unhandled_succ.add(node);
+        }
+        return clone;
+    }
+
+    public void setUnhandled_succ(HashSet<Node> unhandled_succ) {
+        this.unhandled_succ = unhandled_succ;
+    }
+
+    public void setUnhandled_pred(HashSet<Node> unhandled_pred) {
+        this.unhandled_pred = unhandled_pred;
+    }
+
     /**
      * Adds node n to the successors of this node. The edge weight is w.
      *
@@ -83,6 +112,17 @@ public class Node {
         unhandled_succ.remove(n);
         unhandled_pred.remove(n);
         return successors.remove(n) != null || predecessors.remove(n) != null;
+    }
+
+    public boolean removeById(String id) {
+        for (Node n : unhandled_pred) {
+            if (id.equals(n.id)) return unhandled_pred.remove(n);
+        }
+
+        for (Node n : unhandled_succ) {
+            if (id.equals(n.id)) return unhandled_succ.remove(n);
+        }
+        return false;
     }
 
     /**
@@ -163,6 +203,22 @@ public class Node {
     @SuppressWarnings("unchecked")
     public HashMap<Node, Integer> allSuccessors() {
         return (HashMap<Node, Integer>) successors.clone();
+    }
+
+    public Set<Node> reallyAllSuccessors() {
+        //System.out.printf("\t\t\treallyAllSuccessors: calculating successors for %s%n", this.id);
+        List<Node> successors = new ArrayList<>(this.successors.keySet());
+        //System.out.printf("Successors of %s: %s%n", this, successors);
+        Set<Node> allSuccessors = new HashSet<>();
+        if (successors.isEmpty()) return new HashSet<>(successors);
+        for (int i=0; i<successors.size(); i++) {
+            Node node = successors.get(i);
+            //System.out.printf("%s is a successor of %s%n", node, this);
+            allSuccessors.add(node);
+            allSuccessors.addAll(node.reallyAllSuccessors());
+        }
+        //System.out.printf("\t\tcurrently collected successors: %s%n", allSuccessors);
+        return allSuccessors;
     }
 
     /**
