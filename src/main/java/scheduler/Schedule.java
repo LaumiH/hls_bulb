@@ -42,6 +42,10 @@ public class Schedule {
     return this.resources;
   }
 
+  public Map<Integer, Set<Node>> getSlots() {
+    return slots;
+  }
+
   /**
    * Add a node to the schedule during the given interval
    *

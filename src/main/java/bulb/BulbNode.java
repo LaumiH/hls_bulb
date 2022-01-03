@@ -2,6 +2,7 @@ package bulb;
 
 import java.util.*;
 
+import scheduler.Node;
 import scheduler.Schedule;
 
 public class BulbNode {
@@ -11,12 +12,14 @@ public class BulbNode {
     private Schedule schedule;
     private int u_bound;
     private int l_bound;
+    private boolean valid;
 
     public BulbNode(HashSet<BulbNode> children, Schedule schedule, int l_bound, int u_bound) {
         this.children = children;
         this.schedule = schedule;
         this.u_bound = u_bound;
         this.l_bound = l_bound;
+        this.valid = false;
     }
 
     public HashSet<BulbNode> predecessors() {
@@ -27,6 +30,14 @@ public class BulbNode {
             parent = parent.getParent();
         }
         return predecessors;
+    }
+
+    public boolean isValid() {
+        return valid;
+    }
+
+    public void setValid(boolean valid) {
+        this.valid = valid;
     }
 
     public BulbNode getParent() {
@@ -76,10 +87,20 @@ public class BulbNode {
     }
 
     private void print(StringBuilder buffer, String prefix, String childrenPrefix) {
+        String tab = "";
+        if (this.parent != null) tab = "    ";
         buffer.append(prefix);
-        buffer.append("l_bound: ").append(l_bound).append("\n");
-        buffer.append("u_bound: ").append(u_bound);
-        buffer.append("\n").append(this.schedule.diagnose()).append("\n");
+        if (valid) {
+            buffer.append("l_bound: ").append(l_bound).append(", ");
+            buffer.append("u_bound: ").append(u_bound).append("\n");
+        } else {
+            buffer.append("invalid schedule").append("\n");
+        }
+        buffer.append(tab);
+        buffer.append("Fixed nodes: ").append(this.schedule.nodes()).append("\n");
+        buffer.append(tab);
+        buffer.append("Investigated schedule: ").append(this.schedule.getSlots()).append("\n");
+        //buffer.append(this.schedule.diagnose()).append("\n");
         for (Iterator<BulbNode> it = children.iterator(); it.hasNext();) {
             BulbNode next = it.next();
             if (it.hasNext()) {

@@ -127,13 +127,17 @@ public class Graph implements Iterable<Node> {
      * @return
      */
     public int distance(Node pred, Node succ) {
+        if (!pred.reallyAllSuccessors().contains(succ)) {
+            System.out.printf("%s is no successor of %s!!%n", succ, pred);
+            return 0;
+        }
         int distance = 0;
-        for (Node node : pred.successors()) {
-            if (node.equals(succ)) {
-                return distance;
-            } else {
-                distance = distance + pred.getDelay() + distance(node, succ);
-            }
+        int currentDistance = pred.getDelay();
+        if (pred.allSuccessors().containsKey(succ)) return currentDistance;  //succ is direct successor
+        if (pred.allSuccessors().isEmpty()) return -Integer.MAX_VALUE; //went down wrong path
+        //otherwise there are nodes in between
+        for (Node node : pred.allSuccessors().keySet()) {
+            distance = Math.max(distance, currentDistance + distance(node, succ));
         }
         return distance;
     }

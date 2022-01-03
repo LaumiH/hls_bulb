@@ -205,20 +205,21 @@ public class Node {
         return (HashMap<Node, Integer>) successors.clone();
     }
 
+    //does not work when there is a 1-2-1 relationship in a graph
     public Set<Node> reallyAllSuccessors() {
-        Set<Node> successors = new HashSet<>(this.successors.keySet());
-        for (Node node : successors) {
-            successors.addAll(node.reallyAllSuccessors());
+        System.out.printf("reallyAllSuccessors: calculating successors for %s%n", this.id);
+        List<Node> successors = new ArrayList<>(this.successors.keySet());
+        //System.out.printf("Successors of %s: %s%n", this, successors);
+        Set<Node> allSuccessors = new HashSet<>();
+        if (successors.isEmpty()) return new HashSet<>(successors);
+        for (int i=0; i<successors.size(); i++) {
+            Node node = successors.get(i);
+            //System.out.printf("%s is a successor of %s%n", node, this);
+            allSuccessors.add(node);
+            allSuccessors.addAll(node.reallyAllSuccessors());
         }
-        return successors;
-    }
-
-    public Set<Node> reallyAllPredecessors() {
-        Set<Node> predecessors = new HashSet<>(this.predecessors.keySet());
-        for (Node node : predecessors) {
-            predecessors.addAll(node.reallyAllPredecessors());
-        }
-        return predecessors;
+        System.out.printf("\t\tcurrently collected successors: %s%n", allSuccessors);
+        return allSuccessors;
     }
 
     /**

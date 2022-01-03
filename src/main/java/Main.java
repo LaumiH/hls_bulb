@@ -32,7 +32,7 @@ public class Main {
     Scheduler s = new ASAP();
     Schedule asap = s.schedule(g);
     System.out.printf("%nASAP%n%s%n", asap.diagnose());
-    System.out.printf("cost = %s%n", asap.cost());
+    //System.out.printf("cost = %s%n", asap.cost());
     asap.draw("schedules/ASAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
     System.out.println("FINISHED ASAP SCHEDULE");
     System.out.println("");
@@ -40,12 +40,12 @@ public class Main {
     System.out.println("DOING ALAP SCHEDULE");
     s = new ALAP();
     Schedule alap = s.schedule(g);
-    System.out.printf("%nALAP%n%s%n", alap.diagnose());
+    //System.out.printf("%nALAP%n%s%n", alap.diagnose());
     System.out.printf("cost = %s%n", alap.cost());
     alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
-
     System.out.println("FINISHED ALAP SCHEDULE");
     System.out.println("");
+
     System.out.println("STARTING BULB SCHEDULE");
     System.out.println("");
     s = new BULB(rc, asap, alap);
