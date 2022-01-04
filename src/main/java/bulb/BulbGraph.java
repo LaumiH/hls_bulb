@@ -29,7 +29,9 @@ public class BulbGraph {
     }
 
     public void print() {
-        System.out.printf("BULB tree contains %d nodes, %d nodes were further inspected, %d nodes violate resource constraints%n", this.nodes.size(), this.inspectedNodes, this.nodes.size()-this.inspectedNodes);
+        System.out.printf("BULB tree contains %d nodes%n", this.nodes.size());
+        System.out.printf("%d nodes were further inspected, %d nodes violate resource constraints%n",
+                this.inspectedNodes, this.nodes.size() - this.inspectedNodes);
         System.out.println("Print BULB tree:");
         System.out.println(this.root.toString());
     }

@@ -12,7 +12,7 @@ public class ListScheduler {
         System.out.println("\tDISPLAY PARTIAL SCHEDULE");
         System.out.println(partial.diagnose());
         System.out.println("\tDISPLAY ALLOCATED RES");
-        for(Integer i : allocation.keySet()){
+        for (Integer i : allocation.keySet()) {
             System.out.println(allocation.get(i));
         }
 
@@ -58,7 +58,7 @@ public class ListScheduler {
 
         Set<Node> nodes;
         for (Node nd : clone) { // Sort the nodes after number of successors
-            int succ = amnt_of_successors(nd)-1;
+            int succ = amnt_of_successors(nd) - 1;
             nodes = priority_sorted_list.get(-succ);
 
             if (nodes == null) {
@@ -118,7 +118,7 @@ public class ListScheduler {
 
                 // check if res has free spot
                 //loop until all res are used or all nodes are checked
-                for (Map.Entry<Integer,Set<Node>> entry : priority_sorted_list.entrySet()) { // loop through the all priorities
+                for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) { // loop through the all priorities
                     for (Node nd : entry.getValue()) {  // nodes with currently the highest priority
                         System.out.println("\t\tCurrently checked Node: " + nd);
                         ResourceType needed_res = nd.getResourceType();
@@ -148,7 +148,7 @@ public class ListScheduler {
 
 
             }
-            System.out.println("");
+            System.out.println();
 
             int min_delay = Integer.MAX_VALUE;
             System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
@@ -188,7 +188,7 @@ public class ListScheduler {
             System.out.println();
             copy_test.clear();
 
-            for (Map.Entry<Integer,Set<Node>> entry : priority_sorted_list.entrySet()) {
+            for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) {
                 // check if all nodes have been scheduled
                 if (entry.getValue().isEmpty()) {
                     System.out.println("\t\tNodes with priority " + entry.getKey() + " is empty");
@@ -206,7 +206,7 @@ public class ListScheduler {
            /* if (runs == 4) {
                 break;// check if min delay is minimum after second round
             }*/
-            System.out.printf("Finished Iteration %d%n", runs-1);
+            System.out.printf("Finished Iteration %d%n", runs - 1);
             if (runs > 10) {
                 System.out.println("Something went wrong, taking way too many iterations!");
                 break;

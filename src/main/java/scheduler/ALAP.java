@@ -13,13 +13,12 @@ public class ALAP extends Scheduler {
     public ALAP() {
         lmax = 0;
     }
+
     public ALAP(int lmax) {
-        this.lmax = lmax-1;
+        this.lmax = lmax - 1;
     }
 
     public Schedule schedule(final Graph sg) {
-
-        Graph g = sg;
 
         Map<Node, Interval> queue = new HashMap<>();
         Map<Node, Interval> qq;
@@ -27,10 +26,10 @@ public class ALAP extends Scheduler {
         Schedule schedule = new Schedule();
         int min = lmax;
 
-        for (Node nd : g)
+        for (Node nd : sg)
             if (nd.isLeaf())
                 queue.put(nd, new Interval(lmax + 1 - nd.getDelay(), lmax));
-        if(queue.size() == 0)
+        if (queue.size() == 0)
             System.out.println("No leaf in Graph found. Empty or cyclic graph");
 
 
@@ -44,10 +43,10 @@ public class ALAP extends Scheduler {
 
                 schedule.add(nd, slot);
                 for (Node l : nd.predecessors()) {
-                    g.handle(l, nd);
+                    sg.handle(l, nd);
                     Interval ii = min_queue.get(l);
                     if (ii == null || slot.lbound <= ii.ubound) {
-                        ii = new Interval(slot.lbound-l.getDelay(), slot.lbound-1);
+                        ii = new Interval(slot.lbound - l.getDelay(), slot.lbound - 1);
                         min_queue.put(l, ii);
                     }
                     if (!l.bottom())
@@ -65,7 +64,7 @@ public class ALAP extends Scheduler {
             }
             queue = qq;
         }
-        g.reset();
+        sg.reset();
 
         if (lmax == 0)
             return schedule.shift(-(min));

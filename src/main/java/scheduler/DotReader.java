@@ -1,8 +1,8 @@
 package scheduler;
 
-import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,9 +26,9 @@ import java.util.regex.Pattern;
  * See parse().
  */
 public class DotReader {
+    private final boolean readBackEdges;
     //	private BufferedReader file_reader;
     private Graph graph;
-    private final boolean readBackEdges;
 
     public DotReader(boolean readBackEdges) {
         this.readBackEdges = readBackEdges;
@@ -47,8 +47,8 @@ public class DotReader {
 
                 /* new node */
                 m = pat_def.matcher(line);
-                if (m.matches()){
-                    if (m.group(1).compareTo("node") != 0){
+                if (m.matches()) {
+                    if (m.group(1).compareTo("node") != 0) {
                         Node n = new Node(m.group(1));
                         graph.add(n);
                         graph.get(n).setResourceType(ResourceType.getResourceType(m.group(2)));
@@ -56,18 +56,18 @@ public class DotReader {
                 }
                 /* link */
                 m = pat_use.matcher(line);
-                if (m.matches()){
-                    if (graph.link(new Node(m.group(1)), new Node(m.group(2)),0) == null) {
+                if (m.matches()) {
+                    if (graph.link(new Node(m.group(1)), new Node(m.group(2)), 0) == null) {
                         System.err.printf("ERROR: Found circular graph%n");
                         System.exit(-1);
                     }
                 }
 
-                if(readBackEdges){
+                if (readBackEdges) {
                     m = pat_itdep.matcher(line);
-                    if (m.matches()){
+                    if (m.matches()) {
                         int it = Integer.parseInt(m.group(3).split("\"")[1]);
-                        if (graph.link(new Node(m.group(1)), new Node(m.group(2)),it) == null) {
+                        if (graph.link(new Node(m.group(1)), new Node(m.group(2)), it) == null) {
                             System.err.printf("ERROR: Found circular graph%n");
                             System.exit(-1);
                         }

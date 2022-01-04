@@ -2,18 +2,21 @@ package scheduler;
 
 public enum ResourceType {
 
-    MEM (2, 9.0, "Mem"),
-    ADD (1, 1.0, "Add"),
-    SUB (1, 1.4, "Sub"),
+    MEM(2, 9.0, "Mem"),
+    ADD(1, 1.0, "Add"),
+    SUB(1, 1.4, "Sub"),
     MUL (4, 2.3, "Mul"),
-    //MUL (1, 1.0, "Mul"),
-    DIV (18, 4.3, "Div"),
-    SH (1, 2.0, "Shift"),
-    AND (1, 2.0, "And"),
-    OR (1, 2.0, "Or"),
-    CMP (1, 2.1, "Cmp"),
-    OTHER (1, 1.0, "Other"),
-    SLACK(1, 0.0, "Slack");
+    DIV(18, 4.3, "Div"),
+    SH(1, 2.0, "Shift"),
+    AND(1, 2.0, "And"),
+    OR(1, 2.0, "Or"),
+    CMP(1, 2.1, "Cmp"),
+    OTHER(1, 1.0, "Other"),
+    SLACK(1, 0.0, "Slack"),
+
+    //for the paper
+    A(1, 1.0, "A"),
+    B(1, 1.0, "B");
 
     /**
      * Delay (duration) of this resource type
@@ -38,13 +41,14 @@ public enum ResourceType {
 
     /**
      * Get the resource type for the given string.
+     *
      * @param id - the ID of the node to get the resource type from
      * @return the resource type. ResourceType.OTHER if none was found
      */
-    public static ResourceType getResourceType(String id){
+    public static ResourceType getResourceType(String id) {
         if (id.contains("MUL")) {
             return ResourceType.MUL;
-        } else if (id.contains("ADD")|| id.contains("INC")) {
+        } else if (id.contains("ADD") || id.contains("INC")) {
             return ResourceType.ADD;
         } else if (id.contains("DIV")) {
             return ResourceType.DIV;
@@ -62,6 +66,11 @@ public enum ResourceType {
             return ResourceType.OR;
         } else if (id.contains("IF") || id.contains("CMP")) {
             return ResourceType.CMP;
+        //for the paper
+        } else if (id.contains("A")) {
+            return ResourceType.A;
+        } else if (id.contains("B")) {
+            return ResourceType.B;
         } else {
             return ResourceType.OTHER;
         }
