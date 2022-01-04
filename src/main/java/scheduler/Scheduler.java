@@ -7,6 +7,7 @@ package scheduler;
 public abstract class Scheduler {
     /**
      * Use the graph given to create a schedule.
+     *
      * @param sg - the dependency graph
      * @return a schedule for the given graph
      */

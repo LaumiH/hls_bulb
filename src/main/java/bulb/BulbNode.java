@@ -1,9 +1,10 @@
 package bulb;
 
-import java.util.*;
-
-import scheduler.Node;
 import scheduler.Schedule;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class BulbNode {
 
@@ -25,7 +26,7 @@ public class BulbNode {
     public HashSet<BulbNode> predecessors() {
         HashSet<BulbNode> predecessors = new HashSet<>();
         BulbNode parent = (this.parent);
-        while(parent.getParent() != null) {
+        while (parent.getParent() != null) {
             predecessors.add(parent);
             parent = parent.getParent();
         }
@@ -96,7 +97,7 @@ public class BulbNode {
         }
         buffer.append("Investigated partial schedule: ").append(this.schedule.getSlots()).append("; ");
         buffer.append('\n');
-        for (Iterator<BulbNode> it = children.iterator(); it.hasNext();) {
+        for (Iterator<BulbNode> it = children.iterator(); it.hasNext(); ) {
             BulbNode next = it.next();
             if (it.hasNext()) {
                 next.print(buffer, childrenPrefix + "├── ", childrenPrefix + "│   ");

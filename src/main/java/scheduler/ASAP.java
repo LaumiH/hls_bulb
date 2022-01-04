@@ -5,20 +5,18 @@ import java.util.Map;
 
 public class ASAP extends Scheduler {
 
-    public Schedule schedule(final Graph sourceGraph) {
+    public Schedule schedule(final Graph sg) {
         Map<Node, Interval> queue = new HashMap<>();
         Map<Node, Interval> qq;
         Map<Node, Interval> minslot = new HashMap<>();
         Schedule schedule = new Schedule();
 
-        Graph g = sourceGraph;
-
-        for (Node node : g) {
+        for (Node node : sg) {
             if (node.isRoot())
                 // interval is as long as resource type duration
                 queue.put(node, new Interval(0, node.getDelay() - 1));
         }
-        if(queue.size() == 0)
+        if (queue.size() == 0)
             System.out.println("No root in Graph found. Empty or cyclic graph");
 
         while (queue.size() > 0) {
@@ -29,15 +27,15 @@ public class ASAP extends Scheduler {
                 schedule.add(node, slot);
 
                 for (Node successor : node.successors()) {
-                    g.handle(node, successor);
+                    sg.handle(node, successor);
 
                     Interval ii = minslot.get(successor);
                     if (ii == null)
                         minslot.put(successor, new Interval(slot.ubound + 1,
-                            slot.ubound + successor.getDelay()));
+                                slot.ubound + successor.getDelay()));
                     else if (ii.lbound.compareTo(slot.ubound) <= 0)
                         minslot.put(successor, new Interval(slot.ubound + 1,
-                            slot.ubound + successor.getDelay()));
+                                slot.ubound + successor.getDelay()));
 
                     if (!successor.top())
                         continue;
@@ -53,7 +51,7 @@ public class ASAP extends Scheduler {
             }
             queue = qq;
         }
-        g.reset();
+        sg.reset();
 
         return schedule;
     }
