@@ -2,22 +2,35 @@ package scheduler;
 
 import java.util.*;
 
-/** This class represents a single node. */
+/**
+ * This class represents a single node.
+ */
 public class Node {
-    /** Map of successor nodes and their edge weight */
-    private final HashMap<Node, Integer> successors;
-    // contains all successors as key - the value is the edge weight
-    /** Map of predecessors and their edge weight */
-    private final HashMap<Node, Integer> predecessors;
-    // contains all predecessors as key - the value is the edge weight
-    /** Set of unhandled successors */
-    private HashSet<Node> unhandled_succ;
-    /** Set of unhandled predecessors */
-    private HashSet<Node> unhandled_pred;
-
-    /** ID for this node - unique name */
+    /**
+     * ID for this node - unique name
+     */
     public final String id;
-    /** Resource type of this node */
+    // contains all successors as key - the value is the edge weight
+    /**
+     * Map of successor nodes and their edge weight
+     */
+    private final HashMap<Node, Integer> successors;
+    // contains all predecessors as key - the value is the edge weight
+    /**
+     * Map of predecessors and their edge weight
+     */
+    private final HashMap<Node, Integer> predecessors;
+    /**
+     * Set of unhandled successors
+     */
+    private HashSet<Node> unhandled_succ;
+    /**
+     * Set of unhandled predecessors
+     */
+    private HashSet<Node> unhandled_pred;
+    /**
+     * Resource type of this node
+     */
     private ResourceType rt;
 
     /**
@@ -33,7 +46,9 @@ public class Node {
         this.rt = rt;
     }
 
-    /** @param id - ID of the new node */
+    /**
+     * @param id - ID of the new node
+     */
     public Node(String id) {
         this.id = id;
         rt = ResourceType.getResourceType(id);
@@ -175,7 +190,9 @@ public class Node {
         return unhandled_succ.size() == 0;
     }
 
-    /** Mark all nodes as unhandled again */
+    /**
+     * Mark all nodes as unhandled again
+     */
     public void reset() {
         unhandled_succ = successors();
         unhandled_pred = predecessors();
@@ -211,7 +228,7 @@ public class Node {
         //System.out.printf("Successors of %s: %s%n", this, successors);
         Set<Node> allSuccessors = new HashSet<>();
         if (successors.isEmpty()) return new HashSet<>(successors);
-        for (int i=0; i<successors.size(); i++) {
+        for (int i = 0; i < successors.size(); i++) {
             Node node = successors.get(i);
             //System.out.printf("%s is a successor of %s%n", node, this);
             allSuccessors.add(node);
@@ -276,14 +293,14 @@ public class Node {
             f.format("  successors%n");
             for (Node nd : successors.keySet())
                 f.format(
-                    "   %s \t%d%n", nd, getSuccWeight(nd)); // write the successors plus the edge weight
+                        "   %s \t%d%n", nd, getSuccWeight(nd)); // write the successors plus the edge weight
         }
         if (predecessors.size() > 0) {
             f.format("  predecessors%n");
             for (Node nd : predecessors.keySet())
                 f.format(
-                    "   %s \t%d%n",
-                    nd, getPredWeight(nd)); // write the predecessors plus the edge weight
+                        "   %s \t%d%n",
+                        nd, getPredWeight(nd)); // write the predecessors plus the edge weight
         }
 
         String ret = f.toString();
@@ -313,21 +330,21 @@ public class Node {
     }
 
     /**
-     * Set the resource type for this node
-     *
-     * @param rt - new resource type of this node
-     */
-    public void setResourceType(ResourceType rt) {
-        this.rt = rt;
-    }
-
-    /**
      * Get the resource type for this node
      *
      * @return this nodes resource type
      */
     public ResourceType getResourceType() {
         return this.rt;
+    }
+
+    /**
+     * Set the resource type for this node
+     *
+     * @param rt - new resource type of this node
+     */
+    public void setResourceType(ResourceType rt) {
+        this.rt = rt;
     }
 
     /**

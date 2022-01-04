@@ -19,6 +19,7 @@ public class Graph implements Iterable<Node> {
 
     /**
      * Links two nodes to each other for top-down linking.
+     *
      * @param pred preceding node
      * @param succ successing node
      * @return returns the SUCC if everything went fine, NULL otherwise
@@ -35,6 +36,7 @@ public class Graph implements Iterable<Node> {
 
     /**
      * Links two nodes to each other for bottom-up linking.
+     *
      * @param pred preceding node
      * @param succ successing node
      * @return returns the PRED if everything went fine, NULL otherwise
@@ -62,6 +64,7 @@ public class Graph implements Iterable<Node> {
         a.handle(b);
         b.handle(a);
     }
+
     public void reset() {
         for (Node n : nodes.keySet())
             n.reset();
@@ -84,7 +87,7 @@ public class Graph implements Iterable<Node> {
 	*/
 
     public Integer dijkstra(Node src) {
-        HashMap<Node,Integer> dist = new HashMap<>();
+        HashMap<Node, Integer> dist = new HashMap<>();
         //HashMap<Node, Node> prev = new HashMap<>();
         Set<Node> Q = new HashSet<>();
         for (Node nd : nodes.keySet()) {
@@ -122,6 +125,7 @@ public class Graph implements Iterable<Node> {
     /**
      * Calculates how many steps are in between the nodes,
      * so basically u_bound pred - l_bound succ
+     *
      * @param pred
      * @param succ
      * @return
@@ -142,7 +146,7 @@ public class Graph implements Iterable<Node> {
         return distance;
     }
 
-    public Node find_node(HashMap<Node, Integer>dist, Set<Node> Q, Node src) {
+    public Node find_node(HashMap<Node, Integer> dist, Set<Node> Q, Node src) {
         Integer d = Integer.MAX_VALUE;
         Node dest = null;
         for (Node nd : Q) {
@@ -157,7 +161,7 @@ public class Graph implements Iterable<Node> {
     public Node validate() {
         System.out.printf("Validating graph%n");
         Integer s;
-        for (Node nd: nodes.keySet()) {
+        for (Node nd : nodes.keySet()) {
             if (nd.isRoot()) {
                 s = dijkstra(nd);
                 if (s.compareTo(Integer.MAX_VALUE) != 0)
@@ -170,6 +174,7 @@ public class Graph implements Iterable<Node> {
     /**
      * Simple diagnostic function. Invokes diagnose() for each registered
      * node in turn.
+     *
      * @return A String containing the output of diagnose() of each node
      * separated by newlines.
      */
