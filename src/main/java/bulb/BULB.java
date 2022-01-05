@@ -121,9 +121,6 @@ public class BULB extends Scheduler {
             Map<Node, Interval> saveAlap = new HashMap<>(alapValues);
 
             //do not change partial schedule during loop
-            if (partial.size()==2) {
-                System.out.println("Stop here");
-            }
             Schedule updatedPartial = partial.clone();
             updatedPartial.getResources().putAll(partial.getResources());
 

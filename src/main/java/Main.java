@@ -97,9 +97,38 @@ public class Main {
         bulb3.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("END OF BULB SCHEDULE");
 
-        System.out.println("\n\n\nComparing schedules");
+
+        System.out.println("\n\n\nComparing schedules:");
+        System.out.println(
+                "\tasap lower bound estimator,\n" +
+                "\tupper bound estimator from paper,\n" +
+                "\tnormal alap schedule in enumerate for loop\n\n" +
+                "with\n" +
+                "\tasap lower bound estimator,\n" +
+                "\tlist scheduler upper bound estimator,\n" +
+                "\tnormal alap schedule in enumerate for loop");
         bulb1.compare(bulb2);
+
+        System.out.println("\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
+        System.out.println(
+                "\tasap lower bound estimator,\n" +
+                "\tupper bound estimator from paper,\n" +
+                "\tnormal alap schedule in enumerate for loop\n\n" +
+                "with\n" +
+                "\tlower bound estimator from paper,\n" +
+                "\tupper bound estimator from paper,\n" +
+                "\tlazy alap schedule in enumerate for loop");
         bulb1.compare(bulb3);
+
+        System.out.println("\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
+        System.out.println(
+                "\tasap lower bound estimator,\n" +
+                "\tlist scheduler upper bound estimator,\n" +
+                "\tnormal alap schedule in enumerate for loop" +
+                "with\n" +
+                "\tlower bound estimator from paper,\n" +
+                "\tupper bound estimator from paper,\n" +
+                "\tlazy alap schedule in enumerate for loop");
         bulb2.compare(bulb3);
     }
 }
