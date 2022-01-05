@@ -32,33 +32,74 @@ public class Main {
         System.out.println("FINISHED ASAP SCHEDULE");
         System.out.println();
 
-        System.out.println("DOING ALAP SCHEDULE");
-        s = new ALAP();
-        Schedule alap = s.schedule(g);
-        System.out.printf("%nALAP%n%s%n", alap.diagnose());
+        System.out.println("DOING LAZY ALAP SCHEDULE");
+        Scheduler lazyAlap = new ALAP("lazy");
+        Schedule lazy_alap = lazyAlap.schedule(g);
+        System.out.printf("%nALAP%n%s%n", lazy_alap.diagnose());
         //System.out.printf("cost = %s%n", alap.cost());
-        alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+        lazy_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("FINISHED ALAP SCHEDULE");
         System.out.println();
 
-
-        System.out.println("STARTING BULB SCHEDULE");
-        s = new BULB("ASAP", rc, asap, alap);
-        Schedule bulb = s.schedule(g);
-        System.out.printf("%nBULB%n%s%n", bulb.diagnose());
-        ((BULB) s).getBulbGraph().print();
-        bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
-        System.out.println("END OF BULB SCHEDULE");
-
-
-        System.out.println("STARTING BULB SCHEDULE");
+        System.out.println("DOING NORMAL ALAP SCHEDULE");
+        Scheduler normalAlap = new ALAP("normal");
+        Schedule normal_alap = normalAlap.schedule(g);
+        System.out.printf("%nALAP%n%s%n", normal_alap.diagnose());
+        //System.out.printf("cost = %s%n", alap.cost());
+        normal_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+        System.out.println("FINISHED ALAP SCHEDULE");
         System.out.println();
-        s = new BULB("PAPER", rc, asap, alap);
-        bulb = s.schedule(g);
-        System.out.printf("%nBULB%n%s%n", bulb.diagnose());
+
+        /*
+        ###########################################################################################
+         */
+
+        /*
+         * 1
+         */
+        System.out.println("STARTING BULB SCHEDULE with \n" +
+                "\tasap lower bound estimator,\n" +
+                "\tupper bound estimator from paper,\n" +
+                "\tnormal alap schedule in enumerate for loop");
+        s = new BULB("ASAP", "PAPER", rc, asap, normal_alap);
+        Schedule bulb1 = s.schedule(g);
+        System.out.printf("%nBULB%n%s%n", bulb1.diagnose());
         ((BULB) s).getBulbGraph().print();
-        bulb.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+        bulb1.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("END OF BULB SCHEDULE");
 
+        /*
+         * 2
+         */
+        System.out.println("STARTING BULB SCHEDULE with \n" +
+                "\tasap lower bound estimator,\n" +
+                "\tlist scheduler upper bound estimator,\n" +
+                "\tnormal alap schedule in enumerate for loop");
+        s = new BULB("ASAP", "LIST", rc, asap, normal_alap);
+        Schedule bulb2 = s.schedule(g);
+        System.out.printf("%nBULB%n%s%n", bulb2.diagnose());
+        ((BULB) s).getBulbGraph().print();
+        bulb2.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+        System.out.println("END OF BULB SCHEDULE");
+
+        /*
+         * 3
+         */
+        System.out.println("STARTING BULB SCHEDULE with \n" +
+                "\tlower bound estimator from paper,\n" +
+                "\tupper bound estimator from paper,\n" +
+                "\tlazy alap schedule in enumerate for loop");
+        System.out.println();
+        s = new BULB("PAPER", "PAPER", rc, asap, lazy_alap);
+        Schedule bulb3 = s.schedule(g);
+        System.out.printf("%nBULB%n%s%n", bulb3.diagnose());
+        ((BULB) s).getBulbGraph().print();
+        bulb3.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+        System.out.println("END OF BULB SCHEDULE");
+
+        System.out.println("\n\n\nComparing schedules");
+        bulb1.compare(bulb2);
+        bulb1.compare(bulb3);
+        bulb2.compare(bulb3);
     }
 }

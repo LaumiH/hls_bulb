@@ -11,9 +11,9 @@ public class ListScheduler {
         System.out.println("START OF LIST SCHEDULING !!!");
         System.out.println("\tDISPLAY PARTIAL SCHEDULE");
         System.out.println(partial.diagnose());
-        System.out.println("\tDISPLAY ALLOCATED RES");
+        //System.out.println("\tDISPLAY ALLOCATED RES");
         for (Integer i : allocation.keySet()) {
-            System.out.println(allocation.get(i));
+            //System.out.println(allocation.get(i));
         }
 
         //do not overwrite nodes from BULB
@@ -62,12 +62,12 @@ public class ListScheduler {
             nodes = priority_sorted_list.get(-succ);
 
             if (nodes == null) {
-                System.out.println("\t\tEmpty List with priority : " + succ);
+                //System.out.println("\t\tEmpty List with priority : " + succ);
                 nodes = new HashSet<>();
             }
 
             nodes.add(nd);
-            System.out.println("\t\tAdded Node to key : " + succ + "   " + nd);
+            //System.out.println("\t\tAdded Node to key : " + succ + "   " + nd);
 
             priority_sorted_list.put(-succ, nodes); // negative cause list only gives set in ascending order
         }
@@ -86,7 +86,7 @@ public class ListScheduler {
             Set<String> allocated = allocation.get(step);
             if (allocated != null && allocated.size() < constraint_res_types.size()) {
                 t = step;
-                System.out.println("First step with unallocated resources: " + t);
+                //System.out.println("First step with unallocated resources: " + t);
                 break;
             }
         }
@@ -107,7 +107,7 @@ public class ListScheduler {
         }
 
 
-        System.out.println("Currently Free res before loop" + curr_free_res);
+        //System.out.println("Currently Free res before loop" + curr_free_res);
         boolean res_scheduled;
         do {
             //  check which restype is free
@@ -120,7 +120,7 @@ public class ListScheduler {
                 //loop until all res are used or all nodes are checked
                 for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) { // loop through the all priorities
                     for (Node nd : entry.getValue()) {  // nodes with currently the highest priority
-                        System.out.println("\t\tCurrently checked Node: " + nd);
+                        //System.out.println("\t\tCurrently checked Node: " + nd);
                         ResourceType needed_res = nd.getResourceType();
                         if (nd.top()) {
                             if (check_if_res_fits(res_to_check, needed_res)) {
@@ -131,11 +131,11 @@ public class ListScheduler {
                                 res_scheduled = true;
                                 curr_working_nodes.put(nd, resource);
                                 entry.getValue().remove(nd); // remove object from list
-                                System.out.println("\t\tCurrently Working Nodes and Res: " + curr_working_nodes);
+                                //System.out.println("\t\tCurrently Working Nodes and Res: " + curr_working_nodes);
                                 working_node_end_track.put(nd, ii);
                             }
                         } else {
-                            System.out.println("\t\tNot all predecessors of Node: " + nd + " finished");
+                            //System.out.println("\t\tNot all predecessors of Node: " + nd + " finished");
                         }
                         if (res_scheduled) {
                             break;
@@ -148,10 +148,10 @@ public class ListScheduler {
 
 
             }
-            System.out.println();
+            //System.out.println();
 
             int min_delay = Integer.MAX_VALUE;
-            System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
+            //System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
             for (Node nd : working_node_end_track.keySet()) { // finding earliest end of a node
                 if (working_node_end_track.get(nd).ubound < min_delay) {
                     min_delay = working_node_end_track.get(nd).ubound;
@@ -161,12 +161,12 @@ public class ListScheduler {
 
             Map<Node, Interval> copy_test = new HashMap<>(working_node_end_track);
             t = min_delay + 1;
-            //System.out.println("currently free Res " + curr_free_res);
+            ////System.out.println("currently free Res " + curr_free_res);
 
-            System.out.println("Next Time Step " + t);
+            //System.out.println("Next Time Step " + t);
             for (Node nd : copy_test.keySet()) {
                 if (copy_test.get(nd).ubound < t) {
-                    System.out.println(nd);
+                    //System.out.println(nd);
                     curr_free_res.add(curr_working_nodes.get(nd));
                     curr_working_nodes.remove(nd);
                     working_node_end_track.remove(nd);
@@ -183,19 +183,19 @@ public class ListScheduler {
                 }
 
             }
-            System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
-            System.out.println("\t\tcurrently free Res " + curr_free_res);
-            System.out.println();
+            //System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
+            //System.out.println("\t\tcurrently free Res " + curr_free_res);
+            //System.out.println();
             copy_test.clear();
 
             for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) {
                 // check if all nodes have been scheduled
                 if (entry.getValue().isEmpty()) {
-                    System.out.println("\t\tNodes with priority " + entry.getKey() + " is empty");
+                    //System.out.println("\t\tNodes with priority " + entry.getKey() + " is empty");
                     all_nodes_scheduled = true;
                 } else {
                     all_nodes_scheduled = false;
-                    System.out.println("\t\tNodes with priority " + entry.getKey() + " is not empty");
+                    //System.out.println("\t\tNodes with priority " + entry.getKey() + " is not empty");
                     break;
                 }
             }
