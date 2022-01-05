@@ -81,12 +81,8 @@ public class Node {
         return clone;
     }
 
-    public void setUnhandled_succ(HashSet<Node> unhandled_succ) {
-        this.unhandled_succ = unhandled_succ;
-    }
-
-    public void setUnhandled_pred(HashSet<Node> unhandled_pred) {
-        this.unhandled_pred = unhandled_pred;
+    public HashSet<Node> getUnhandled_pred() {
+        return unhandled_pred;
     }
 
     /**
