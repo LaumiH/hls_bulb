@@ -502,21 +502,20 @@ public class Schedule {
         for (int i = 0; i < length; i++) {
             cmp = slots1.get(i);
             cmp2 = slots2.get(i);
-            System.out.println("Investigating Slot : " + i);
+            //System.out.println("Investigating Slot : " + i);
             if (cmp.size() != cmp2.size()) {
                 return;
             }
             for (Node nd : cmp) {
                 foundSameNode = false;
                 for (Node ndcp : cmp2) {
-                    System.out.println("Comparing " + ndcp + " to " + nd);
-                    if (nd == ndcp) {
-                        System.out.println("Same Node found");
+                    //System.out.println("Comparing " + ndcp + " to " + nd);
+                    if (nd.equals(ndcp)) {
+                        //System.out.println("Same Node found");
                         foundSameNode = true;
                         break;
                     } else {
-                        foundSameNode = false;
-                        System.out.println("Didnt find same node");
+                        //System.out.println("Didnt find same node");
                     }
                 }
                 if (!foundSameNode) {
