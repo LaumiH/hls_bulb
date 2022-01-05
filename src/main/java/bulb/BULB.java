@@ -175,7 +175,13 @@ public class BULB extends Scheduler {
                 switch (this.uBoundEstimator) {
                     case "LIST":
                         incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
-                        potentialBestSchedule = upperBoundSchedule(updatedPartial, i, nodesDFG.subList(i + 1, nodesDFG.size()));
+                        List<Node> nodesToSchedule = nodesDFG.subList(i + 1, nodesDFG.size());
+                        if (nodesToSchedule.isEmpty()) {
+                            //already scheduled last node, list scheduler will not do anything useful
+                            u_bound = updatedPartial.length();
+                            break;
+                        }
+                        potentialBestSchedule = upperBoundSchedule(updatedPartial, i, nodesToSchedule);
                         u_bound = potentialBestSchedule.length();
                         decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                         break;
