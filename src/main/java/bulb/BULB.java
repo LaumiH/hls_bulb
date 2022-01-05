@@ -7,6 +7,7 @@ import java.util.*;
 public class BULB extends Scheduler {
 
     private final String lBoundEstimator;
+    private final String uBoundEstimator;
 
     private final ResourceConstraint resourceConstraint;
     private final Schedule asapSchedule;
@@ -22,8 +23,9 @@ public class BULB extends Scheduler {
     // real resources allocated to an operation in a step, must fulfill res constraint
     private Map<Integer, Set<String>> allocation;
 
-    public BULB(String lBoundEstimator, final ResourceConstraint rc, final Schedule asap, final Schedule alap) {
+    public BULB(String lBoundEstimator, String uBoundEstimator, final ResourceConstraint rc, final Schedule asap, final Schedule alap) {
         this.lBoundEstimator = lBoundEstimator;
+        this.uBoundEstimator = uBoundEstimator;
         this.resourceConstraint = rc;
 
         this.asapSchedule = asap;
@@ -65,7 +67,7 @@ public class BULB extends Scheduler {
         //get initial best latency through list scheduler
         ListScheduler listScheduler = new ListScheduler();
         Schedule listSchedule = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, allocation);
-        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " END OF LIST SCHEDULER FROM BULB " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " END OF LIST SCHEDULER FROM BULB " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\n");
         this.bestLatency = listSchedule.length();
         this.bestSchedule = listSchedule;
         System.out.printf("Best schedule length at beginning: %d%n", bestLatency);
@@ -90,21 +92,21 @@ public class BULB extends Scheduler {
     private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) {
         // end recursion condition
         if (i == dfg.size()) {
-            System.out.println("%%%%%%%%%%%% START OF BULB ENUMERATE --- finished investigating all nodes in DFG");
+            System.out.println("finished investigating all nodes in DFG");
             if (bestLatency > partial.length()) {
                 bestSchedule = partial;
                 this.bestLatency = partial.length();
             }
         }
 
-        System.out.printf("i=%d; START OF BULB ENUMERATE for schedule %s%n", i, partial.diagnose());
+        System.out.printf("%n%n%ni=%d; START OF BULB ENUMERATE for schedule %s%n", i, partial.diagnose());
 
         List<Node> nodesDFG = new ArrayList<>(nodes);
 
         //get current operation to schedule
         Node currentOperation = nodesDFG.get(i);
-        System.out.printf("i=%d; Current operation to schedule: %s; interval range: step %d to %d%n", i, currentOperation,
-                asapSchedule.slot(currentOperation).lbound, alapSchedule.slot(currentOperation).ubound);
+        System.out.printf("i=%d; Current operation to schedule: %s; asap - alap range: step %d to %d%n", i, currentOperation,
+                asapValues.get(currentOperation).lbound, alapValues.get(currentOperation).ubound);
 
         // check all possible time slots for current operation
         // from lower bound of asap to upper bound of alap
@@ -112,7 +114,7 @@ public class BULB extends Scheduler {
 
             //get interval for current operation
             Interval duration = new Interval(step, step + currentOperation.getDelay() - 1);
-            System.out.printf("%n%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
+            System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
 
             // save asap and alap values for later reset
             Map<Node, Interval> saveAsap = new HashMap<>(asapValues);
@@ -120,7 +122,7 @@ public class BULB extends Scheduler {
 
             //do not change partial schedule during loop
             Schedule updatedPartial = partial.clone();
-            partial.getResources().putAll(updatedPartial.getResources());
+            updatedPartial.getResources().putAll(partial.getResources());
 
             //add current operation to schedule
             updatedPartial.add(currentOperation, duration);
@@ -146,8 +148,6 @@ public class BULB extends Scheduler {
                 updatedPartial.remove(currentOperation);
                 updatedPartial.add(currentOperation, duration, resName);
 
-                //TODO: frist update ASAP is missing! move first (empty) bulb node inspection inside enumerate
-
                 System.out.printf("i=%d; Calculating lower bound for %s in interval %s%n", i, currentOperation, duration);
                 int l_bound = 0;
                 switch (this.lBoundEstimator) {
@@ -169,7 +169,29 @@ public class BULB extends Scheduler {
 
                 System.out.printf("%ni=%d; Lower bound is: %s%n%n", i, l_bound);
                 System.out.printf("i=%d; Calculating upper bound for %s in interval %s%n", i, currentOperation, duration);
-                int u_bound = calculateBound("upper", updatedPartial, currentBulbNode, currentOperation, duration, resName, nodesDFG.subList(i + 1, nodesDFG.size()));
+
+                int u_bound = 0;
+                Schedule potentialBestSchedule = null;
+                switch (this.uBoundEstimator) {
+                    case "LIST":
+                        incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                        List<Node> nodesToSchedule = nodesDFG.subList(i + 1, nodesDFG.size());
+                        if (nodesToSchedule.isEmpty()) {
+                            //already scheduled last node, list scheduler will not do anything useful
+                            u_bound = updatedPartial.length();
+                            break;
+                        }
+                        potentialBestSchedule = upperBoundSchedule(updatedPartial, i, nodesToSchedule);
+                        u_bound = potentialBestSchedule.length();
+                        decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                        break;
+                    case "PAPER":
+                        u_bound = calculateBound("upper", updatedPartial, currentBulbNode, currentOperation, duration, resName, nodesDFG.subList(i + 1, nodesDFG.size()));
+                        break;
+                    default:
+                        System.out.println("Type of lower bound estimator not given, or not known, aborting");
+                        System.exit(-1);
+                }
                 System.out.printf("%ni=%d; Upper bound is: %s%n%n", i, u_bound);
 
                 System.out.printf("Res usage after bounds: %s%n", this.resourceUsage);
@@ -189,9 +211,14 @@ public class BULB extends Scheduler {
                 if (u_bound < this.bestLatency) {
                     System.out.printf("i=%d; Upper bound (%d) is better than best latency (%d)%n", i, u_bound, bestLatency);
                     this.bestLatency = u_bound;
-                    incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
-                    this.bestSchedule = upperBoundSchedule(updatedPartial, i, nodesDFG.subList(i + 1, nodesDFG.size()));
-                    decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                    if (this.uBoundEstimator.equals("LIST")) {
+                        //has been calculated above for u_bound estimation
+                        this.bestSchedule = potentialBestSchedule;
+                    } else {
+                        incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                        this.bestSchedule = upperBoundSchedule(updatedPartial, i, nodesDFG.subList(i + 1, nodesDFG.size()));
+                        decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                    }
                 } else if (u_bound > this.bestLatency) {
                     System.out.printf("i=%d; Upper bound (%d) is worse than best latency (%d), stop here%n", i, u_bound, bestLatency);
                     //done with investigating this step
@@ -204,8 +231,10 @@ public class BULB extends Scheduler {
 
                 //at this point the algo stops if u_bound == l_bound, and we have the best schedule
                 if (l_bound == u_bound) {
-                    System.out.println("Found best schedule and lower == upper");
-                    return;
+                    System.out.println("Found best schedule with lower == upper");
+                    System.out.printf("Can skip scheduling %d nodes%n%n%n", bestSchedule.nodes().size()-i-1);
+                    asapValues = saveAsap;
+                    continue;
                 }
 
                 if (l_bound < this.bestLatency) {
@@ -215,27 +244,45 @@ public class BULB extends Scheduler {
                     i = i + 1;
                     enumerate(updatedPartial, i, currentBulbNode, nodesDFG);
                     i = i - 1;
+                    System.out.printf("i=%d; Decrementing resources for scheduling %s in next interval%n", i, currentOperation);
                     decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                 }
             } else {
+                System.out.println("###############################################################");
+                System.out.println("###############################################################");
+                System.out.println("###############################################################");
                 System.out.printf("i=%d; Resource constraints do not allow to schedule %s in %s%n", i, currentOperation, duration);
-                System.out.println(this.resourceUsage);
-                //update asap and alap values of current operation to earliest free step
-                int freeStep = 0;
-                Interval copyDuration = duration.copy();
-                while (!checkResConstraint(currentOperation.getResourceType(), copyDuration)) {
-                    freeStep++;
-                    copyDuration = copyDuration.shift(1);
+                System.out.println(this.allocation);
+                System.out.println("###############################################################");
+                System.out.println("###############################################################");
+                System.out.println("###############################################################");
+                //update asap and alap values of current operation to the earliest free step
+                //if steps are exceeded!
+                if (step == alapValues.get(currentOperation).ubound - currentOperation.getDelay() + 1) {
+                    //alap bound is reached
+                    System.out.println("###############################################################");
+                    System.out.println("###############################################################");
+                    System.out.println("###############################################################");
+                    System.out.printf("i=%d; alap bound reached -> updating asap for %s and successors %n", i, currentOperation);
+                    System.out.println("###############################################################");
+                    System.out.println("###############################################################");
+                    System.out.println("###############################################################");
+                    int freeStep = 0;
+                    Interval copyDuration = duration.copy();
+                    while (!checkResConstraint(currentOperation.getResourceType(), copyDuration)) {
+                        freeStep++;
+                        copyDuration = copyDuration.shift(1);
+                    }
+                    this.asapValues.replace(currentOperation, asapValues.get(currentOperation).copy().shift(freeStep));
+                    this.alapValues.replace(currentOperation, alapValues.get(currentOperation).copy().shift(freeStep));
+                    step = copyDuration.lbound - 1;   //will be incremented in loop head
+                    updateAsap(copyDuration, i, nodesDFG);
+                    //alap will be updated as well if asap > alap
+                    continue;
                 }
-                //TODO: is this correct?
-                this.asapValues.replace(currentOperation, asapValues.get(currentOperation).copy().shift(freeStep));
-                this.alapValues.replace(currentOperation, alapValues.get(currentOperation).copy().shift(freeStep));
-                step = copyDuration.lbound - 1;   //will be incremented in loop head
-                updateAsap(copyDuration, i, nodesDFG);
-                continue;
             }
             //done with investigating this step
-            System.out.printf("i=%d; Restoring asap and alap values%n", i);
+            System.out.printf("i=%d; Restoring asap and alap values for successors of %s%n", i, currentOperation);
             asapValues = saveAsap;
             alapValues = saveAlap;
         }
@@ -248,6 +295,10 @@ public class BULB extends Scheduler {
      * @return the upper bound for needed clock cycles
      */
     private int calculateBound(String kind, Schedule sched, BulbNode currentBulbNode, Node currentOperation, Interval duration, String resName, List<Node> unschedNodes) {
+        if (currentOperation.id.equals("N5_B")) {
+            System.out.println("Scheduling N5_B");
+        }
+
         //store old resource usage and allocation
         Map<Integer, List<Resource>> saveResourceUsage = new HashMap<>();
         for (Map.Entry<Integer, List<Resource>> entry : this.resourceUsage.entrySet()) {
@@ -341,7 +392,6 @@ public class BULB extends Scheduler {
                 int criticalPath = CP(unscheduledNode);
                 System.out.printf("\tcalculateBound: critical path for %s: %d%n", unscheduledNode, criticalPath);
                 latencyEstimate = Math.max(latencyEstimate, k + unscheduledNode.getDelay() - 1 + criticalPath + 1);
-                //latencyEstimate = Math.max(latencyEstimate, k); //TODO: huh?!
             } else {
                 int criticalPath = CP(unscheduledNode);
                 System.out.printf("\tcalculateBound: critical path for %s: %d%n", unscheduledNode, criticalPath);
@@ -374,37 +424,6 @@ public class BULB extends Scheduler {
         int cp = latest - alapValues.get(node).ubound;
         return Math.max(cp, 0);   // 0 when it is the last node
     }
-
-    /*
-    private int criticalPath(Node nd) {
-        int asap_nd = asapSchedule.slot(nd).lbound;
-        int alap_nd = alapSchedule.slot(nd).lbound;
-        int cp = 0;
-        int max_cp_of_succ = 0;
-        int delay = 0;
-        if (nd != null && (asap_nd - alap_nd == 0)) {
-            System.out.printf("\t\tcalculating CP for node %s%n", nd);
-            cp = nd.getDelay();
-            for (Node nd2 : nd.allSuccessors().keySet()) {
-                System.out.printf("\t\tsuccessor node: %s%n", nd2);
-                int asap = asapSchedule.slot(nd2).lbound;
-                int alap = alapSchedule.slot(nd2).lbound;
-                if (asap - alap == 0) {
-                    delay = criticalPath(nd2);
-                    System.out.printf("\t\tdelay for node %s: %d%n", nd2, delay);
-                    if (max_cp_of_succ < delay) {
-                        max_cp_of_succ = delay;
-                    }
-                }
-            }
-        } else {
-            System.out.printf("\t\tNode %s is not on critical path%n", nd);
-            return -1;
-        }
-        System.out.printf("\t\tmax_cp_of_succ: %d%n", max_cp_of_succ + cp);
-        return cp + max_cp_of_succ;
-    }
-    */
 
     private void incrementResourceUsed(Interval interval, ResourceType rt, String resName) {
         System.out.printf("\t\tincrementResourceUsed: allocating operation %s on resource %s in interval %s%n", rt, resName, interval);
@@ -493,7 +512,6 @@ public class BULB extends Scheduler {
 
     private String findAllocation(ResourceType resourceToCheck, Interval interval) {
         //return name of any compatible, free resource for allocation (do not allocate yet)v
-        System.out.println("\t\tfindAllocation: Allocation " + this.allocation);
         System.out.printf("\t\tfindAllocation: Find allocation for operation %s in interval %s -> ", resourceToCheck, interval);
 
         for (int step = interval.lbound; step <= interval.ubound; step++) {
@@ -549,6 +567,17 @@ public class BULB extends Scheduler {
                     Interval shifted = asapValues.get(succ).shift(l_asap - asapJ.lbound);
                     System.out.printf("\tupdateAsap: asap of %s will be updated to %s%n", succ, shifted);
                     asapValues.replace(succ, asapJ, shifted);
+                    //check if asap shift caused asap > alap,
+                    //which would result in not trying to schedule resource in enumerate!
+                    Interval alapJ = alapValues.get(succ);
+                    if (asapJ.gt(alapJ)) {
+                        System.out.printf("\tupdateAsap: asap (%s) > alap (%s) for %s%n", asapJ, alapJ, succ);
+                        shifted = alapValues.get(succ).shift(l_asap - asapJ.lbound);
+                        System.out.printf("\tupdateAsap: alap of %s will be updated to %s%n", succ, shifted);
+                        alapValues.replace(succ, alapJ, shifted);
+                    }
+                } else {
+                    System.out.printf("\tupdateAsap: %s does not need to be updated%n", succ);
                 }
             }
         }

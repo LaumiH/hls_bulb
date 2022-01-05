@@ -477,4 +477,52 @@ public class Schedule {
             System.out.println(e.getMessage());
         }
     }
+
+    public void compare(Schedule cmpSched) {
+        if (cmpSched == null || cmpSched.size() == 0) {
+            System.out.println("Comparison Schedule is null or has no nodes!");
+            return;
+        }
+        if (this.length() != cmpSched.length()) {
+            System.out.println("Length is not equal, so Schedules can't be equal");
+            this.diagnose();
+            cmpSched.diagnose();
+            return;
+        }
+
+        Map<Integer, Set<Node>> slots1 = this.slots;
+        Map<Integer, Set<Node>> slots2 = cmpSched.slots;
+        System.out.println("this map " + slots1);
+        System.out.println("cmp map " + slots2);
+
+
+        int length = this.length();
+        Set<Node> cmp, cmp2;
+        boolean foundSameNode = false;
+        for (int i = 0; i < length; i++) {
+            cmp = slots1.get(i);
+            cmp2 = slots2.get(i);
+            //System.out.println("Investigating Slot : " + i);
+            if (cmp.size() != cmp2.size()) {
+                return;
+            }
+            for (Node nd : cmp) {
+                foundSameNode = false;
+                for (Node ndcp : cmp2) {
+                    //System.out.println("Comparing " + ndcp + " to " + nd);
+                    if (nd.equals(ndcp)) {
+                        //System.out.println("Same Node found");
+                        foundSameNode = true;
+                        break;
+                    } else {
+                        //System.out.println("Didnt find same node");
+                    }
+                }
+                if (!foundSameNode) {
+                    return;
+                }
+            }
+        }
+        System.out.println("Schedules are equal");
+    }
 }
