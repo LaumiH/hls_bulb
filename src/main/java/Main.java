@@ -57,16 +57,18 @@ public class Main {
         /*
          * 1
          */
+
         System.out.println("STARTING BULB SCHEDULE with \n" +
                 "\tasap lower bound estimator,\n" +
                 "\tupper bound estimator from paper,\n" +
                 "\tnormal alap schedule in enumerate for loop");
-        s = new BULB("ASAP", "PAPER", rc, asap, normal_alap);
-        Schedule bulb1 = s.schedule(g);
+        BULB bulbS1 = new BULB("ASAP", "PAPER", rc, asap, normal_alap);
+        Schedule bulb1 = bulbS1.schedule(g);
         System.out.printf("%nBULB%n%s%n", bulb1.diagnose());
-        ((BULB) s).getBulbGraph().print();
+        bulbS1.getBulbGraph().print();
         bulb1.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("END OF BULB SCHEDULE");
+
 
         /*
          * 2
@@ -75,10 +77,10 @@ public class Main {
                 "\tasap lower bound estimator,\n" +
                 "\tlist scheduler upper bound estimator,\n" +
                 "\tnormal alap schedule in enumerate for loop");
-        s = new BULB("ASAP", "LIST", rc, asap, normal_alap);
-        Schedule bulb2 = s.schedule(g);
+        BULB bulbS2 = new BULB("ASAP", "LIST", rc, asap, normal_alap);
+        Schedule bulb2 = bulbS2.schedule(g);
         System.out.printf("%nBULB%n%s%n", bulb2.diagnose());
-        ((BULB) s).getBulbGraph().print();
+        bulbS2.getBulbGraph().print();
         bulb2.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("END OF BULB SCHEDULE");
 
@@ -90,10 +92,10 @@ public class Main {
                 "\tupper bound estimator from paper,\n" +
                 "\tlazy alap schedule in enumerate for loop");
         System.out.println();
-        s = new BULB("PAPER", "PAPER", rc, asap, lazy_alap);
-        Schedule bulb3 = s.schedule(g);
+        BULB bulbS3 = new BULB("PAPER", "PAPER", rc, asap, lazy_alap);
+        Schedule bulb3 = bulbS3.schedule(g);
         System.out.printf("%nBULB%n%s%n", bulb3.diagnose());
-        ((BULB) s).getBulbGraph().print();
+        bulbS3.getBulbGraph().print();
         bulb3.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("END OF BULB SCHEDULE");
 
@@ -124,11 +126,19 @@ public class Main {
         System.out.println(
                 "\tasap lower bound estimator,\n" +
                 "\tlist scheduler upper bound estimator,\n" +
-                "\tnormal alap schedule in enumerate for loop" +
+                "\tnormal alap schedule in enumerate for loop\n\n" +
                 "with\n" +
                 "\tlower bound estimator from paper,\n" +
                 "\tupper bound estimator from paper,\n" +
                 "\tlazy alap schedule in enumerate for loop");
         bulb2.compare(bulb3);
+
+        System.out.println();
+        System.out.println();
+        bulbS1.getBulbGraph().print();
+        System.out.println();
+        bulbS2.getBulbGraph().print();
+        System.out.println();
+        bulbS3.getBulbGraph().print();
     }
 }
