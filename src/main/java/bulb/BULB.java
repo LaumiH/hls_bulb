@@ -105,8 +105,22 @@ public class BULB extends Scheduler {
 
         //get current operation to schedule
         Node currentOperation = nodesDFG.get(i);
-        System.out.printf("i=%d; Current operation to schedule: %s; asap - alap range: step %d to %d%n", i, currentOperation,
-                asapValues.get(currentOperation).lbound, alapValues.get(currentOperation).ubound);
+        System.out.printf("i=%d; Current operation to schedule: %s; " +
+                        "asap - alap range: step %d to %d; duration: %d%n", i, currentOperation,
+                asapValues.get(currentOperation).lbound, alapValues.get(currentOperation).ubound,
+                currentOperation.getDelay());
+
+        if ((alapValues.get(currentOperation).ubound-asapValues.get(currentOperation).lbound) < (currentOperation.getDelay()-1)) {
+            System.out.printf("Operation %s cannot get scheduled because alap (%s) - " +
+                    "asap (%s) does not leave enough space for its duration (%d)%n",
+                    currentOperation,
+                    alapValues.get(currentOperation).ubound,
+                    asapValues.get(currentOperation).lbound,
+                    currentOperation.getDelay());
+            System.out.println("Increasing alap with the delay of the operation");
+            Interval oldAlap = alapValues.get(currentOperation);
+            alapValues.replace(currentOperation, oldAlap.shift(currentOperation.getDelay()));
+        }
 
         // check all possible time slots for current operation
         // from lower bound of asap to upper bound of alap
