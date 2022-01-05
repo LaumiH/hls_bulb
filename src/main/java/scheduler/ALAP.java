@@ -43,9 +43,6 @@ public class ALAP extends Scheduler {
                 if(lazyAlap){
                     i+= nd.getDelay();
                 }
-
-
-
             }
         if (queue.size() == 0)
             System.out.println("No leaf in Graph found. Empty or cyclic graph");
