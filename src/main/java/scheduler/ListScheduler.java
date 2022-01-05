@@ -8,12 +8,15 @@ public class ListScheduler {
     public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
         System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        System.out.println("START OF LIST SCHEDULING !!!");
-        System.out.println("\tDISPLAY PARTIAL SCHEDULE");
+        System.out.println("START OF LIST SCHEDULING");
         System.out.println(partial.diagnose());
-        System.out.println("\tDISPLAY ALLOCATED RES");
         for (Integer i : allocation.keySet()) {
-            System.out.println(allocation.get(i));
+            System.out.printf("allocated in step %d: %s%n", i, allocation.get(i));
+        }
+
+        if (nodesToSchedule.isEmpty()) {
+            System.out.println("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
+            System.exit(-1);
         }
 
         //do not overwrite nodes from BULB
@@ -24,10 +27,6 @@ public class ListScheduler {
 
         //set correct reference of new nodes in clone and partial schedule
         //otherwise already scheduled predecessors will not be recognized
-
-        if (partial.size()==2) {
-            System.out.println("stop here");
-        }
 
         for (Node pred : partial.nodes()) {
             Set<Node> successors = pred.allSuccessors().keySet();
@@ -92,26 +91,33 @@ public class ListScheduler {
             }
         }
 
-        //find nodes and allocation in this step
-        if (scheduleToWorkWith.size() > 0) {
-            for (Node node : scheduleToWorkWith.nodes(t)) {
-                curr_working_nodes.put(node, scheduleToWorkWith.getResources().get(node));
-                working_node_end_track.put(node, new Interval(t, t + node.getDelay() - 1));
-            }
-        }
-
-        //find unallocated resources
+        //calculate initial free resources
         for (String s : constraint_res_types) {
             if (allocation.get(t) == null || !allocation.get(t).contains(s)) {
                 curr_free_res.add(s);
             }
         }
 
-
-        System.out.println("Currently Free res before loop" + curr_free_res);
         boolean res_scheduled;
         do {
-            //  check which restype is free
+            System.out.println("Current step: " + t);
+
+            //get nodes and allocation in this step from partial schedule ()
+            if (null != scheduleToWorkWith.nodes(t)) {
+                for (Node node : scheduleToWorkWith.nodes(t)) {
+                    curr_working_nodes.put(node, scheduleToWorkWith.getResources().get(node));
+                    //be careful with inrterval, only add if it hasn't been there
+                    //otherwise interval gets wrongly updated
+                    if (!working_node_end_track.containsKey(node)) {
+                        working_node_end_track.put(node, new Interval(t, t + node.getDelay() - 1));
+                    }
+                    curr_free_res.remove(scheduleToWorkWith.getResources().get(node));
+                }
+            }
+
+            System.out.println("Free res" + curr_free_res);
+            System.out.println("Working nodes" + curr_working_nodes);
+            // check which restype is free
             // check which node with the highest priority can use it
             for (String resource : curr_free_res) {
                 Set<ResourceType> res_to_check = alpha.getAllRes().get(resource);
@@ -159,14 +165,15 @@ public class ListScheduler {
             }
 
 
-            Map<Node, Interval> copy_test = new HashMap<>(working_node_end_track);
+            Map<Node, Interval> copy_working_node_end_track = new HashMap<>(working_node_end_track);
             t = min_delay + 1;
             //System.out.println("currently free Res " + curr_free_res);
 
             System.out.println("Next Time Step " + t);
-            for (Node nd : copy_test.keySet()) {
-                if (copy_test.get(nd).ubound < t) {
-                    System.out.println(nd);
+            System.out.println("Checking which nodes still occupy resources");
+            for (Node nd : copy_working_node_end_track.keySet()) {
+                System.out.printf("Check if still running in step %d: %s with interval %s%n", t, nd, working_node_end_track.get(nd));
+                if (copy_working_node_end_track.get(nd).ubound < t) {
                     curr_free_res.add(curr_working_nodes.get(nd));
                     curr_working_nodes.remove(nd);
                     working_node_end_track.remove(nd);
@@ -181,14 +188,14 @@ public class ListScheduler {
                     }
                 } else {
                     curr_free_res.remove(curr_working_nodes.get(nd));
-                    //can return false when res was removed in earlier step and duration >1
+                    //can return false when res was removed in earlier step and duration > 1
                 }
 
             }
-            System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
-            System.out.println("\t\tcurrently free Res " + curr_free_res);
+            System.out.printf("\t\tNodes in step %d: %s%n", t, working_node_end_track);
+            System.out.println("\t\tCurrently free resources " + curr_free_res);
             System.out.println();
-            copy_test.clear();
+            copy_working_node_end_track.clear();
 
             for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) {
                 // check if all nodes have been scheduled
@@ -210,8 +217,8 @@ public class ListScheduler {
             }*/
             System.out.printf("Finished Iteration %d%n", runs - 1);
             if (runs > 10) {
-                System.out.println("Something went wrong, taking way too many iterations!");
-                break;
+                System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
+                System.exit(-1);
             }
 
         } while (!all_nodes_scheduled);
