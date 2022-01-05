@@ -147,7 +147,14 @@ public class Node {
      * @return true iff a node has been marked.
      */
     public boolean handle(Node n) {
-        return unhandled_succ.remove(n) || unhandled_pred.remove(n);
+        boolean success = unhandled_succ.remove(n) || unhandled_pred.remove(n);
+        if (!success) {
+            System.out.printf("%s does not contain %s in unhandled_pred or unhandled_succ. Try to remove by id%n", this, n);
+            System.out.printf("unhandled_pred: %s; unhandled_succ: %s%n", this.unhandled_pred, unhandled_succ);
+            //try to remove by id, as reference of nodes might just be wrong!
+            success = this.removeById(n.id) || this.removeById(n.id);
+        }
+        return success;
     }
 
     /**
@@ -274,10 +281,11 @@ public class Node {
         try {
             Node nd = (Node) e;
             return nd.id.equals(this.id);
-
         } catch (Throwable err) {
-            return false;
+            System.out.println("Two compared nodes do not match, error thrown");
+            System.exit(-1);
         }
+        return false;
     }
 
     /**
