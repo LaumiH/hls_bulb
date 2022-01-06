@@ -309,9 +309,12 @@ public class BULB extends Scheduler {
      * @return the upper bound for needed clock cycles
      */
     private int calculateBound(String kind, Schedule sched, BulbNode currentBulbNode, Node currentOperation, Interval duration, String resName, List<Node> unschedNodes) {
+        System.out.println("Calculate UPPER BOUND");
         if (currentOperation.id.equals("N5_B")) {
             System.out.println("Scheduling N5_B");
         }
+        System.out.println("Printing curr Sched in calcU with length : " + sched.size());
+        System.out.println(sched.diagnose() );
 
         //store old resource usage and allocation
         Map<Integer, List<Resource>> saveResourceUsage = new HashMap<>();
@@ -351,12 +354,15 @@ public class BULB extends Scheduler {
 
         //move dependent nodes to later steps to fulfill constraint
         //estimate constraint dependent finish step
+
         for (Node unscheduledNode : unschedNodes) {
             int k = asapValues.get(unscheduledNode).lbound;
             System.out.printf("\tcalculateBound: %s has asap %s%n", unscheduledNode, k);
 
             // a predecessor might have been scheduled later than asap due to resource constraints
             for (Node pred : unscheduledNode.predecessors()) {
+                System.out.println("unsched pred " + pred);
+                System.out.println("COPY SCHEDULE" + copy.diagnose());
                 int predFinished = copy.slot(pred).ubound;
                 if (predFinished >= k) {
                     // unscheduledNode asap needs to be moved
