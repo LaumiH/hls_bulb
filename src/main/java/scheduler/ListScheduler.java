@@ -10,6 +10,8 @@ public class ListScheduler {
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("START OF LIST SCHEDULING");
         System.out.println(partial.diagnose());
+        System.out.println("");
+        System.out.println("List of Nodes to Schedule" + nodesToSchedule);
         for (Integer i : allocation.keySet()) {
             System.out.printf("allocated in step %d: %s%n", i, allocation.get(i));
         }
@@ -216,7 +218,7 @@ public class ListScheduler {
                 break;// check if min delay is minimum after second round
             }*/
             System.out.printf("Finished Iteration %d%n", runs - 1);
-            if (runs > 10) {
+            if (runs > 20) {
                 System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
                 System.exit(-1);
             }
@@ -240,9 +242,9 @@ public class ListScheduler {
     boolean check_if_res_fits(Set<ResourceType> fromRes, ResourceType from_Node) {
         System.out.println("check_res_type of " + from_Node);
         for (ResourceType type : fromRes) {
-            System.out.println("Restypes : " +type);
+            //System.out.println("Restypes : " +type);
             if (type == from_Node) {
-                System.out.println("Res can be used");
+                //System.out.println("Res can be used");
                 return true;
             }
         }

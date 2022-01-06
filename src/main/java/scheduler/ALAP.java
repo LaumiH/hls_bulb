@@ -25,72 +25,40 @@ public class ALAP extends Scheduler {
         this.mode = mode;
         this.lmax = lmax - 1;
     }
-
     public Schedule schedule(final Graph sg) {
-        boolean lazyAlap;
-        Map<Node, Interval> queue = new HashMap<>();
+        Map<Node, Interval> queue = new HashMap<Node, Interval>();
         Map<Node, Interval> qq;
-        Map<Node, Interval> min_queue = new HashMap<>();
+        Map<Node, Interval> min_queue = new HashMap<Node, Interval>();
         Schedule schedule = new Schedule();
-        int min = lmax;
-        int i = 0;
-
-        if (mode.toLowerCase().equals("lazy")) {
-            lazyAlap = true;
-        } else {
-            lazyAlap = false;
+        Integer min = lmax;
+        Graph g = sg;
+        boolean lazyALAP =false;
+        if(mode.equals("lazy")){
+            lazyALAP = true;
         }
-        //System.out.println("lazy: " + lazyAlap);
-        for (Node nd : sg)
-            if (nd.isLeaf()) {
-                queue.put(nd, new Interval(lmax + 1 - nd.getDelay() + i, lmax + i));
-                if (lazyAlap) {
-                    i += nd.getDelay();
-                }
-            }
-        if (queue.size() == 0)
-            System.out.println("No leaf in Graph found. Empty or cyclic graph");
-        //System.out.println("queue :" + queue);
 
-        Interval last_slot = null;
+        for (Node nd : g)
+            if (nd.isLeaf())
+                queue.put(nd, new Interval(lmax + 1 - nd.getDelay(), lmax));
+        if(queue.size() == 0)
+            System.out.println("No leaf in Graph found. Empty or cyclic graph");
+
+
         while (queue.size() > 0) {
-            qq = new HashMap<>();
+            qq = new HashMap<Node, Interval>();
 
             for (Node nd : queue.keySet()) {
-                //System.out.println("Max of schedule " + schedule.max());
-                //System.out.println("Node out of Queue set " + nd);
                 Interval slot = queue.get(nd);
-
-                //System.out.println("Slot :" + slot);
                 if (slot.lbound < min)
                     min = slot.lbound;
 
                 schedule.add(nd, slot);
-                //System.out.println(schedule.diagnose());
-                //System.out.println("All predecessors of node " + nd);
-                //System.out.println("min_queue " + min_queue);
                 for (Node l : nd.predecessors()) {
-                    //System.out.println(l);
-                    sg.handle(l, nd);
+                    g.handle(l, nd);
                     Interval ii = min_queue.get(l);
-
                     if (ii == null || slot.lbound <= ii.ubound) {
-                        //System.out.println("last_interval " + last_slot);
-                        ii = new Interval(slot.lbound - l.getDelay(), slot.lbound - 1);
-                        if (last_slot == null || !lazyAlap) {
-                            ii = new Interval(slot.lbound - l.getDelay(), slot.lbound - 1);
-                            //System.out.println();
-                        } else {
-                            ii = new Interval(last_slot.lbound - l.getDelay(), last_slot.lbound - 1);
-                            //System.out.println("testIntervall" + new Interval(last_slot.lbound - l.getDelay(), last_slot.ubound - 1));
-
-                        }
-
-                        //System.out.println("min queue int " + ii);
-                        last_slot = new Interval(ii.lbound, ii.ubound);
-
+                        ii = new Interval(slot.lbound-l.getDelay(), slot.lbound-1);
                         min_queue.put(l, ii);
-
                     }
                     if (!l.bottom())
                         continue;
@@ -107,10 +75,29 @@ public class ALAP extends Scheduler {
             }
             queue = qq;
         }
-        sg.reset();
-
+        g.reset();
+        if(lazyALAP){
+            schedule = makeALAPlazy(schedule);
+        }
         if (lmax == 0)
             return schedule.shift(-(min));
         return schedule;
+    }
+
+    Schedule makeALAPlazy(Schedule normalAlap){
+        int lower= 0,upper = 0;
+        Schedule test = new Schedule();
+        for(Node nd : normalAlap.orderNodes("asc")){
+            upper = lower +nd.getDelay();
+            Interval ii = new Interval(lower,upper);
+            System.out.println("Slot" + ii);
+            test.add(nd,ii);
+            lower = upper;
+
+
+        }
+        System.out.println("Test" + test.diagnose());
+
+        return test;
     }
 }
