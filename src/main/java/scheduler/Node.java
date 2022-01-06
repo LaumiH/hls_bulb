@@ -10,6 +10,8 @@ public class Node {
      * ID for this node - unique name
      */
     public final String id;
+    public final String label;
+
     // contains all successors as key - the value is the edge weight
     /**
      * Map of successor nodes and their edge weight
@@ -37,8 +39,9 @@ public class Node {
      * @param id - ID of the new node
      * @param rt - resource type
      */
-    public Node(String id, ResourceType rt) {
+    public Node(String id, String label, ResourceType rt) {
         this.id = id;
+        this.label = label;
         successors = new HashMap<>();
         predecessors = new HashMap<>();
         unhandled_succ = new HashSet<>();
@@ -49,8 +52,9 @@ public class Node {
     /**
      * @param id - ID of the new node
      */
-    public Node(String id) {
+    public Node(String id, String label) {
         this.id = id;
+        this.label = label;
         rt = ResourceType.getResourceType(id);
         successors = new HashMap<>();
         predecessors = new HashMap<>();
@@ -59,7 +63,7 @@ public class Node {
     }
 
     public Node clone() {
-        Node clone = new Node(this.id, this.rt);
+        Node clone = new Node(this.id, this.label, this.rt);
         HashMap<Node, Integer> predecessors = new HashMap<>(this.predecessors);
         HashMap<Node, Integer> successors = new HashMap<>(this.successors);
         for (Map.Entry<Node, Integer> entry : predecessors.entrySet()) {
@@ -266,7 +270,7 @@ public class Node {
     }
 
     public String toString() {
-        return id;
+        return id + "--" + this.label;
     }
 
     public int hashCode() {

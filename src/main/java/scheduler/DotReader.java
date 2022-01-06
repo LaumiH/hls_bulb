@@ -40,6 +40,7 @@ public class DotReader {
         Pattern pat_def = Pattern.compile("(\\w\\w*) (\\[.*\\]);.*");
         Pattern pat_use = Pattern.compile("(\\w\\w*) -> (\\w\\w*);.*");
         Pattern pat_itdep = Pattern.compile("(\\w\\w*) -> (\\w\\w*).*(\\[.*\\]);.*");
+        Pattern label = Pattern.compile("\".(\\w*:\\w*).\"");
         Matcher m;
         try {
             line = input.readLine();
@@ -49,7 +50,9 @@ public class DotReader {
                 m = pat_def.matcher(line);
                 if (m.matches()) {
                     if (m.group(1).compareTo("node") != 0) {
-                        Node n = new Node(m.group(1));
+                        int firstMark = line.indexOf("\"");
+                        int lastMark = line.lastIndexOf("\"");
+                        Node n = new Node(m.group(1), line.substring(firstMark+1, lastMark));
                         graph.add(n);
                         graph.get(n).setResourceType(ResourceType.getResourceType(m.group(2)));
                     }
@@ -57,7 +60,7 @@ public class DotReader {
                 /* link */
                 m = pat_use.matcher(line);
                 if (m.matches()) {
-                    if (graph.link(new Node(m.group(1)), new Node(m.group(2)), 0) == null) {
+                    if (graph.link(new Node(m.group(1), ""), new Node(m.group(2), ""), 0) == null) {
                         System.err.printf("ERROR: Found circular graph%n");
                         System.exit(-1);
                     }
@@ -67,7 +70,7 @@ public class DotReader {
                     m = pat_itdep.matcher(line);
                     if (m.matches()) {
                         int it = Integer.parseInt(m.group(3).split("\"")[1]);
-                        if (graph.link(new Node(m.group(1)), new Node(m.group(2)), it) == null) {
+                        if (graph.link(new Node(m.group(1), ""), new Node(m.group(2), ""), it) == null) {
                             System.err.printf("ERROR: Found circular graph%n");
                             System.exit(-1);
                         }
