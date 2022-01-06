@@ -126,6 +126,8 @@ public class BULB extends Scheduler {
         // from lower bound of asap to upper bound of alap
         for (int step = asapValues.get(currentOperation).lbound; step <= alapValues.get(currentOperation).ubound - currentOperation.getDelay() + 1; step++) {
 
+            System.out.println(asapValues);
+
             //get interval for current operation
             Interval duration = new Interval(step, step + currentOperation.getDelay() - 1);
             System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
@@ -200,7 +202,25 @@ public class BULB extends Scheduler {
                         decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                         break;
                     case "PAPER":
+                        if (updatedPartial.length() == 4) {
+                            System.out.println("STOP here");
+                        }
                         u_bound = calculateBound("upper", updatedPartial, currentBulbNode, currentOperation, duration, resName, nodesDFG.subList(i + 1, nodesDFG.size()));
+                        System.out.println("Calculating list scheduler upper bound for comparison");
+                        List<Node> toSched = nodesDFG.subList(i + 1, nodesDFG.size());
+                        if (toSched.isEmpty()) {
+                            //already scheduled last node, list scheduler will not do anything useful
+                            System.out.println("Upper bound through PAPER: " + u_bound);
+                            System.out.println("Upper bound through ListScheduler: " + updatedPartial.length());
+                            break;
+                        }
+                        incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+                        potentialBestSchedule = upperBoundSchedule(updatedPartial, i, toSched);
+                        System.out.println("updated partial length: " + updatedPartial.length());
+                        System.out.println("Upper bound through PAPER: " + u_bound);
+                        System.out.println("Upper bound through ListScheduler: " + potentialBestSchedule.length());
+                        if (u_bound != potentialBestSchedule.length()) System.exit(-1);
+                        decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
                         break;
                     default:
                         System.out.println("Type of lower bound estimator not given, or not known, aborting");
@@ -309,12 +329,15 @@ public class BULB extends Scheduler {
      * @return the upper bound for needed clock cycles
      */
     private int calculateBound(String kind, Schedule sched, BulbNode currentBulbNode, Node currentOperation, Interval duration, String resName, List<Node> unschedNodes) {
-        System.out.println("Calculate UPPER BOUND");
-        if (currentOperation.id.equals("N5_B")) {
-            System.out.println("Scheduling N5_B");
+        System.out.printf("Calculate %s BOUND%n", kind.toUpperCase(Locale.ROOT));
+        System.out.println("Printing curr Sched in calcU with length : " + sched.length());
+        System.out.println("Resource allocation: " + this.allocation);
+        System.out.println(sched.diagnose());
+
+        if (unschedNodes.isEmpty()) {
+            System.out.println("No unscheduled nodes remaining, returning length of schedule");
+            return sched.length();
         }
-        System.out.println("Printing curr Sched in calcU with length : " + sched.size());
-        System.out.println(sched.diagnose() );
 
         //store old resource usage and allocation
         Map<Integer, List<Resource>> saveResourceUsage = new HashMap<>();
@@ -343,14 +366,14 @@ public class BULB extends Scheduler {
             System.out.printf("%n\tcalculateBound: critical path for %s: %d%n", scheduled, delayCP);
             latencyEstimate = Math.max(latencyEstimate, Xi + delayCP + 1);  //+1 to get latency, not end step
         }
-        System.out.printf("\tcalculateBound: %s latency estimate based on CP of scheduled nodes: %d%n", kind, latencyEstimate);
+        System.out.printf("\ncalculateBound: %s latency estimate based on CP of scheduled nodes: %d%n", kind, latencyEstimate);
 
-        System.out.printf("\tcalculateBound: schedule %s in interval %s to continue with unscheduled nodes%n", currentOperation, duration);
+        System.out.printf("calculateBound: schedule %s in interval %s to continue with unscheduled nodes%n", currentOperation, duration);
         //to calculate the dependent nodes, the current operation has to be added to the res constraints!
         incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
-        copy.add(currentOperation, duration, resName);
+        //copy.add(currentOperation, duration, resName);
 
-        System.out.println("\tcalculateBound: estimate bound through scheduling remaining nodes");
+        System.out.println("calculateBound: estimate bound through scheduling remaining nodes");
 
         //move dependent nodes to later steps to fulfill constraint
         //estimate constraint dependent finish step
@@ -361,8 +384,8 @@ public class BULB extends Scheduler {
 
             // a predecessor might have been scheduled later than asap due to resource constraints
             for (Node pred : unscheduledNode.predecessors()) {
-                System.out.println("unsched pred " + pred);
-                System.out.println("COPY SCHEDULE" + copy.diagnose());
+                System.out.println("\tpred " + pred);
+                System.out.println("COPY SCHEDULE " + copy.diagnose());
                 int predFinished = copy.slot(pred).ubound;
                 if (predFinished >= k) {
                     // unscheduledNode asap needs to be moved
@@ -392,12 +415,12 @@ public class BULB extends Scheduler {
 
             duration = new Interval(k, k + unscheduledNode.getDelay() - 1);
             while (!checkResConstraint(unscheduledNode.getResourceType(), duration)) {
-                System.out.printf("\tcalculateBound: %s cannot be scheduled on %s%n", unscheduledNode, duration);
+                System.out.printf("calculateBound: %s cannot be scheduled on %s%n", unscheduledNode, duration);
                 k++;
                 duration = duration.shift(1);
             }
 
-            System.out.printf("\tcalculateBound: %s can be scheduled on %s%n", unscheduledNode, duration);
+            System.out.printf("calculateBound: %s can be scheduled on %s%n", unscheduledNode, duration);
 
             //finally found a slot to schedule operation
             //add resource of operation type to used resources in this step
@@ -406,21 +429,15 @@ public class BULB extends Scheduler {
             incrementResourceUsed(duration, unscheduledNode.getResourceType(), resName);
             copy.add(unscheduledNode, duration, resName);
 
-            System.out.printf("\tcalculateBound: calculate bound based on %s%n", unscheduledNode);
+            System.out.printf("calculateBound: calculate bound based on %s%n", unscheduledNode);
 
-            if ("upper".equals(kind)) {
-                int criticalPath = CP(unscheduledNode);
-                System.out.printf("\tcalculateBound: critical path for %s: %d%n", unscheduledNode, criticalPath);
-                latencyEstimate = Math.max(latencyEstimate, k + unscheduledNode.getDelay() - 1 + criticalPath + 1);
-            } else {
-                int criticalPath = CP(unscheduledNode);
-                System.out.printf("\tcalculateBound: critical path for %s: %d%n", unscheduledNode, criticalPath);
-                latencyEstimate = Math.max(latencyEstimate, k + unscheduledNode.getDelay() - 1 + criticalPath + 1);
-            }
+            int criticalPath = CP(unscheduledNode);
+            System.out.printf("\tcalculateBound: critical path for %s: %d%n", unscheduledNode, criticalPath);
+            latencyEstimate = Math.max(latencyEstimate, k + unscheduledNode.getDelay() - 1 + criticalPath + 1);
             System.out.printf("\tcalculateBound: %s latency estimate after node %s: %d%n", kind, unscheduledNode, latencyEstimate);
         }
 
-        decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
+        //decrementResourceUsed(duration, currentOperation.getResourceType(), resName);
 
         this.resourceUsage = saveResourceUsage;
         this.allocation = saveAllocation;
