@@ -29,7 +29,6 @@ public class ListScheduler {
 
         //set correct reference of new nodes in clone and partial schedule
         //otherwise already scheduled predecessors will not be recognized
-
         for (Node pred : partial.nodes()) {
             Set<Node> successors = pred.allSuccessors().keySet();
             for (Node toSchedule : nodesToSchedule) {
@@ -139,6 +138,8 @@ public class ListScheduler {
                         ResourceType needed_res = nd.getResourceType();
                         System.out.printf("Unhandled predecessors: %s%n", nd.getUnhandled_pred());
                         if (nd.top()) {
+                            //check if in this step all predecessors from partial schedule are finished
+                            if (!predFinishedInStep(t, nd, scheduleToWorkWith)) continue;
                             if (check_if_res_fits(res_to_check, needed_res)) {
                                 // all predecessors of the node are finished
                                 Interval ii = new Interval(t, t + nd.getDelay() - 1);
@@ -147,13 +148,27 @@ public class ListScheduler {
                                 curr_working_nodes.put(nd, resource);
                                 entry.getValue().remove(nd); // remove node from priority list
                                 removedInThisIteration = true;
-                                System.out.println("\t\tCurrently Working Nodes and Res: " + curr_working_nodes);
+                                System.out.println("Currently Working Nodes and Res: " + curr_working_nodes);
                                 working_node_end_track.put(nd, ii);
                             }
                         } else {
-                            //check that there are really no predecessors left in priority sorted list, as references are buggy -.-
-                            //TODO
-                            System.out.println("\t\tNot all predecessors of Node: " + nd + " finished");
+                            //check that there are really no predecessors left in priority sorted list
+                            //references between nodes might be buggy -.-
+
+                            Set<Node> unscheduledPred = new HashSet<>(nd.predecessors());
+                            for (Node pred : nd.predecessors()) {
+                                if (scheduleToWorkWith.nodes().contains(pred)) {
+                                    if (scheduleToWorkWith.slot(pred).ubound < t) {
+                                        unscheduledPred.remove(pred);
+                                    }
+                                }
+                            }
+                            if (unscheduledPred.isEmpty()) {
+                                System.out.println("top was wrong, there are all predecessors scheduled!");
+                                System.exit(-1);
+                            }
+
+                            System.out.println("Not all predecessors of Node: " + nd + " finished");
                             System.out.printf("Predecessors: %s%n", nd.allPredecessors());
                         }
                         if (res_scheduled) {
@@ -168,14 +183,15 @@ public class ListScheduler {
             }
             System.out.println();
 
-            int min_delay = t;
-            System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
-            for (Node nd : working_node_end_track.keySet()) { // finding earliest end of a node
-                if (working_node_end_track.get(nd).ubound < min_delay) {
-                    min_delay = working_node_end_track.get(nd).ubound;
-                }
-            }
+            System.out.println("Preparing new step");
 
+            System.out.println("\t\tNodes in List with Interval " + working_node_end_track);
+            //get random end of a working node and then check if a node ends earlier
+            int min_delay = working_node_end_track.values().iterator().next().ubound;
+            for (Interval interval : working_node_end_track.values()) { // finding the earliest end of a node
+                min_delay = Math.min(min_delay, interval.ubound);
+            }
+            System.out.printf("Minimal delay of nodes: %s%n", min_delay);
 
             Map<Node, Interval> copy_working_node_end_track = new HashMap<>(working_node_end_track);
             t = min_delay + 1;
@@ -197,6 +213,8 @@ public class ListScheduler {
                     curr_free_res.add(curr_working_nodes.get(nd));
                     curr_working_nodes.remove(nd);
                     working_node_end_track.remove(nd);
+                    //handle successors of node, i.e. remove nd from unhandled_pred
+                    //can only be done at end of step, otherwise dependencies will be disregarded ...
                     if (!clonedNodesToSchedule.contains(nd)) continue;
                     //meaning the node does not need to be removed from its successors' unhandled_pred list
                     for (Node n2 : nd.successors()) {
@@ -234,7 +252,6 @@ public class ListScheduler {
                 }
             }
 
-            System.out.println("\nDISPLAY PARTIAL SCHEDULE");
             System.out.println(scheduleToWorkWith.diagnose());
             runs++;
            /* if (runs == 4) {
@@ -273,6 +290,24 @@ public class ListScheduler {
         }
         System.out.println("Res does not fit for node");
         return false;
+    }
 
+    boolean predFinishedInStep(int step, Node node, Schedule schedule) {
+        for (Node scheduledPred : node.predecessors()) {
+            if (schedule.slot(scheduledPred).ubound >= step) {
+                System.out.printf("%s cannot be scheduled because predecessor %s is not finished yet%n",
+                        node, scheduledPred);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    Set<Node> getAllNodesFromPrioritySortedList(Map<Integer, Set<Node>> psl) {
+        Set<Node> allNodes = new HashSet<>() {};
+        for (Set<Node> nodes : psl.values()) {
+            allNodes.addAll(nodes);
+        }
+        return allNodes;
     }
 }
