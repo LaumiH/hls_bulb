@@ -242,6 +242,9 @@ public class Schedule {
             sched.add(nd, new Interval(nodes.get(nd).lbound, nodes.get(nd).ubound));
         }
 
+        sched.getResources().clear();
+        sched.getResources().putAll(this.getResources());
+
         return sched;
     }
 
@@ -296,14 +299,54 @@ public class Schedule {
      *
      * @return null iff the schedule has no illegal overlaps, a conflicting node otherwise
      */
-    public Node validate() {
-        for (Node nd : nodes.keySet())
-            for (Node sn : nd.successors()) {
-                if (slot(sn) == null) continue;
-                if (slot(nd).ubound.compareTo(slot(sn).lbound) >= 0) {
-                    return nd;
+    public Node validate(ResourceConstraint resourceConstraint) {
+        System.out.println("########\nValidating schedule\n########");
+        for (Node node : nodes.keySet()) {
+            for (Node successor : node.successors()) {
+                if (slot(successor) == null) continue;
+                if (slot(node).ubound.compareTo(slot(successor).lbound) >= 0) {
+                    //dependency violated
+                    return node;
                 }
             }
+        }
+        if (resourceConstraint != null) {
+            if (resources.keySet().size() != nodes().size()) {
+                System.out.println("Resource size does not match nodes size of schedule!");
+                System.exit(-1);
+            }
+            Set<String> resNames = resourceConstraint.getAllRes().keySet();
+            List<String> resUsed = new ArrayList<>();
+            Node lastNodeAdded = null;
+            for (int step = 0; step < this.slots.size(); step++) {
+                Set<Node> nodesInStep = this.slots.get(step);
+                if (nodesInStep == null) {
+                    System.out.println("Nodes in step is null");
+                    System.out.println("Is this plausible?");
+                    continue;
+                }
+
+                for (Node n : nodesInStep) {
+                    String resName = resources.get(n);
+                    if (null == resName) {
+                        System.out.println("Node is scheduled in step, but does not have resource!");
+                        return n;
+                    }
+                    if (resUsed.contains(resName)) {
+                        System.out.printf("Resource %s is allocated twice in step %d, " +
+                                "node %s is second%n", resName, step, n);
+                        return n;
+                    }
+                    resUsed.add(resources.get(n));
+                    lastNodeAdded = n;
+                }
+
+            }
+            if (resNames.size() < resUsed.size()) {
+                return lastNodeAdded;
+            }
+            resUsed.clear();
+        }
         return null;
     }
 
@@ -317,7 +360,7 @@ public class Schedule {
     /**
      * @return a string with a textual representation of the schedule and the resources
      */
-    public String diagnose() {
+    public String diagnose(ResourceConstraint resourceConstraint) {
         if (nodes.keySet().size() <= 0) return "%n";
 
         Formatter f = new Formatter();
@@ -340,6 +383,13 @@ public class Schedule {
 
         String str = f.toString();
         f.close();
+
+        if (this.validate(resourceConstraint) != null) {
+            System.out.println("Invalid schedule detected!");
+            System.out.println(str);
+            System.exit(-1);
+        }
+
         return str;
     }
 
@@ -453,21 +503,20 @@ public class Schedule {
     }
 
     public void compare(Schedule cmpSched) {
+
         if (cmpSched == null || cmpSched.size() == 0) {
             System.out.println("Comparison Schedule is null or has no nodes!");
             return;
         }
         if (this.length() != cmpSched.length()) {
             System.out.println("Length is not equal, so Schedules can't be equal");
-            this.diagnose();
-            cmpSched.diagnose();
             return;
         }
 
         Map<Integer, Set<Node>> slots1 = this.slots;
         Map<Integer, Set<Node>> slots2 = cmpSched.slots;
-        System.out.println("this map " + slots1);
-        System.out.println("cmp map " + slots2);
+        //System.out.println("this map " + slots1);
+        //System.out.println("cmp map " + slots2);
 
 
         int length = this.length();
