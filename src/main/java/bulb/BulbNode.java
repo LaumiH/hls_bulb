@@ -92,10 +92,10 @@ public class BulbNode {
         if (valid) {
             buffer.append("l_bound: ").append(l_bound).append(", ");
             buffer.append("u_bound: ").append(u_bound).append("; ");
+            buffer.append("Investigated partial schedule: ").append(this.schedule.getSlots()).append("; ");
         } else {
-            buffer.append("invalid schedule").append("; ");
+            buffer.append("invalid").append("; ");
         }
-        buffer.append("Investigated partial schedule: ").append(this.schedule.getSlots()).append("; ");
         buffer.append('\n');
         for (Iterator<BulbNode> it = children.iterator(); it.hasNext(); ) {
             BulbNode next = it.next();
