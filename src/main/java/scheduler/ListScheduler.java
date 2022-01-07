@@ -9,7 +9,7 @@ public class ListScheduler {
         System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("START OF LIST SCHEDULING");
-        System.out.println(partial.diagnose());
+        System.out.println(partial.diagnose(alpha));
         System.out.println("");
         System.out.println("List of Nodes to Schedule" + nodesToSchedule);
         for (Integer i : allocation.keySet()) {
@@ -49,8 +49,6 @@ public class ListScheduler {
 
         //clone partial schedule including resources
         Schedule scheduleToWorkWith = partial.clone();
-        scheduleToWorkWith.getResources().putAll(partial.getResources());
-
 
         Set<String> constraint_res_types = alpha.getAllRes().keySet(); // all res constraint types
         Map<Node, String> curr_working_nodes = new HashMap<>(); // Node and real res
@@ -63,7 +61,7 @@ public class ListScheduler {
             nodes = priority_sorted_list.get(-succ);
 
             if (nodes == null) {
-                System.out.println("\t\tEmpty List with priority : " + succ);
+                //System.out.println("\t\tEmpty List with priority : " + succ);
                 nodes = new HashSet<>();
             }
 
@@ -107,7 +105,7 @@ public class ListScheduler {
             if (null != scheduleToWorkWith.nodes(t)) {
                 for (Node node : scheduleToWorkWith.nodes(t)) {
                     curr_working_nodes.put(node, scheduleToWorkWith.getResources().get(node));
-                    //be careful with inrterval, only add if it hasn't been there
+                    //be careful with interval, only add if it hasn't been there
                     //otherwise interval gets wrongly updated
                     if (!working_node_end_track.containsKey(node)) {
                         working_node_end_track.put(node, new Interval(t, t + node.getDelay() - 1));
@@ -136,11 +134,10 @@ public class ListScheduler {
                     for (Node nd : iteration) {  // nodes with currently the highest priority
                         System.out.printf("step %d: Currently checked Node: %s%n", t, nd);
                         ResourceType needed_res = nd.getResourceType();
-                        System.out.printf("Unhandled predecessors: %s%n", nd.getUnhandled_pred());
                         if (nd.top()) {
                             //check if in this step all predecessors from partial schedule are finished
                             if (!predFinishedInStep(t, nd, scheduleToWorkWith)) continue;
-                            if (check_if_res_fits(res_to_check, needed_res)) {
+                            if (check_if_res_fits(resource, res_to_check, needed_res)) {
                                 // all predecessors of the node are finished
                                 Interval ii = new Interval(t, t + nd.getDelay() - 1);
                                 scheduleToWorkWith.add(nd, ii, resource);
@@ -168,8 +165,7 @@ public class ListScheduler {
                                 System.exit(-1);
                             }
 
-                            System.out.println("Not all predecessors of Node: " + nd + " finished");
-                            System.out.printf("Predecessors: %s%n", nd.allPredecessors());
+                            System.out.println("\tNot all predecessors of Node: " + nd + " finished");
                         }
                         if (res_scheduled) {
                             break;
@@ -200,15 +196,12 @@ public class ListScheduler {
                 System.out.println("t is somehow < 0?");
                 System.exit(-1);
             }
-            //System.out.println("currently free Res " + curr_free_res);
+            System.out.println("currently free Res " + curr_free_res);
 
             System.out.println("Next Time Step " + t);
             System.out.println("Checking which nodes still occupy resources");
             for (Node nd : copy_working_node_end_track.keySet()) {
-                if (nd.id.equals("n1")) {
-                    System.out.println("STOP");
-                }
-                System.out.printf("Check if still running in step %d: %s with interval %s%n", t, nd, working_node_end_track.get(nd));
+                System.out.printf("\tCheck if still running in step %d: %s with interval %s%n", t, nd, working_node_end_track.get(nd));
                 if (copy_working_node_end_track.get(nd).ubound < t) {
                     curr_free_res.add(curr_working_nodes.get(nd));
                     curr_working_nodes.remove(nd);
@@ -219,10 +212,6 @@ public class ListScheduler {
                     //meaning the node does not need to be removed from its successors' unhandled_pred list
                     for (Node n2 : nd.successors()) {
                         boolean success = n2.handle(nd);
-                        if (n2.id.equals("n0")) {
-                            System.out.println();
-                            System.out.println();
-                        }
                         if (!success) {
                             System.out.println("Could not perform handle on node " + n2);
                             System.exit(-1);
@@ -234,9 +223,8 @@ public class ListScheduler {
                 }
 
             }
-            System.out.printf("\t\tNodes in step %d: %s%n", t, working_node_end_track);
-            System.out.println("\t\tCurrently free resources " + curr_free_res);
-            System.out.println();
+            System.out.printf("Nodes in step %d: %s%n", t, working_node_end_track);
+            System.out.printf("Currently free resources: %s%n%n", curr_free_res);
             copy_working_node_end_track.clear();
 
 
@@ -252,13 +240,11 @@ public class ListScheduler {
                 }
             }
 
-            System.out.println(scheduleToWorkWith.diagnose());
+            System.out.println(scheduleToWorkWith.diagnose(alpha));
             runs++;
-           /* if (runs == 4) {
-                break;// check if min delay is minimum after second round
-            }*/
+
             System.out.printf("Finished Iteration %d%n", runs - 1);
-            if (runs > 30) {
+            if (runs > 50) {
                 System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
                 System.exit(-1);
             }
@@ -279,23 +265,23 @@ public class ListScheduler {
         return succ;
     }
 
-    boolean check_if_res_fits(Set<ResourceType> fromRes, ResourceType from_Node) {
-        System.out.println("check_res_type of " + from_Node);
+    boolean check_if_res_fits(String resName, Set<ResourceType> fromRes, ResourceType from_Node) {
+        //System.out.println("check_res_type of " + from_Node);
         for (ResourceType type : fromRes) {
             //System.out.println("Restypes : " +type);
             if (type == from_Node) {
-                //System.out.println("Res can be used");
+                System.out.printf("\tRes %s can be used%n", resName);
                 return true;
             }
         }
-        System.out.println("Res does not fit for node");
+        System.out.printf("\tRes %s does not fit for node%n", resName);
         return false;
     }
 
     boolean predFinishedInStep(int step, Node node, Schedule schedule) {
         for (Node scheduledPred : node.predecessors()) {
             if (schedule.slot(scheduledPred).ubound >= step) {
-                System.out.printf("%s cannot be scheduled because predecessor %s is not finished yet%n",
+                System.out.printf("\t\t%s cannot be scheduled because predecessor %s is not finished yet%n",
                         node, scheduledPred);
                 return false;
             }
