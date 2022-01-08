@@ -1,5 +1,7 @@
 package bulb;
 
+import scheduler.Interval;
+import scheduler.Node;
 import scheduler.Schedule;
 
 import java.util.HashSet;
@@ -9,6 +11,8 @@ import java.util.Set;
 public class BulbNode {
 
     private BulbNode parent;
+    private Node investigatedNode = null;
+    private Interval investigatedInterval = null;
     private HashSet<BulbNode> children;
     private Schedule schedule;
     private int u_bound;
@@ -31,6 +35,22 @@ public class BulbNode {
             parent = parent.getParent();
         }
         return predecessors;
+    }
+
+    public Node getInvestigatedNode() {
+        return investigatedNode;
+    }
+
+    public void setInvestigatedNode(Node investigatedNode) {
+        this.investigatedNode = investigatedNode;
+    }
+
+    public Interval getInvestigatedInterval() {
+        return investigatedInterval;
+    }
+
+    public void setInvestigatedInterval(Interval investigatedInterval) {
+        this.investigatedInterval = investigatedInterval;
     }
 
     public boolean isValid() {
@@ -92,7 +112,11 @@ public class BulbNode {
         if (valid) {
             buffer.append("l_bound: ").append(l_bound).append(", ");
             buffer.append("u_bound: ").append(u_bound).append("; ");
-            buffer.append("Investigated partial schedule: ").append(this.schedule.getSlots()).append("; ");
+            if (investigatedNode != null && investigatedInterval != null) {
+                buffer.append("investigated ").append(investigatedNode);
+                buffer.append(" in  ").append(investigatedInterval).append("; ");
+            }
+            buffer.append("investigated partial schedule: ").append(this.schedule.getSlots()).append("; ");
         } else {
             buffer.append("invalid").append("; ");
         }

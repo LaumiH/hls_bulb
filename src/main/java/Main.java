@@ -27,7 +27,7 @@ public class Main {
         System.out.println("DOING ASAP SCHEDULE");
         Scheduler s = new ASAP();
         Schedule asap = s.schedule(g);
-        System.out.printf("%nASAP%n%s%n", asap.diagnose(null));
+        System.out.printf("%nASAP%n%s%n", asap.diagnose(null, g.size()));
         //System.out.printf("cost = %s%n", asap.cost());
         asap.draw("schedules/ASAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("FINISHED ASAP SCHEDULE");
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("DOING LAZY ALAP SCHEDULE");
         Scheduler lazyAlap = new ALAP("lazy");
         Schedule lazy_alap = lazyAlap.schedule(g);
-        System.out.printf("%nALAP%n%s%n", lazy_alap.diagnose(null));
+        System.out.printf("%nALAP%n%s%n", lazy_alap.diagnose(null, g.size()));
         //System.out.printf("cost = %s%n", alap.cost());
         lazy_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("FINISHED ALAP SCHEDULE");
@@ -45,7 +45,7 @@ public class Main {
         System.out.println("DOING NORMAL ALAP SCHEDULE");
         Scheduler normalAlap = new ALAP("normal");
         Schedule normal_alap = normalAlap.schedule(g);
-        System.out.printf("%nALAP%n%s%n", normal_alap.diagnose(null));
+        System.out.printf("%nALAP%n%s%n", normal_alap.diagnose(null, g.size()));
         //System.out.printf("cost = %s%n", alap.cost());
         normal_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("FINISHED ALAP SCHEDULE");
@@ -70,7 +70,7 @@ public class Main {
 //                "\tnormal alap schedule in enumerate for loop");
 //        BULB bulbS1 = new BULB("ASAP", "PAPER", rc, asap, normal_alap, lazy_alap, false);
 //        Schedule bulb1 = bulbS1.schedule(g);
-//        System.out.printf("%nBULB%n%s%n", bulb1.diagnose(rc));
+//        System.out.printf("%nBULB%n%s%n", bulb1.diagnose(rc, g.size()));
 //        bulbS1.getBulbGraph().print();
 //        bulb1.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
 //        System.out.println("END OF BULB SCHEDULE");
@@ -92,7 +92,7 @@ public class Main {
                 "\tnormal alap schedule in enumerate for loop");
         BULB bulbS2 = new BULB("ASAP", "LIST", rc, asap, normal_alap, lazy_alap, false);
         Schedule bulb2 = bulbS2.schedule(g);
-        System.out.printf("%nBULB%n%s%n", bulb2.diagnose(rc));
+        System.out.printf("%nBULB%n%s%n", bulb2.diagnose(rc, g.size()));
         bulbS2.getBulbGraph().print();
         bulb2.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
         System.out.println("END OF BULB SCHEDULE");
@@ -114,7 +114,7 @@ public class Main {
 //                "\tlazy alap schedule in enumerate for loop");
 //        BULB bulbS3 = new BULB("PAPER", "PAPER", rc, asap, normal_alap, lazy_alap, true);
 //        Schedule bulb3 = bulbS3.schedule(g);
-//        System.out.printf("%nBULB%n%s%n", bulb3.diagnose(rc));
+//        System.out.printf("%nBULB%n%s%n", bulb3.diagnose(rc, g.size()));
 //        bulbS3.getBulbGraph().print();
 //        bulb3.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
 //        System.out.println("END OF BULB SCHEDULE");
@@ -136,7 +136,7 @@ public class Main {
 //                "\nnormal alap schedule in enumerate for loop");
 //        BULB bulbS4 = new BULB("PAPER", "PAPER", rc, asap, normal_alap, lazy_alap, false);
 //        Schedule bulb4 = bulbS4.schedule(g);
-//        System.out.printf("%nBULB%n%s%n", bulb4.diagnose(rc));
+//        System.out.printf("%nBULB%n%s%n", bulb4.diagnose(rc, g.size()));
 //        bulbS4.getBulbGraph().print();
 //        bulb4.draw("schedules/BULB_" + args[0].substring(args[0].lastIndexOf("/") + 1));
 //        System.out.println("END OF BULB SCHEDULE");

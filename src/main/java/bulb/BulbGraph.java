@@ -34,13 +34,13 @@ public class BulbGraph {
     }
 
     public void print() {
+        System.out.println("Print BULB tree:");
+        System.out.println(this.root.toString());
         System.out.printf("BULB tree contains %d nodes%n", this.inspectedNodes);
         System.out.printf("%d tried combinations violated resource constraints%n",
                 this.nodes.size() - this.inspectedNodes);
         System.out.println("Lower == Upper reached: " + lowerEqualsUpperReached);
         System.out.println("Parameters: " + parameters);
-        System.out.println("Print BULB tree:");
-        System.out.println(this.root.toString());
     }
 
     public boolean isLowerEqualsUpperReached() {
