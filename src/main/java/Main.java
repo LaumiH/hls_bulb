@@ -1,55 +1,78 @@
 import bulb.BULB;
 import scheduler.*;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Objects;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("START OF PROGRAM");
+        boolean printSchedules = false;
+        String folder_Graph = "C:/Users/Dirk/IdeaProjects/hls-bulb/graphs";
+        File folder = new File(folder_Graph);
+        File[] listOfGraphFiles = folder.listFiles();
 
+        String folder_ressources = "C:/Users/Dirk/IdeaProjects/hls-bulb/resources/vlsi";
+        File res_folder = new File(folder_ressources);
+        File[] listOfResFiles = res_folder.listFiles();
+
+        String logFilePlace =  "C:/Users/Dirk/IdeaProjects/hls-bulb/logFile.txt";
+        File logFile = new File(logFilePlace);
+        FileWriter fileWriter = new FileWriter(logFilePlace);
+        PrintWriter printWriter = new PrintWriter(fileWriter);
         ResourceConstraint rc = new ResourceConstraint();
-        if (args.length > 1) {
-            System.out.println("Reading resource constraints from " + args[1] + "\n");
-            rc.parse(args[1]);
-        }
+        for(int i = 0; i < listOfGraphFiles.length ; i++) {
+            System.out.println(listOfResFiles.length);
+            for(int j = 0; j < listOfResFiles.length; j++){
 
-        DotReader dr = new DotReader(false);
-        if (args.length < 1) {
-            System.err.printf("Usage: scheduler dotfile%n");
-            System.exit(-1);
-        } else {
-            System.out.printf("Scheduling %s%n", args[0]);
-        }
-        System.out.println("PARSING INPUT GRAPH");
-        Graph g = dr.parse(args[0]);
-        System.out.printf("Input graph:%n%n%s%n", g.diagnose());
 
-        System.out.println("DOING ASAP SCHEDULE");
-        Scheduler s = new ASAP();
-        Schedule asap = s.schedule(g);
-        System.out.printf("%nASAP%n%s%n", asap.diagnose(null, g.size()));
-        //System.out.printf("cost = %s%n", asap.cost());
-        asap.draw("schedules/ASAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
-        System.out.println("FINISHED ASAP SCHEDULE");
-        System.out.println();
+            if (args.length > 1) {
+                System.out.println("Reading resource constraints from " + listOfResFiles[j]+ "\n");
+                rc.parse(listOfResFiles[j].getAbsolutePath());
+            }
 
-        System.out.println("DOING LAZY ALAP SCHEDULE");
-        Scheduler lazyAlap = new ALAP("lazy");
-        Schedule lazy_alap = lazyAlap.schedule(g);
-        System.out.printf("%nALAP%n%s%n", lazy_alap.diagnose(null, g.size()));
-        //System.out.printf("cost = %s%n", alap.cost());
-        lazy_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
-        System.out.println("FINISHED ALAP SCHEDULE");
-        System.out.println();
+            DotReader dr = new DotReader(false);
+            if (args.length < 1) {
+                System.err.printf("Usage: scheduler dotfile%n");
+                System.exit(-1);
+            } else {
+                System.out.printf("Scheduling %s%n", listOfGraphFiles[i].getAbsolutePath());
+            }
+            System.out.println("PARSING INPUT GRAPH");
+            Graph g = dr.parse(listOfGraphFiles[i].getAbsolutePath());
+            System.out.printf("Input graph:%n%n%s%n", g.diagnose());
 
-        System.out.println("DOING NORMAL ALAP SCHEDULE");
-        Scheduler normalAlap = new ALAP("normal");
-        Schedule normal_alap = normalAlap.schedule(g);
-        System.out.printf("%nALAP%n%s%n", normal_alap.diagnose(null, g.size()));
-        //System.out.printf("cost = %s%n", alap.cost());
-        normal_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
-        System.out.println("FINISHED ALAP SCHEDULE");
-        System.out.println();
+            System.out.println("DOING ASAP SCHEDULE");
+            Scheduler s = new ASAP();
+            Schedule asap = s.schedule(g);
+            System.out.printf("%nASAP%n%s%n", asap.diagnose(null, g.size()));
+            //System.out.printf("cost = %s%n", asap.cost());
+            asap.draw("schedules/ASAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+            System.out.println("FINISHED ASAP SCHEDULE");
+            System.out.println();
+
+            System.out.println("DOING LAZY ALAP SCHEDULE");
+            Scheduler lazyAlap = new ALAP("lazy");
+            Schedule lazy_alap = lazyAlap.schedule(g);
+            System.out.printf("%nALAP%n%s%n", lazy_alap.diagnose(null, g.size()));
+            //System.out.printf("cost = %s%n", alap.cost());
+            lazy_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+            System.out.println("FINISHED ALAP SCHEDULE");
+            System.out.println();
+
+            System.out.println("DOING NORMAL ALAP SCHEDULE");
+            Scheduler normalAlap = new ALAP("normal");
+            Schedule normal_alap = normalAlap.schedule(g);
+            System.out.printf("%nALAP%n%s%n", normal_alap.diagnose(null, g.size()));
+            //System.out.printf("cost = %s%n", alap.cost());
+            normal_alap.draw("schedules/ALAP_" + args[0].substring(args[0].lastIndexOf("/") + 1));
+            System.out.println("FINISHED ALAP SCHEDULE");
+            System.out.println();
 
 
 
@@ -59,9 +82,9 @@ public class Main {
         ###########################################################################################
          */
 
-        /*
-         * 1
-         */
+            /*
+             * 1
+             */
 //        long timestart = System.currentTimeMillis();
 //
 //        System.out.println("STARTING BULB SCHEDULE with \n" +
@@ -81,11 +104,11 @@ public class Main {
 //        timend = timend % 60;
 //        System.out.println("Duration of Bulb 1:" +(timend) + " mS" );
 
+            /*
+             * 2
+             */
+            //timestart = System.currentTimeMillis();
         /*
-         * 2
-         */
-        //timestart = System.currentTimeMillis();
-
         System.out.println("STARTING BULB SCHEDULE with \n" +
                 "\tasap lower bound estimator,\n" +
                 "\tlist scheduler upper bound estimator,\n" +
@@ -102,7 +125,7 @@ public class Main {
 //        System.out.println("Duration of Bulb 2:" +(timend/60) + " S" );
 //        timend = timend % 60;
 //        System.out.println("Duration of Bulb 2:" +(timend) + " mS" );
-//
+//      */
 //        /*
 //         * 3
 //         */
@@ -218,5 +241,7 @@ public class Main {
 //        System.out.println(bulb4.diagnose(rc));
 //
 //        System.out.println("\n\n\nEND OF PROGRAM");
+        }
+        }
     }
 }
