@@ -299,7 +299,7 @@ public class Schedule {
      *
      * @return null iff the schedule has no illegal overlaps, a conflicting node otherwise
      */
-    public Node validate(ResourceConstraint resourceConstraint) {
+    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) {
         System.out.println("########\nValidating schedule\n########");
         for (Node node : nodes.keySet()) {
             for (Node successor : node.successors()) {
@@ -309,6 +309,10 @@ public class Schedule {
                     return node;
                 }
             }
+        }
+        if (nodes().size() > nrOfNodes) {
+            System.out.println("There are more nodes scheduled than in the source graph");
+            System.exit(-1);
         }
         if (resourceConstraint != null) {
             if (resources.keySet().size() != nodes().size()) {
@@ -330,22 +334,24 @@ public class Schedule {
                     String resName = resources.get(n);
                     if (null == resName) {
                         System.out.println("Node is scheduled in step, but does not have resource!");
+                        System.exit(-1);
                         return n;
                     }
                     if (resUsed.contains(resName)) {
                         System.out.printf("Resource %s is allocated twice in step %d, " +
                                 "node %s is second%n", resName, step, n);
+                        System.exit(-1);
                         return n;
                     }
                     resUsed.add(resources.get(n));
                     lastNodeAdded = n;
                 }
-
+                if (resNames.size() < resUsed.size()) {
+                    System.exit(-1);
+                    return lastNodeAdded;
+                }
+                resUsed.clear();
             }
-            if (resNames.size() < resUsed.size()) {
-                return lastNodeAdded;
-            }
-            resUsed.clear();
         }
         return null;
     }
@@ -360,7 +366,7 @@ public class Schedule {
     /**
      * @return a string with a textual representation of the schedule and the resources
      */
-    public String diagnose(ResourceConstraint resourceConstraint) {
+    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) {
         if (nodes.keySet().size() <= 0) return "%n";
 
         Formatter f = new Formatter();
@@ -384,7 +390,7 @@ public class Schedule {
         String str = f.toString();
         f.close();
 
-        if (this.validate(resourceConstraint) != null) {
+        if (this.validate(resourceConstraint, nrOfNodes) != null) {
             System.out.println("Invalid schedule detected!");
             System.out.println(str);
             System.exit(-1);
