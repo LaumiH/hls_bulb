@@ -1,24 +1,26 @@
 package scheduler;
 
+import bulb.BULBException;
+import bulb.BulbTimeoutException;
+
 import java.util.*;
 
 public class ListScheduler {
     int runs = 0;
 
-    public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
-        System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        System.out.println("START OF LIST SCHEDULING");
+    public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) throws BULBException, BulbTimeoutException {
+        //System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        //System.out.println("START OF LIST SCHEDULING");
         //partial.validate(alpha, nodesToSchedule.size());
         //System.out.println(partial.diagnose(alpha, nodesToSchedule.size()+partial.size()));
         //System.out.println("");
         //System.out.println("List of Nodes to Schedule" + nodesToSchedule);
-        for (Integer i : allocation.keySet()) {
+        //for (Integer i : allocation.keySet()) {
             //System.out.printf("allocated in step %d: %s%n", i, allocation.get(i));
-        }
+        //}
 
         if (nodesToSchedule.isEmpty()) {
-            //System.out.println("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
-            System.exit(-1);
+            throw new BULBException("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
         }
 
         //do not overwrite nodes from BULB
@@ -57,6 +59,7 @@ public class ListScheduler {
 
         Set<Node> nodes;
         for (Node nd : clonedNodesToSchedule) { // Sort the nodes after number of successors
+            if (Thread.interrupted()) throw new BulbTimeoutException("");
             int succ = amnt_of_successors(nd) - 1;
             nodes = priority_sorted_list.get(-succ);
 
@@ -71,6 +74,7 @@ public class ListScheduler {
             priority_sorted_list.put(-succ, nodes); // negative cause list only gives set in ascending order
         }
 
+        /*
         StringBuilder builder = new StringBuilder();
         builder.append("Priority sorted list: \n");
         for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) {
@@ -78,7 +82,8 @@ public class ListScheduler {
             builder.append(entry.getValue()).append("\n");
         }
         builder.append("\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
-        //System.out.println(builder);
+        System.out.println(builder);
+        */
 
         //find the earliest step with yet unallocated resource(s)
         for (int step = 0; step < scheduleToWorkWith.length(); step++) {
@@ -120,9 +125,10 @@ public class ListScheduler {
             // check which node with the highest priority can use it
             boolean removedInThisIteration = true;
             for (String resource : curr_free_res) {
-                if (!removedInThisIteration) {
+                if (Thread.interrupted()) throw new BulbTimeoutException("");
+                //if (!removedInThisIteration) {
                     //System.out.printf("Could not find any operation to schedule on resource %s in step %d%n", resource, t);
-                }
+                //}
                 removedInThisIteration = false;
                 Set<ResourceType> res_to_check = alpha.getAllRes().get(resource);
                 res_scheduled = false;
@@ -130,8 +136,9 @@ public class ListScheduler {
                 // check if res has free spot
                 //loop until all res are used or all nodes are checked
                 for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) { // loop through the all priorities
-                    Set<Node> iteration = new HashSet<>(entry.getValue());
+                    Set<Node> iteration = entry.getValue();
                     for (Node nd : iteration) {  // nodes with currently the highest priority
+                        if (Thread.interrupted()) throw new BulbTimeoutException("");
                         //System.out.printf("step %d: Currently checked Node: %s%n", t, nd);
                         ResourceType needed_res = nd.getResourceType();
                         if (nd.top()) {
@@ -176,6 +183,7 @@ public class ListScheduler {
 
                             Set<Node> unscheduledPred = new HashSet<>(nd.predecessors());
                             for (Node pred : nd.predecessors()) {
+                                if (Thread.interrupted()) throw new BulbTimeoutException("");
                                 if (scheduleToWorkWith.nodes().contains(pred)) {
                                     if (scheduleToWorkWith.slot(pred).ubound < t) {
                                         unscheduledPred.remove(pred);
@@ -183,11 +191,10 @@ public class ListScheduler {
                                 }
                             }
                             if (unscheduledPred.isEmpty()) {
-                                //System.out.println("top was wrong, there are all predecessors scheduled!");
-                                System.exit(-1);
+                                throw new BULBException("top was wrong, there are all predecessors scheduled!");
                             }
 
-                            ////System.out.println("\tNot all predecessors of Node: " + nd + " finished");
+                            //System.out.println("\tNot all predecessors of Node: " + nd + " finished");
                         }
                         if (res_scheduled) {
                             break;
@@ -219,8 +226,7 @@ public class ListScheduler {
             }
 
             if (t<0) {
-                //System.out.println("t is somehow < 0?");
-                System.exit(-1);
+                throw new BULBException("t is somehow < 0?");
             }
 
             //System.out.println("currently free Res " + curr_free_res);
@@ -241,8 +247,7 @@ public class ListScheduler {
                     for (Node n2 : nd.successors()) {
                         boolean success = n2.handle(nd);
                         if (!success) {
-                            //System.out.println("Could not perform handle on node " + n2);
-                            System.exit(-1);
+                            throw new BULBException("Could not perform handle on node " + n2);
                         }
                     }
                 } else {
@@ -273,9 +278,8 @@ public class ListScheduler {
             runs++;
 
             //System.out.printf("Finished Iteration %d%n", runs - 1);
-            if (runs > 50) {
-                //System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
-                System.exit(-1);
+            if (runs > nodesToSchedule.size()*alpha.getAllRes().size()) {
+                throw new BULBException("Something is fishy with the ListScheduler, taking way too many iterations!");
             }
 
         } while (!all_nodes_scheduled);
@@ -283,11 +287,12 @@ public class ListScheduler {
         return scheduleToWorkWith;
     }
 
-    int amnt_of_successors(Node nd) {
+    int amnt_of_successors(Node nd) throws BulbTimeoutException {
         int succ = 0;
         if (nd != null) {
             succ++;
             for (Node nd2 : nd.allSuccessors().keySet()) {
+                if (Thread.interrupted()) throw new BulbTimeoutException("");
                 succ += amnt_of_successors(nd2);
             }
         }

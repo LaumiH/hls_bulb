@@ -1,5 +1,7 @@
 package scheduler;
 
+import bulb.BULBException;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -299,8 +301,8 @@ public class Schedule {
      *
      * @return null iff the schedule has no illegal overlaps, a conflicting node otherwise
      */
-    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) {
-        System.out.println("########\nValidating schedule\n########");
+    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) throws BULBException {
+        //System.out.println("########\nValidating schedule\n########");
         for (Node node : nodes.keySet()) {
             for (Node successor : node.successors()) {
                 if (slot(successor) == null) continue;
@@ -311,44 +313,32 @@ public class Schedule {
             }
         }
         if (nodes().size() > nrOfNodes) {
-            System.out.println("There are more nodes scheduled than in the source graph");
-            System.exit(-1);
+            throw new BULBException("There are more nodes scheduled than in the source graph");
         }
         if (resourceConstraint != null) {
             if (resources.keySet().size() != nodes().size()) {
-                System.out.println("Resource size does not match nodes size of schedule!");
-                System.exit(-1);
+                throw new BULBException("Resource size does not match nodes size of schedule!");
             }
             Set<String> resNames = resourceConstraint.getAllRes().keySet();
             List<String> resUsed = new ArrayList<>();
-            Node lastNodeAdded = null;
             for (int step = 0; step < this.slots.size(); step++) {
                 Set<Node> nodesInStep = this.slots.get(step);
                 if (nodesInStep == null) {
-                    System.out.println("Nodes in step is null");
-                    System.out.println("Is this plausible?");
                     continue;
                 }
 
                 for (Node n : nodesInStep) {
                     String resName = resources.get(n);
                     if (null == resName) {
-                        System.out.println("Node is scheduled in step, but does not have resource!");
-                        System.exit(-1);
-                        return n;
+                        throw new BULBException("Node is scheduled in step, but does not have resource!");
                     }
                     if (resUsed.contains(resName)) {
-                        System.out.printf("Resource %s is allocated twice in step %d, " +
-                                "node %s is second%n", resName, step, n);
-                        System.exit(-1);
-                        return n;
+                        throw new BULBException("Resource " + resName + " is allocated twice in step " + step);
                     }
                     resUsed.add(resources.get(n));
-                    lastNodeAdded = n;
                 }
                 if (resNames.size() < resUsed.size()) {
-                    System.exit(-1);
-                    return lastNodeAdded;
+                    throw new BULBException("resNames.size() < resUsed.size()");
                 }
                 resUsed.clear();
             }
@@ -366,35 +356,23 @@ public class Schedule {
     /**
      * @return a string with a textual representation of the schedule and the resources
      */
-    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) {
-        if (nodes.keySet().size() <= 0) return "%n";
+    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) throws BULBException {
+        if (nodes.keySet().size() <= 0) return "empty schedule";
 
         Formatter f = new Formatter();
         f.format("Found schedule of length %d with %d nodes%n%n", length(), size());
         Set<Node> os = new HashSet<>();
-        for (Integer ii : slots.keySet())
-            for (Node nd : slots.get(ii)) {
+        for (Set<Node> nodeSet : slots.values()) {
+            for (Node nd : nodeSet) {
                 if (os.contains(nd)) continue;
                 os.add(nd);
                 f.format("%s : %s%n", nd, nodes.get(nd));
             }
-
-        /*
-        f.format("%nRegistered resources%n");
-        for (ResourceType rt : sort_res.keySet()) {
-          for (Resource r : sort_res.get(rt).keySet())
-            f.format(" %s %s %s %n", rt, r.step(), r.weight());
         }
-        */
-
         String str = f.toString();
         f.close();
 
-        if (this.validate(resourceConstraint, nrOfNodes) != null) {
-            System.out.println("Invalid schedule detected!");
-            System.out.println(str);
-            System.exit(-1);
-        }
+        validate(resourceConstraint, nrOfNodes);
 
         return str;
     }
@@ -411,23 +389,17 @@ public class Schedule {
             int scaleY = 2;
             int scaleX = 2;
             int maxY = length() * scaleY;
-
             int X;
             int Y;
-
             int min = min();
-
             dotFile.write("//do not use DOT to generate pdf use NEATO or FDP\n");
             dotFile.write("digraph{\n");
             dotFile.write("layout=\"neato\";\n");
             dotFile.write("splines=\"ortho\";\n");
-
             int maxNodes = 0;
-
             for (int i = 0; i <= max(); i++) {
                 if (nodes(i) != null) maxNodes = Math.max(nodes(i).size(), maxNodes);
             }
-
             boolean allResourcesGiven = true;
             for (Node n : nodes()) {
                 if (!resources.containsKey(n)) {
@@ -435,9 +407,7 @@ public class Schedule {
                     break;
                 }
             }
-
             int[] slots = new int[maxNodes];
-
             Map<String, Integer> peSlots = new HashMap<>();
             if (allResourcesGiven) {
                 int x = 0;
@@ -449,26 +419,18 @@ public class Schedule {
                     slots[i] = 0;
                 }
             }
-
             for (int i = 0; i <= max(); i++) {
                 Y = maxY - i * scaleY;
-                X = 0;
-
                 if (!allResourcesGiven) {
                     for (int j = 0; j < slots.length; j++) {
-                        if (slots[j] > 0) {
-                            slots[j]--;
-                        }
+                        if (slots[j] > 0) slots[j]--;
                     }
                 }
 
                 if (nodes(i) != null)
                     for (Node n : nodes(i)) {
-
                         if (i == min || (nodes(i - 1) != null && !nodes(i - 1).contains(n))) {
-
                             int slot = 0;
-
                             if (allResourcesGiven) {
                                 slot = peSlots.get(resources.get(n));
                             } else {
@@ -478,7 +440,6 @@ public class Schedule {
                                 slots[slot] += n.getDelay();
                             }
                             X = slot * scaleX;
-
                             int nodeHeight = n.getDelay() * scaleY - 1;
                             int nodeY = Y - nodeHeight / 2;
                             int nodeWidth = 1;
@@ -499,7 +460,6 @@ public class Schedule {
                         }
                     }
             }
-
             dotFile.write("}");
             dotFile.flush();
             dotFile.close();
@@ -508,50 +468,35 @@ public class Schedule {
         }
     }
 
-    public void compare(Schedule cmpSched) {
+    public boolean compare(Schedule cmpSched) {
 
         if (cmpSched == null || cmpSched.size() == 0) {
             System.out.println("Comparison Schedule is null or has no nodes!");
-            return;
+            return false;
         }
         if (this.length() != cmpSched.length()) {
             System.out.println("Length is not equal, so Schedules can't be equal");
-            return;
+            return false;
         }
-
-        Map<Integer, Set<Node>> slots1 = this.slots;
-        Map<Integer, Set<Node>> slots2 = cmpSched.slots;
-        //System.out.println("this map " + slots1);
-        //System.out.println("cmp map " + slots2);
-
 
         int length = this.length();
         Set<Node> cmp, cmp2;
-        boolean foundSameNode = false;
+        boolean equal = true;
         for (int i = 0; i < length; i++) {
-            cmp = slots1.get(i);
-            cmp2 = slots2.get(i);
-            //System.out.println("Investigating Slot : " + i);
+            cmp = this.slots.get(i);
+            cmp2 = cmpSched.slots.get(i);
             if (cmp.size() != cmp2.size()) {
-                return;
+                System.out.printf("Nr of nodes differs in slot %d%n", i);
+                equal = false;
             }
             for (Node nd : cmp) {
-                foundSameNode = false;
-                for (Node ndcp : cmp2) {
-                    //System.out.println("Comparing " + ndcp + " to " + nd);
-                    if (nd.equals(ndcp)) {
-                        //System.out.println("Same Node found");
-                        foundSameNode = true;
-                        break;
-                    } else {
-                        //System.out.println("Didnt find same node");
-                    }
-                }
-                if (!foundSameNode) {
-                    return;
+                if (!cmp2.contains(nd)) {
+                    System.out.printf("Step %d does not contain node %s in one graph%n", i, nd);
+                    equal = false;
                 }
             }
         }
-        System.out.println("Schedules are equal");
+        if (equal) System.out.println("Schedules are equal");
+        return equal;
     }
 }

@@ -108,19 +108,22 @@ public class BulbNode {
     }
 
     private void print(StringBuilder buffer, String prefix, String childrenPrefix) {
-        buffer.append(prefix);
         if (valid) {
+            buffer.append(prefix);
+            if (l_bound > u_bound) {
+                buffer.append("TOO CONSERVATIVE: ");
+            }
             buffer.append("l_bound: ").append(l_bound).append(", ");
             buffer.append("u_bound: ").append(u_bound).append("; ");
             if (investigatedNode != null && investigatedInterval != null) {
                 buffer.append("investigated ").append(investigatedNode);
-                buffer.append(" in  ").append(investigatedInterval).append("; ");
+                buffer.append(" in ").append(investigatedInterval).append("; ");
             }
             buffer.append("investigated partial schedule: ").append(this.schedule.getSlots()).append("; ");
+            buffer.append('\n');
         } else {
-            buffer.append("invalid").append("; ");
+            //buffer.append("invalid").append("; ");
         }
-        buffer.append('\n');
         for (Iterator<BulbNode> it = children.iterator(); it.hasNext(); ) {
             BulbNode next = it.next();
             if (it.hasNext()) {
