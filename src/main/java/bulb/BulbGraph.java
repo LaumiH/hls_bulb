@@ -16,6 +16,7 @@ public class BulbGraph {
     private int bestLatency;
     private int initialLatency;
     private int dfgNodes;
+    private boolean receivedTimeout = true; //will be set to false when bulb completed
 
     public BulbGraph(List<BulbNode> nodes) {
         this.nodes = nodes;
@@ -49,8 +50,11 @@ public class BulbGraph {
 
     public String printMetrics() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Printing BULB metrics for ").append(parameters).append("\n")
-                .append("BULB tree contains ").append(inspectedNodes).append(" inspected nodes").append("\n")
+        builder.append("Printing BULB metrics for ").append(parameters).append("\n");
+        if (receivedTimeout) {
+            builder.append("Received timeout while executing").append("\n");
+        }
+        builder.append("BULB tree contains ").append(inspectedNodes).append(" inspected nodes").append("\n")
                 .append(this.nodes.size() - this.inspectedNodes)
                 .append(" tried intervals violated resource constraints and were not further inspected").append("\n")
                 .append("Lower == Upper reached: ").append(lowerEqualsUpperReached).append(", ")
@@ -138,5 +142,13 @@ public class BulbGraph {
 
     public void setDfgNodes(int dfgNodes) {
         this.dfgNodes = dfgNodes;
+    }
+
+    public boolean isReceivedTimeout() {
+        return receivedTimeout;
+    }
+
+    public void setReceivedTimeout(boolean receivedTimeout) {
+        this.receivedTimeout = receivedTimeout;
     }
 }
