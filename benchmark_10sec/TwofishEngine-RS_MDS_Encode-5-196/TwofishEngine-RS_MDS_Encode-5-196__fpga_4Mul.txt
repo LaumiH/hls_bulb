@@ -1,0 +1,1239 @@
+Reading resource constraints from BULB_resources/r/fpga_4Mul
+
+Available resources:
+RES00:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES01:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES02:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES03:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES04:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES05:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES06:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES07:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES08:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES09:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES10:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES11:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES12:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES13:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES14:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES15:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES16:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES17:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES18:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES19:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES20:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES21:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES22:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES23:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES24:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES25:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES26:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES27:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES28:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES29:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES30:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES31:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES32:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES33:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES34:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES35:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES36:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES37:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES38:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES39:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES40:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES41:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES42:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES43:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES44:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES45:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES46:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES47:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES48:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES49:		And, Or, Add, Cmp, Other, Shift, Sub, 
+RES50:		Mem, 
+RES51:		Mem, 
+RES52:		Mul, Div, 
+RES53:		Mul, Div, 
+RES54:		Mul, Div, 
+RES55:		Mul, Div, 
+
+Available operations:
+Mem:		RES50, RES51, 
+Add:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Sub:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Mul:		RES52, RES53, RES54, RES55, 
+Div:		RES52, RES53, RES54, RES55, 
+Shift:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+And:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Or:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Cmp:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Other:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/TwofishEngine-RS_MDS_Encode-5-196.dot
+DOING ASAP SCHEDULE
+Found schedule of length 22 with 44 nodes
+
+n16--19:IUSHR : [0:0]
+n30--97:IADD : [0:0]
+n40--75:ISHL : [0:0]
+n43--8:IFGE : [0:0]
+n15--23:IAND : [1:1]
+n29--192:IADD : [1:1]
+n34--103:IFGE : [1:1]
+n14--54:IAND : [2:2]
+n35--32:IAND : [2:2]
+n1--51:IUSHR : [2:2]
+n19--27:ISHL : [2:2]
+n0--67:IXOR : [3:3]
+n21--43:IXOR : [3:3]
+n42--33:IFEQ : [3:3]
+n33--55:IFEQ : [3:3]
+n20--47:IAND : [4:4]
+n24--85:ISHL : [5:5]
+n23--69:IXOR : [5:5]
+n28--91:ISHL : [6:6]
+n41--80:ISHL : [6:6]
+n39--81:IXOR : [7:7]
+n37--86:IXOR : [8:8]
+n36--92:IXOR : [9:9]
+n6--94:IXOR : [10:10]
+n13--170:ISHL : [11:11]
+n5--114:IUSHR : [11:11]
+n8--118:IAND : [12:12]
+n38--146:IUSHR : [13:13]
+n7--122:ISHL : [13:13]
+n32--149:IAND : [13:13]
+n11--127:IAND : [13:13]
+n18--162:IXOR : [14:14]
+n10--138:IXOR : [14:14]
+n31--150:IFEQ : [14:14]
+n12--128:IFEQ : [14:14]
+n9--142:IAND : [15:15]
+n17--164:IXOR : [16:16]
+n4--180:ISHL : [16:16]
+n26--186:ISHL : [17:17]
+n22--175:ISHL : [17:17]
+n3--176:IXOR : [18:18]
+n2--181:IXOR : [19:19]
+n25--187:IXOR : [20:20]
+n27--189:IXOR : [21:21]
+
+FINISHED ASAP SCHEDULE
+
+DOING LAZY ALAP SCHEDULE
+Found schedule of length 44 with 44 nodes
+
+n16--19:IUSHR : [0:0]
+n15--23:IAND : [1:1]
+n19--27:ISHL : [2:2]
+n1--51:IUSHR : [3:3]
+n21--43:IXOR : [4:4]
+n0--67:IXOR : [5:5]
+n20--47:IAND : [6:6]
+n23--69:IXOR : [7:7]
+n41--80:ISHL : [8:8]
+n40--75:ISHL : [9:9]
+n24--85:ISHL : [10:10]
+n39--81:IXOR : [11:11]
+n37--86:IXOR : [12:12]
+n28--91:ISHL : [13:13]
+n36--92:IXOR : [14:14]
+n6--94:IXOR : [15:15]
+n5--114:IUSHR : [16:16]
+n8--118:IAND : [17:17]
+n7--122:ISHL : [18:18]
+n38--146:IUSHR : [19:19]
+n10--138:IXOR : [20:20]
+n18--162:IXOR : [21:21]
+n9--142:IAND : [22:22]
+n17--164:IXOR : [23:23]
+n13--170:ISHL : [24:24]
+n22--175:ISHL : [25:25]
+n3--176:IXOR : [26:26]
+n4--180:ISHL : [27:27]
+n26--186:ISHL : [28:28]
+n2--181:IXOR : [29:29]
+n25--187:IXOR : [30:30]
+n14--54:IAND : [31:31]
+n35--32:IAND : [32:32]
+n30--97:IADD : [33:33]
+n32--149:IAND : [34:34]
+n11--127:IAND : [35:35]
+n27--189:IXOR : [36:36]
+n29--192:IADD : [37:37]
+n43--8:IFGE : [38:38]
+n31--150:IFEQ : [39:39]
+n42--33:IFEQ : [40:40]
+n12--128:IFEQ : [41:41]
+n34--103:IFGE : [42:42]
+n33--55:IFEQ : [43:43]
+
+FINISHED ALAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 22 with 44 nodes
+
+n16--19:IUSHR : [0:0]
+n15--23:IAND : [1:1]
+n19--27:ISHL : [2:2]
+n1--51:IUSHR : [3:3]
+n21--43:IXOR : [3:3]
+n0--67:IXOR : [4:4]
+n20--47:IAND : [4:4]
+n23--69:IXOR : [5:5]
+n41--80:ISHL : [6:6]
+n40--75:ISHL : [6:6]
+n24--85:ISHL : [7:7]
+n39--81:IXOR : [7:7]
+n37--86:IXOR : [8:8]
+n28--91:ISHL : [8:8]
+n36--92:IXOR : [9:9]
+n6--94:IXOR : [10:10]
+n5--114:IUSHR : [11:11]
+n8--118:IAND : [12:12]
+n7--122:ISHL : [13:13]
+n38--146:IUSHR : [14:14]
+n10--138:IXOR : [14:14]
+n18--162:IXOR : [15:15]
+n9--142:IAND : [15:15]
+n17--164:IXOR : [16:16]
+n13--170:ISHL : [17:17]
+n22--175:ISHL : [17:17]
+n3--176:IXOR : [18:18]
+n4--180:ISHL : [18:18]
+n26--186:ISHL : [19:19]
+n2--181:IXOR : [19:19]
+n25--187:IXOR : [20:20]
+n14--54:IAND : [20:20]
+n35--32:IAND : [20:20]
+n30--97:IADD : [20:20]
+n32--149:IAND : [20:20]
+n11--127:IAND : [20:20]
+n27--189:IXOR : [21:21]
+n29--192:IADD : [21:21]
+n43--8:IFGE : [21:21]
+n31--150:IFEQ : [21:21]
+n42--33:IFEQ : [21:21]
+n12--128:IFEQ : [21:21]
+n34--103:IFGE : [21:21]
+n33--55:IFEQ : [21:21]
+
+FINISHED ALAP SCHEDULE
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparing schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 22 with 44 nodes
+
+n16--19:IUSHR : [0:0]
+n30--97:IADD : [0:0]
+n40--75:ISHL : [0:0]
+n43--8:IFGE : [0:0]
+n15--23:IAND : [1:1]
+n29--192:IADD : [1:1]
+n34--103:IFGE : [1:1]
+n14--54:IAND : [2:2]
+n35--32:IAND : [2:2]
+n1--51:IUSHR : [2:2]
+n19--27:ISHL : [2:2]
+n0--67:IXOR : [3:3]
+n21--43:IXOR : [3:3]
+n42--33:IFEQ : [3:3]
+n33--55:IFEQ : [3:3]
+n20--47:IAND : [4:4]
+n24--85:ISHL : [5:5]
+n23--69:IXOR : [5:5]
+n28--91:ISHL : [6:6]
+n41--80:ISHL : [6:6]
+n39--81:IXOR : [7:7]
+n37--86:IXOR : [8:8]
+n36--92:IXOR : [9:9]
+n6--94:IXOR : [10:10]
+n13--170:ISHL : [11:11]
+n5--114:IUSHR : [11:11]
+n8--118:IAND : [12:12]
+n38--146:IUSHR : [13:13]
+n7--122:ISHL : [13:13]
+n32--149:IAND : [13:13]
+n11--127:IAND : [13:13]
+n18--162:IXOR : [14:14]
+n10--138:IXOR : [14:14]
+n31--150:IFEQ : [14:14]
+n12--128:IFEQ : [14:14]
+n9--142:IAND : [15:15]
+n17--164:IXOR : [16:16]
+n4--180:ISHL : [16:16]
+n26--186:ISHL : [17:17]
+n22--175:ISHL : [17:17]
+n3--176:IXOR : [18:18]
+n2--181:IXOR : [19:19]
+n25--187:IXOR : [20:20]
+n27--189:IXOR : [21:21]
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 29 milliseconds to converge
+Scheduling took 29 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 21 milliseconds to converge
+Scheduling took 22 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 24 milliseconds to converge
+Scheduling took 24 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 28 milliseconds to converge
+Scheduling took 28 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 27 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 22
+Initial best latency: 22
+43 out of 44 DFG nodes could be skipped to find best schedule
+It took 22 milliseconds to converge
+Scheduling took 22 milliseconds
+
+Print BULB tree: 
+l_bound: 22, u_bound: 22; investigated partial schedule: {}; 
+└── l_bound: 22, u_bound: 22; investigated n16--19:IUSHR in [0:0]; investigated partial schedule: {0=[n16--19:IUSHR]}; 
+

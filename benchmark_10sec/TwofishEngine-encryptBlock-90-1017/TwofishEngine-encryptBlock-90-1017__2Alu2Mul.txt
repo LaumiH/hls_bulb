@@ -1,0 +1,1295 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		And, Or, Mem, Add, Cmp, Other, Shift, Sub, 
+RES01:		And, Or, Mem, Add, Cmp, Other, Shift, Sub, 
+RES02:		Mul, Div, 
+RES03:		Mul, Div, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/TwofishEngine-encryptBlock-90-1017.dot
+DOING ASAP SCHEDULE
+Found schedule of length 76 with 250 nodes
+
+n74--167:IUSHR : [0:0]
+n86--228:IUSHR : [0:0]
+n34--268:DMA_LOAD(ref) : [0:1]
+n67--296:ISHL : [0:0]
+n66--550:IADD : [0:0]
+n68--301:IUSHR : [0:0]
+n199--127:IUSHR : [0:0]
+n240--147:IUSHR : [0:0]
+n38--527:IUSHR : [0:0]
+n37--522:ISHL : [0:0]
+n235--194:IUSHR : [0:0]
+n236--273:IADD : [0:0]
+n17--105:DMA_LOAD(ref) : [0:1]
+n148--114:IAND : [0:0]
+n233--248:IUSHR : [0:0]
+n222--212:IAND : [0:0]
+n249--95:IFGE : [0:0]
+n70--232:IAND : [1:1]
+n6--252:IAND : [1:1]
+n180--213:IMUL : [1:4]
+n73--171:IAND : [1:1]
+n65--1013:IADD : [1:1]
+n36--528:IOR : [1:1]
+n165--316:IADD : [1:1]
+n27--302:IOR : [1:1]
+n152--131:IAND : [1:1]
+n147--115:IMUL : [1:4]
+n218--151:IAND : [1:1]
+n248--558:IFGE : [1:1]
+n215--198:IAND : [1:1]
+n69--233:IMUL : [2:5]
+n220--172:IMUL : [2:5]
+n79--276:DMA_LOAD : [2:3]
+n230--319:DMA_LOAD : [2:3]
+n164--499:IADD : [2:2]
+n156--502:DMA_LOAD : [2:3]
+n5--253:IMUL : [2:5]
+n146--199:IMUL : [2:5]
+n217--152:IMUL : [2:5]
+n32--132:IMUL : [2:5]
+n182--542:IADD : [3:3]
+n160--545:DMA_LOAD : [3:4]
+n56--736:IADD : [4:4]
+n209--739:DMA_LOAD : [4:5]
+n142--116:IADD : [5:5]
+n179--214:IADD : [5:5]
+n109--782:DMA_LOAD : [5:6]
+n55--779:IADD : [5:5]
+n221--153:IADD : [6:6]
+n35--962:IADD : [6:6]
+n141--117:DMA_LOAD : [6:7]
+n225--234:IADD : [6:6]
+n145--200:IADD : [6:6]
+n205--173:IADD : [6:6]
+n62--254:IADD : [6:6]
+n238--215:DMA_LOAD : [6:7]
+n31--133:IADD : [6:6]
+n11--965:DMA_LOAD : [6:7]
+n210--201:DMA_LOAD : [7:8]
+n90--235:DMA_LOAD : [7:8]
+n4--1008:DMA_LOAD : [7:8]
+n157--1005:IADD : [7:7]
+n61--255:DMA_LOAD : [7:8]
+n204--174:DMA_LOAD : [7:8]
+n106--154:DMA_LOAD : [7:8]
+n193--134:DMA_LOAD : [7:8]
+n105--135:IXOR : [9:9]
+n89--216:IXOR : [9:9]
+n104--155:IXOR : [10:10]
+n88--236:IXOR : [10:10]
+n130--256:IXOR : [11:11]
+n189--175:IXOR : [11:11]
+n129--308:IMUL : [12:15]
+n195--266:IADD : [12:12]
+n194--277:IADD : [13:13]
+n111--278:IXOR : [14:14]
+n110--284:IUSHR : [15:15]
+n226--289:ISHL : [15:15]
+n188--309:IADD : [16:16]
+n127--290:IOR : [16:16]
+n28--320:IADD : [17:17]
+n126--393:IUSHR : [17:17]
+n83--340:IAND : [17:17]
+n8--373:IUSHR : [17:17]
+n172--353:IUSHR : [17:17]
+n26--321:IXOR : [18:18]
+n82--341:IMUL : [18:21]
+n7--377:IAND : [18:18]
+n85--397:IAND : [18:18]
+n171--357:IAND : [18:18]
+n163--454:IUSHR : [19:19]
+n15--438:IAND : [19:19]
+n120--764:IUSHR : [19:19]
+n107--378:IMUL : [19:22]
+n190--358:IMUL : [19:22]
+n119--759:ISHL : [19:19]
+n138--420:IUSHR : [19:19]
+n84--398:IMUL : [19:22]
+n42--474:IUSHR : [19:19]
+n14--439:IMUL : [20:23]
+n1--458:IAND : [20:20]
+n118--765:IOR : [20:20]
+n41--478:IAND : [20:20]
+n128--424:IAND : [20:20]
+n0--459:IMUL : [21:24]
+n53--479:IMUL : [21:24]
+n78--425:IMUL : [21:24]
+n117--342:IADD : [22:22]
+n198--359:IADD : [23:23]
+n229--399:IADD : [23:23]
+n116--343:DMA_LOAD : [23:24]
+n192--379:IADD : [23:23]
+n197--360:DMA_LOAD : [24:25]
+n247--380:DMA_LOAD : [24:25]
+n92--400:DMA_LOAD : [24:25]
+n227--440:IADD : [24:24]
+n52--480:IADD : [25:25]
+n54--460:IADD : [25:25]
+n161--441:DMA_LOAD : [25:26]
+n77--426:IADD : [25:25]
+n242--481:DMA_LOAD : [26:27]
+n115--427:DMA_LOAD : [26:27]
+n239--361:IXOR : [26:26]
+n98--461:DMA_LOAD : [26:27]
+n91--381:IXOR : [27:27]
+n46--401:IXOR : [28:28]
+n97--442:IXOR : [28:28]
+n96--462:IXOR : [29:29]
+n151--482:IXOR : [30:30]
+n47--534:IMUL : [31:34]
+n150--492:IADD : [31:31]
+n51--503:IADD : [32:32]
+n50--504:IXOR : [33:33]
+n185--515:ISHL : [34:34]
+n184--510:IUSHR : [34:34]
+n45--535:IADD : [35:35]
+n33--516:IOR : [35:35]
+n121--630:IUSHR : [36:36]
+n125--610:IUSHR : [36:36]
+n149--546:IADD : [36:36]
+n237--590:IUSHR : [36:36]
+n22--577:IAND : [36:36]
+n143--594:IAND : [37:37]
+n246--634:IAND : [37:37]
+n124--614:IAND : [37:37]
+n76--547:IXOR : [37:37]
+n21--578:IMUL : [37:40]
+n232--691:IUSHR : [38:38]
+n24--595:IMUL : [38:41]
+n214--711:IUSHR : [38:38]
+n159--615:IMUL : [38:41]
+n228--985:ISHL : [38:38]
+n191--635:IMUL : [38:41]
+n75--657:IUSHR : [38:38]
+n162--675:IAND : [38:38]
+n181--990:IUSHR : [38:38]
+n231--695:IAND : [39:39]
+n213--715:IAND : [39:39]
+n169--991:IOR : [39:39]
+n112--661:IAND : [39:39]
+n223--676:IMUL : [39:42]
+n187--696:IMUL : [40:43]
+n25--716:IMUL : [40:43]
+n243--662:IMUL : [40:43]
+n49--579:IADD : [41:41]
+n48--580:DMA_LOAD : [42:43]
+n158--616:IADD : [42:42]
+n123--636:IADD : [42:42]
+n23--596:IADD : [42:42]
+n122--637:DMA_LOAD : [43:44]
+n175--677:IADD : [43:43]
+n167--597:DMA_LOAD : [43:44]
+n212--617:DMA_LOAD : [43:44]
+n174--678:DMA_LOAD : [44:45]
+n136--697:IADD : [44:44]
+n18--717:IADD : [44:44]
+n245--663:IADD : [44:44]
+n58--698:DMA_LOAD : [45:46]
+n166--598:IXOR : [45:45]
+n16--718:DMA_LOAD : [45:46]
+n216--664:DMA_LOAD : [45:46]
+n211--618:IXOR : [46:46]
+n57--679:IXOR : [47:47]
+n94--638:IXOR : [47:47]
+n30--699:IXOR : [48:48]
+n29--719:IXOR : [49:49]
+n144--729:IADD : [50:50]
+n95--771:IMUL : [50:53]
+n208--740:IADD : [51:51]
+n219--741:IXOR : [52:52]
+n139--747:IUSHR : [53:53]
+n140--752:ISHL : [53:53]
+n13--753:IOR : [54:54]
+n93--772:IADD : [54:54]
+n108--783:IADD : [55:55]
+n207--803:IAND : [55:55]
+n63--856:IUSHR : [55:55]
+n40--816:IUSHR : [55:55]
+n12--836:IUSHR : [55:55]
+n133--860:IAND : [56:56]
+n114--784:IXOR : [56:56]
+n39--820:IAND : [56:56]
+n203--840:IAND : [56:56]
+n206--804:IMUL : [56:59]
+n196--917:IUSHR : [57:57]
+n186--937:IUSHR : [57:57]
+n224--883:IUSHR : [57:57]
+n202--841:IMUL : [57:60]
+n113--901:IAND : [57:57]
+n72--821:IMUL : [57:60]
+n173--861:IMUL : [57:60]
+n132--941:IAND : [58:58]
+n135--887:IAND : [58:58]
+n60--921:IAND : [58:58]
+n170--902:IMUL : [58:61]
+n131--942:IMUL : [59:62]
+n59--922:IMUL : [59:62]
+n134--888:IMUL : [59:62]
+n183--805:IADD : [60:60]
+n137--862:IADD : [61:61]
+n102--806:DMA_LOAD : [61:62]
+n71--822:IADD : [61:61]
+n44--842:IADD : [61:61]
+n103--823:DMA_LOAD : [62:63]
+n200--903:IADD : [62:62]
+n81--863:DMA_LOAD : [62:63]
+n43--843:DMA_LOAD : [62:63]
+n100--943:IADD : [63:63]
+n241--889:IADD : [63:63]
+n201--923:IADD : [63:63]
+n234--904:DMA_LOAD : [63:64]
+n244--890:DMA_LOAD : [64:65]
+n178--924:DMA_LOAD : [64:65]
+n101--824:IXOR : [64:64]
+n99--944:DMA_LOAD : [64:65]
+n80--844:IXOR : [65:65]
+n177--905:IXOR : [66:66]
+n19--864:IXOR : [66:66]
+n176--925:IXOR : [67:67]
+n20--945:IXOR : [68:68]
+n87--997:IMUL : [69:72]
+n10--955:IADD : [69:69]
+n9--966:IADD : [70:70]
+n64--967:IXOR : [71:71]
+n154--973:IUSHR : [72:72]
+n155--978:ISHL : [72:72]
+n153--979:IOR : [73:73]
+n3--998:IADD : [73:73]
+n2--1009:IADD : [74:74]
+n168--1010:IXOR : [75:75]
+
+FINISHED ASAP SCHEDULE
+
+DOING LAZY ALAP SCHEDULE
+Found schedule of length 400 with 250 nodes
+
+n235--194:IUSHR : [0:0]
+n222--212:IAND : [1:1]
+n215--198:IAND : [2:2]
+n86--228:IUSHR : [3:3]
+n70--232:IAND : [4:4]
+n233--248:IUSHR : [5:5]
+n146--199:IMUL : [6:9]
+n180--213:IMUL : [10:13]
+n69--233:IMUL : [14:17]
+n6--252:IAND : [18:18]
+n199--127:IUSHR : [19:19]
+n5--253:IMUL : [20:23]
+n240--147:IUSHR : [24:24]
+n152--131:IAND : [25:25]
+n17--105:DMA_LOAD(ref) : [26:27]
+n148--114:IAND : [28:28]
+n147--115:IMUL : [29:32]
+n145--200:IADD : [33:33]
+n179--214:IADD : [34:34]
+n218--151:IAND : [35:35]
+n74--167:IUSHR : [36:36]
+n32--132:IMUL : [37:40]
+n210--201:DMA_LOAD : [41:42]
+n225--234:IADD : [43:43]
+n217--152:IMUL : [44:47]
+n238--215:DMA_LOAD : [48:49]
+n73--171:IAND : [50:50]
+n220--172:IMUL : [51:54]
+n90--235:DMA_LOAD : [55:56]
+n62--254:IADD : [57:57]
+n61--255:DMA_LOAD : [58:59]
+n89--216:IXOR : [60:60]
+n142--116:IADD : [61:61]
+n31--133:IADD : [62:62]
+n88--236:IXOR : [63:63]
+n221--153:IADD : [64:64]
+n130--256:IXOR : [65:65]
+n141--117:DMA_LOAD : [66:67]
+n193--134:DMA_LOAD : [68:69]
+n129--308:IMUL : [70:73]
+n106--154:DMA_LOAD : [74:75]
+n205--173:IADD : [76:76]
+n204--174:DMA_LOAD : [77:78]
+n105--135:IXOR : [79:79]
+n34--268:DMA_LOAD(ref) : [80:81]
+n236--273:IADD : [82:82]
+n104--155:IXOR : [83:83]
+n230--319:DMA_LOAD : [84:85]
+n189--175:IXOR : [86:86]
+n68--301:IUSHR : [87:87]
+n188--309:IADD : [88:88]
+n67--296:ISHL : [89:89]
+n79--276:DMA_LOAD : [90:91]
+n27--302:IOR : [92:92]
+n28--320:IADD : [93:93]
+n26--321:IXOR : [94:94]
+n195--266:IADD : [95:95]
+n138--420:IUSHR : [96:96]
+n194--277:IADD : [97:97]
+n111--278:IXOR : [98:98]
+n163--454:IUSHR : [99:99]
+n15--438:IAND : [100:100]
+n128--424:IAND : [101:101]
+n14--439:IMUL : [102:105]
+n110--284:IUSHR : [106:106]
+n1--458:IAND : [107:107]
+n226--289:ISHL : [108:108]
+n42--474:IUSHR : [109:109]
+n78--425:IMUL : [110:113]
+n0--459:IMUL : [114:117]
+n41--478:IAND : [118:118]
+n127--290:IOR : [119:119]
+n172--353:IUSHR : [120:120]
+n53--479:IMUL : [121:124]
+n83--340:IAND : [125:125]
+n8--373:IUSHR : [126:126]
+n171--357:IAND : [127:127]
+n126--393:IUSHR : [128:128]
+n190--358:IMUL : [129:132]
+n7--377:IAND : [133:133]
+n82--341:IMUL : [134:137]
+n227--440:IADD : [138:138]
+n77--426:IADD : [139:139]
+n115--427:DMA_LOAD : [140:141]
+n107--378:IMUL : [142:145]
+n85--397:IAND : [146:146]
+n54--460:IADD : [147:147]
+n161--441:DMA_LOAD : [148:149]
+n52--480:IADD : [150:150]
+n84--398:IMUL : [151:154]
+n98--461:DMA_LOAD : [155:156]
+n242--481:DMA_LOAD : [157:158]
+n97--442:IXOR : [159:159]
+n198--359:IADD : [160:160]
+n96--462:IXOR : [161:161]
+n117--342:IADD : [162:162]
+n197--360:DMA_LOAD : [163:164]
+n116--343:DMA_LOAD : [165:166]
+n151--482:IXOR : [167:167]
+n192--379:IADD : [168:168]
+n47--534:IMUL : [169:172]
+n247--380:DMA_LOAD : [173:174]
+n229--399:IADD : [175:175]
+n165--316:IADD : [176:176]
+n92--400:DMA_LOAD : [177:178]
+n239--361:IXOR : [179:179]
+n164--499:IADD : [180:180]
+n91--381:IXOR : [181:181]
+n46--401:IXOR : [182:182]
+n160--545:DMA_LOAD : [183:184]
+n38--527:IUSHR : [185:185]
+n37--522:ISHL : [186:186]
+n45--535:IADD : [187:187]
+n36--528:IOR : [188:188]
+n156--502:DMA_LOAD : [189:190]
+n149--546:IADD : [191:191]
+n76--547:IXOR : [192:192]
+n150--492:IADD : [193:193]
+n51--503:IADD : [194:194]
+n75--657:IUSHR : [195:195]
+n232--691:IUSHR : [196:196]
+n112--661:IAND : [197:197]
+n50--504:IXOR : [198:198]
+n162--675:IAND : [199:199]
+n231--695:IAND : [200:200]
+n243--662:IMUL : [201:204]
+n185--515:ISHL : [205:205]
+n214--711:IUSHR : [206:206]
+n223--676:IMUL : [207:210]
+n184--510:IUSHR : [211:211]
+n187--696:IMUL : [212:215]
+n213--715:IAND : [216:216]
+n33--516:IOR : [217:217]
+n25--716:IMUL : [218:221]
+n237--590:IUSHR : [222:222]
+n143--594:IAND : [223:223]
+n125--610:IUSHR : [224:224]
+n22--577:IAND : [225:225]
+n121--630:IUSHR : [226:226]
+n24--595:IMUL : [227:230]
+n175--677:IADD : [231:231]
+n245--663:IADD : [232:232]
+n124--614:IAND : [233:233]
+n21--578:IMUL : [234:237]
+n174--678:DMA_LOAD : [238:239]
+n136--697:IADD : [240:240]
+n246--634:IAND : [241:241]
+n159--615:IMUL : [242:245]
+n216--664:DMA_LOAD : [246:247]
+n58--698:DMA_LOAD : [248:249]
+n18--717:IADD : [250:250]
+n191--635:IMUL : [251:254]
+n57--679:IXOR : [255:255]
+n16--718:DMA_LOAD : [256:257]
+n49--579:IADD : [258:258]
+n30--699:IXOR : [259:259]
+n23--596:IADD : [260:260]
+n48--580:DMA_LOAD : [261:262]
+n29--719:IXOR : [263:263]
+n158--616:IADD : [264:264]
+n167--597:DMA_LOAD : [265:266]
+n123--636:IADD : [267:267]
+n212--617:DMA_LOAD : [268:269]
+n95--771:IMUL : [270:273]
+n122--637:DMA_LOAD : [274:275]
+n166--598:IXOR : [276:276]
+n182--542:IADD : [277:277]
+n211--618:IXOR : [278:278]
+n56--736:IADD : [279:279]
+n94--638:IXOR : [280:280]
+n109--782:DMA_LOAD : [281:282]
+n209--739:DMA_LOAD : [283:284]
+n144--729:IADD : [285:285]
+n120--764:IUSHR : [286:286]
+n119--759:ISHL : [287:287]
+n93--772:IADD : [288:288]
+n118--765:IOR : [289:289]
+n108--783:IADD : [290:290]
+n208--740:IADD : [291:291]
+n114--784:IXOR : [292:292]
+n219--741:IXOR : [293:293]
+n224--883:IUSHR : [294:294]
+n139--747:IUSHR : [295:295]
+n140--752:ISHL : [296:296]
+n13--753:IOR : [297:297]
+n196--917:IUSHR : [298:298]
+n135--887:IAND : [299:299]
+n113--901:IAND : [300:300]
+n186--937:IUSHR : [301:301]
+n134--888:IMUL : [302:305]
+n60--921:IAND : [306:306]
+n40--816:IUSHR : [307:307]
+n170--902:IMUL : [308:311]
+n132--941:IAND : [312:312]
+n59--922:IMUL : [313:316]
+n39--820:IAND : [317:317]
+n207--803:IAND : [318:318]
+n12--836:IUSHR : [319:319]
+n131--942:IMUL : [320:323]
+n203--840:IAND : [324:324]
+n72--821:IMUL : [325:328]
+n206--804:IMUL : [329:332]
+n63--856:IUSHR : [333:333]
+n133--860:IAND : [334:334]
+n202--841:IMUL : [335:338]
+n241--889:IADD : [339:339]
+n200--903:IADD : [340:340]
+n173--861:IMUL : [341:344]
+n244--890:DMA_LOAD : [345:346]
+n234--904:DMA_LOAD : [347:348]
+n201--923:IADD : [349:349]
+n100--943:IADD : [350:350]
+n178--924:DMA_LOAD : [351:352]
+n71--822:IADD : [353:353]
+n183--805:IADD : [354:354]
+n177--905:IXOR : [355:355]
+n103--823:DMA_LOAD : [356:357]
+n102--806:DMA_LOAD : [358:359]
+n99--944:DMA_LOAD : [360:361]
+n44--842:IADD : [362:362]
+n176--925:IXOR : [363:363]
+n137--862:IADD : [364:364]
+n43--843:DMA_LOAD : [365:366]
+n81--863:DMA_LOAD : [367:368]
+n101--824:IXOR : [369:369]
+n20--945:IXOR : [370:370]
+n80--844:IXOR : [371:371]
+n87--997:IMUL : [372:375]
+n55--779:IADD : [376:376]
+n19--864:IXOR : [377:377]
+n11--965:DMA_LOAD : [378:379]
+n35--962:IADD : [380:380]
+n10--955:IADD : [381:381]
+n4--1008:DMA_LOAD : [382:383]
+n9--966:IADD : [384:384]
+n3--998:IADD : [385:385]
+n228--985:ISHL : [386:386]
+n64--967:IXOR : [387:387]
+n181--990:IUSHR : [388:388]
+n154--973:IUSHR : [389:389]
+n155--978:ISHL : [390:390]
+n169--991:IOR : [391:391]
+n2--1009:IADD : [392:392]
+n66--550:IADD : [393:393]
+n153--979:IOR : [394:394]
+n157--1005:IADD : [395:395]
+n168--1010:IXOR : [396:396]
+n248--558:IFGE : [397:397]
+n249--95:IFGE : [398:398]
+n65--1013:IADD : [399:399]
+
+FINISHED ALAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 76 with 250 nodes
+
+n235--194:IUSHR : [0:0]
+n222--212:IAND : [1:1]
+n215--198:IAND : [1:1]
+n86--228:IUSHR : [1:1]
+n70--232:IAND : [2:2]
+n233--248:IUSHR : [2:2]
+n146--199:IMUL : [2:5]
+n180--213:IMUL : [2:5]
+n69--233:IMUL : [3:6]
+n6--252:IAND : [3:3]
+n199--127:IUSHR : [4:4]
+n5--253:IMUL : [4:7]
+n240--147:IUSHR : [5:5]
+n152--131:IAND : [5:5]
+n17--105:DMA_LOAD(ref) : [5:6]
+n148--114:IAND : [5:5]
+n147--115:IMUL : [6:9]
+n145--200:IADD : [6:6]
+n179--214:IADD : [6:6]
+n218--151:IAND : [6:6]
+n74--167:IUSHR : [6:6]
+n32--132:IMUL : [6:9]
+n210--201:DMA_LOAD : [7:8]
+n225--234:IADD : [7:7]
+n217--152:IMUL : [7:10]
+n238--215:DMA_LOAD : [7:8]
+n73--171:IAND : [7:7]
+n220--172:IMUL : [8:11]
+n90--235:DMA_LOAD : [8:9]
+n62--254:IADD : [8:8]
+n61--255:DMA_LOAD : [9:10]
+n89--216:IXOR : [9:9]
+n142--116:IADD : [10:10]
+n31--133:IADD : [10:10]
+n88--236:IXOR : [10:10]
+n221--153:IADD : [11:11]
+n130--256:IXOR : [11:11]
+n141--117:DMA_LOAD : [11:12]
+n193--134:DMA_LOAD : [11:12]
+n129--308:IMUL : [12:15]
+n106--154:DMA_LOAD : [12:13]
+n205--173:IADD : [12:12]
+n204--174:DMA_LOAD : [13:14]
+n105--135:IXOR : [13:13]
+n34--268:DMA_LOAD(ref) : [13:14]
+n236--273:IADD : [14:14]
+n104--155:IXOR : [14:14]
+n230--319:DMA_LOAD : [15:16]
+n189--175:IXOR : [15:15]
+n68--301:IUSHR : [16:16]
+n188--309:IADD : [16:16]
+n67--296:ISHL : [16:16]
+n79--276:DMA_LOAD : [17:18]
+n27--302:IOR : [17:17]
+n28--320:IADD : [17:17]
+n26--321:IXOR : [18:18]
+n195--266:IADD : [18:18]
+n138--420:IUSHR : [19:19]
+n194--277:IADD : [19:19]
+n111--278:IXOR : [20:20]
+n163--454:IUSHR : [20:20]
+n15--438:IAND : [20:20]
+n128--424:IAND : [20:20]
+n14--439:IMUL : [21:24]
+n110--284:IUSHR : [21:21]
+n1--458:IAND : [21:21]
+n226--289:ISHL : [21:21]
+n42--474:IUSHR : [21:21]
+n78--425:IMUL : [21:24]
+n0--459:IMUL : [22:25]
+n41--478:IAND : [22:22]
+n127--290:IOR : [22:22]
+n172--353:IUSHR : [23:23]
+n53--479:IMUL : [23:26]
+n83--340:IAND : [24:24]
+n8--373:IUSHR : [24:24]
+n171--357:IAND : [24:24]
+n126--393:IUSHR : [25:25]
+n190--358:IMUL : [25:28]
+n7--377:IAND : [25:25]
+n82--341:IMUL : [25:28]
+n227--440:IADD : [25:25]
+n77--426:IADD : [25:25]
+n115--427:DMA_LOAD : [26:27]
+n107--378:IMUL : [26:29]
+n85--397:IAND : [26:26]
+n54--460:IADD : [26:26]
+n161--441:DMA_LOAD : [26:27]
+n52--480:IADD : [27:27]
+n84--398:IMUL : [27:30]
+n98--461:DMA_LOAD : [27:28]
+n242--481:DMA_LOAD : [28:29]
+n97--442:IXOR : [28:28]
+n198--359:IADD : [29:29]
+n96--462:IXOR : [29:29]
+n117--342:IADD : [29:29]
+n197--360:DMA_LOAD : [30:31]
+n116--343:DMA_LOAD : [30:31]
+n151--482:IXOR : [30:30]
+n192--379:IADD : [30:30]
+n47--534:IMUL : [31:34]
+n247--380:DMA_LOAD : [31:32]
+n229--399:IADD : [31:31]
+n165--316:IADD : [32:32]
+n92--400:DMA_LOAD : [32:33]
+n239--361:IXOR : [32:32]
+n164--499:IADD : [33:33]
+n91--381:IXOR : [33:33]
+n46--401:IXOR : [34:34]
+n160--545:DMA_LOAD : [34:35]
+n38--527:IUSHR : [35:35]
+n37--522:ISHL : [35:35]
+n45--535:IADD : [35:35]
+n36--528:IOR : [36:36]
+n156--502:DMA_LOAD : [36:37]
+n149--546:IADD : [36:36]
+n76--547:IXOR : [37:37]
+n150--492:IADD : [37:37]
+n51--503:IADD : [38:38]
+n75--657:IUSHR : [38:38]
+n232--691:IUSHR : [39:39]
+n112--661:IAND : [39:39]
+n50--504:IXOR : [39:39]
+n162--675:IAND : [39:39]
+n231--695:IAND : [40:40]
+n243--662:IMUL : [40:43]
+n185--515:ISHL : [40:40]
+n214--711:IUSHR : [40:40]
+n223--676:IMUL : [40:43]
+n184--510:IUSHR : [40:40]
+n187--696:IMUL : [41:44]
+n213--715:IAND : [41:41]
+n33--516:IOR : [41:41]
+n25--716:IMUL : [42:45]
+n237--590:IUSHR : [42:42]
+n143--594:IAND : [43:43]
+n125--610:IUSHR : [43:43]
+n22--577:IAND : [43:43]
+n121--630:IUSHR : [44:44]
+n24--595:IMUL : [44:47]
+n175--677:IADD : [44:44]
+n245--663:IADD : [44:44]
+n124--614:IAND : [44:44]
+n21--578:IMUL : [44:47]
+n174--678:DMA_LOAD : [45:46]
+n136--697:IADD : [45:45]
+n246--634:IAND : [45:45]
+n159--615:IMUL : [45:48]
+n216--664:DMA_LOAD : [45:46]
+n58--698:DMA_LOAD : [46:47]
+n18--717:IADD : [46:46]
+n191--635:IMUL : [46:49]
+n57--679:IXOR : [47:47]
+n16--718:DMA_LOAD : [47:48]
+n49--579:IADD : [48:48]
+n30--699:IXOR : [48:48]
+n23--596:IADD : [48:48]
+n48--580:DMA_LOAD : [49:50]
+n29--719:IXOR : [49:49]
+n158--616:IADD : [49:49]
+n167--597:DMA_LOAD : [49:50]
+n123--636:IADD : [50:50]
+n212--617:DMA_LOAD : [50:51]
+n95--771:IMUL : [50:53]
+n122--637:DMA_LOAD : [51:52]
+n166--598:IXOR : [51:51]
+n182--542:IADD : [51:51]
+n211--618:IXOR : [52:52]
+n56--736:IADD : [52:52]
+n94--638:IXOR : [53:53]
+n109--782:DMA_LOAD : [53:54]
+n209--739:DMA_LOAD : [53:54]
+n144--729:IADD : [54:54]
+n120--764:IUSHR : [54:54]
+n119--759:ISHL : [54:54]
+n93--772:IADD : [54:54]
+n118--765:IOR : [55:55]
+n108--783:IADD : [55:55]
+n208--740:IADD : [55:55]
+n114--784:IXOR : [56:56]
+n219--741:IXOR : [56:56]
+n224--883:IUSHR : [57:57]
+n139--747:IUSHR : [57:57]
+n140--752:ISHL : [57:57]
+n13--753:IOR : [58:58]
+n196--917:IUSHR : [58:58]
+n135--887:IAND : [58:58]
+n113--901:IAND : [58:58]
+n186--937:IUSHR : [59:59]
+n134--888:IMUL : [59:62]
+n60--921:IAND : [59:59]
+n40--816:IUSHR : [59:59]
+n170--902:IMUL : [59:62]
+n132--941:IAND : [60:60]
+n59--922:IMUL : [60:63]
+n39--820:IAND : [60:60]
+n207--803:IAND : [60:60]
+n12--836:IUSHR : [60:60]
+n131--942:IMUL : [61:64]
+n203--840:IAND : [61:61]
+n72--821:IMUL : [61:64]
+n206--804:IMUL : [61:64]
+n63--856:IUSHR : [61:61]
+n133--860:IAND : [62:62]
+n202--841:IMUL : [62:65]
+n241--889:IADD : [63:63]
+n200--903:IADD : [63:63]
+n173--861:IMUL : [63:66]
+n244--890:DMA_LOAD : [64:65]
+n234--904:DMA_LOAD : [64:65]
+n201--923:IADD : [64:64]
+n100--943:IADD : [65:65]
+n178--924:DMA_LOAD : [65:66]
+n71--822:IADD : [65:65]
+n183--805:IADD : [65:65]
+n177--905:IXOR : [66:66]
+n103--823:DMA_LOAD : [66:67]
+n102--806:DMA_LOAD : [66:67]
+n99--944:DMA_LOAD : [66:67]
+n44--842:IADD : [66:66]
+n176--925:IXOR : [67:67]
+n137--862:IADD : [67:67]
+n43--843:DMA_LOAD : [67:68]
+n81--863:DMA_LOAD : [68:69]
+n101--824:IXOR : [68:68]
+n20--945:IXOR : [68:68]
+n80--844:IXOR : [69:69]
+n87--997:IMUL : [69:72]
+n55--779:IADD : [69:69]
+n19--864:IXOR : [70:70]
+n11--965:DMA_LOAD : [70:71]
+n35--962:IADD : [71:71]
+n10--955:IADD : [71:71]
+n4--1008:DMA_LOAD : [72:73]
+n9--966:IADD : [72:72]
+n3--998:IADD : [73:73]
+n228--985:ISHL : [73:73]
+n64--967:IXOR : [73:73]
+n181--990:IUSHR : [73:73]
+n154--973:IUSHR : [74:74]
+n155--978:ISHL : [74:74]
+n169--991:IOR : [74:74]
+n2--1009:IADD : [74:74]
+n66--550:IADD : [74:74]
+n153--979:IOR : [75:75]
+n157--1005:IADD : [75:75]
+n168--1010:IXOR : [75:75]
+n248--558:IFGE : [75:75]
+n249--95:IFGE : [75:75]
+n65--1013:IADD : [75:75]
+
+FINISHED ALAP SCHEDULE
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparing schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3351 milliseconds to converge
+Scheduling took 3352 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3020 milliseconds to converge
+Scheduling took 3020 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3351 milliseconds to converge
+Scheduling took 3352 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3127 milliseconds to converge
+Scheduling took 3127 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3351 milliseconds to converge
+Scheduling took 3352 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 2924 milliseconds to converge
+Scheduling took 2924 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3020 milliseconds to converge
+Scheduling took 3020 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3127 milliseconds to converge
+Scheduling took 3127 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3020 milliseconds to converge
+Scheduling took 3020 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 2924 milliseconds to converge
+Scheduling took 2924 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Comparing lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true 
+		 with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+
+--->  Schedules are equal
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3127 milliseconds to converge
+Scheduling took 3127 milliseconds
+
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 2924 milliseconds to converge
+Scheduling took 2924 milliseconds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 128 with 250 nodes
+
+n17--105:DMA_LOAD(ref) : [0:1]
+n34--268:DMA_LOAD(ref) : [0:1]
+n199--127:IUSHR : [2:2]
+n235--194:IUSHR : [2:2]
+n222--212:IAND : [3:3]
+n215--198:IAND : [3:3]
+n240--147:IUSHR : [4:4]
+n146--199:IMUL : [4:7]
+n180--213:IMUL : [4:7]
+n86--228:IUSHR : [4:4]
+n152--131:IAND : [5:5]
+n148--114:IAND : [5:5]
+n70--232:IAND : [6:6]
+n233--248:IUSHR : [6:6]
+n6--252:IAND : [7:7]
+n218--151:IAND : [7:7]
+n69--233:IMUL : [8:11]
+n147--115:IMUL : [8:11]
+n145--200:IADD : [8:8]
+n179--214:IADD : [8:8]
+n210--201:DMA_LOAD : [9:10]
+n74--167:IUSHR : [9:9]
+n238--215:DMA_LOAD : [10:11]
+n73--171:IAND : [11:11]
+n142--116:IADD : [12:12]
+n225--234:IADD : [12:12]
+n5--253:IMUL : [12:15]
+n32--132:IMUL : [12:15]
+n141--117:DMA_LOAD : [13:14]
+n90--235:DMA_LOAD : [13:14]
+n79--276:DMA_LOAD : [15:16]
+n89--216:IXOR : [15:15]
+n220--172:IMUL : [16:19]
+n217--152:IMUL : [16:19]
+n31--133:IADD : [16:16]
+n62--254:IADD : [17:17]
+n193--134:DMA_LOAD : [17:18]
+n61--255:DMA_LOAD : [18:19]
+n105--135:IXOR : [19:19]
+n221--153:IADD : [20:20]
+n205--173:IADD : [20:20]
+n106--154:DMA_LOAD : [21:22]
+n88--236:IXOR : [21:21]
+n130--256:IXOR : [22:22]
+n104--155:IXOR : [23:23]
+n129--308:IMUL : [23:26]
+n204--174:DMA_LOAD : [23:24]
+n236--273:IADD : [24:24]
+n68--301:IUSHR : [25:25]
+n189--175:IXOR : [25:25]
+n230--319:DMA_LOAD : [26:27]
+n195--266:IADD : [26:26]
+n194--277:IADD : [27:27]
+n111--278:IXOR : [28:28]
+n188--309:IADD : [28:28]
+n28--320:IADD : [29:29]
+n67--296:ISHL : [29:29]
+n110--284:IUSHR : [30:30]
+n27--302:IOR : [30:30]
+n26--321:IXOR : [31:31]
+n226--289:ISHL : [31:31]
+n165--316:IADD : [32:32]
+n127--290:IOR : [32:32]
+n163--454:IUSHR : [33:33]
+n138--420:IUSHR : [33:33]
+n15--438:IAND : [34:34]
+n128--424:IAND : [34:34]
+n14--439:IMUL : [35:38]
+n1--458:IAND : [35:35]
+n172--353:IUSHR : [35:35]
+n78--425:IMUL : [35:38]
+n83--340:IAND : [36:36]
+n8--373:IUSHR : [36:36]
+n42--474:IUSHR : [37:37]
+n171--357:IAND : [37:37]
+n126--393:IUSHR : [38:38]
+n7--377:IAND : [38:38]
+n0--459:IMUL : [39:42]
+n190--358:IMUL : [39:42]
+n41--478:IAND : [39:39]
+n227--440:IADD : [39:39]
+n85--397:IAND : [40:40]
+n77--426:IADD : [40:40]
+n115--427:DMA_LOAD : [41:42]
+n161--441:DMA_LOAD : [41:42]
+n198--359:IADD : [43:43]
+n107--378:IMUL : [43:46]
+n82--341:IMUL : [43:46]
+n54--460:IADD : [43:43]
+n197--360:DMA_LOAD : [44:45]
+n98--461:DMA_LOAD : [44:45]
+n156--502:DMA_LOAD : [46:47]
+n97--442:IXOR : [46:46]
+n117--342:IADD : [47:47]
+n84--398:IMUL : [47:50]
+n53--479:IMUL : [47:50]
+n116--343:DMA_LOAD : [48:49]
+n192--379:IADD : [48:48]
+n247--380:DMA_LOAD : [49:50]
+n239--361:IXOR : [50:50]
+n229--399:IADD : [51:51]
+n52--480:IADD : [51:51]
+n242--481:DMA_LOAD : [52:53]
+n96--462:IXOR : [52:52]
+n92--400:DMA_LOAD : [53:54]
+n91--381:IXOR : [54:54]
+n46--401:IXOR : [55:55]
+n151--482:IXOR : [55:55]
+n47--534:IMUL : [56:59]
+n164--499:IADD : [56:56]
+n150--492:IADD : [56:56]
+n38--527:IUSHR : [57:57]
+n51--503:IADD : [57:57]
+n37--522:ISHL : [58:58]
+n50--504:IXOR : [58:58]
+n36--528:IOR : [59:59]
+n160--545:DMA_LOAD : [59:60]
+n45--535:IADD : [60:60]
+n185--515:ISHL : [61:61]
+n149--546:IADD : [61:61]
+n76--547:IXOR : [62:62]
+n184--510:IUSHR : [62:62]
+n33--516:IOR : [63:63]
+n182--542:IADD : [63:63]
+n232--691:IUSHR : [64:64]
+n75--657:IUSHR : [64:64]
+n112--661:IAND : [65:65]
+n237--590:IUSHR : [65:65]
+n231--695:IAND : [66:66]
+n243--662:IMUL : [66:69]
+n162--675:IAND : [66:66]
+n143--594:IAND : [67:67]
+n125--610:IUSHR : [67:67]
+n223--676:IMUL : [67:70]
+n214--711:IUSHR : [68:68]
+n22--577:IAND : [68:68]
+n121--630:IUSHR : [69:69]
+n213--715:IAND : [69:69]
+n187--696:IMUL : [70:73]
+n245--663:IADD : [70:70]
+n124--614:IAND : [70:70]
+n24--595:IMUL : [71:74]
+n175--677:IADD : [71:71]
+n246--634:IAND : [71:71]
+n174--678:DMA_LOAD : [72:73]
+n216--664:DMA_LOAD : [72:73]
+n57--679:IXOR : [74:74]
+n136--697:IADD : [74:74]
+n21--578:IMUL : [74:77]
+n58--698:DMA_LOAD : [75:76]
+n25--716:IMUL : [75:78]
+n23--596:IADD : [75:75]
+n167--597:DMA_LOAD : [76:77]
+n30--699:IXOR : [77:77]
+n49--579:IADD : [78:78]
+n159--615:IMUL : [78:81]
+n209--739:DMA_LOAD : [78:79]
+n48--580:DMA_LOAD : [79:80]
+n191--635:IMUL : [79:82]
+n18--717:IADD : [80:80]
+n166--598:IXOR : [81:81]
+n16--718:DMA_LOAD : [81:82]
+n158--616:IADD : [82:82]
+n123--636:IADD : [83:83]
+n212--617:DMA_LOAD : [83:84]
+n122--637:DMA_LOAD : [84:85]
+n29--719:IXOR : [85:85]
+n211--618:IXOR : [86:86]
+n95--771:IMUL : [86:89]
+n56--736:IADD : [86:86]
+n120--764:IUSHR : [87:87]
+n94--638:IXOR : [87:87]
+n144--729:IADD : [88:88]
+n119--759:ISHL : [88:88]
+n208--740:IADD : [89:89]
+n109--782:DMA_LOAD : [89:90]
+n219--741:IXOR : [90:90]
+n118--765:IOR : [91:91]
+n93--772:IADD : [91:91]
+n108--783:IADD : [92:92]
+n139--747:IUSHR : [92:92]
+n114--784:IXOR : [93:93]
+n140--752:ISHL : [93:93]
+n13--753:IOR : [94:94]
+n224--883:IUSHR : [94:94]
+n196--917:IUSHR : [95:95]
+n135--887:IAND : [95:95]
+n134--888:IMUL : [96:99]
+n113--901:IAND : [96:96]
+n40--816:IUSHR : [96:96]
+n186--937:IUSHR : [97:97]
+n39--820:IAND : [97:97]
+n170--902:IMUL : [97:100]
+n60--921:IAND : [98:98]
+n207--803:IAND : [98:98]
+n132--941:IAND : [99:99]
+n12--836:IUSHR : [99:99]
+n241--889:IADD : [100:100]
+n59--922:IMUL : [100:103]
+n203--840:IAND : [100:100]
+n200--903:IADD : [101:101]
+n72--821:IMUL : [101:104]
+n63--856:IUSHR : [101:101]
+n133--860:IAND : [102:102]
+n244--890:DMA_LOAD : [102:103]
+n234--904:DMA_LOAD : [103:104]
+n201--923:IADD : [104:104]
+n206--804:IMUL : [104:107]
+n177--905:IXOR : [105:105]
+n131--942:IMUL : [105:108]
+n71--822:IADD : [105:105]
+n103--823:DMA_LOAD : [106:107]
+n178--924:DMA_LOAD : [106:107]
+n176--925:IXOR : [108:108]
+n202--841:IMUL : [108:111]
+n183--805:IADD : [108:108]
+n100--943:IADD : [109:109]
+n102--806:DMA_LOAD : [109:110]
+n173--861:IMUL : [109:112]
+n99--944:DMA_LOAD : [110:111]
+n101--824:IXOR : [111:111]
+n44--842:IADD : [112:112]
+n55--779:IADD : [112:112]
+n137--862:IADD : [113:113]
+n43--843:DMA_LOAD : [113:114]
+n81--863:DMA_LOAD : [114:115]
+n80--844:IXOR : [115:115]
+n19--864:IXOR : [116:116]
+n20--945:IXOR : [116:116]
+n10--955:IADD : [117:117]
+n87--997:IMUL : [117:120]
+n11--965:DMA_LOAD : [117:118]
+n35--962:IADD : [118:118]
+n4--1008:DMA_LOAD : [119:120]
+n9--966:IADD : [119:119]
+n64--967:IXOR : [120:120]
+n3--998:IADD : [121:121]
+n228--985:ISHL : [121:121]
+n181--990:IUSHR : [122:122]
+n66--550:IADD : [122:122]
+n154--973:IUSHR : [123:123]
+n155--978:ISHL : [123:123]
+n169--991:IOR : [124:124]
+n2--1009:IADD : [124:124]
+n153--979:IOR : [125:125]
+n157--1005:IADD : [125:125]
+n168--1010:IXOR : [126:126]
+n248--558:IFGE : [126:126]
+n249--95:IFGE : [127:127]
+n65--1013:IADD : [127:127]
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3020 milliseconds to converge
+Scheduling took 3020 milliseconds
+
+Print BULB tree: 
+l_bound: 128, u_bound: 128; investigated partial schedule: {}; 
+└── l_bound: 128, u_bound: 128; investigated n235--194:IUSHR in [0:0]; investigated partial schedule: {0=[n235--194:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3127 milliseconds to converge
+Scheduling took 3127 milliseconds
+
+Print BULB tree: 
+l_bound: 128, u_bound: 128; investigated partial schedule: {}; 
+└── l_bound: 128, u_bound: 128; investigated n235--194:IUSHR in [0:0]; investigated partial schedule: {0=[n235--194:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 3351 milliseconds to converge
+Scheduling took 3352 milliseconds
+
+Print BULB tree: 
+l_bound: 128, u_bound: 128; investigated partial schedule: {}; 
+└── l_bound: 128, u_bound: 128; investigated n235--194:IUSHR in [0:0]; investigated partial schedule: {0=[n235--194:IUSHR]}; 
+
+Printing BULB metrics for lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 128
+Initial best latency: 128
+249 out of 250 DFG nodes could be skipped to find best schedule
+It took 2924 milliseconds to converge
+Scheduling took 2924 milliseconds
+
+Print BULB tree: 
+l_bound: 128, u_bound: 128; investigated partial schedule: {}; 
+└── l_bound: 128, u_bound: 128; investigated n235--194:IUSHR in [0:0]; investigated partial schedule: {0=[n235--194:IUSHR]}; 
+

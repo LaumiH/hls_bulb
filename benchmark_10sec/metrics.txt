@@ -1,0 +1,143 @@
+1042 tried combinations completed in given time
+72 tried combinations timed out
+	- benchmark/ECOH256Digest-AES2RoundsAll-2-666/ECOH256Digest-AES2RoundsAll-2-666__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/TwofishEngine-#init#-3600-4541/TwofishEngine-#init#-3600-4541__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-processBlock-2-37/WhirlpoolDigest-processBlock-2-37__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/BLAKE256Digest-processBlock-189-1577/BLAKE256Digest-processBlock-189-1577__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/SIMD512Digest-compress-1682-2248/SIMD512Digest-compress-1682-2248__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SkipjackEngine-encryptBlock-150-445/SkipjackEngine-encryptBlock-150-445__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/ADPCMn-decode-631-729/ADPCMn-decode-631-729__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SIMD512Digest-fft64-1537-1965/SIMD512Digest-fft64-1537-1965__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/SerpentEngine-encryptBlock-51-2815/SerpentEngine-encryptBlock-51-2815__2Alu2Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/SHA1Digest-processBlock-559-950/SHA1Digest-processBlock-559-950__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/FIR-main-75-454/FIR-main-75-454__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/ADPCMn-decode-271-381/ADPCMn-decode-271-381__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/TwofishEngine-setKey-262-1953/TwofishEngine-setKey-262-1953__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/FIR-main-75-264/FIR-main-75-264__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-processBlock-50-321/WhirlpoolDigest-processBlock-50-321__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/ECOH256Digest-mixColumn-3-238/ECOH256Digest-mixColumn-3-238__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SHA1Digest-processBlock-105-486/SHA1Digest-processBlock-105-486__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-#init#-75-755/WhirlpoolDigest-#init#-75-755__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SIMD512Digest-compress-1566-1661/SIMD512Digest-compress-1566-1661__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/SIMD512Digest-compress-63-471/SIMD512Digest-compress-63-471__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/SIMD512Digest-compress-1682-2248/SIMD512Digest-compress-1682-2248__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/IDCT/IDCT__2Alu2Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/FIR-main-75-454/FIR-main-75-454__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/XTEAEngine-setKey-4-123/XTEAEngine-setKey-4-123__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SerpentEngine-makeWorkingKey-245-1724/SerpentEngine-makeWorkingKey-245-1724__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-processBlock-359-635/WhirlpoolDigest-processBlock-359-635__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/SkipjackEngine-init-45-238/SkipjackEngine-init-45-238__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SkipjackEngine-init-45-238/SkipjackEngine-init-45-238__2Alu2Mul.txt timed out with PAPER estimator, normalalap, updateAlapBound=true
+	- benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt timed out with PAPER estimator, normalalap, updateAlapBound=true
+	- benchmark/SerpentEngine-makeWorkingKey-179-322/SerpentEngine-makeWorkingKey-179-322__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/RadioGatun32Digest-processBlock-170-1524/RadioGatun32Digest-processBlock-170-1524__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/ADPCMn-decode-559-599/ADPCMn-decode-559-599__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/FFT-fft3-688-929/FFT-fft3-688-929__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/SerpentEngine-makeWorkingKey-86-225__2Alu2Mul.txt timed out with PAPER estimator, normalalap, updateAlapBound=true
+	- benchmark/SIMD512Digest-fft64-3640-4116/SIMD512Digest-fft64-3640-4116__2Alu2Mul.txt timed out with PAPER estimator, normalalap, updateAlapBound=true
+	- benchmark/SIMD512Digest-fft64-1537-1965/SIMD512Digest-fft64-1537-1965__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-processBlock-50-321/WhirlpoolDigest-processBlock-50-321__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/CubeHash512Digest-sixteenRounds-2-2891/CubeHash512Digest-sixteenRounds-2-2891__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/SerpentEngine-encryptBlock-51-2815/SerpentEngine-encryptBlock-51-2815__fpga_4Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/SIMD512Digest-compress-63-471/SIMD512Digest-compress-63-471__2Alu2Mul.txt timed out with PAPER estimator, normalalap, updateAlapBound=true
+	- benchmark/TwofishEngine-setKey-113-1859/TwofishEngine-setKey-113-1859__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/WhirlpoolDigest-#init#-75-755/WhirlpoolDigest-#init#-75-755__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/CubeHash512Digest-sixteenRounds-2-2891/CubeHash512Digest-sixteenRounds-2-2891__2Alu2Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=true
+	- benchmark/TwofishEngine-encryptBlock-90-1017/TwofishEngine-encryptBlock-90-1017__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/PETrigonometry-cordic-88-287/PETrigonometry-cordic-88-287__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/SHA256Digest-processBlock-119-1722/SHA256Digest-processBlock-119-1722__fpga_4Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/SerpentEngine-makeWorkingKey-15-150/SerpentEngine-makeWorkingKey-15-150__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/FFT-fft3-387-948/FFT-fft3-387-948__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/serpent/serpent__2Alu2Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/TwofishEngine-encryptBlock-90-1017/TwofishEngine-encryptBlock-90-1017__fpga_4Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/IDCT/IDCT__fpga_4Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/SHA256Digest-processBlock-119-1722/SHA256Digest-processBlock-119-1722__2Alu2Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/SerpentEngine-makeWorkingKey-150-195/SerpentEngine-makeWorkingKey-150-195__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/BLAKE256Digest-processBlock-189-1577/BLAKE256Digest-processBlock-189-1577__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/SerpentEngine-makeWorkingKey-245-1724/SerpentEngine-makeWorkingKey-245-1724__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/FFT-fft3-688-929/FFT-fft3-688-929__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/FIR-main-75-264/FIR-main-75-264__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SHA1Digest-processBlock-332-693/SHA1Digest-processBlock-332-693__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/SIMD512Digest-fft64-3640-4116/SIMD512Digest-fft64-3640-4116__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/paper/paper__fpga_4Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/TwofishEngine-#init#-3600-4541/TwofishEngine-#init#-3600-4541__fpga_4Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/TwofishEngine-setKey-262-1953/TwofishEngine-setKey-262-1953__2Alu2Mul.txt timed out with PAPER estimator, normalalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-#init#-310-427/WhirlpoolDigest-#init#-310-427__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/paper/paper__2Alu2Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+	- benchmark/ECOH256Digest-AES2RoundsAll-2-666/ECOH256Digest-AES2RoundsAll-2-666__fpga_4Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=true
+	- benchmark/WhirlpoolDigest-processBlock-359-635/WhirlpoolDigest-processBlock-359-635__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/FFT-fft3-387-948/FFT-fft3-387-948__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/SIMD512Digest-compress-1878-2280/SIMD512Digest-compress-1878-2280__2Alu2Mul.txt timed out with ASAP estimator, normalalap, updateAlapBound=true
+	- benchmark/TwofishEngine-setKey-113-1859/TwofishEngine-setKey-113-1859__2Alu2Mul.txt timed out with ASAP estimator, lazyalap, updateAlapBound=false
+	- benchmark/serpent/serpent__fpga_4Mul.txt timed out with PAPER estimator, lazyalap, updateAlapBound=false
+
+
+66 tried comparisons produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ContrastFilter-filter-13-252/ContrastFilter-filter-13-252__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__fpga_4Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SHA256Digest-processBlock-17-148/SHA256Digest-processBlock-17-148__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/SwizzleFilter-filterImage-13-423__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: ASAP, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: false produced unequal schedules
+benchmark/XTEAEngine-setKey-70-169/XTEAEngine-setKey-70-169__2Alu2Mul.txt: lBoundEstimator: PAPER, lazyALAP: false, updateAlapBound: true with lBoundEstimator: PAPER, lazyALAP: true, updateAlapBound: true produced unequal schedules

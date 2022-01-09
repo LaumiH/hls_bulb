@@ -1,5 +1,6 @@
 import bulb.BULB;
 import bulb.BulbGraph;
+import bulb.BulbTimeoutException;
 import scheduler.*;
 
 import java.io.File;
@@ -19,14 +20,15 @@ public class Main {
 
         //this is to keep track of overall statistics in the benchmark
         int completed = 0;
-        Map<String, String> timeouted = new HashMap<>();     //filename, parameters
+        Map<String, String> timeouted = new TreeMap<>();     //filename, parameters -> treemap is sorted
+        Map<String, String> exception = new TreeMap<>();     //filename, parameters
         List<String> notEqual = new ArrayList<>();    //filename, res and parameters of both
 
         List<File> listOfGraphFiles = new ArrayList<>();
         List<File> listOfResFiles = new ArrayList<>();
-        String folderGraphs = "graphs";
+        //String folderGraphs = "graphs";
         String folderResources = "BULB_resources/r";
-        //String folderGraphs = "BULB_resources/g";
+        String folderGraphs = "BULB_resources/g";
         //String folderResources = "resources/vlsi";
 
         if (args.length > 0) {
@@ -135,7 +137,6 @@ public class Main {
                 List<Boolean> lazyALAP = new ArrayList<>(Arrays.asList(false, true));
                 List<Boolean> updateAlapBound = new ArrayList<>(Arrays.asList(true, false));
 
-                System.setOut(console);
                 for (String lBoundEstimator : lBoundEstimators) {
                     for (boolean lazy : lazyALAP) {
                         for (boolean updateAlap : updateAlapBound) {
@@ -152,13 +153,20 @@ public class Main {
                             Future<Schedule> future = exs.submit(bulbScheduler);
                             Schedule bulb;
                             try {
-                                bulb = future.get(1, TimeUnit.HOURS);
+                                bulb = future.get(15, TimeUnit.MINUTES);
                                 bulbSchedules.put(bulbScheduler.getBulbGraph(), bulb);
                                 completed++;
                             } catch (Exception e) {
-                                System.out.println("Timeout reached while computing " + dotFile + " with " + resFile);
-                                String alap = lazy ? "lazy":"normal";
-                                timeouted.put(logName, lBoundEstimator + " estimator, " + alap + "alap, updateAlapBound=" + updateAlap);
+                                if (e.getCause() instanceof BulbTimeoutException) {
+                                    System.out.println("Timeout reached while computing " + dotFile + " with " + resFile);
+                                    String alap = lazy ? "lazy" : "normal";
+                                    timeouted.put(logName, lBoundEstimator + " estimator, " + alap + " alap, updateAlapBound=" + updateAlap);
+                                } else {
+                                    e.printStackTrace();
+                                    System.out.println(e.getMessage());
+                                    String alap = lazy ? "lazy" : "normal";
+                                    exception.put(logName, lBoundEstimator + " estimator, " + alap + " alap, updateAlapBound=" + updateAlap);
+                                }
                             } finally {
                                 future.cancel(true); //this method will stop the running underlying task
                                 while (!future.isDone()) {
@@ -237,7 +245,7 @@ public class Main {
 
         PrintStream o = null;
         try {
-            o = new PrintStream("benchmarks/metrics.txt");
+            o = new PrintStream("benchmark/metrics.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(-1);
@@ -246,9 +254,15 @@ public class Main {
         System.setOut(o);
 
         System.out.printf("%d tried combinations completed in given time%n", completed);
+
         System.out.printf("%d tried combinations timed out%n", timeouted.size());
         for (Map.Entry<String,String> t : timeouted.entrySet()) {
             System.out.printf("\t- %s timed out with %s%n", t.getKey(), t.getValue());
+        }
+
+        System.out.printf("%d tried combinations threw an exception, please check!%n", exception.size());
+        for (Map.Entry<String,String> t : exception.entrySet()) {
+            System.out.printf("\t- %s threw an exception with %s%n", t.getKey(), t.getValue());
         }
 
         System.out.printf("%n%n%d tried comparisons produced unequal schedules%n", notEqual.size());
