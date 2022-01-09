@@ -1,5 +1,7 @@
 package scheduler;
 
+import bulb.BulbTimeoutException;
+
 import java.util.*;
 
 /**
@@ -229,13 +231,14 @@ public class Node {
         return (HashMap<Node, Integer>) successors.clone();
     }
 
-    public Set<Node> reallyAllSuccessors() {
+    public Set<Node> reallyAllSuccessors() throws BulbTimeoutException {
         //System.out.printf("\t\t\treallyAllSuccessors: calculating successors for %s%n", this.id);
         List<Node> successors = new ArrayList<>(this.successors.keySet());
         //System.out.printf("Successors of %s: %s%n", this, successors);
         Set<Node> allSuccessors = new HashSet<>();
         if (successors.isEmpty()) return new HashSet<>(successors);
         for (int i = 0; i < successors.size(); i++) {
+            if (Thread.interrupted()) throw new BulbTimeoutException("");
             Node node = successors.get(i);
             //System.out.printf("%s is a successor of %s%n", node, this);
             allSuccessors.add(node);

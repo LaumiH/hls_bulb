@@ -1,5 +1,7 @@
 package scheduler;
 
+import bulb.BulbTimeoutException;
+
 import java.util.*;
 
 public class Graph implements Iterable<Node> {
@@ -126,13 +128,13 @@ public class Graph implements Iterable<Node> {
      * Calculates how many steps are in between the nodes,
      * so basically u_bound pred - l_bound succ
      *
-     * @param pred
-     * @param succ
-     * @return
+     * @param pred first node to inspect
+     * @param succ second node to inspect
+     * @return the distance between the nodes
      */
-    public int distance(Node pred, Node succ) {
+    public int distance(Node pred, Node succ) throws BulbTimeoutException {
         if (!pred.reallyAllSuccessors().contains(succ)) {
-            System.out.printf("%s is no successor of %s!!%n", succ, pred);
+            //System.out.printf("%s is no successor of %s!!%n", succ, pred);
             return 0;
         }
         int distance = 0;
