@@ -12,12 +12,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
     boolean timeoutReached = false;
 
     private final String lBoundEstimator;
-    private final String uBoundEstimator;
+    private final boolean updateAlapBound;
 
     private final ResourceConstraint resourceConstraint;
     private final Schedule asapSchedule;
     private final Schedule alapSchedule;
-    private final Schedule lazyAlapSchedule;
     private final boolean lazyALAP;
     private final BulbGraph bulbGraph;
     private final Graph dfg;
@@ -33,17 +32,16 @@ public class BULB extends Scheduler implements Callable<Schedule> {
 
     private int skippedNodes = 0;
 
-    public BULB(Graph sourceGraph, String lBoundEstimator, String uBoundEstimator, final ResourceConstraint rc,
-                final Schedule asap, final Schedule alap, final Schedule lazyAlap, boolean lazyALAP) {
+    public BULB(Graph sourceGraph, String lBoundEstimator, final ResourceConstraint rc, final Schedule asap,
+                final Schedule alap, final Schedule lazyAlap, boolean lazyALAP, boolean updateAlapBound) {
         this.dfg = sourceGraph;
         this.lBoundEstimator = lBoundEstimator;
-        this.uBoundEstimator = uBoundEstimator;
+        this.updateAlapBound = updateAlapBound;
         this.resourceConstraint = rc;
+        this.lazyALAP = lazyALAP;
 
         this.asapSchedule = asap;
         this.alapSchedule = alap;
-        this.lazyAlapSchedule = lazyAlap;
-        this.lazyALAP = lazyALAP;
 
         this.asapValues = new HashMap<>();
         for (Node n : asap.nodes()) {
@@ -71,81 +69,70 @@ public class BULB extends Scheduler implements Callable<Schedule> {
 
     @Override
     public Schedule call() throws Exception {
+        //System.out.println("Start BULB");
+        startTime = System.currentTimeMillis();
+
+        List<Node> nodesDFG = this.alapSchedule.orderNodes("asc");
+
+        //System.out.printf("Nodes in ascending alap order: %s%n", nodesDFG);
+
+        //get initial lower bound
+        int l_bound;
+        switch (this.lBoundEstimator) {
+            case "ASAP":
+                //find latest asap value, include updates on asap values through scheduling and res constraints
+                //also including the scheduling of current node!
+                l_bound = asapSchedule.length();
+                break;
+            case "PAPER":
+                l_bound = calculateLowerBound(new Schedule(), /*null, null,*/nodesDFG.subList(0, nodesDFG.size())).length();
+                break;
+            default:
+                throw new BULBException("Type of lower bound estimator not given, or not known, aborting");
+        }
+
+        //get initial best latency through list scheduler
+        ListScheduler listScheduler = new ListScheduler();
+        Schedule listSchedule = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, allocation);
+        System.out.println("Finished first list scheduler run");
+        this.bestLatency = listSchedule.length();
+        this.bestSchedule = listSchedule;
+        bulbGraph.setInitialLatency(bestLatency);
+        bulbGraph.setBestLatency(bestLatency);
+        bulbGraph.setDfgNodes(nodesDFG.size());
+        //System.out.printf("Best schedule length at beginning: %d%n", bestLatency);
+
+        //add first node with empty schedule and asal length as lower bound
+        BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), l_bound, bestLatency);
+        root.setValid(true);
+        bulbGraph.addNode(null, root);
+        bulbGraph.incrementInspected();
+        bulbGraph.setParameters("" +
+                "lBoundEstimator: " + lBoundEstimator + ", " +
+                "lazyALAP: " + lazyALAP + ", " +
+                "updateAlapBound: " + updateAlapBound);
+
+        if (Thread.interrupted()) timeoutReached = true;
+
         try {
-            //System.out.println("Start BULB");
-            startTime = System.currentTimeMillis();
-
-            List<Node> nodesDFG = this.alapSchedule.orderNodes("asc");
-
-            //System.out.printf("Nodes in ascending alap order: %s%n", nodesDFG);
-
-            //get initial lower bound
-            int l_bound;
-            switch (this.lBoundEstimator) {
-                case "ASAP":
-                    //find latest asap value, include updates on asap values through scheduling and res constraints
-                    //also including the scheduling of current node!
-                    l_bound = asapSchedule.length();
-                    break;
-                case "PAPER":
-                    l_bound = calculateLowerBound(new Schedule(), /*null, null,*/nodesDFG.subList(0, nodesDFG.size())).length();
-                    break;
-                default:
-                    throw new BULBException("Type of lower bound estimator not given, or not known, aborting");
-            }
-
-            //get initial best latency through list scheduler
-            ListScheduler listScheduler = new ListScheduler();
-            Schedule listSchedule = listScheduler.schedule(nodesDFG, new Schedule(), resourceConstraint, allocation);
-            //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " END OF LIST SCHEDULER FROM BULB " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\n");
-            this.bestLatency = listSchedule.length();
-            this.bestSchedule = listSchedule;
-            bulbGraph.setInitialLatency(bestLatency);
-            bulbGraph.setBestLatency(bestLatency);
-            bulbGraph.setDfgNodes(nodesDFG.size());
-            //System.out.printf("Best schedule length at beginning: %d%n", bestLatency);
-
-            //add first node with empty schedule and asal length as lower bound
-            BulbNode root = new BulbNode(new HashSet<>(), new Schedule(), l_bound, bestLatency);
-            root.setValid(true);
-            bulbGraph.addNode(null, root);
-            bulbGraph.incrementInspected();
-            bulbGraph.setParameters("" +
-                    "lBoundEstimator: " + lBoundEstimator + ", " +
-                    "uBoundEstimator: " + uBoundEstimator + ", " +
-                    "lazyALAP: " + lazyALAP);
-
-            if (Thread.interrupted()) timeoutReached = true;
-
-            try {
-                enumerate(new Schedule(), 0, root, nodesDFG);
-            } catch (BulbTimeoutException bulbTimeoutException) {
-                System.out.println("Received timeout, aborting");
-                this.dfg.reset();
-
-                endTime = System.currentTimeMillis();
-                this.allocation.clear();
-                this.resourceUsage.clear();
-                bulbGraph.setExecutionTime(System.currentTimeMillis() - startTime);
-                return this.bestSchedule;
-            }
-
+            enumerate(new Schedule(), 0, root, nodesDFG);
+        } catch (BulbTimeoutException bulbTimeoutException) {
+            System.out.println("Received timeout, aborting");
             this.dfg.reset();
-
             endTime = System.currentTimeMillis();
             this.allocation.clear();
             this.resourceUsage.clear();
             bulbGraph.setExecutionTime(System.currentTimeMillis() - startTime);
             return this.bestSchedule;
-        } catch (InterruptedException interruptedException) {
-            System.out.println("Interrupt caught");
         }
+
         this.dfg.reset();
 
         endTime = System.currentTimeMillis();
         this.allocation.clear();
         this.resourceUsage.clear();
         bulbGraph.setExecutionTime(System.currentTimeMillis() - startTime);
+        bulbGraph.setReceivedTimeout(false);
         return this.bestSchedule;
     }
 
@@ -155,7 +142,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
      * @param partial - the (partial) schedule, which is a BulbNode in the BulbGraph
      * @param i       - the current node in the DFG
      */
-    private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) throws BulbTimeoutException, InterruptedException, BULBException {
+    private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) throws BulbTimeoutException, BULBException {
         if (Thread.interrupted()) timeoutReached = true;
         if (timeoutReached) {
             throw new BulbTimeoutException("");
@@ -188,23 +175,25 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         //        asapValues.get(currentOperation).lbound, alapUpperBound,
         //        currentOperation.getDelay());
 
-        //check if operation fits in asap - alap interval, otherwise it would not be scheduled!
-        if ((alapUpperBound - asapValues.get(currentOperation).lbound) < (currentOperation.getDelay() - 1)) {
-            //System.out.printf("Operation %s cannot get scheduled because alap (%s) - " +
-            //                "asap (%s) does not leave enough space for its duration (%d)%n",
-            //        currentOperation, alapUpperBound,
-            //        asapValues.get(currentOperation).lbound,
-            //        currentOperation.getDelay());
-            //System.out.println("Replacing alap with asap.u_bound + the delay of the operation");
-            if (lazyALAP) {
-                System.out.println(lazyAlapSchedule.diagnose(null, dfg.size()));
-                Interval asap = asapValues.get(currentOperation);
-                lazyAlapValues.replace(currentOperation, asap.shift(currentOperation.getDelay()));
-                alapUpperBound = alapValues.get(currentOperation).ubound;
-            } else {
-                Interval asap = asapValues.get(currentOperation);
-                alapValues.replace(currentOperation, asap.shift(currentOperation.getDelay()));
-                alapUpperBound = alapValues.get(currentOperation).ubound;
+        if (updateAlapBound) {
+            //check if operation fits in asap - alap interval, otherwise it would not be scheduled!
+            if ((alapUpperBound - asapValues.get(currentOperation).lbound) < (currentOperation.getDelay() - 1)) {
+                //System.out.printf("Operation %s cannot get scheduled because alap (%s) - " +
+                //                "asap (%s) does not leave enough space for its duration (%d)%n",
+                //        currentOperation, alapUpperBound,
+                //        asapValues.get(currentOperation).lbound,
+                //        currentOperation.getDelay());
+                //System.out.println("Replacing alap with asap.u_bound + the delay of the operation");
+                if (lazyALAP) {
+                    //System.out.println(lazyAlapSchedule.diagnose(null, dfg.size()));
+                    Interval asap = asapValues.get(currentOperation);
+                    lazyAlapValues.replace(currentOperation, asap.shift(currentOperation.getDelay()));
+                    alapUpperBound = alapValues.get(currentOperation).ubound;
+                } else {
+                    Interval asap = asapValues.get(currentOperation);
+                    alapValues.replace(currentOperation, asap.shift(currentOperation.getDelay()));
+                    alapUpperBound = alapValues.get(currentOperation).ubound;
+                }
             }
         }
 
@@ -223,7 +212,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             //get interval for current operation
             Interval duration = new Interval(step, step + currentOperation.getDelay() - 1);
 
-            System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
+            //System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
 
             if (duration.ubound > 200) {
                 throw new BULBException("Suspicious: duration of interval > 200");
@@ -316,20 +305,20 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                             i, l_bound, u_bound);
                 } else if (u_bound <= this.bestLatency) {
                     if (u_bound < this.bestLatency) {
-                        System.out.printf("i=%d; Upper bound (%d) is better than best latency (%d)%n", i, u_bound, bestLatency);
+                        //System.out.printf("i=%d; Upper bound (%d) is better than best latency (%d)%n", i, u_bound, bestLatency);
                         this.bestLatency = u_bound;
                         this.bestSchedule = potentialBestSchedule;
                         bulbGraph.setBestLatency(bestLatency);
-                    } else {
-                        System.out.printf("i=%d; Upper bound (%d) cannot top best latency (%d)%n", i, u_bound, bestLatency);
-                    }
+                    } //else {
+                        //System.out.printf("i=%d; Upper bound (%d) cannot top best latency (%d)%n", i, u_bound, bestLatency);
+                    //}
 
                     //stop investigating further down
                     if (l_bound == u_bound) {
                         bulbGraph.setConvergenceTime(System.currentTimeMillis() - startTime, u_bound);
                         bulbGraph.incrementNumberOfConvergences();
 
-                        System.out.println("Found best schedule with lower == upper");
+                        //System.out.println("Found best schedule with lower == upper");
                         //System.out.printf("Can skip scheduling %d nodes%n%n%n", bestSchedule.nodes().size() - i - 1);
                         skippedNodes = Math.max(skippedNodes, bestSchedule.nodes().size() - i - 1);
                         bulbGraph.setMaxSkippedNodes(skippedNodes);
@@ -337,7 +326,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                         bestSchedule.validate(resourceConstraint, dfg.size());
                     } else {
                         //lower bound smaller than upper bound
-                        System.out.printf("i=%d; Lower bound (%d) is still smaller than upper bound (%d)%n", i, l_bound, u_bound);
+                        //System.out.printf("i=%d; Lower bound (%d) is still smaller than upper bound (%d)%n", i, l_bound, u_bound);
                         updateAsap(duration, i, nodesDFG);
                         i = i + 1;
                         enumerate(updatedPartial, i, currentBulbNode, nodesDFG);
@@ -347,7 +336,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                 } else {
                     //u_bound > this.bestLatency, cannot be a better schedule
 
-                    System.out.printf("i=%d; Upper bound (%d) is worse than best latency (%d), stop here%n", i, u_bound, bestLatency);
+                    //System.out.printf("i=%d; Upper bound (%d) is worse than best latency (%d), stop here%n", i, u_bound, bestLatency);
                     //System.out.printf("i=%d; Restoring asap values%n", i);
                     //System.out.println(bestSchedule.diagnose(resourceConstraint, dfg.size()));
                     bestSchedule.validate(resourceConstraint, dfg.size());
@@ -363,34 +352,36 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                 }
             } else {
                 //System.out.println("###############################################################");
-                System.out.printf("i=%d; Resource constraints do not allow to schedule %s in %s%n", i, currentOperation, duration);
+                //System.out.printf("i=%d; Resource constraints do not allow to schedule %s in %s%n", i, currentOperation, duration);
                 //System.out.println(this.allocation);
                 //System.out.println("###############################################################");
-                //update asap and alap values of current operation to the earliest free step
-                //if steps are exceeded!
-                if (step == alapUpperBound - currentOperation.getDelay() + 1) {
-                    //alap bound is reached
-                    //System.out.println("###############################################################");
-                    //System.out.printf("i=%d; alap bound reached -> updating asap for %s and successors %n", i, currentOperation);
-                    //System.out.println("###############################################################");
-                    int freeStep = 1;
-                    Interval copyDuration = duration.copy().shift(1);
-                    while ("".equals(checkResConstraint(currentOperation.getResourceType(), copyDuration))) {
-                        freeStep++;
-                        copyDuration = copyDuration.shift(1);
+                if (updateAlapBound) {
+                    //update asap and alap values of current operation to the earliest free step
+                    //if steps are exceeded!
+                    if (step == alapUpperBound - currentOperation.getDelay() + 1) {
+                        //alap bound is reached
+                        //System.out.println("###############################################################");
+                        //System.out.printf("i=%d; alap bound reached -> updating asap for %s and successors %n", i, currentOperation);
+                        //System.out.println("###############################################################");
+                        int freeStep = 1;
+                        Interval copyDuration = duration.copy().shift(1);
+                        while ("".equals(checkResConstraint(currentOperation.getResourceType(), copyDuration))) {
+                            freeStep++;
+                            copyDuration = copyDuration.shift(1);
+                        }
+                        this.asapValues.replace(currentOperation, asapValues.get(currentOperation).shift(freeStep));
+                        if (lazyALAP) {
+                            //System.out.println("Need to update alap of lazy alap");
+                            this.lazyAlapValues.replace(currentOperation, lazyAlapValues.get(currentOperation).shift(freeStep));
+                            alapUpperBound = lazyAlapValues.get(currentOperation).ubound;
+                        } else {
+                            this.alapValues.replace(currentOperation, alapValues.get(currentOperation).shift(freeStep));
+                            alapUpperBound = alapValues.get(currentOperation).ubound;
+                        }
+                        step = copyDuration.lbound - 1;   //will be incremented in loop head
+                        updateAsap(copyDuration, i, nodesDFG);
+                        //alap will be updated as well if asap > alap
                     }
-                    this.asapValues.replace(currentOperation, asapValues.get(currentOperation).shift(freeStep));
-                    if (lazyALAP) {
-                        System.out.println("Need to update alap of lazy alap");
-                        this.lazyAlapValues.replace(currentOperation, lazyAlapValues.get(currentOperation).shift(freeStep));
-                        alapUpperBound = lazyAlapValues.get(currentOperation).ubound;
-                    } else {
-                        this.alapValues.replace(currentOperation, alapValues.get(currentOperation).shift(freeStep));
-                        alapUpperBound = alapValues.get(currentOperation).ubound;
-                    }
-                    step = copyDuration.lbound - 1;   //will be incremented in loop head
-                    updateAsap(copyDuration, i, nodesDFG);
-                    //alap will be updated as well if asap > alap
                 }
             }
             //done with investigating this step
@@ -404,7 +395,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
      * @param sched - the partial schedule to be estimated
      * @return the upper bound for needed clock cycles
      */
-    private Schedule calculateLowerBound(Schedule sched, /*Node currentOperation, Interval duration,*/ List<Node> unschedNodes) throws BULBException {
+    private Schedule calculateLowerBound(Schedule sched, /*Node currentOperation, Interval duration,*/ List<Node> unschedNodes) throws BULBException, BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.println("\tcalculateBound: Current schedule: " + sched.diagnose(resourceConstraint, dfg.size()));
         //System.out.println("\tcalculateBound: Allocation: " + this.allocation);
         //System.out.println("\tcalculateBound: Resource usage: " + this.resourceUsage);
@@ -461,7 +456,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                 if (predFinished >= k) {
                     // unscheduledNode asap needs to be moved
                     k = predFinished + 1;
-                    System.out.printf("\tcalculateBound: Updated k to %d as predecessor %s of %s finishes on %d%n", k, pred, unscheduledNode, predFinished);
+                    //System.out.printf("\tcalculateBound: Updated k to %d as predecessor %s of %s finishes on %d%n", k, pred, unscheduledNode, predFinished);
                 }
             }
 
@@ -505,7 +500,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         return copy;
     }
 
-    private int CP(Node node) {
+    private int CP(Node node) throws BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.printf("\t\tCP: Calculating critical path for DFG node %s%n", node);
         //find the latest end of a successor of the node
         int latest = 0;
@@ -522,7 +521,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         return Math.max(cp, 0);   // 0 when it is the last node
     }
 
-    private void incrementResourceUsed(Interval interval, ResourceType rt, String resName) {
+    private void incrementResourceUsed(Interval interval, ResourceType rt, String resName) throws BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.printf("\t\tincrementResourceUsed: allocating operation %s on resource %s in interval %s%n", rt, resName, interval);
         for (int step = interval.lbound; step <= interval.ubound; step++) {
             List<Resource> usedInStep = this.resourceUsage.computeIfAbsent(step, k -> new ArrayList<>());
@@ -552,7 +555,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         //System.out.println("\t\t\tAllocation after" + this.allocation);
     }
 
-    private void decrementResourceUsed(Interval interval, ResourceType rt, String resName) {
+    private void decrementResourceUsed(Interval interval, ResourceType rt, String resName) throws BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.printf("\t\tdecrementResourceUsed: removing operation %s from resource %s in interval %s%n", rt, resName, interval);
         for (int step = interval.lbound; step <= interval.ubound; step++) {
             List<Resource> usedInStep = this.resourceUsage.get(step);
@@ -575,7 +582,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
      * @param interval        - the target interval (remind allocating the resource for all steps in the duration of operation!)
      * @return the name of the real resource to allocate the operation to
      */
-    private String checkResConstraint(ResourceType resourceToCheck, Interval interval) {
+    private String checkResConstraint(ResourceType resourceToCheck, Interval interval) throws BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.println("\t\tcheckResConstraint: Resource usage: " + this.resourceUsage);
         //System.out.println("\t\tcheckResConstraint: Allocation: " + this.allocation);
         //System.out.printf("\t\tcheckResConstraint: checking resource constraint for %s in interval %s: ", resourceToCheck, interval);
@@ -612,7 +623,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         return "";
     }
 
-    private Schedule upperBoundSchedule(Schedule partial, List<Node> unschedNodes) throws BULBException {
+    private Schedule upperBoundSchedule(Schedule partial, List<Node> unschedNodes) throws BULBException, BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " CALL OF BULB UPPER_BOUND_SCHEDULE " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         // take existing partial schedule and schedule all the missing nodes according to rc
         // do not update resUsage and allocation Map
@@ -621,7 +636,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " END OF BULB UPPER_BOUND_SCHEDULE " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 
-    private void updateAsap(Interval duration, int i, List<Node> nodes) {
+    private void updateAsap(Interval duration, int i, List<Node> nodes) throws BulbTimeoutException {
+        if (Thread.interrupted()) timeoutReached = true;
+        if (timeoutReached) {
+            throw new BulbTimeoutException("");
+        }
         //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " START OF BULB UPDATE_ASAP " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         Node iNode = nodes.get(i);
         Set<Node> successorsOfI = iNode.reallyAllSuccessors();
@@ -646,7 +665,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                     //System.out.printf("\tupdateAsap: asap of %s will be updated to %s%n", succ, shifted);
                     asapValues.replace(succ, asapJ, shifted);
                 } //else {
-                    //System.out.printf("\tupdateAsap: asap of %s does not need to be updated%n", succ);
+                //System.out.printf("\tupdateAsap: asap of %s does not need to be updated%n", succ);
                 //}
                 //check if asap shift caused asap > alap,
                 //which would result in not trying to schedule resource in enumerate!
