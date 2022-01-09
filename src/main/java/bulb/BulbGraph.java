@@ -15,6 +15,7 @@ public class BulbGraph {
     private int numberOfConvergences = 0;
     private int bestLatency;
     private int initialLatency;
+    private int dfgNodes;
 
     public BulbGraph(List<BulbNode> nodes) {
         this.nodes = nodes;
@@ -52,10 +53,11 @@ public class BulbGraph {
                 .append("BULB tree contains ").append(inspectedNodes).append(" inspected nodes").append("\n")
                 .append(this.nodes.size() - this.inspectedNodes)
                 .append(" tried intervals violated resource constraints and were not further inspected").append("\n")
-                .append("Lower == Upper reached: ").append(lowerEqualsUpperReached).append("\n")
+                .append("Lower == Upper reached: ").append(lowerEqualsUpperReached).append(", ")
+                .append(numberOfConvergences).append(" times").append("\n")
                 .append("Best latency found: ").append(bestLatency).append("\n")
                 .append("Initial best latency: ").append(initialLatency).append("\n")
-                .append(maxSkippedNodes).append(" nodes could be skipped to find best schedule").append("\n")
+                .append(maxSkippedNodes).append(" out of ").append(dfgNodes).append(" DFG nodes could be skipped to find best schedule").append("\n")
                 .append("It took ").append(convergenceTime).append(" milliseconds to converge").append("\n")
                 .append("Scheduling took ").append(executionTime).append(" milliseconds").append("\n");
         return builder.toString();
@@ -128,5 +130,13 @@ public class BulbGraph {
 
     public void setInitialLatency(int initialLatency) {
         this.initialLatency = initialLatency;
+    }
+
+    public int getDfgNodes() {
+        return dfgNodes;
+    }
+
+    public void setDfgNodes(int dfgNodes) {
+        this.dfgNodes = dfgNodes;
     }
 }
