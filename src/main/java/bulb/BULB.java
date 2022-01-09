@@ -88,8 +88,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                     l_bound = asapSchedule.length();
                     break;
                 case "PAPER":
-                    l_bound = calculateLowerBound(new Schedule(), null, null,
-                            nodesDFG.subList(0, nodesDFG.size())).length();
+                    l_bound = calculateLowerBound(new Schedule(), /*null, null,*/nodesDFG.subList(0, nodesDFG.size())).length();
                     break;
                 default:
                     throw new BULBException("Type of lower bound estimator not given, or not known, aborting");
@@ -103,6 +102,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             this.bestSchedule = listSchedule;
             bulbGraph.setInitialLatency(bestLatency);
             bulbGraph.setBestLatency(bestLatency);
+            bulbGraph.setDfgNodes(nodesDFG.size());
             //System.out.printf("Best schedule length at beginning: %d%n", bestLatency);
 
             //add first node with empty schedule and asal length as lower bound
@@ -170,10 +170,6 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                 this.bestLatency = partial.length();
             }
             return;
-        }
-
-        if (i == 10) {
-            System.out.println("STOP");
         }
 
         //System.out.printf("%n%n%ni=%d; START OF BULB ENUMERATE%n", i);
@@ -274,7 +270,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                         }
                         break;
                     case "PAPER":
-                        l_bound = calculateLowerBound(updatedPartial, currentOperation, duration,
+                        l_bound = calculateLowerBound(updatedPartial, /*currentOperation, duration,*/
                                 nodesDFG.subList(i + 1, nodesDFG.size())).length();
                         break;
                     default:
@@ -408,7 +404,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
      * @param sched - the partial schedule to be estimated
      * @return the upper bound for needed clock cycles
      */
-    private Schedule calculateLowerBound(Schedule sched, Node currentOperation, Interval duration, List<Node> unschedNodes) throws BULBException {
+    private Schedule calculateLowerBound(Schedule sched, /*Node currentOperation, Interval duration,*/ List<Node> unschedNodes) throws BULBException {
         //System.out.println("\tcalculateBound: Current schedule: " + sched.diagnose(resourceConstraint, dfg.size()));
         //System.out.println("\tcalculateBound: Allocation: " + this.allocation);
         //System.out.println("\tcalculateBound: Resource usage: " + this.resourceUsage);
@@ -449,16 +445,10 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         }
         //System.out.printf("\ncalculateBound: %s latency estimate based on CP of scheduled nodes: %d%n", kind, latencyEstimate);
 
-        //System.out.printf("calculateBound: schedule %s in interval %s to continue with unscheduled nodes%n", currentOperation, duration);
-        //to calculate the dependent nodes, the current operation has to be added to the res constraints!
-        //incrementResourceUsed(duration, currentOperation.getResourceType(), resName);
-        //copy.add(currentOperation, duration, resName);
-
         //System.out.println("calculateBound: estimate bound through scheduling remaining nodes");
 
-        //move dependent nodes to later steps to fulfill constraint
+        //move dependent nodes to later steps to fulfill constraint (if this should be wrong somehow)
         //estimate constraint dependent finish step
-
         for (Node unscheduledNode : unschedNodes) {
             int k = asapValues.get(unscheduledNode).lbound;
             //System.out.printf("\tcalculateBound: %s has asap %s%n", unscheduledNode, k);
@@ -471,11 +461,11 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                 if (predFinished >= k) {
                     // unscheduledNode asap needs to be moved
                     k = predFinished + 1;
-                    //System.out.printf("\tcalculateBound: Updated k to %d as predecessor %s of %s finishes on %d%n", k, pred, unscheduledNode, predFinished);
+                    System.out.printf("\tcalculateBound: Updated k to %d as predecessor %s of %s finishes on %d%n", k, pred, unscheduledNode, predFinished);
                 }
             }
 
-            duration = new Interval(k, k + unscheduledNode.getDelay() - 1);
+            Interval duration = new Interval(k, k + unscheduledNode.getDelay() - 1);
             String resName = checkResConstraint(unscheduledNode.getResourceType(), duration);
             while ("".equals(resName)) {
                 //System.out.printf("calculateBound: %s cannot be scheduled on %s%n", unscheduledNode, duration);
@@ -655,9 +645,9 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                     Interval shifted = asapValues.get(succ).shift(l_asap - asapJ.lbound);
                     //System.out.printf("\tupdateAsap: asap of %s will be updated to %s%n", succ, shifted);
                     asapValues.replace(succ, asapJ, shifted);
-                } else {
+                } //else {
                     //System.out.printf("\tupdateAsap: asap of %s does not need to be updated%n", succ);
-                }
+                //}
                 //check if asap shift caused asap > alap,
                 //which would result in not trying to schedule resource in enumerate!
                 //System.out.printf("Checking asap of %s, is %s%n", succ, alapValues.get(succ));
