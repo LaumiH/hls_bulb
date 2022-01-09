@@ -75,23 +75,12 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             //System.out.println("Start BULB");
             startTime = System.currentTimeMillis();
 
-//        var shutdownListener = new Thread() {
-//            public void run() {
-//                try {
-//                    Thread.sleep(5000);
-//                } catch (InterruptedException e) {
-//                }
-//                bulbGraph.print();
-//            }
-//        };
-//        Runtime.getRuntime().addShutdownHook(shutdownListener);
-
             List<Node> nodesDFG = this.alapSchedule.orderNodes("asc");
 
             //System.out.printf("Nodes in ascending alap order: %s%n", nodesDFG);
 
             //get initial lower bound
-            int l_bound = 0;
+            int l_bound;
             switch (this.lBoundEstimator) {
                 case "ASAP":
                     //find latest asap value, include updates on asap values through scheduling and res constraints
@@ -103,8 +92,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                             nodesDFG.subList(0, nodesDFG.size())).length();
                     break;
                 default:
-                    System.out.println("Type of lower bound estimator not given, or not known, aborting");
-                    System.exit(-1);
+                    throw new BULBException("Type of lower bound estimator not given, or not known, aborting");
             }
 
             //get initial best latency through list scheduler
@@ -138,7 +126,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                 endTime = System.currentTimeMillis();
                 this.allocation.clear();
                 this.resourceUsage.clear();
-                bulbGraph.setExecutionTime(System.currentTimeMillis()-startTime);
+                bulbGraph.setExecutionTime(System.currentTimeMillis() - startTime);
                 return this.bestSchedule;
             }
 
@@ -147,7 +135,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             endTime = System.currentTimeMillis();
             this.allocation.clear();
             this.resourceUsage.clear();
-            bulbGraph.setExecutionTime(System.currentTimeMillis()-startTime);
+            bulbGraph.setExecutionTime(System.currentTimeMillis() - startTime);
             return this.bestSchedule;
         } catch (InterruptedException interruptedException) {
             System.out.println("Interrupt caught");
@@ -157,7 +145,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         endTime = System.currentTimeMillis();
         this.allocation.clear();
         this.resourceUsage.clear();
-        bulbGraph.setExecutionTime(System.currentTimeMillis()-startTime);
+        bulbGraph.setExecutionTime(System.currentTimeMillis() - startTime);
         return this.bestSchedule;
     }
 
@@ -167,7 +155,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
      * @param partial - the (partial) schedule, which is a BulbNode in the BulbGraph
      * @param i       - the current node in the DFG
      */
-    private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) throws BulbTimeoutException, InterruptedException {
+    private void enumerate(final Schedule partial, int i, BulbNode parent, final List<Node> nodes) throws BulbTimeoutException, InterruptedException, BULBException {
         if (Thread.interrupted()) timeoutReached = true;
         if (timeoutReached) {
             throw new BulbTimeoutException("");
@@ -184,7 +172,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             return;
         }
 
-        if (i==10) {
+        if (i == 10) {
             System.out.println("STOP");
         }
 
@@ -242,8 +230,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
 
             if (duration.ubound > 200) {
-                System.out.println("Duration > 200");
-                System.exit(-1);
+                throw new BULBException("Suspicious: duration of interval > 200");
             }
             if (duration.ubound > bestLatency) {
                 System.out.println("Can skip this one, would be scheduled later than best latency");
@@ -291,8 +278,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
                                 nodesDFG.subList(i + 1, nodesDFG.size())).length();
                         break;
                     default:
-                        System.out.println("Type of lower bound estimator not given, or not known, aborting");
-                        System.exit(-1);
+                        throw new BULBException("Type of lower bound estimator not given, or not known, aborting");
                 }
 
                 //System.out.printf("Res usage before bounds: %s%n", this.resourceUsage);
@@ -344,7 +330,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
 
                     //stop investigating further down
                     if (l_bound == u_bound) {
-                        bulbGraph.setConvergenceTime(System.currentTimeMillis()-startTime, u_bound);
+                        bulbGraph.setConvergenceTime(System.currentTimeMillis() - startTime, u_bound);
                         bulbGraph.incrementNumberOfConvergences();
 
                         System.out.println("Found best schedule with lower == upper");
@@ -422,7 +408,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
      * @param sched - the partial schedule to be estimated
      * @return the upper bound for needed clock cycles
      */
-    private Schedule calculateLowerBound(Schedule sched, Node currentOperation, Interval duration, List<Node> unschedNodes) {
+    private Schedule calculateLowerBound(Schedule sched, Node currentOperation, Interval duration, List<Node> unschedNodes) throws BULBException {
         //System.out.println("\tcalculateBound: Current schedule: " + sched.diagnose(resourceConstraint, dfg.size()));
         //System.out.println("\tcalculateBound: Allocation: " + this.allocation);
         //System.out.println("\tcalculateBound: Resource usage: " + this.resourceUsage);
@@ -522,8 +508,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         this.allocation = saveAllocation;
         //System.out.printf("Latency estimate of bound: %d%n", latencyEstimate);
         if (copy.length() != latencyEstimate) {
-            System.out.println("Calculated different schedule length than latency estimate, hm.");
-            System.exit(-1);
+            throw new BULBException("Calculated different schedule length than latency estimate, hm.");
         }
 
         //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " END OF BULB CALCULATE_BOUND " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -637,7 +622,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         return "";
     }
 
-    private Schedule upperBoundSchedule(Schedule partial, List<Node> unschedNodes) {
+    private Schedule upperBoundSchedule(Schedule partial, List<Node> unschedNodes) throws BULBException {
         //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + " CALL OF BULB UPPER_BOUND_SCHEDULE " + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         // take existing partial schedule and schedule all the missing nodes according to rc
         // do not update resUsage and allocation Map

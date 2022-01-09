@@ -97,10 +97,9 @@ public class BulbGraph {
         return convergenceTime;
     }
 
-    public void setConvergenceTime(long convergenceTime, int u_bound) {
+    public void setConvergenceTime(long convergenceTime, int u_bound) throws BULBException {
         if (bestLatency > 0 && u_bound > bestLatency) {
-            System.out.println("Schedule converged later with better u_bound, is that plausible?");
-            System.exit(-1);
+            throw new BULBException("Schedule converged later with better u_bound, is that plausible?");
         }
 
         this.convergenceTime = convergenceTime;

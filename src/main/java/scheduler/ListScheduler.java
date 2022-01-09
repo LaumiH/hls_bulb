@@ -1,11 +1,13 @@
 package scheduler;
 
+import bulb.BULBException;
+
 import java.util.*;
 
 public class ListScheduler {
     int runs = 0;
 
-    public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
+    public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) throws BULBException {
         //System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         //System.out.println("START OF LIST SCHEDULING");
         //partial.validate(alpha, nodesToSchedule.size());
@@ -17,8 +19,7 @@ public class ListScheduler {
         }
 
         if (nodesToSchedule.isEmpty()) {
-            System.out.println("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
-            System.exit(-1);
+            throw new BULBException("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
         }
 
         //do not overwrite nodes from BULB
@@ -183,8 +184,7 @@ public class ListScheduler {
                                 }
                             }
                             if (unscheduledPred.isEmpty()) {
-                                System.out.println("top was wrong, there are all predecessors scheduled!");
-                                System.exit(-1);
+                                throw new BULBException("top was wrong, there are all predecessors scheduled!");
                             }
 
                             //System.out.println("\tNot all predecessors of Node: " + nd + " finished");
@@ -219,8 +219,7 @@ public class ListScheduler {
             }
 
             if (t<0) {
-                System.out.println("t is somehow < 0?");
-                System.exit(-1);
+                throw new BULBException("t is somehow < 0?");
             }
 
             //System.out.println("currently free Res " + curr_free_res);
@@ -241,8 +240,7 @@ public class ListScheduler {
                     for (Node n2 : nd.successors()) {
                         boolean success = n2.handle(nd);
                         if (!success) {
-                            System.out.println("Could not perform handle on node " + n2);
-                            System.exit(-1);
+                            throw new BULBException("Could not perform handle on node " + n2);
                         }
                     }
                 } else {
@@ -274,8 +272,7 @@ public class ListScheduler {
 
             //System.out.printf("Finished Iteration %d%n", runs - 1);
             if (runs > 50) {
-                System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
-                System.exit(-1);
+                throw new BULBException("Something is fishy with the ListScheduler, taking way too many iterations!");
             }
 
         } while (!all_nodes_scheduled);

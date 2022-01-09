@@ -1,5 +1,7 @@
 package scheduler;
 
+import bulb.BULBException;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -299,7 +301,7 @@ public class Schedule {
      *
      * @return null iff the schedule has no illegal overlaps, a conflicting node otherwise
      */
-    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) {
+    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) throws BULBException {
         //System.out.println("########\nValidating schedule\n########");
         for (Node node : nodes.keySet()) {
             for (Node successor : node.successors()) {
@@ -311,17 +313,14 @@ public class Schedule {
             }
         }
         if (nodes().size() > nrOfNodes) {
-            System.out.println("There are more nodes scheduled than in the source graph");
-            System.exit(-1);
+            throw new BULBException("There are more nodes scheduled than in the source graph");
         }
         if (resourceConstraint != null) {
             if (resources.keySet().size() != nodes().size()) {
-                System.out.println("Resource size does not match nodes size of schedule!");
-                System.exit(-1);
+                throw new BULBException("Resource size does not match nodes size of schedule!");
             }
             Set<String> resNames = resourceConstraint.getAllRes().keySet();
             List<String> resUsed = new ArrayList<>();
-            Node lastNodeAdded = null;
             for (int step = 0; step < this.slots.size(); step++) {
                 Set<Node> nodesInStep = this.slots.get(step);
                 if (nodesInStep == null) {
@@ -331,23 +330,15 @@ public class Schedule {
                 for (Node n : nodesInStep) {
                     String resName = resources.get(n);
                     if (null == resName) {
-                        System.out.println("Node is scheduled in step, but does not have resource!");
-                        System.exit(-1);
-                        return n;
+                        throw new BULBException("Node is scheduled in step, but does not have resource!");
                     }
                     if (resUsed.contains(resName)) {
-                        System.out.printf("Resource %s is allocated twice in step %d, " +
-                                "node %s is second%n", resName, step, n);
-                        System.exit(-1);
-                        return n;
+                        throw new BULBException("Resource " + resName + " is allocated twice in step " + step);
                     }
                     resUsed.add(resources.get(n));
-                    lastNodeAdded = n;
                 }
                 if (resNames.size() < resUsed.size()) {
-                    System.out.println("resNames.size() < resUsed.size()");
-                    System.exit(-1);
-                    return lastNodeAdded;
+                    throw new BULBException("resNames.size() < resUsed.size()");
                 }
                 resUsed.clear();
             }
@@ -365,7 +356,7 @@ public class Schedule {
     /**
      * @return a string with a textual representation of the schedule and the resources
      */
-    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) {
+    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) throws BULBException {
         if (nodes.keySet().size() <= 0) return "%n";
 
         Formatter f = new Formatter();
@@ -389,11 +380,7 @@ public class Schedule {
         String str = f.toString();
         f.close();
 
-        if (this.validate(resourceConstraint, nrOfNodes) != null) {
-            System.out.println("Invalid schedule detected!");
-            System.out.println(str);
-            System.exit(-1);
-        }
+        validate(resourceConstraint, nrOfNodes);
 
         return str;
     }
