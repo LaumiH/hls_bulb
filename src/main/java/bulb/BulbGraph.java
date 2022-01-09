@@ -1,19 +1,20 @@
 package bulb;
 
 import java.util.List;
-import java.util.Set;
 
 public class BulbGraph {
 
     private final List<BulbNode> nodes;
-
     private BulbNode root;
-
     private int inspectedNodes = 0;
-
     private boolean lowerEqualsUpperReached = false;
-
     private String parameters;
+    private int maxSkippedNodes;
+    private long executionTime;
+    private long convergenceTime;
+    private int numberOfConvergences = 0;
+    private int bestLatency;
+    private int initialLatency;
 
     public BulbGraph(List<BulbNode> nodes) {
         this.nodes = nodes;
@@ -33,14 +34,31 @@ public class BulbGraph {
         this.inspectedNodes++;
     }
 
-    public void print() {
-        System.out.println("Print BULB tree:");
-        System.out.println(this.root.toString());
-        System.out.printf("BULB tree contains %d nodes%n", this.inspectedNodes);
-        System.out.printf("%d tried combinations violated resource constraints%n",
-                this.nodes.size() - this.inspectedNodes);
-        System.out.println("Lower == Upper reached: " + lowerEqualsUpperReached);
-        System.out.println("Parameters: " + parameters);
+    public String print() {
+        StringBuilder builder = new StringBuilder();
+        if (this.nodes.size() > 2000) {
+            builder.append("Buld tree is huge, will not print it");
+            return builder.toString();
+        } else {
+            builder.append("Print BULB tree: ").append("\n")
+                    .append(this.root.toString());
+            return builder.toString();
+        }
+    }
+
+    public String printMetrics() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Printing BULB metrics for ").append(parameters).append("\n")
+                .append("BULB tree contains ").append(inspectedNodes).append(" inspected nodes").append("\n")
+                .append(this.nodes.size() - this.inspectedNodes)
+                .append(" tried intervals violated resource constraints and were not further inspected").append("\n")
+                .append("Lower == Upper reached: ").append(lowerEqualsUpperReached).append("\n")
+                .append("Best latency found: ").append(bestLatency).append("\n")
+                .append("Initial best latency: ").append(initialLatency).append("\n")
+                .append(maxSkippedNodes).append(" nodes could be skipped to find best schedule").append("\n")
+                .append("It took ").append(convergenceTime).append(" milliseconds to converge").append("\n")
+                .append("Scheduling took ").append(executionTime).append(" milliseconds").append("\n");
+        return builder.toString();
     }
 
     public boolean isLowerEqualsUpperReached() {
@@ -57,5 +75,59 @@ public class BulbGraph {
 
     public void setParameters(String parameters) {
         this.parameters = parameters;
+    }
+
+    public int getMaxSkippedNodes() {
+        return maxSkippedNodes;
+    }
+
+    public void setMaxSkippedNodes(int number) {
+        maxSkippedNodes = number;
+    }
+
+    public long getExecutionTime() {
+        return executionTime;
+    }
+
+    public void setExecutionTime(long executionTime) {
+        this.executionTime = executionTime;
+    }
+
+    public long getConvergenceTime() {
+        return convergenceTime;
+    }
+
+    public void setConvergenceTime(long convergenceTime, int u_bound) {
+        if (bestLatency > 0 && u_bound > bestLatency) {
+            System.out.println("Schedule converged later with better u_bound, is that plausible?");
+            System.exit(-1);
+        }
+
+        this.convergenceTime = convergenceTime;
+    }
+
+    public int getNumberOfConvergences() {
+        return numberOfConvergences;
+    }
+
+    public void incrementNumberOfConvergences() {
+        numberOfConvergences++;
+        setLowerEqualsUpperReached(true);
+    }
+
+    public int getBestLatency() {
+        return bestLatency;
+    }
+
+    public void setBestLatency(int bestLatency) {
+        this.bestLatency = bestLatency;
+    }
+
+    public int getInitialLatency() {
+        return initialLatency;
+    }
+
+    public void setInitialLatency(int initialLatency) {
+        this.initialLatency = initialLatency;
     }
 }

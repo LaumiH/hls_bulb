@@ -300,7 +300,7 @@ public class Schedule {
      * @return null iff the schedule has no illegal overlaps, a conflicting node otherwise
      */
     public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) {
-        System.out.println("########\nValidating schedule\n########");
+        //System.out.println("########\nValidating schedule\n########");
         for (Node node : nodes.keySet()) {
             for (Node successor : node.successors()) {
                 if (slot(successor) == null) continue;
@@ -325,8 +325,6 @@ public class Schedule {
             for (int step = 0; step < this.slots.size(); step++) {
                 Set<Node> nodesInStep = this.slots.get(step);
                 if (nodesInStep == null) {
-                    System.out.println("Nodes in step is null");
-                    System.out.println("Is this plausible?");
                     continue;
                 }
 
@@ -347,6 +345,7 @@ public class Schedule {
                     lastNodeAdded = n;
                 }
                 if (resNames.size() < resUsed.size()) {
+                    System.out.println("resNames.size() < resUsed.size()");
                     System.exit(-1);
                     return lastNodeAdded;
                 }
@@ -508,22 +507,21 @@ public class Schedule {
         }
     }
 
-    public void compare(Schedule cmpSched) {
+    public boolean compare(Schedule cmpSched) {
 
         if (cmpSched == null || cmpSched.size() == 0) {
             System.out.println("Comparison Schedule is null or has no nodes!");
-            return;
+            return false;
         }
         if (this.length() != cmpSched.length()) {
             System.out.println("Length is not equal, so Schedules can't be equal");
-            return;
+            return false;
         }
 
         Map<Integer, Set<Node>> slots1 = this.slots;
         Map<Integer, Set<Node>> slots2 = cmpSched.slots;
         //System.out.println("this map " + slots1);
         //System.out.println("cmp map " + slots2);
-
 
         int length = this.length();
         Set<Node> cmp, cmp2;
@@ -533,7 +531,7 @@ public class Schedule {
             cmp2 = slots2.get(i);
             //System.out.println("Investigating Slot : " + i);
             if (cmp.size() != cmp2.size()) {
-                return;
+                return false;
             }
             for (Node nd : cmp) {
                 foundSameNode = false;
@@ -543,15 +541,14 @@ public class Schedule {
                         //System.out.println("Same Node found");
                         foundSameNode = true;
                         break;
-                    } else {
-                        //System.out.println("Didnt find same node");
                     }
                 }
                 if (!foundSameNode) {
-                    return;
+                    return false;
                 }
             }
         }
         System.out.println("Schedules are equal");
+        return true;
     }
 }

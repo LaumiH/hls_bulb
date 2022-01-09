@@ -6,8 +6,8 @@ public class ListScheduler {
     int runs = 0;
 
     public Schedule schedule(final List<Node> nodesToSchedule, Schedule partial, ResourceConstraint alpha, Map<Integer, Set<String>> allocation) {
-        System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        System.out.println("START OF LIST SCHEDULING");
+        //System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        //System.out.println("START OF LIST SCHEDULING");
         //partial.validate(alpha, nodesToSchedule.size());
         //System.out.println(partial.diagnose(alpha, nodesToSchedule.size()+partial.size()));
         //System.out.println("");
@@ -17,7 +17,7 @@ public class ListScheduler {
         }
 
         if (nodesToSchedule.isEmpty()) {
-            //System.out.println("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
+            System.out.println("\n\nUmmmm, actually all nodes have been scheduled already. What exactly is it you want from me?");
             System.exit(-1);
         }
 
@@ -130,7 +130,7 @@ public class ListScheduler {
                 // check if res has free spot
                 //loop until all res are used or all nodes are checked
                 for (Map.Entry<Integer, Set<Node>> entry : priority_sorted_list.entrySet()) { // loop through the all priorities
-                    Set<Node> iteration = new HashSet<>(entry.getValue());
+                    Set<Node> iteration = entry.getValue();
                     for (Node nd : iteration) {  // nodes with currently the highest priority
                         //System.out.printf("step %d: Currently checked Node: %s%n", t, nd);
                         ResourceType needed_res = nd.getResourceType();
@@ -183,11 +183,11 @@ public class ListScheduler {
                                 }
                             }
                             if (unscheduledPred.isEmpty()) {
-                                //System.out.println("top was wrong, there are all predecessors scheduled!");
+                                System.out.println("top was wrong, there are all predecessors scheduled!");
                                 System.exit(-1);
                             }
 
-                            ////System.out.println("\tNot all predecessors of Node: " + nd + " finished");
+                            //System.out.println("\tNot all predecessors of Node: " + nd + " finished");
                         }
                         if (res_scheduled) {
                             break;
@@ -219,7 +219,7 @@ public class ListScheduler {
             }
 
             if (t<0) {
-                //System.out.println("t is somehow < 0?");
+                System.out.println("t is somehow < 0?");
                 System.exit(-1);
             }
 
@@ -241,7 +241,7 @@ public class ListScheduler {
                     for (Node n2 : nd.successors()) {
                         boolean success = n2.handle(nd);
                         if (!success) {
-                            //System.out.println("Could not perform handle on node " + n2);
+                            System.out.println("Could not perform handle on node " + n2);
                             System.exit(-1);
                         }
                     }
@@ -274,7 +274,7 @@ public class ListScheduler {
 
             //System.out.printf("Finished Iteration %d%n", runs - 1);
             if (runs > 50) {
-                //System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
+                System.out.println("Something went wrong in ListScheduler, taking way too many iterations!");
                 System.exit(-1);
             }
 
