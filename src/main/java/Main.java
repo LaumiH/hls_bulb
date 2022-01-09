@@ -18,13 +18,15 @@ public class Main {
 
         System.out.println("START OF PROGRAM");
 
-        String folderGraphs = "graphs";
+        //String folderGraphs = "graphs";
+        String folderGraphs = "BULB_resources/g";
         File folder = new File(folderGraphs);
-        List<File> listOfGraphFiles = List.of(folder.listFiles());
+        List<File> listOfGraphFiles = List.of(Objects.requireNonNull(folder.listFiles()));
 
-        String folderResources = "resources/vlsi";
+        //String folderResources = "resources/vlsi";
+        String folderResources = "BULB_resources/r";
         folder = new File(folderResources);
-        List<File> listOfResFiles = List.of(folder.listFiles());
+        List<File> listOfResFiles = List.of(Objects.requireNonNull(folder.listFiles()));
 
         // Store current System.out before assigning a new value
         PrintStream console = System.out;
@@ -37,35 +39,46 @@ public class Main {
                 String dotFilePath = folderGraphs + "/" + dotFile;
                 String resFilePath = folderResources + "/" + resFile;
 
-                String logFile = "target/" + dotFile + "__" + resFile + ".txt";
+                String logDir = "target/" + dotFile.replaceAll(".dot", "");
+                String logName = logDir + "/" + dotFile.replaceAll(".dot", "") + "__" + resFile + ".txt";
 
                 // Creating a File object that represents the log file
+                File logFile = new File(logDir);
+                if (! logFile.exists()){
+                    if (!logFile.mkdirs()) {
+                        System.out.printf("Cannot create directory %s%n", logFile);
+                        System.exit(-1);
+                    }
+                    // If you require it to make the entire directory path including parents,
+                    // use directory.mkdirs(); here instead.
+                }
+                logFile = new File(logName);
                 PrintStream o = null;
                 try {
-                    o = new PrintStream(new File(logFile));
+                    o = new PrintStream(logFile);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
+                } finally {
+                    Objects.requireNonNull(o).close();
                 }
 
+                System.setOut(console);
                 System.out.printf("Scheduling %s on %s%n", dotFile, resFile);
 
                 // Assign o to output stream
                 System.setOut(o);
 
                 ResourceConstraint rc = new ResourceConstraint();
-                if (args.length > 1) {
-                    System.out.println("Reading resource constraints from " + resFilePath + "\n");
-                    rc.parse(resFilePath);
+                System.out.println("Reading resource constraints from " + resFilePath + "\n");
+                rc.parse(resFilePath);
+                if (rc.getAllRes().size() < 1) {
+                    System.out.println("Not able to read resources from res file!");
+                    System.exit(-1);
                 }
 
                 DotReader dr = new DotReader(false);
-                if (args.length < 1) {
-                    System.err.printf("Usage: scheduler dotfile%n");
-                    System.exit(-1);
-                } else {
-                    System.out.printf("Scheduling %s%n", dotFilePath);
-                }
-                System.out.println("PARSING INPUT GRAPH");
+
+                System.out.printf("PARSING INPUT GRAPH: %s%n", dotFilePath);
                 Graph g = dr.parse(dotFilePath);
                 System.out.printf("Input graph:%n%n%s%n", g.diagnose());
 
@@ -107,9 +120,10 @@ public class Main {
                 List<String> lBoundEstimators = new ArrayList<>(Arrays.asList("ASAP", "PAPER"));
                 List<Boolean> lazyALAP = new ArrayList<>(Arrays.asList(false, true));
 
+                System.setOut(console);
                 for (String lBoundEstimator : lBoundEstimators) {
                     for (boolean lazy : lazyALAP) {
-                        System.out.printf("STARTING BULB SCHEDULE with %n" +
+                        System.out.printf("%n%n%nSTARTING BULB SCHEDULE with %n" +
                                         "\t%s lower bound estimator,%n" +
                                         "\tlist scheduler upper bound estimator,%n" +
                                         "\t%s alap schedule in enumerate for loop%n%n",
@@ -123,15 +137,19 @@ public class Main {
                         Future<Schedule> future = exs.submit(bulbScheduler);
                         Schedule bulb = new Schedule();
                         try {
-                            bulb = future.get(Integer.parseInt(args[0]), TimeUnit.SECONDS);
+                            bulb = future.get(5, TimeUnit.SECONDS);
                             bulbSchedules.put(bulbScheduler.getBulbGraph(), bulb);
-                            Thread.sleep(5 * 1000);
                         } catch (Exception e) {
                             System.out.println("meow");
+                            e.printStackTrace();
                         } finally {
                             future.cancel(true); //this method will stop the running underlying task
+                            while(!future.isDone()) {
+                                System.out.println("Waiting for completion of thread");
+                            }
                             exs.shutdownNow();
                             bulb.diagnose(rc, g.size());
+                            Thread.sleep(5 * 1000);
                         }
                     }
                 }
@@ -144,7 +162,7 @@ public class Main {
                 }
 
                 System.setOut(console);
-                System.out.printf("Finished scheduling %s on %s, start comparison%n", dotFile, resFile);
+                System.out.printf("%n%nFinished scheduling %s on %s, start comparison%n%n", dotFile, resFile);
                 System.setOut(o);
 
                 System.out.println("\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
@@ -182,8 +200,10 @@ public class Main {
                 System.out.println(bulbSchedules.values().iterator().next().diagnose(rc, g.size()));
 
                 System.setOut(console);
-                System.out.printf("Finished %s on %s%n", dotFile, resFile);
-                System.setOut(o);
+                System.out.printf("Completed %s on %s%n%n%n", dotFile, resFile);
+
+                o.flush();
+                o.close();
             }
         }
 
