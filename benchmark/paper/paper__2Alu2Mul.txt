@@ -1,0 +1,130 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		And, Or, Mem, Add, Cmp, Other, Shift, Sub, 
+RES01:		And, Or, Mem, Add, Cmp, Other, Shift, Sub, 
+RES02:		Mul, Div, 
+RES03:		Mul, Div, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/paper.dot
+Input graph:
+
+N1_A (A):
+  successors
+   N3_A-- 	0
+
+N2_A (A):
+  successors
+   N3_A-- 	0
+
+N10_B (B):
+  predecessors
+   N7_B-- 	0
+
+N3_A (A):
+  successors
+   N5_B-- 	0
+  predecessors
+   N1_A-- 	0
+   N2_A-- 	0
+
+N11_B (B):
+  predecessors
+   N8_A-- 	0
+
+N7_B (B):
+  successors
+   N10_B-- 	0
+
+N8_A (A):
+  successors
+   N11_B-- 	0
+
+N9_B (B):
+  predecessors
+   N5_B-- 	0
+   N6_A-- 	0
+
+N4_A (A):
+  successors
+   N6_A-- 	0
+
+N5_B (B):
+  successors
+   N9_B-- 	0
+  predecessors
+   N3_A-- 	0
+
+N6_A (A):
+  successors
+   N9_B-- 	0
+  predecessors
+   N4_A-- 	0
+
+Nr of Nodes : 11
+DOING ASAP SCHEDULE
+Found schedule of length 4 with 11 nodes
+
+N1_A-- : [0:0]
+N2_A-- : [0:0]
+N7_B-- : [0:0]
+N8_A-- : [0:0]
+N4_A-- : [0:0]
+N10_B-- : [1:1]
+N3_A-- : [1:1]
+N11_B-- : [1:1]
+N6_A-- : [1:1]
+N5_B-- : [2:2]
+N9_B-- : [3:3]
+
+FINISHED ASAP SCHEDULE
+
+DOING LAZY ALAP SCHEDULE
+Found schedule of length 11 with 11 nodes
+
+N1_A-- : [0:0]
+N2_A-- : [1:1]
+N3_A-- : [2:2]
+N4_A-- : [3:3]
+N7_B-- : [4:4]
+N8_A-- : [5:5]
+N5_B-- : [6:6]
+N6_A-- : [7:7]
+N10_B-- : [8:8]
+N11_B-- : [9:9]
+N9_B-- : [10:10]
+
+FINISHED ALAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 4 with 11 nodes
+
+N1_A-- : [0:0]
+N2_A-- : [0:0]
+N3_A-- : [1:1]
+N4_A-- : [1:1]
+N7_B-- : [2:2]
+N8_A-- : [2:2]
+N5_B-- : [2:2]
+N6_A-- : [2:2]
+N10_B-- : [3:3]
+N11_B-- : [3:3]
+N9_B-- : [3:3]
+
+FINISHED ALAP SCHEDULE
+
