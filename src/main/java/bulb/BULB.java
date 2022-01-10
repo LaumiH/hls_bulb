@@ -148,10 +148,12 @@ public class BULB extends Scheduler implements Callable<Schedule> {
             throw new BulbTimeoutException("");
         }
 
+        //System.out.println(i);
+
         // end recursion condition
-        if (i == dfg.size()) {
-            //System.out.println(i);
-            //System.out.println("finished investigating all nodes in DFG");
+        if (i == dfg.size()-1) {
+            System.out.println(i);
+            System.out.println("investigated last node in DFG");
             if (bestLatency > partial.length()) {
                 bestSchedule = partial;
                 this.bestLatency = partial.length();
@@ -214,9 +216,9 @@ public class BULB extends Scheduler implements Callable<Schedule> {
 
             //System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
 
-            if (duration.ubound > 200) {
-                throw new BULBException("Suspicious: duration of interval > 200");
-            }
+            //if (duration.ubound > 200) {
+            //    throw new BULBException("Suspicious: duration of interval > 200");
+            //}
             if (duration.ubound > bestLatency) {
                 System.out.println("Can skip this one, would be scheduled later than best latency");
             }
