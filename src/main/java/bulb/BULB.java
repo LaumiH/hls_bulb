@@ -73,6 +73,7 @@ public class BULB extends Scheduler implements Callable<Schedule> {
         startTime = System.currentTimeMillis();
 
         List<Node> nodesDFG = this.alapSchedule.orderNodes("asc");
+        //TODO: build lazy alap based on this order
 
         //System.out.printf("Nodes in ascending alap order: %s%n", nodesDFG);
 
@@ -214,8 +215,8 @@ public class BULB extends Scheduler implements Callable<Schedule> {
 
             //System.out.printf("%ni=%d; BULB is trying %s in interval %s%n", i, currentOperation, duration);
 
-            if (duration.ubound > 200) {
-                throw new BULBException("Suspicious: duration of interval > 200");
+            if (duration.ubound > 1000) {
+                throw new BULBException("Suspicious: duration of interval > 1000");
             }
             if (duration.ubound > bestLatency) {
                 System.out.println("Can skip this one, would be scheduled later than best latency");
