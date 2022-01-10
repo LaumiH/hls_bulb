@@ -278,7 +278,7 @@ public class ListScheduler {
             runs++;
 
             //System.out.printf("Finished Iteration %d%n", runs - 1);
-            if (runs > nodesToSchedule.size()*alpha.getAllRes().size()) {
+            if (runs > nodesToSchedule.size()*alpha.getAllRes().size()*1000) {
                 throw new BULBException("Something is fishy with the ListScheduler, taking many iterations!");
             }
 
