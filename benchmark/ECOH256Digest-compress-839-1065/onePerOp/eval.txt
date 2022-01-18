@@ -1,0 +1,280 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 28, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 249
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 28, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 218
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 27, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 249
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 218, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 249
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 27, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 218
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 41 with 76 nodes
+
+n69--1037:IADD : [0:0]
+n62--909:IMUL : [0:3]
+n40--1024:DMA_LOAD(ref) : [0:1]
+n75--842:IFGE : [0:0]
+n56--1047:IADD : [1:1]
+n29--1028:DMA_LOAD : [2:3]
+n43--1057:IADD : [2:2]
+n74--1062:IADD : [3:3]
+n68--1038:DMA_LOAD : [4:5]
+n16--855:IMUL : [4:7]
+n12--912:IADD : [4:4]
+n5--944:IADD : [5:5]
+n4--945:DMA_LOAD : [6:7]
+n21--931:IADD : [6:6]
+n11--919:IADD : [7:7]
+n49--949:IAND : [8:8]
+n15--862:IADD : [8:8]
+n7--932:DMA_LOAD : [8:9]
+n22--967:IMUL : [8:11]
+n59--874:IADD : [9:9]
+n9--952:ISHL : [9:9]
+n47--863:DMA_LOAD : [10:11]
+n6--936:IAND : [10:10]
+n63--887:IADD : [10:10]
+n39--939:ISHL : [11:11]
+n58--875:DMA_LOAD : [12:13]
+n1--971:IADD : [12:12]
+n51--867:IAND : [12:12]
+n57--990:IADD : [13:13]
+n50--870:ISHL : [13:13]
+n18--1003:IADD : [14:14]
+n64--879:IAND : [14:14]
+n45--888:DMA_LOAD : [14:15]
+n54--882:ISHL : [15:15]
+n66--978:IADD : [15:15]
+n53--896:IOR : [16:16]
+n44--892:IAND : [16:16]
+n33--920:DMA_LOAD : [16:17]
+n61--895:ISHL : [17:17]
+n14--899:DMA_LOAD : [18:19]
+n52--924:IAND : [18:18]
+n38--927:ISHL : [19:19]
+n13--903:IAND : [20:20]
+n37--953:IOR : [20:20]
+n48--956:DMA_LOAD : [20:21]
+n60--883:IOR : [21:21]
+n17--1004:DMA_LOAD : [22:23]
+n10--960:IAND : [22:22]
+n31--904:IOR : [22:22]
+n8--940:IOR : [23:23]
+n41--1008:IAND : [24:24]
+n32--961:IOR : [24:24]
+n65--979:DMA_LOAD : [24:25]
+n25--1011:ISHL : [25:25]
+n30--963:IXOR : [25:25]
+n20--983:IAND : [26:26]
+n23--991:DMA_LOAD : [26:27]
+n19--986:ISHL : [27:27]
+n0--1015:DMA_LOAD : [28:29]
+n3--995:IAND : [28:28]
+n2--998:ISHL : [29:29]
+n26--1019:IAND : [30:30]
+n71--846:DMA_LOAD(ref) : [30:31]
+n73--1012:IOR : [30:30]
+n24--999:IOR : [31:31]
+n67--1020:IOR : [32:32]
+n55--1048:DMA_LOAD : [32:33]
+n28--1022:IXOR : [33:33]
+n27--1029:IXOR : [34:34]
+n42--1058:DMA_LOAD : [34:35]
+n72--1039:IXOR : [35:35]
+n46--1049:IXOR : [36:36]
+n35--851:DMA_LOAD : [36:37]
+n36--1059:IXOR : [37:37]
+n34--1060:IXOR : [38:38]
+n70--1061:DMA_STORE : [39:40]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: false, 0 times
+Best latency found: 41
+Initial best latency: 41
+0 out of 76 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 28 milliseconds
+
+Print BULB tree: 
+TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated partial schedule: {}; 
+└── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [0:3]; investigated partial schedule: {0=[n62--909:IMUL], 1=[n62--909:IMUL], 2=[n62--909:IMUL], 3=[n62--909:IMUL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: false, 0 times
+Best latency found: 41
+Initial best latency: 41
+0 out of 76 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 27 milliseconds
+
+Print BULB tree: 
+TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated partial schedule: {}; 
+└── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [0:3]; investigated partial schedule: {0=[n62--909:IMUL], 1=[n62--909:IMUL], 2=[n62--909:IMUL], 3=[n62--909:IMUL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 39 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: false, 0 times
+Best latency found: 41
+Initial best latency: 41
+0 out of 76 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 218 milliseconds
+
+Print BULB tree: 
+TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated partial schedule: {}; 
+├── l_bound: 47, u_bound: 47; investigated n62--909:IMUL in [21:24]; investigated partial schedule: {21=[n62--909:IMUL], 22=[n62--909:IMUL], 23=[n62--909:IMUL], 24=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 44, u_bound: 43; investigated n62--909:IMUL in [2:5]; investigated partial schedule: {2=[n62--909:IMUL], 3=[n62--909:IMUL], 4=[n62--909:IMUL], 5=[n62--909:IMUL]}; 
+├── l_bound: 63, u_bound: 63; investigated n62--909:IMUL in [37:40]; investigated partial schedule: {37=[n62--909:IMUL], 38=[n62--909:IMUL], 39=[n62--909:IMUL], 40=[n62--909:IMUL]}; 
+├── l_bound: 46, u_bound: 46; investigated n62--909:IMUL in [20:23]; investigated partial schedule: {20=[n62--909:IMUL], 21=[n62--909:IMUL], 22=[n62--909:IMUL], 23=[n62--909:IMUL]}; 
+├── l_bound: 53, u_bound: 54; investigated n62--909:IMUL in [27:30]; investigated partial schedule: {27=[n62--909:IMUL], 28=[n62--909:IMUL], 29=[n62--909:IMUL], 30=[n62--909:IMUL]}; 
+├── l_bound: 55, u_bound: 56; investigated n62--909:IMUL in [29:32]; investigated partial schedule: {29=[n62--909:IMUL], 30=[n62--909:IMUL], 31=[n62--909:IMUL], 32=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [0:3]; investigated partial schedule: {0=[n62--909:IMUL], 1=[n62--909:IMUL], 2=[n62--909:IMUL], 3=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [15:18]; investigated partial schedule: {15=[n62--909:IMUL], 16=[n62--909:IMUL], 17=[n62--909:IMUL], 18=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 42; investigated n62--909:IMUL in [16:19]; investigated partial schedule: {16=[n62--909:IMUL], 17=[n62--909:IMUL], 18=[n62--909:IMUL], 19=[n62--909:IMUL]}; 
+├── l_bound: 51, u_bound: 52; investigated n62--909:IMUL in [25:28]; investigated partial schedule: {25=[n62--909:IMUL], 26=[n62--909:IMUL], 27=[n62--909:IMUL], 28=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [1:4]; investigated partial schedule: {1=[n62--909:IMUL], 2=[n62--909:IMUL], 3=[n62--909:IMUL], 4=[n62--909:IMUL]}; 
+├── l_bound: 61, u_bound: 61; investigated n62--909:IMUL in [35:38]; investigated partial schedule: {35=[n62--909:IMUL], 36=[n62--909:IMUL], 37=[n62--909:IMUL], 38=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 45, u_bound: 43; investigated n62--909:IMUL in [3:6]; investigated partial schedule: {3=[n62--909:IMUL], 4=[n62--909:IMUL], 5=[n62--909:IMUL], 6=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [10:13]; investigated partial schedule: {10=[n62--909:IMUL], 11=[n62--909:IMUL], 12=[n62--909:IMUL], 13=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [11:14]; investigated partial schedule: {11=[n62--909:IMUL], 12=[n62--909:IMUL], 13=[n62--909:IMUL], 14=[n62--909:IMUL]}; 
+├── l_bound: 60, u_bound: 60; investigated n62--909:IMUL in [34:37]; investigated partial schedule: {34=[n62--909:IMUL], 35=[n62--909:IMUL], 36=[n62--909:IMUL], 37=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [6:9]; investigated partial schedule: {6=[n62--909:IMUL], 7=[n62--909:IMUL], 8=[n62--909:IMUL], 9=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [8:11]; investigated partial schedule: {8=[n62--909:IMUL], 9=[n62--909:IMUL], 10=[n62--909:IMUL], 11=[n62--909:IMUL]}; 
+├── l_bound: 49, u_bound: 49; investigated n62--909:IMUL in [23:26]; investigated partial schedule: {23=[n62--909:IMUL], 24=[n62--909:IMUL], 25=[n62--909:IMUL], 26=[n62--909:IMUL]}; 
+├── l_bound: 59, u_bound: 59; investigated n62--909:IMUL in [33:36]; investigated partial schedule: {33=[n62--909:IMUL], 34=[n62--909:IMUL], 35=[n62--909:IMUL], 36=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [12:15]; investigated partial schedule: {12=[n62--909:IMUL], 13=[n62--909:IMUL], 14=[n62--909:IMUL], 15=[n62--909:IMUL]}; 
+├── l_bound: 48, u_bound: 48; investigated n62--909:IMUL in [22:25]; investigated partial schedule: {22=[n62--909:IMUL], 23=[n62--909:IMUL], 24=[n62--909:IMUL], 25=[n62--909:IMUL]}; 
+├── l_bound: 56, u_bound: 56; investigated n62--909:IMUL in [30:33]; investigated partial schedule: {30=[n62--909:IMUL], 31=[n62--909:IMUL], 32=[n62--909:IMUL], 33=[n62--909:IMUL]}; 
+├── l_bound: 62, u_bound: 62; investigated n62--909:IMUL in [36:39]; investigated partial schedule: {36=[n62--909:IMUL], 37=[n62--909:IMUL], 38=[n62--909:IMUL], 39=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [5:8]; investigated partial schedule: {5=[n62--909:IMUL], 6=[n62--909:IMUL], 7=[n62--909:IMUL], 8=[n62--909:IMUL]}; 
+├── l_bound: 58, u_bound: 58; investigated n62--909:IMUL in [32:35]; investigated partial schedule: {32=[n62--909:IMUL], 33=[n62--909:IMUL], 34=[n62--909:IMUL], 35=[n62--909:IMUL]}; 
+├── l_bound: 52, u_bound: 52; investigated n62--909:IMUL in [26:29]; investigated partial schedule: {26=[n62--909:IMUL], 27=[n62--909:IMUL], 28=[n62--909:IMUL], 29=[n62--909:IMUL]}; 
+├── l_bound: 57, u_bound: 57; investigated n62--909:IMUL in [31:34]; investigated partial schedule: {31=[n62--909:IMUL], 32=[n62--909:IMUL], 33=[n62--909:IMUL], 34=[n62--909:IMUL]}; 
+├── l_bound: 44, u_bound: 44; investigated n62--909:IMUL in [18:21]; investigated partial schedule: {18=[n62--909:IMUL], 19=[n62--909:IMUL], 20=[n62--909:IMUL], 21=[n62--909:IMUL]}; 
+├── l_bound: 45, u_bound: 45; investigated n62--909:IMUL in [19:22]; investigated partial schedule: {19=[n62--909:IMUL], 20=[n62--909:IMUL], 21=[n62--909:IMUL], 22=[n62--909:IMUL]}; 
+├── l_bound: 50, u_bound: 50; investigated n62--909:IMUL in [24:27]; investigated partial schedule: {24=[n62--909:IMUL], 25=[n62--909:IMUL], 26=[n62--909:IMUL], 27=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [4:7]; investigated partial schedule: {4=[n62--909:IMUL], 5=[n62--909:IMUL], 6=[n62--909:IMUL], 7=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [7:10]; investigated partial schedule: {7=[n62--909:IMUL], 8=[n62--909:IMUL], 9=[n62--909:IMUL], 10=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [9:12]; investigated partial schedule: {9=[n62--909:IMUL], 10=[n62--909:IMUL], 11=[n62--909:IMUL], 12=[n62--909:IMUL]}; 
+├── l_bound: 54, u_bound: 54; investigated n62--909:IMUL in [28:31]; investigated partial schedule: {28=[n62--909:IMUL], 29=[n62--909:IMUL], 30=[n62--909:IMUL], 31=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 43, u_bound: 41; investigated n62--909:IMUL in [14:17]; investigated partial schedule: {14=[n62--909:IMUL], 15=[n62--909:IMUL], 16=[n62--909:IMUL], 17=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [13:16]; investigated partial schedule: {13=[n62--909:IMUL], 14=[n62--909:IMUL], 15=[n62--909:IMUL], 16=[n62--909:IMUL]}; 
+└── l_bound: 43, u_bound: 43; investigated n62--909:IMUL in [17:20]; investigated partial schedule: {17=[n62--909:IMUL], 18=[n62--909:IMUL], 19=[n62--909:IMUL], 20=[n62--909:IMUL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 39 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: false, 0 times
+Best latency found: 41
+Initial best latency: 41
+0 out of 76 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 249 milliseconds
+
+Print BULB tree: 
+TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated partial schedule: {}; 
+├── l_bound: 42, u_bound: 43; investigated n62--909:IMUL in [3:6]; investigated partial schedule: {3=[n62--909:IMUL], 4=[n62--909:IMUL], 5=[n62--909:IMUL], 6=[n62--909:IMUL]}; 
+├── l_bound: 55, u_bound: 60; investigated n62--909:IMUL in [34:37]; investigated partial schedule: {34=[n62--909:IMUL], 35=[n62--909:IMUL], 36=[n62--909:IMUL], 37=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [1:4]; investigated partial schedule: {1=[n62--909:IMUL], 2=[n62--909:IMUL], 3=[n62--909:IMUL], 4=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [15:18]; investigated partial schedule: {15=[n62--909:IMUL], 16=[n62--909:IMUL], 17=[n62--909:IMUL], 18=[n62--909:IMUL]}; 
+├── l_bound: 43, u_bound: 48; investigated n62--909:IMUL in [22:25]; investigated partial schedule: {22=[n62--909:IMUL], 23=[n62--909:IMUL], 24=[n62--909:IMUL], 25=[n62--909:IMUL]}; 
+├── l_bound: 53, u_bound: 58; investigated n62--909:IMUL in [32:35]; investigated partial schedule: {32=[n62--909:IMUL], 33=[n62--909:IMUL], 34=[n62--909:IMUL], 35=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 46; investigated n62--909:IMUL in [20:23]; investigated partial schedule: {20=[n62--909:IMUL], 21=[n62--909:IMUL], 22=[n62--909:IMUL], 23=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 43; investigated n62--909:IMUL in [17:20]; investigated partial schedule: {17=[n62--909:IMUL], 18=[n62--909:IMUL], 19=[n62--909:IMUL], 20=[n62--909:IMUL]}; 
+├── l_bound: 56, u_bound: 61; investigated n62--909:IMUL in [35:38]; investigated partial schedule: {35=[n62--909:IMUL], 36=[n62--909:IMUL], 37=[n62--909:IMUL], 38=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 47; investigated n62--909:IMUL in [21:24]; investigated partial schedule: {21=[n62--909:IMUL], 22=[n62--909:IMUL], 23=[n62--909:IMUL], 24=[n62--909:IMUL]}; 
+├── l_bound: 54, u_bound: 59; investigated n62--909:IMUL in [33:36]; investigated partial schedule: {33=[n62--909:IMUL], 34=[n62--909:IMUL], 35=[n62--909:IMUL], 36=[n62--909:IMUL]}; 
+├── l_bound: 51, u_bound: 56; investigated n62--909:IMUL in [30:33]; investigated partial schedule: {30=[n62--909:IMUL], 31=[n62--909:IMUL], 32=[n62--909:IMUL], 33=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [6:9]; investigated partial schedule: {6=[n62--909:IMUL], 7=[n62--909:IMUL], 8=[n62--909:IMUL], 9=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [13:16]; investigated partial schedule: {13=[n62--909:IMUL], 14=[n62--909:IMUL], 15=[n62--909:IMUL], 16=[n62--909:IMUL]}; 
+├── l_bound: 46, u_bound: 52; investigated n62--909:IMUL in [25:28]; investigated partial schedule: {25=[n62--909:IMUL], 26=[n62--909:IMUL], 27=[n62--909:IMUL], 28=[n62--909:IMUL]}; 
+├── l_bound: 50, u_bound: 56; investigated n62--909:IMUL in [29:32]; investigated partial schedule: {29=[n62--909:IMUL], 30=[n62--909:IMUL], 31=[n62--909:IMUL], 32=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [7:10]; investigated partial schedule: {7=[n62--909:IMUL], 8=[n62--909:IMUL], 9=[n62--909:IMUL], 10=[n62--909:IMUL]}; 
+├── l_bound: 48, u_bound: 54; investigated n62--909:IMUL in [27:30]; investigated partial schedule: {27=[n62--909:IMUL], 28=[n62--909:IMUL], 29=[n62--909:IMUL], 30=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [0:3]; investigated partial schedule: {0=[n62--909:IMUL], 1=[n62--909:IMUL], 2=[n62--909:IMUL], 3=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 42; investigated n62--909:IMUL in [16:19]; investigated partial schedule: {16=[n62--909:IMUL], 17=[n62--909:IMUL], 18=[n62--909:IMUL], 19=[n62--909:IMUL]}; 
+├── l_bound: 58, u_bound: 63; investigated n62--909:IMUL in [37:40]; investigated partial schedule: {37=[n62--909:IMUL], 38=[n62--909:IMUL], 39=[n62--909:IMUL], 40=[n62--909:IMUL]}; 
+├── l_bound: 47, u_bound: 52; investigated n62--909:IMUL in [26:29]; investigated partial schedule: {26=[n62--909:IMUL], 27=[n62--909:IMUL], 28=[n62--909:IMUL], 29=[n62--909:IMUL]}; 
+├── l_bound: 49, u_bound: 54; investigated n62--909:IMUL in [28:31]; investigated partial schedule: {28=[n62--909:IMUL], 29=[n62--909:IMUL], 30=[n62--909:IMUL], 31=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 43; investigated n62--909:IMUL in [2:5]; investigated partial schedule: {2=[n62--909:IMUL], 3=[n62--909:IMUL], 4=[n62--909:IMUL], 5=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [10:13]; investigated partial schedule: {10=[n62--909:IMUL], 11=[n62--909:IMUL], 12=[n62--909:IMUL], 13=[n62--909:IMUL]}; 
+├── l_bound: 57, u_bound: 62; investigated n62--909:IMUL in [36:39]; investigated partial schedule: {36=[n62--909:IMUL], 37=[n62--909:IMUL], 38=[n62--909:IMUL], 39=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [12:15]; investigated partial schedule: {12=[n62--909:IMUL], 13=[n62--909:IMUL], 14=[n62--909:IMUL], 15=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 45; investigated n62--909:IMUL in [19:22]; investigated partial schedule: {19=[n62--909:IMUL], 20=[n62--909:IMUL], 21=[n62--909:IMUL], 22=[n62--909:IMUL]}; 
+├── l_bound: 45, u_bound: 50; investigated n62--909:IMUL in [24:27]; investigated partial schedule: {24=[n62--909:IMUL], 25=[n62--909:IMUL], 26=[n62--909:IMUL], 27=[n62--909:IMUL]}; 
+├── l_bound: 44, u_bound: 49; investigated n62--909:IMUL in [23:26]; investigated partial schedule: {23=[n62--909:IMUL], 24=[n62--909:IMUL], 25=[n62--909:IMUL], 26=[n62--909:IMUL]}; 
+├── l_bound: 52, u_bound: 57; investigated n62--909:IMUL in [31:34]; investigated partial schedule: {31=[n62--909:IMUL], 32=[n62--909:IMUL], 33=[n62--909:IMUL], 34=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [14:17]; investigated partial schedule: {14=[n62--909:IMUL], 15=[n62--909:IMUL], 16=[n62--909:IMUL], 17=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [9:12]; investigated partial schedule: {9=[n62--909:IMUL], 10=[n62--909:IMUL], 11=[n62--909:IMUL], 12=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [4:7]; investigated partial schedule: {4=[n62--909:IMUL], 5=[n62--909:IMUL], 6=[n62--909:IMUL], 7=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [11:14]; investigated partial schedule: {11=[n62--909:IMUL], 12=[n62--909:IMUL], 13=[n62--909:IMUL], 14=[n62--909:IMUL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [8:11]; investigated partial schedule: {8=[n62--909:IMUL], 9=[n62--909:IMUL], 10=[n62--909:IMUL], 11=[n62--909:IMUL]}; 
+├── l_bound: 42, u_bound: 44; investigated n62--909:IMUL in [18:21]; investigated partial schedule: {18=[n62--909:IMUL], 19=[n62--909:IMUL], 20=[n62--909:IMUL], 21=[n62--909:IMUL]}; 
+└── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n62--909:IMUL in [5:8]; investigated partial schedule: {5=[n62--909:IMUL], 6=[n62--909:IMUL], 7=[n62--909:IMUL], 8=[n62--909:IMUL]}; 
+

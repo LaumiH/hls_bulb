@@ -1,0 +1,321 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 19, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 190
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 19, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 39
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 19, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 193
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 19, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 245
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 19, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 31
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 39, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 190
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 190, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 193
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 190, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 245
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 31, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 190
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 39, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 193
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 39, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 245
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 31, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 39
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 193, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 245
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 31, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 193
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 31, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 245
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 36 with 42 nodes
+
+n13--224:I2D : [0:0]
+n29--127:DMA_LOAD64 : [0:1]
+n17--125:I2D : [0:0]
+n4--133:F2D : [0:0]
+n6--181:FDIV : [0:17]
+n41--91:IFGE : [0:0]
+n31--113:DMA_LOAD64 : [0:1]
+n22--184:IADD : [0:0]
+n40--190:IFGE : [1:1]
+n21--283:IADD : [1:1]
+n37--167:DMA_LOAD(ref) : [2:3]
+n3--149:DMUL : [2:5]
+n28--130:DMUL : [2:5]
+n8--95:DMA_LOAD64 : [2:3]
+n36--271:DMA_LOAD64 : [4:5]
+n18--172:DMA_LOAD64 : [4:5]
+n11--99:DCMPG : [4:4]
+n10--100:IFGT : [5:5]
+n2--153:DMUL : [6:9]
+n9--173:DMUL : [6:9]
+n32--134:DMUL : [6:9]
+n38--154:DADD : [10:10]
+n16--272:DMUL : [10:13]
+n7--174:DSUB : [10:10]
+n30--135:DSUB : [10:10]
+n14--136:DMA_STORE64 : [11:12]
+n26--155:DMA_STORE64 : [11:12]
+n15--175:DMA_STORE64 : [13:14]
+n12--248:DMUL : [13:16]
+n34--229:DMUL : [13:16]
+n24--198:DCMPG : [15:15]
+n1--273:DSUB : [15:15]
+n0--274:DMA_STORE64 : [16:17]
+n23--199:IFGT : [16:16]
+n35--232:F2D : [18:18]
+n5--280:FDIV : [18:35]
+n27--252:DMUL : [19:22]
+n33--233:DMUL : [19:22]
+n25--253:DADD : [23:23]
+n20--234:DSUB : [23:23]
+n39--254:DMA_STORE64 : [24:25]
+n19--235:DMA_STORE64 : [24:25]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 36
+Initial best latency: 36
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 19 milliseconds to converge
+Scheduling took 19 milliseconds
+
+Print BULB tree: 
+l_bound: 36, u_bound: 36; investigated partial schedule: {}; 
+└── l_bound: 36, u_bound: 36; investigated n6--181:FDIV in [0:17]; investigated partial schedule: {0=[n6--181:FDIV], 1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 20 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 36
+Initial best latency: 36
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 32 milliseconds to converge
+Scheduling took 190 milliseconds
+
+Print BULB tree: 
+l_bound: 36, u_bound: 36; investigated partial schedule: {}; 
+├── l_bound: 52, u_bound: 52; investigated n6--181:FDIV in [16:33]; investigated partial schedule: {16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV]}; 
+├── l_bound: 51, u_bound: 51; investigated n6--181:FDIV in [15:32]; investigated partial schedule: {15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV]}; 
+├── l_bound: 54, u_bound: 54; investigated n6--181:FDIV in [18:35]; investigated partial schedule: {18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV], 34=[n6--181:FDIV], 35=[n6--181:FDIV]}; 
+├── l_bound: 40, u_bound: 40; investigated n6--181:FDIV in [4:21]; investigated partial schedule: {4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV]}; 
+├── l_bound: 41, u_bound: 41; investigated n6--181:FDIV in [5:22]; investigated partial schedule: {5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV]}; 
+├── l_bound: 49, u_bound: 49; investigated n6--181:FDIV in [13:30]; investigated partial schedule: {13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV]}; 
+├── l_bound: 48, u_bound: 49; investigated n6--181:FDIV in [12:29]; investigated partial schedule: {12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV]}; 
+├── l_bound: 44, u_bound: 46; investigated n6--181:FDIV in [8:25]; investigated partial schedule: {8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV]}; 
+├── l_bound: 38, u_bound: 38; investigated n6--181:FDIV in [2:19]; investigated partial schedule: {2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV]}; 
+├── l_bound: 50, u_bound: 51; investigated n6--181:FDIV in [14:31]; investigated partial schedule: {14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV]}; 
+├── l_bound: 37, u_bound: 37; investigated n6--181:FDIV in [1:18]; investigated partial schedule: {1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV]}; 
+├── l_bound: 53, u_bound: 53; investigated n6--181:FDIV in [17:34]; investigated partial schedule: {17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV], 34=[n6--181:FDIV]}; 
+├── l_bound: 46, u_bound: 46; investigated n6--181:FDIV in [10:27]; investigated partial schedule: {10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV]}; 
+├── l_bound: 47, u_bound: 47; investigated n6--181:FDIV in [11:28]; investigated partial schedule: {11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV]}; 
+├── l_bound: 42, u_bound: 42; investigated n6--181:FDIV in [6:23]; investigated partial schedule: {6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV]}; 
+├── l_bound: 45, u_bound: 46; investigated n6--181:FDIV in [9:26]; investigated partial schedule: {9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 36; investigated n6--181:FDIV in [0:17]; investigated partial schedule: {0=[n6--181:FDIV], 1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV]}; 
+├── l_bound: 39, u_bound: 40; investigated n6--181:FDIV in [3:20]; investigated partial schedule: {3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV]}; 
+└── l_bound: 43, u_bound: 46; investigated n6--181:FDIV in [7:24]; investigated partial schedule: {7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 36
+Initial best latency: 36
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 39 milliseconds to converge
+Scheduling took 39 milliseconds
+
+Print BULB tree: 
+l_bound: 36, u_bound: 36; investigated partial schedule: {}; 
+└── l_bound: 36, u_bound: 36; investigated n6--181:FDIV in [0:17]; investigated partial schedule: {0=[n6--181:FDIV], 1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 20 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 36
+Initial best latency: 36
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 44 milliseconds to converge
+Scheduling took 193 milliseconds
+
+Print BULB tree: 
+l_bound: 36, u_bound: 36; investigated partial schedule: {}; 
+├── l_bound: 42, u_bound: 42; investigated n6--181:FDIV in [6:23]; investigated partial schedule: {6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV]}; 
+├── l_bound: 38, u_bound: 38; investigated n6--181:FDIV in [2:19]; investigated partial schedule: {2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV]}; 
+├── l_bound: 41, u_bound: 41; investigated n6--181:FDIV in [5:22]; investigated partial schedule: {5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV]}; 
+├── l_bound: 50, u_bound: 51; investigated n6--181:FDIV in [14:31]; investigated partial schedule: {14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV]}; 
+├── l_bound: 54, u_bound: 54; investigated n6--181:FDIV in [18:35]; investigated partial schedule: {18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV], 34=[n6--181:FDIV], 35=[n6--181:FDIV]}; 
+├── l_bound: 45, u_bound: 46; investigated n6--181:FDIV in [9:26]; investigated partial schedule: {9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV]}; 
+├── l_bound: 37, u_bound: 37; investigated n6--181:FDIV in [1:18]; investigated partial schedule: {1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 36; investigated n6--181:FDIV in [0:17]; investigated partial schedule: {0=[n6--181:FDIV], 1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV]}; 
+├── l_bound: 53, u_bound: 53; investigated n6--181:FDIV in [17:34]; investigated partial schedule: {17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV], 34=[n6--181:FDIV]}; 
+├── l_bound: 39, u_bound: 40; investigated n6--181:FDIV in [3:20]; investigated partial schedule: {3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV]}; 
+├── l_bound: 43, u_bound: 46; investigated n6--181:FDIV in [7:24]; investigated partial schedule: {7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV]}; 
+├── l_bound: 52, u_bound: 52; investigated n6--181:FDIV in [16:33]; investigated partial schedule: {16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV]}; 
+├── l_bound: 49, u_bound: 49; investigated n6--181:FDIV in [13:30]; investigated partial schedule: {13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV]}; 
+├── l_bound: 47, u_bound: 47; investigated n6--181:FDIV in [11:28]; investigated partial schedule: {11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV]}; 
+├── l_bound: 48, u_bound: 49; investigated n6--181:FDIV in [12:29]; investigated partial schedule: {12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV]}; 
+├── l_bound: 46, u_bound: 46; investigated n6--181:FDIV in [10:27]; investigated partial schedule: {10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV]}; 
+├── l_bound: 51, u_bound: 51; investigated n6--181:FDIV in [15:32]; investigated partial schedule: {15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV]}; 
+├── l_bound: 44, u_bound: 46; investigated n6--181:FDIV in [8:25]; investigated partial schedule: {8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV]}; 
+└── l_bound: 40, u_bound: 40; investigated n6--181:FDIV in [4:21]; investigated partial schedule: {4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 20 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 36
+Initial best latency: 36
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 33 milliseconds to converge
+Scheduling took 245 milliseconds
+
+Print BULB tree: 
+l_bound: 36, u_bound: 36; investigated partial schedule: {}; 
+├── l_bound: 36, u_bound: 40; investigated n6--181:FDIV in [4:21]; investigated partial schedule: {4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 46; investigated n6--181:FDIV in [10:27]; investigated partial schedule: {10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 49; investigated n6--181:FDIV in [12:29]; investigated partial schedule: {12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 46; investigated n6--181:FDIV in [8:25]; investigated partial schedule: {8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 36; investigated n6--181:FDIV in [0:17]; investigated partial schedule: {0=[n6--181:FDIV], 1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 47; investigated n6--181:FDIV in [11:28]; investigated partial schedule: {11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 54; investigated n6--181:FDIV in [18:35]; investigated partial schedule: {18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV], 34=[n6--181:FDIV], 35=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 38; investigated n6--181:FDIV in [2:19]; investigated partial schedule: {2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 49; investigated n6--181:FDIV in [13:30]; investigated partial schedule: {13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 46; investigated n6--181:FDIV in [9:26]; investigated partial schedule: {9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 41; investigated n6--181:FDIV in [5:22]; investigated partial schedule: {5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 42; investigated n6--181:FDIV in [6:23]; investigated partial schedule: {6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 37; investigated n6--181:FDIV in [1:18]; investigated partial schedule: {1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 52; investigated n6--181:FDIV in [16:33]; investigated partial schedule: {16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 53; investigated n6--181:FDIV in [17:34]; investigated partial schedule: {17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV], 33=[n6--181:FDIV], 34=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 40; investigated n6--181:FDIV in [3:20]; investigated partial schedule: {3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 46; investigated n6--181:FDIV in [7:24]; investigated partial schedule: {7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV]}; 
+├── l_bound: 36, u_bound: 51; investigated n6--181:FDIV in [15:32]; investigated partial schedule: {15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV], 32=[n6--181:FDIV]}; 
+└── l_bound: 36, u_bound: 51; investigated n6--181:FDIV in [14:31]; investigated partial schedule: {14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV], 18=[n6--181:FDIV], 19=[n6--181:FDIV], 20=[n6--181:FDIV], 21=[n6--181:FDIV], 22=[n6--181:FDIV], 23=[n6--181:FDIV], 24=[n6--181:FDIV], 25=[n6--181:FDIV], 26=[n6--181:FDIV], 27=[n6--181:FDIV], 28=[n6--181:FDIV], 29=[n6--181:FDIV], 30=[n6--181:FDIV], 31=[n6--181:FDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 36
+Initial best latency: 36
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 31 milliseconds to converge
+Scheduling took 31 milliseconds
+
+Print BULB tree: 
+l_bound: 36, u_bound: 36; investigated partial schedule: {}; 
+└── l_bound: 36, u_bound: 36; investigated n6--181:FDIV in [0:17]; investigated partial schedule: {0=[n6--181:FDIV], 1=[n6--181:FDIV], 2=[n6--181:FDIV], 3=[n6--181:FDIV], 4=[n6--181:FDIV], 5=[n6--181:FDIV], 6=[n6--181:FDIV], 7=[n6--181:FDIV], 8=[n6--181:FDIV], 9=[n6--181:FDIV], 10=[n6--181:FDIV], 11=[n6--181:FDIV], 12=[n6--181:FDIV], 13=[n6--181:FDIV], 14=[n6--181:FDIV], 15=[n6--181:FDIV], 16=[n6--181:FDIV], 17=[n6--181:FDIV]}; 
+

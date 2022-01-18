@@ -1,0 +1,613 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 4205, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 4224
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 97, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 4224
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 122, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 4224
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 97, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 4205
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 122, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 4205
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 97, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 122
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 88 with 309 nodes
+
+n230--1476:IMUL : [0:3]
+n3--236:IADD : [0:0]
+n28--370:DMA_LOAD(ref) : [0:1]
+n72--435:IMUL : [0:3]
+n8--294:IADD : [0:0]
+n74--179:IADD : [0:0]
+n187--243:IADD : [1:1]
+n177--268:IADD : [1:1]
+n131--255:IADD : [1:1]
+n48--269:DMA_LOAD : [2:3]
+n153--211:IADD : [2:2]
+n207--244:DMA_LOAD : [2:3]
+n63--256:DMA_LOAD : [2:3]
+n224--198:IADD : [3:3]
+n47--273:IAND : [4:4]
+n2--280:DMA_LOAD : [4:5]
+n61--326:IADD : [4:4]
+n206--248:IAND : [4:4]
+n7--313:IADD : [5:5]
+n238--301:IADD : [5:5]
+n62--260:IAND : [5:5]
+n262--327:DMA_LOAD : [6:7]
+n223--199:DMA_LOAD : [6:7]
+n50--276:ISHL : [6:6]
+n98--186:IADD : [6:6]
+n93--314:DMA_LOAD : [7:8]
+n127--251:ISHL : [7:7]
+n51--284:IAND : [8:8]
+n128--263:ISHL : [8:8]
+n97--187:DMA_LOAD : [8:9]
+n49--264:IOR : [9:9]
+n170--302:DMA_LOAD : [9:10]
+n34--212:DMA_LOAD : [9:10]
+n257--191:IAND : [10:10]
+n126--277:IOR : [10:10]
+n169--306:IAND : [11:11]
+n200--338:DMA_LOAD : [11:12]
+n92--318:IAND : [11:11]
+n278--203:IAND : [11:11]
+n73--223:DMA_LOAD : [12:13]
+n261--331:IAND : [12:12]
+n33--216:IAND : [12:12]
+n25--285:IOR : [13:13]
+n232--219:ISHL : [13:13]
+n199--342:IAND : [13:13]
+n38--321:ISHL : [14:14]
+n284--194:ISHL : [14:14]
+n37--309:ISHL : [14:14]
+n202--227:IAND : [14:14]
+n158--207:IOR : [15:15]
+n214--334:ISHL : [15:15]
+n277--206:ISHL : [15:15]
+n19--335:IOR : [15:15]
+n276--801:IXOR : [16:16]
+n157--220:IOR : [16:16]
+n20--322:IOR : [16:16]
+n53--422:IXOR : [16:16]
+n275--802:IOR : [17:17]
+n188--885:IXOR : [17:17]
+n18--343:IOR : [17:17]
+n66--228:IOR : [17:17]
+n122--415:IXOR : [18:18]
+n287--909:IXOR : [18:18]
+n103--429:IXOR : [18:18]
+n118--886:IOR : [18:18]
+n1--887:IXOR : [19:19]
+n125--803:IXOR : [19:19]
+n256--968:IXOR : [19:19]
+n52--945:IXOR : [19:19]
+n144--910:IOR : [20:20]
+n105--825:IXOR : [20:20]
+n282--849:IXOR : [20:20]
+n181--873:IXOR : [20:20]
+n203--850:IOR : [21:21]
+n104--826:IOR : [21:21]
+n255--969:IOR : [21:21]
+n101--874:IOR : [21:21]
+n96--875:IXOR : [22:22]
+n40--897:IXOR : [22:22]
+n75--946:IOR : [22:22]
+n195--978:IXOR : [22:22]
+n10--947:IXOR : [23:23]
+n283--813:IXOR : [23:23]
+n171--837:IXOR : [23:23]
+n160--851:IXOR : [23:23]
+n155--861:IXOR : [24:24]
+n175--921:IXOR : [24:24]
+n164--970:IXOR : [24:24]
+n77--911:IXOR : [24:24]
+n225--827:IXOR : [25:25]
+n102--957:IXOR : [25:25]
+n267--777:IXOR : [25:25]
+n249--933:IXOR : [25:25]
+n154--862:IOR : [26:26]
+n133--814:IOR : [26:26]
+n174--922:IOR : [26:26]
+n219--789:IXOR : [26:26]
+n39--898:IOR : [27:27]
+n123--958:IOR : [27:27]
+n266--778:IOR : [27:27]
+n91--838:IOR : [27:27]
+n132--815:IXOR : [28:28]
+n234--934:IOR : [28:28]
+n218--790:IOR : [28:28]
+n194--979:IOR : [28:28]
+n36--935:IXOR : [29:29]
+n121--959:IXOR : [29:29]
+n130--779:IXOR : [29:29]
+n15--899:IXOR : [29:29]
+n90--839:IXOR : [30:30]
+n215--791:IXOR : [30:30]
+n139--923:IXOR : [30:30]
+n260--980:IXOR : [30:30]
+n176--766:IXOR : [31:31]
+n0--1165:ISHL : [31:31]
+n124--1152:ISHL : [31:31]
+n22--863:IXOR : [31:31]
+n17--767:IOR : [32:32]
+n9--1139:ISHL : [32:32]
+n89--1170:IUSHR : [32:32]
+n192--1157:IUSHR : [32:32]
+n83--1171:IOR : [33:33]
+n191--1158:IOR : [33:33]
+n95--1026:ISHL : [33:33]
+n76--1204:ISHL : [33:33]
+n220--994:IUSHR : [34:34]
+n243--1209:IUSHR : [34:34]
+n163--1183:IUSHR : [34:34]
+n193--1178:ISHL : [34:34]
+n16--768:IXOR : [35:35]
+n26--1144:IUSHR : [35:35]
+n159--990:ISHL : [35:35]
+n148--1191:ISHL : [35:35]
+n14--1069:IUSHR : [36:36]
+n70--1064:ISHL : [36:36]
+n149--1196:IUSHR : [36:36]
+n117--1031:IUSHR : [36:36]
+n198--1127:ISHL : [37:37]
+n35--1001:ISHL : [37:37]
+n59--1039:ISHL : [37:37]
+n213--1081:IUSHR : [37:37]
+n235--1102:ISHL : [38:38]
+n114--1145:IOR : [38:38]
+n178--1005:IUSHR : [38:38]
+n212--1077:ISHL : [38:38]
+n60--1044:IUSHR : [39:39]
+n138--1107:IUSHR : [39:39]
+n84--1184:IOR : [39:39]
+n21--1132:IUSHR : [39:39]
+n46--1057:IUSHR : [40:40]
+n43--1197:IOR : [40:40]
+n45--1052:ISHL : [40:40]
+n292--1094:IUSHR : [40:40]
+n100--1210:IOR : [41:41]
+n263--1089:ISHL : [41:41]
+n147--995:IOR : [41:41]
+n167--1013:ISHL : [41:41]
+n201--1119:IUSHR : [42:42]
+n168--1018:IUSHR : [42:42]
+n129--1115:ISHL : [42:42]
+n108--1032:IOR : [42:42]
+n58--1045:IOR : [43:43]
+n79--1133:IOR : [43:43]
+n13--1120:IOR : [43:43]
+n185--1070:IOR : [43:43]
+n141--1006:IOR : [44:44]
+n5--1082:IOR : [44:44]
+n6--1095:IOR : [44:44]
+n107--1019:IOR : [44:44]
+n81--404:IADD : [45:45]
+n32--727:IADD : [45:45]
+n162--1108:IOR : [45:45]
+n44--1058:IOR : [45:45]
+n86--538:IADD : [46:46]
+n272--458:IADD : [46:46]
+n280--376:IADD : [46:46]
+n55--700:IADD : [46:46]
+n286--565:IADD : [47:47]
+n254--673:IADD : [47:47]
+n68--646:IADD : [47:47]
+n265--511:IADD : [47:47]
+n251--754:IADD : [48:48]
+n152--390:IADD : [48:48]
+n241--484:IADD : [48:48]
+n29--592:IADD : [48:48]
+n246--619:IADD : [49:49]
+n80--406:DMA_LOAD : [49:50]
+n82--1364:IXOR : [49:49]
+n85--540:DMA_LOAD : [49:50]
+n54--702:DMA_LOAD : [50:51]
+n65--378:DMA_LOAD : [50:51]
+n293--594:DMA_LOAD : [51:52]
+n31--729:DMA_LOAD : [51:52]
+n173--486:DMA_LOAD : [52:53]
+n250--756:DMA_LOAD : [52:53]
+n42--1344:IXOR : [53:53]
+n88--621:DMA_LOAD : [53:54]
+n264--513:DMA_LOAD : [54:55]
+n110--1502:IADD : [54:54]
+n182--1215:IXOR : [54:54]
+n24--392:DMA_LOAD : [55:56]
+n197--1516:IADD : [55:55]
+n135--648:DMA_LOAD : [55:56]
+n217--675:DMA_LOAD : [56:57]
+n228--1354:IXOR : [56:56]
+n229--1488:IADD : [57:57]
+n259--567:DMA_LOAD : [57:58]
+n248--460:DMA_LOAD : [57:58]
+n4--1294:IXOR : [58:58]
+n94--409:IXOR : [58:58]
+n180--545:IADD : [59:59]
+n184--1274:IXOR : [59:59]
+n140--1234:IXOR : [59:59]
+n12--1284:IXOR : [59:59]
+n297--1218:IXOR : [60:60]
+n57--518:IADD : [60:60]
+n295--680:IADD : [60:60]
+n99--1382:IXOR : [60:60]
+n252--1324:IXOR : [61:61]
+n258--570:IXOR : [61:61]
+n137--734:IADD : [61:61]
+n211--1391:IXOR : [61:61]
+n134--1373:IXOR : [62:62]
+n290--707:IADD : [62:62]
+n216--678:IXOR : [62:62]
+n172--489:IXOR : [62:62]
+n69--651:IXOR : [63:63]
+n166--572:IADD : [63:63]
+n64--381:IXOR : [63:63]
+n23--395:IXOR : [63:63]
+n120--705:IXOR : [64:64]
+n247--462:IXOR : [64:64]
+n205--1264:IXOR : [64:64]
+n209--1489:DMA_LOAD : [64:65]
+n71--438:IADD : [65:65]
+n30--597:IXOR : [65:65]
+n161--1304:IXOR : [65:65]
+n196--1517:DMA_LOAD : [66:67]
+n279--516:IXOR : [66:66]
+n112--732:IXOR : [66:66]
+n113--1334:IXOR : [66:66]
+n190--543:IXOR : [67:67]
+n116--599:IADD : [67:67]
+n237--1314:IXOR : [67:67]
+n41--1347:IXOR : [68:68]
+n87--624:IXOR : [68:68]
+n271--626:IADD : [68:68]
+n151--464:IADD : [68:68]
+n143--1254:IXOR : [69:69]
+n302--759:IXOR : [69:69]
+n269--653:IADD : [69:69]
+n145--1366:IXOR : [69:69]
+n222--1357:IXOR : [70:70]
+n300--365:IADD : [70:70]
+n146--1224:IXOR : [70:70]
+n106--1244:IXOR : [70:70]
+n299--366:IMUL : [71:74]
+n227--491:IADD : [71:71]
+n183--1277:IXOR : [71:71]
+n109--1503:DMA_LOAD : [71:72]
+n56--525:IFNE : [71:71]
+n253--679:DMA_STORE : [72:73]
+n210--1394:IXOR : [72:72]
+n11--1287:IXOR : [72:72]
+n298--1400:IXOR : [73:73]
+n296--1307:IXOR : [73:73]
+n136--741:IFNE : [73:73]
+n179--552:IFNE : [74:74]
+n294--687:IFNE : [74:74]
+n67--652:DMA_STORE : [74:75]
+n291--1337:IXOR : [74:74]
+n242--445:IFNE : [75:75]
+n165--579:IFNE : [75:75]
+n27--598:DMA_STORE : [75:76]
+n240--490:DMA_STORE : [76:77]
+n285--517:DMA_STORE : [76:77]
+n244--1518:IXOR : [76:76]
+n288--1327:IXOR : [77:77]
+n245--625:DMA_STORE : [77:78]
+n289--714:IFNE : [78:78]
+n204--1267:IXOR : [78:78]
+n208--1490:IXOR : [78:78]
+n231--1375:IXOR : [79:79]
+n111--733:DMA_STORE : [79:80]
+n78--1297:IXOR : [79:79]
+n281--382:DMA_STORE : [79:80]
+n273--1227:IXOR : [80:80]
+n274--463:DMA_STORE : [80:81]
+n115--606:IFNE : [81:81]
+n236--1317:IXOR : [81:81]
+n156--396:DMA_STORE : [81:82]
+n233--1247:IXOR : [82:82]
+n239--1385:IXOR : [82:82]
+n119--706:DMA_STORE : [82:83]
+n221--1504:IXOR : [83:83]
+n150--471:IFNE : [83:83]
+n270--633:IFNE : [83:83]
+n186--410:DMA_STORE : [84:85]
+n142--1257:IXOR : [84:84]
+n301--760:DMA_STORE : [84:85]
+n268--660:IFNE : [84:84]
+n189--544:DMA_STORE : [85:86]
+n305--347:IADD : [85:85]
+n306--1521:IADD : [86:86]
+n303--571:DMA_STORE : [86:87]
+n226--498:IFNE : [86:86]
+n304--1237:IXOR : [87:87]
+n307--172:IFLT : [87:87]
+n308--354:IFNE : [87:87]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 89 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 70 times
+Best latency found: 88
+Initial best latency: 88
+308 out of 309 DFG nodes could be skipped to find best schedule
+It took 77 milliseconds to converge
+Scheduling took 4224 milliseconds
+
+Print BULB tree: 
+l_bound: 88, u_bound: 88; investigated partial schedule: {}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [9:9]; investigated partial schedule: {9=[n3--236:IADD]}; 
+├── l_bound: 101, u_bound: 102; investigated n3--236:IADD in [84:84]; investigated partial schedule: {84=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [54:54]; investigated partial schedule: {54=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [63:63]; investigated partial schedule: {63=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [51:51]; investigated partial schedule: {51=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [25:25]; investigated partial schedule: {25=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [40:40]; investigated partial schedule: {40=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [65:65]; investigated partial schedule: {65=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [42:42]; investigated partial schedule: {42=[n3--236:IADD]}; 
+├── l_bound: 96, u_bound: 97; investigated n3--236:IADD in [79:79]; investigated partial schedule: {79=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [35:35]; investigated partial schedule: {35=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [11:11]; investigated partial schedule: {11=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [15:15]; investigated partial schedule: {15=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [33:33]; investigated partial schedule: {33=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [59:59]; investigated partial schedule: {59=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [22:22]; investigated partial schedule: {22=[n3--236:IADD]}; 
+├── l_bound: 92, u_bound: 93; investigated n3--236:IADD in [75:75]; investigated partial schedule: {75=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [57:57]; investigated partial schedule: {57=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [60:60]; investigated partial schedule: {60=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [62:62]; investigated partial schedule: {62=[n3--236:IADD]}; 
+├── l_bound: 100, u_bound: 101; investigated n3--236:IADD in [83:83]; investigated partial schedule: {83=[n3--236:IADD]}; 
+├── l_bound: 102, u_bound: 103; investigated n3--236:IADD in [85:85]; investigated partial schedule: {85=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [32:32]; investigated partial schedule: {32=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [31:31]; investigated partial schedule: {31=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [34:34]; investigated partial schedule: {34=[n3--236:IADD]}; 
+├── l_bound: 94, u_bound: 95; investigated n3--236:IADD in [77:77]; investigated partial schedule: {77=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [10:10]; investigated partial schedule: {10=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [8:8]; investigated partial schedule: {8=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [4:4]; investigated partial schedule: {4=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [26:26]; investigated partial schedule: {26=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [44:44]; investigated partial schedule: {44=[n3--236:IADD]}; 
+├── l_bound: 97, u_bound: 98; investigated n3--236:IADD in [80:80]; investigated partial schedule: {80=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [45:45]; investigated partial schedule: {45=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [7:7]; investigated partial schedule: {7=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [23:23]; investigated partial schedule: {23=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [12:12]; investigated partial schedule: {12=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [43:43]; investigated partial schedule: {43=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [37:37]; investigated partial schedule: {37=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [67:67]; investigated partial schedule: {67=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [20:20]; investigated partial schedule: {20=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [68:68]; investigated partial schedule: {68=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 89; investigated n3--236:IADD in [71:71]; investigated partial schedule: {71=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [19:19]; investigated partial schedule: {19=[n3--236:IADD]}; 
+├── l_bound: 95, u_bound: 96; investigated n3--236:IADD in [78:78]; investigated partial schedule: {78=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [48:48]; investigated partial schedule: {48=[n3--236:IADD]}; 
+├── l_bound: 90, u_bound: 91; investigated n3--236:IADD in [73:73]; investigated partial schedule: {73=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [14:14]; investigated partial schedule: {14=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [41:41]; investigated partial schedule: {41=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [38:38]; investigated partial schedule: {38=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [17:17]; investigated partial schedule: {17=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [1:1]; investigated partial schedule: {1=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [29:29]; investigated partial schedule: {29=[n3--236:IADD]}; 
+├── l_bound: 89, u_bound: 90; investigated n3--236:IADD in [72:72]; investigated partial schedule: {72=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [36:36]; investigated partial schedule: {36=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [30:30]; investigated partial schedule: {30=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [69:69]; investigated partial schedule: {69=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [3:3]; investigated partial schedule: {3=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [46:46]; investigated partial schedule: {46=[n3--236:IADD]}; 
+├── l_bound: 104, u_bound: 105; investigated n3--236:IADD in [87:87]; investigated partial schedule: {87=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [50:50]; investigated partial schedule: {50=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [55:55]; investigated partial schedule: {55=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [56:56]; investigated partial schedule: {56=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [58:58]; investigated partial schedule: {58=[n3--236:IADD]}; 
+├── l_bound: 93, u_bound: 94; investigated n3--236:IADD in [76:76]; investigated partial schedule: {76=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [24:24]; investigated partial schedule: {24=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [5:5]; investigated partial schedule: {5=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [18:18]; investigated partial schedule: {18=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [28:28]; investigated partial schedule: {28=[n3--236:IADD]}; 
+├── l_bound: 98, u_bound: 99; investigated n3--236:IADD in [81:81]; investigated partial schedule: {81=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [66:66]; investigated partial schedule: {66=[n3--236:IADD]}; 
+├── l_bound: 91, u_bound: 92; investigated n3--236:IADD in [74:74]; investigated partial schedule: {74=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [2:2]; investigated partial schedule: {2=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [27:27]; investigated partial schedule: {27=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [52:52]; investigated partial schedule: {52=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [16:16]; investigated partial schedule: {16=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [49:49]; investigated partial schedule: {49=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 89; investigated n3--236:IADD in [70:70]; investigated partial schedule: {70=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [61:61]; investigated partial schedule: {61=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [64:64]; investigated partial schedule: {64=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [0:0]; investigated partial schedule: {0=[n3--236:IADD]}; 
+├── l_bound: 99, u_bound: 100; investigated n3--236:IADD in [82:82]; investigated partial schedule: {82=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [47:47]; investigated partial schedule: {47=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [53:53]; investigated partial schedule: {53=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [21:21]; investigated partial schedule: {21=[n3--236:IADD]}; 
+├── l_bound: 103, u_bound: 104; investigated n3--236:IADD in [86:86]; investigated partial schedule: {86=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [39:39]; investigated partial schedule: {39=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [6:6]; investigated partial schedule: {6=[n3--236:IADD]}; 
+└── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [13:13]; investigated partial schedule: {13=[n3--236:IADD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 89 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 70 times
+Best latency found: 88
+Initial best latency: 88
+308 out of 309 DFG nodes could be skipped to find best schedule
+It took 92 milliseconds to converge
+Scheduling took 4205 milliseconds
+
+Print BULB tree: 
+l_bound: 88, u_bound: 88; investigated partial schedule: {}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [2:2]; investigated partial schedule: {2=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [51:51]; investigated partial schedule: {51=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [29:29]; investigated partial schedule: {29=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [8:8]; investigated partial schedule: {8=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [30:30]; investigated partial schedule: {30=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [57:57]; investigated partial schedule: {57=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [0:0]; investigated partial schedule: {0=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [15:15]; investigated partial schedule: {15=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [14:14]; investigated partial schedule: {14=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [43:43]; investigated partial schedule: {43=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [22:22]; investigated partial schedule: {22=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [28:28]; investigated partial schedule: {28=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [56:56]; investigated partial schedule: {56=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [36:36]; investigated partial schedule: {36=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [17:17]; investigated partial schedule: {17=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [20:20]; investigated partial schedule: {20=[n3--236:IADD]}; 
+├── l_bound: 90, u_bound: 90; investigated n3--236:IADD in [72:72]; investigated partial schedule: {72=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [31:31]; investigated partial schedule: {31=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [19:19]; investigated partial schedule: {19=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [49:49]; investigated partial schedule: {49=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [10:10]; investigated partial schedule: {10=[n3--236:IADD]}; 
+├── l_bound: 94, u_bound: 94; investigated n3--236:IADD in [76:76]; investigated partial schedule: {76=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [62:62]; investigated partial schedule: {62=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [32:32]; investigated partial schedule: {32=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [60:60]; investigated partial schedule: {60=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [13:13]; investigated partial schedule: {13=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [12:12]; investigated partial schedule: {12=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [23:23]; investigated partial schedule: {23=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [67:67]; investigated partial schedule: {67=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [46:46]; investigated partial schedule: {46=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [59:59]; investigated partial schedule: {59=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [1:1]; investigated partial schedule: {1=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [38:38]; investigated partial schedule: {38=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [3:3]; investigated partial schedule: {3=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [27:27]; investigated partial schedule: {27=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [69:69]; investigated partial schedule: {69=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [61:61]; investigated partial schedule: {61=[n3--236:IADD]}; 
+├── l_bound: 92, u_bound: 92; investigated n3--236:IADD in [74:74]; investigated partial schedule: {74=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [48:48]; investigated partial schedule: {48=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [18:18]; investigated partial schedule: {18=[n3--236:IADD]}; 
+├── l_bound: 99, u_bound: 99; investigated n3--236:IADD in [81:81]; investigated partial schedule: {81=[n3--236:IADD]}; 
+├── l_bound: 104, u_bound: 104; investigated n3--236:IADD in [86:86]; investigated partial schedule: {86=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [39:39]; investigated partial schedule: {39=[n3--236:IADD]}; 
+├── l_bound: 89, u_bound: 89; investigated n3--236:IADD in [71:71]; investigated partial schedule: {71=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [58:58]; investigated partial schedule: {58=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [63:63]; investigated partial schedule: {63=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [9:9]; investigated partial schedule: {9=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [16:16]; investigated partial schedule: {16=[n3--236:IADD]}; 
+├── l_bound: 93, u_bound: 93; investigated n3--236:IADD in [75:75]; investigated partial schedule: {75=[n3--236:IADD]}; 
+├── l_bound: 101, u_bound: 101; investigated n3--236:IADD in [83:83]; investigated partial schedule: {83=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [47:47]; investigated partial schedule: {47=[n3--236:IADD]}; 
+├── l_bound: 95, u_bound: 95; investigated n3--236:IADD in [77:77]; investigated partial schedule: {77=[n3--236:IADD]}; 
+├── l_bound: 103, u_bound: 103; investigated n3--236:IADD in [85:85]; investigated partial schedule: {85=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [34:34]; investigated partial schedule: {34=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [11:11]; investigated partial schedule: {11=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [7:7]; investigated partial schedule: {7=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [66:66]; investigated partial schedule: {66=[n3--236:IADD]}; 
+├── l_bound: 97, u_bound: 97; investigated n3--236:IADD in [79:79]; investigated partial schedule: {79=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 89; investigated n3--236:IADD in [70:70]; investigated partial schedule: {70=[n3--236:IADD]}; 
+├── l_bound: 91, u_bound: 91; investigated n3--236:IADD in [73:73]; investigated partial schedule: {73=[n3--236:IADD]}; 
+├── l_bound: 96, u_bound: 96; investigated n3--236:IADD in [78:78]; investigated partial schedule: {78=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [53:53]; investigated partial schedule: {53=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [44:44]; investigated partial schedule: {44=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [21:21]; investigated partial schedule: {21=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [64:64]; investigated partial schedule: {64=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [35:35]; investigated partial schedule: {35=[n3--236:IADD]}; 
+├── l_bound: 102, u_bound: 102; investigated n3--236:IADD in [84:84]; investigated partial schedule: {84=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [52:52]; investigated partial schedule: {52=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [5:5]; investigated partial schedule: {5=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [41:41]; investigated partial schedule: {41=[n3--236:IADD]}; 
+├── l_bound: 105, u_bound: 105; investigated n3--236:IADD in [87:87]; investigated partial schedule: {87=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [4:4]; investigated partial schedule: {4=[n3--236:IADD]}; 
+├── l_bound: 100, u_bound: 100; investigated n3--236:IADD in [82:82]; investigated partial schedule: {82=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [65:65]; investigated partial schedule: {65=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [42:42]; investigated partial schedule: {42=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [26:26]; investigated partial schedule: {26=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [50:50]; investigated partial schedule: {50=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [55:55]; investigated partial schedule: {55=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [40:40]; investigated partial schedule: {40=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [33:33]; investigated partial schedule: {33=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [45:45]; investigated partial schedule: {45=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [54:54]; investigated partial schedule: {54=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [68:68]; investigated partial schedule: {68=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [24:24]; investigated partial schedule: {24=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [25:25]; investigated partial schedule: {25=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [6:6]; investigated partial schedule: {6=[n3--236:IADD]}; 
+├── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [37:37]; investigated partial schedule: {37=[n3--236:IADD]}; 
+└── l_bound: 98, u_bound: 98; investigated n3--236:IADD in [80:80]; investigated partial schedule: {80=[n3--236:IADD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 88
+Initial best latency: 88
+308 out of 309 DFG nodes could be skipped to find best schedule
+It took 96 milliseconds to converge
+Scheduling took 97 milliseconds
+
+Print BULB tree: 
+l_bound: 88, u_bound: 88; investigated partial schedule: {}; 
+└── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [0:0]; investigated partial schedule: {0=[n3--236:IADD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 88
+Initial best latency: 88
+308 out of 309 DFG nodes could be skipped to find best schedule
+It took 121 milliseconds to converge
+Scheduling took 122 milliseconds
+
+Print BULB tree: 
+l_bound: 88, u_bound: 88; investigated partial schedule: {}; 
+└── l_bound: 88, u_bound: 88; investigated n3--236:IADD in [0:0]; investigated partial schedule: {0=[n3--236:IADD]}; 
+

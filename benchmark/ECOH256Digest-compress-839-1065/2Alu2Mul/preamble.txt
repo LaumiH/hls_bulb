@@ -1,0 +1,188 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/ECOH256Digest-compress-839-1065.dot
+DOING ASAP SCHEDULE
+Found schedule of length 21 with 76 nodes
+
+n69--1037:IADD : [0:0]
+n16--855:IMUL : [0:3]
+n71--846:DMA_LOAD(ref) : [0:1]
+n74--1062:IADD : [0:0]
+n62--909:IMUL : [0:3]
+n40--1024:DMA_LOAD(ref) : [0:1]
+n43--1057:IADD : [0:0]
+n75--842:IFGE : [0:0]
+n56--1047:IADD : [0:0]
+n22--967:IMUL : [0:3]
+n35--851:DMA_LOAD : [2:3]
+n68--1038:DMA_LOAD : [2:3]
+n29--1028:DMA_LOAD : [2:3]
+n42--1058:DMA_LOAD : [2:3]
+n55--1048:DMA_LOAD : [2:3]
+n14--899:DMA_LOAD : [4:5]
+n15--862:IADD : [4:4]
+n59--874:IADD : [4:4]
+n1--971:IADD : [4:4]
+n63--887:IADD : [4:4]
+n12--912:IADD : [4:4]
+n47--863:DMA_LOAD : [5:6]
+n58--875:DMA_LOAD : [5:6]
+n57--990:IADD : [5:5]
+n0--1015:DMA_LOAD : [5:6]
+n48--956:DMA_LOAD : [5:6]
+n18--1003:IADD : [5:5]
+n5--944:IADD : [5:5]
+n21--931:IADD : [5:5]
+n45--888:DMA_LOAD : [5:6]
+n66--978:IADD : [5:5]
+n11--919:IADD : [5:5]
+n13--903:IAND : [6:6]
+n17--1004:DMA_LOAD : [6:7]
+n4--945:DMA_LOAD : [6:7]
+n7--932:DMA_LOAD : [6:7]
+n65--979:DMA_LOAD : [6:7]
+n23--991:DMA_LOAD : [6:7]
+n33--920:DMA_LOAD : [6:7]
+n26--1019:IAND : [7:7]
+n51--867:IAND : [7:7]
+n10--960:IAND : [7:7]
+n64--879:IAND : [7:7]
+n44--892:IAND : [7:7]
+n49--949:IAND : [8:8]
+n3--995:IAND : [8:8]
+n6--936:IAND : [8:8]
+n50--870:ISHL : [8:8]
+n61--895:ISHL : [8:8]
+n41--1008:IAND : [8:8]
+n52--924:IAND : [8:8]
+n54--882:ISHL : [8:8]
+n20--983:IAND : [8:8]
+n25--1011:ISHL : [9:9]
+n38--927:ISHL : [9:9]
+n2--998:ISHL : [9:9]
+n39--939:ISHL : [9:9]
+n19--986:ISHL : [9:9]
+n60--883:IOR : [9:9]
+n9--952:ISHL : [9:9]
+n53--896:IOR : [9:9]
+n24--999:IOR : [10:10]
+n37--953:IOR : [10:10]
+n8--940:IOR : [10:10]
+n73--1012:IOR : [10:10]
+n31--904:IOR : [10:10]
+n32--961:IOR : [11:11]
+n67--1020:IOR : [11:11]
+n30--963:IXOR : [12:12]
+n28--1022:IXOR : [13:13]
+n27--1029:IXOR : [14:14]
+n72--1039:IXOR : [15:15]
+n46--1049:IXOR : [16:16]
+n36--1059:IXOR : [17:17]
+n34--1060:IXOR : [18:18]
+n70--1061:DMA_STORE : [19:20]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 21 with 76 nodes
+
+n62--909:IMUL : [0:3]
+n16--855:IMUL : [1:4]
+n22--967:IMUL : [1:4]
+n12--912:IADD : [4:4]
+n15--862:IADD : [5:5]
+n59--874:IADD : [5:5]
+n1--971:IADD : [5:5]
+n5--944:IADD : [5:5]
+n63--887:IADD : [5:5]
+n21--931:IADD : [5:5]
+n11--919:IADD : [5:5]
+n47--863:DMA_LOAD : [6:7]
+n58--875:DMA_LOAD : [6:7]
+n57--990:IADD : [6:6]
+n18--1003:IADD : [6:6]
+n4--945:DMA_LOAD : [6:7]
+n7--932:DMA_LOAD : [6:7]
+n45--888:DMA_LOAD : [6:7]
+n33--920:DMA_LOAD : [6:7]
+n66--978:IADD : [6:6]
+n14--899:DMA_LOAD : [7:8]
+n48--956:DMA_LOAD : [7:8]
+n17--1004:DMA_LOAD : [7:8]
+n65--979:DMA_LOAD : [7:8]
+n23--991:DMA_LOAD : [7:8]
+n0--1015:DMA_LOAD : [8:9]
+n49--949:IAND : [8:8]
+n6--936:IAND : [8:8]
+n52--924:IAND : [8:8]
+n51--867:IAND : [8:8]
+n64--879:IAND : [8:8]
+n44--892:IAND : [8:8]
+n13--903:IAND : [9:9]
+n38--927:ISHL : [9:9]
+n39--939:ISHL : [9:9]
+n3--995:IAND : [9:9]
+n61--895:ISHL : [9:9]
+n50--870:ISHL : [9:9]
+n41--1008:IAND : [9:9]
+n9--952:ISHL : [9:9]
+n10--960:IAND : [9:9]
+n54--882:ISHL : [9:9]
+n20--983:IAND : [9:9]
+n25--1011:ISHL : [10:10]
+n26--1019:IAND : [10:10]
+n37--953:IOR : [10:10]
+n2--998:ISHL : [10:10]
+n19--986:ISHL : [10:10]
+n60--883:IOR : [10:10]
+n8--940:IOR : [10:10]
+n40--1024:DMA_LOAD(ref) : [10:11]
+n53--896:IOR : [10:10]
+n24--999:IOR : [11:11]
+n73--1012:IOR : [11:11]
+n32--961:IOR : [11:11]
+n31--904:IOR : [11:11]
+n69--1037:IADD : [12:12]
+n29--1028:DMA_LOAD : [12:13]
+n30--963:IXOR : [12:12]
+n67--1020:IOR : [12:12]
+n68--1038:DMA_LOAD : [13:14]
+n28--1022:IXOR : [13:13]
+n56--1047:IADD : [13:13]
+n27--1029:IXOR : [14:14]
+n71--846:DMA_LOAD(ref) : [14:15]
+n43--1057:IADD : [14:14]
+n55--1048:DMA_LOAD : [14:15]
+n72--1039:IXOR : [15:15]
+n42--1058:DMA_LOAD : [15:16]
+n35--851:DMA_LOAD : [16:17]
+n46--1049:IXOR : [16:16]
+n36--1059:IXOR : [17:17]
+n34--1060:IXOR : [18:18]
+n70--1061:DMA_STORE : [19:20]
+n74--1062:IADD : [20:20]
+n75--842:IFGE : [20:20]
+
+FINISHED ALAP SCHEDULE
+

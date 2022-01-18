@@ -1,0 +1,52 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SerpentEngine-makeWorkingKey-150-172.dot
+DOING ASAP SCHEDULE
+Found schedule of length 5 with 5 nodes
+
+n2--166:IADD : [0:0]
+n3--169:IADD : [0:0]
+n4--154:IFGE : [0:0]
+n1--167:DMA_LOAD : [1:2]
+n0--168:DMA_STORE : [3:4]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 5 with 5 nodes
+
+n2--166:IADD : [0:0]
+n1--167:DMA_LOAD : [1:2]
+n0--168:DMA_STORE : [3:4]
+n3--169:IADD : [4:4]
+n4--154:IFGE : [4:4]
+
+FINISHED ALAP SCHEDULE
+

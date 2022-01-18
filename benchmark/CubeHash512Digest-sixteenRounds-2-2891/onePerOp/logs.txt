@@ -1,0 +1,413 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 848 with latency 448
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 835 with latency 448
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 826 with latency 448
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (449) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (448), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (450) > upper bound (449), the lower bound estimator was too conservative
+i=0; lower bound (451) > upper bound (450), the lower bound estimator was too conservative
+i=0; lower bound (452) > upper bound (451), the lower bound estimator was too conservative
+i=0; lower bound (453) > upper bound (452), the lower bound estimator was too conservative
+i=0; lower bound (454) > upper bound (453), the lower bound estimator was too conservative
+i=0; lower bound (455) > upper bound (454), the lower bound estimator was too conservative
+i=0; lower bound (456) > upper bound (455), the lower bound estimator was too conservative
+i=0; lower bound (457) > upper bound (456), the lower bound estimator was too conservative
+i=0; lower bound (458) > upper bound (457), the lower bound estimator was too conservative
+i=0; lower bound (459) > upper bound (458), the lower bound estimator was too conservative
+i=0; lower bound (460) > upper bound (459), the lower bound estimator was too conservative
+i=0; lower bound (461) > upper bound (460), the lower bound estimator was too conservative
+i=0; lower bound (462) > upper bound (461), the lower bound estimator was too conservative
+i=0; lower bound (463) > upper bound (462), the lower bound estimator was too conservative
+i=0; lower bound (464) > upper bound (463), the lower bound estimator was too conservative
+i=0; lower bound (465) > upper bound (464), the lower bound estimator was too conservative
+i=0; lower bound (466) > upper bound (465), the lower bound estimator was too conservative
+i=0; lower bound (467) > upper bound (466), the lower bound estimator was too conservative
+i=0; lower bound (468) > upper bound (467), the lower bound estimator was too conservative
+i=0; lower bound (469) > upper bound (468), the lower bound estimator was too conservative
+i=0; lower bound (470) > upper bound (469), the lower bound estimator was too conservative
+i=0; lower bound (471) > upper bound (470), the lower bound estimator was too conservative
+i=0; lower bound (472) > upper bound (471), the lower bound estimator was too conservative
+i=0; lower bound (473) > upper bound (472), the lower bound estimator was too conservative
+i=0; lower bound (474) > upper bound (473), the lower bound estimator was too conservative
+i=0; lower bound (475) > upper bound (474), the lower bound estimator was too conservative
+i=0; lower bound (476) > upper bound (475), the lower bound estimator was too conservative
+i=0; lower bound (477) > upper bound (476), the lower bound estimator was too conservative
+i=0; lower bound (478) > upper bound (477), the lower bound estimator was too conservative
+i=0; lower bound (479) > upper bound (478), the lower bound estimator was too conservative
+i=0; lower bound (480) > upper bound (479), the lower bound estimator was too conservative
+i=0; lower bound (481) > upper bound (480), the lower bound estimator was too conservative
+i=0; lower bound (482) > upper bound (481), the lower bound estimator was too conservative
+i=0; lower bound (483) > upper bound (482), the lower bound estimator was too conservative
+i=0; lower bound (484) > upper bound (483), the lower bound estimator was too conservative
+i=0; lower bound (485) > upper bound (484), the lower bound estimator was too conservative
+i=0; lower bound (486) > upper bound (485), the lower bound estimator was too conservative
+i=0; lower bound (487) > upper bound (486), the lower bound estimator was too conservative
+i=0; lower bound (488) > upper bound (487), the lower bound estimator was too conservative
+i=0; lower bound (489) > upper bound (488), the lower bound estimator was too conservative
+i=0; lower bound (490) > upper bound (489), the lower bound estimator was too conservative
+i=0; lower bound (491) > upper bound (490), the lower bound estimator was too conservative
+i=0; lower bound (492) > upper bound (491), the lower bound estimator was too conservative
+i=0; lower bound (493) > upper bound (492), the lower bound estimator was too conservative
+i=0; lower bound (494) > upper bound (493), the lower bound estimator was too conservative
+i=0; lower bound (495) > upper bound (494), the lower bound estimator was too conservative
+i=0; lower bound (496) > upper bound (495), the lower bound estimator was too conservative
+i=0; lower bound (497) > upper bound (496), the lower bound estimator was too conservative
+i=0; lower bound (498) > upper bound (497), the lower bound estimator was too conservative
+i=0; lower bound (499) > upper bound (498), the lower bound estimator was too conservative
+i=0; lower bound (500) > upper bound (499), the lower bound estimator was too conservative
+i=0; lower bound (501) > upper bound (500), the lower bound estimator was too conservative
+i=0; lower bound (502) > upper bound (501), the lower bound estimator was too conservative
+i=0; lower bound (503) > upper bound (502), the lower bound estimator was too conservative
+i=0; lower bound (504) > upper bound (503), the lower bound estimator was too conservative
+i=0; lower bound (505) > upper bound (504), the lower bound estimator was too conservative
+i=0; lower bound (506) > upper bound (505), the lower bound estimator was too conservative
+i=0; lower bound (507) > upper bound (506), the lower bound estimator was too conservative
+i=0; lower bound (508) > upper bound (507), the lower bound estimator was too conservative
+i=0; lower bound (509) > upper bound (508), the lower bound estimator was too conservative
+i=0; lower bound (510) > upper bound (509), the lower bound estimator was too conservative
+i=0; lower bound (511) > upper bound (510), the lower bound estimator was too conservative
+i=0; lower bound (512) > upper bound (511), the lower bound estimator was too conservative
+i=0; lower bound (513) > upper bound (512), the lower bound estimator was too conservative
+i=0; lower bound (514) > upper bound (513), the lower bound estimator was too conservative
+i=0; lower bound (515) > upper bound (514), the lower bound estimator was too conservative
+i=0; lower bound (516) > upper bound (515), the lower bound estimator was too conservative
+i=0; lower bound (517) > upper bound (516), the lower bound estimator was too conservative
+i=0; lower bound (518) > upper bound (517), the lower bound estimator was too conservative
+i=0; lower bound (519) > upper bound (518), the lower bound estimator was too conservative
+i=0; lower bound (520) > upper bound (519), the lower bound estimator was too conservative
+i=0; lower bound (521) > upper bound (520), the lower bound estimator was too conservative
+i=0; lower bound (522) > upper bound (521), the lower bound estimator was too conservative
+i=0; lower bound (523) > upper bound (522), the lower bound estimator was too conservative
+i=0; lower bound (524) > upper bound (523), the lower bound estimator was too conservative
+i=0; lower bound (525) > upper bound (524), the lower bound estimator was too conservative
+i=0; lower bound (526) > upper bound (525), the lower bound estimator was too conservative
+i=0; lower bound (527) > upper bound (526), the lower bound estimator was too conservative
+i=0; lower bound (528) > upper bound (527), the lower bound estimator was too conservative
+i=0; lower bound (529) > upper bound (528), the lower bound estimator was too conservative
+i=0; lower bound (530) > upper bound (529), the lower bound estimator was too conservative
+i=0; lower bound (531) > upper bound (530), the lower bound estimator was too conservative
+i=0; lower bound (532) > upper bound (531), the lower bound estimator was too conservative
+i=0; lower bound (533) > upper bound (532), the lower bound estimator was too conservative
+i=0; lower bound (534) > upper bound (533), the lower bound estimator was too conservative
+i=0; lower bound (535) > upper bound (534), the lower bound estimator was too conservative
+i=0; lower bound (536) > upper bound (535), the lower bound estimator was too conservative
+i=0; lower bound (537) > upper bound (536), the lower bound estimator was too conservative
+i=0; lower bound (538) > upper bound (537), the lower bound estimator was too conservative
+i=0; lower bound (539) > upper bound (538), the lower bound estimator was too conservative
+i=0; lower bound (540) > upper bound (539), the lower bound estimator was too conservative
+i=0; lower bound (541) > upper bound (540), the lower bound estimator was too conservative
+i=0; lower bound (542) > upper bound (541), the lower bound estimator was too conservative
+i=0; lower bound (543) > upper bound (542), the lower bound estimator was too conservative
+i=0; lower bound (544) > upper bound (543), the lower bound estimator was too conservative
+i=0; lower bound (545) > upper bound (544), the lower bound estimator was too conservative
+i=0; lower bound (546) > upper bound (545), the lower bound estimator was too conservative
+i=0; lower bound (547) > upper bound (546), the lower bound estimator was too conservative
+i=0; lower bound (548) > upper bound (547), the lower bound estimator was too conservative
+i=0; lower bound (549) > upper bound (548), the lower bound estimator was too conservative
+i=0; lower bound (550) > upper bound (549), the lower bound estimator was too conservative
+i=0; lower bound (551) > upper bound (550), the lower bound estimator was too conservative
+i=0; lower bound (552) > upper bound (551), the lower bound estimator was too conservative
+i=0; lower bound (553) > upper bound (552), the lower bound estimator was too conservative
+i=0; lower bound (554) > upper bound (553), the lower bound estimator was too conservative
+i=0; lower bound (555) > upper bound (554), the lower bound estimator was too conservative
+i=0; lower bound (556) > upper bound (555), the lower bound estimator was too conservative
+i=0; lower bound (557) > upper bound (556), the lower bound estimator was too conservative
+i=0; lower bound (558) > upper bound (557), the lower bound estimator was too conservative
+i=0; lower bound (559) > upper bound (558), the lower bound estimator was too conservative
+i=0; lower bound (560) > upper bound (559), the lower bound estimator was too conservative
+i=0; lower bound (561) > upper bound (560), the lower bound estimator was too conservative
+i=0; lower bound (562) > upper bound (561), the lower bound estimator was too conservative
+i=0; lower bound (563) > upper bound (562), the lower bound estimator was too conservative
+i=0; lower bound (564) > upper bound (563), the lower bound estimator was too conservative
+i=0; lower bound (565) > upper bound (564), the lower bound estimator was too conservative
+i=0; lower bound (566) > upper bound (565), the lower bound estimator was too conservative
+i=0; lower bound (567) > upper bound (566), the lower bound estimator was too conservative
+i=0; lower bound (568) > upper bound (567), the lower bound estimator was too conservative
+i=0; lower bound (569) > upper bound (568), the lower bound estimator was too conservative
+i=0; lower bound (570) > upper bound (569), the lower bound estimator was too conservative
+i=0; lower bound (571) > upper bound (570), the lower bound estimator was too conservative
+i=0; lower bound (572) > upper bound (571), the lower bound estimator was too conservative
+i=0; lower bound (573) > upper bound (572), the lower bound estimator was too conservative
+i=0; lower bound (574) > upper bound (573), the lower bound estimator was too conservative
+i=0; lower bound (575) > upper bound (574), the lower bound estimator was too conservative
+i=0; lower bound (576) > upper bound (575), the lower bound estimator was too conservative
+i=0; lower bound (577) > upper bound (576), the lower bound estimator was too conservative
+i=0; lower bound (578) > upper bound (577), the lower bound estimator was too conservative
+i=0; lower bound (579) > upper bound (578), the lower bound estimator was too conservative
+i=0; lower bound (580) > upper bound (579), the lower bound estimator was too conservative
+i=0; lower bound (581) > upper bound (580), the lower bound estimator was too conservative
+i=0; lower bound (582) > upper bound (581), the lower bound estimator was too conservative
+i=0; lower bound (583) > upper bound (582), the lower bound estimator was too conservative
+i=0; lower bound (584) > upper bound (583), the lower bound estimator was too conservative
+i=0; lower bound (585) > upper bound (584), the lower bound estimator was too conservative
+i=0; lower bound (586) > upper bound (585), the lower bound estimator was too conservative
+i=0; lower bound (587) > upper bound (586), the lower bound estimator was too conservative
+i=0; lower bound (588) > upper bound (587), the lower bound estimator was too conservative
+i=0; lower bound (589) > upper bound (588), the lower bound estimator was too conservative
+i=0; lower bound (590) > upper bound (589), the lower bound estimator was too conservative
+i=0; lower bound (591) > upper bound (590), the lower bound estimator was too conservative
+i=0; lower bound (592) > upper bound (591), the lower bound estimator was too conservative
+i=0; lower bound (593) > upper bound (592), the lower bound estimator was too conservative
+i=0; lower bound (594) > upper bound (593), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 862 with latency 448
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 156515 with latency 448
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with onePerOp
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 156168 with latency 448
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with onePerOp
+Received timeout, aborting

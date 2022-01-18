@@ -1,0 +1,79 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 506 with latency 97
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 386 with latency 97
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 438 with latency 97
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (99) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (99) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 435 with latency 97
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 31122 with latency 97
+Timeout reached while computing SerpentEngine-makeWorkingKey-245-1724.dot with fpga_2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 34191 with latency 97
+Timeout reached while computing SerpentEngine-makeWorkingKey-245-1724.dot with fpga_2Mul
+Received timeout, aborting

@@ -1,0 +1,76 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SHA1Digest-processBlock-17-67.dot
+DOING ASAP SCHEDULE
+Found schedule of length 10 with 17 nodes
+
+n14--46:ISUB : [0:0]
+n16--20:IFGE : [0:0]
+n15--64:IADD : [0:0]
+n7--26:ISUB : [0:0]
+n10--39:ISUB : [0:0]
+n12--32:ISUB : [0:0]
+n13--47:DMA_LOAD : [1:2]
+n4--40:DMA_LOAD : [1:2]
+n6--27:DMA_LOAD : [1:2]
+n11--33:DMA_LOAD : [1:2]
+n3--34:IXOR : [3:3]
+n2--41:IXOR : [4:4]
+n1--48:IXOR : [5:5]
+n0--56:ISHL : [6:6]
+n5--61:IUSHR : [6:6]
+n9--62:IOR : [7:7]
+n8--63:DMA_STORE : [8:9]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 10 with 17 nodes
+
+n7--26:ISUB : [0:0]
+n12--32:ISUB : [0:0]
+n6--27:DMA_LOAD : [1:2]
+n10--39:ISUB : [1:1]
+n11--33:DMA_LOAD : [1:2]
+n14--46:ISUB : [2:2]
+n4--40:DMA_LOAD : [2:3]
+n13--47:DMA_LOAD : [3:4]
+n3--34:IXOR : [3:3]
+n2--41:IXOR : [4:4]
+n1--48:IXOR : [5:5]
+n0--56:ISHL : [6:6]
+n5--61:IUSHR : [6:6]
+n9--62:IOR : [7:7]
+n8--63:DMA_STORE : [8:9]
+n16--20:IFGE : [9:9]
+n15--64:IADD : [9:9]
+
+FINISHED ALAP SCHEDULE
+

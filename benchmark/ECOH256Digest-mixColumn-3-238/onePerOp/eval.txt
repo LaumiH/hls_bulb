@@ -1,0 +1,679 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 25730, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 26195
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Length is not equal, so Schedules can't be equal
+Found schedule of length 29 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n30--15:ISHL : [0:0]
+n63--6:IFGE : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n62--235:IADD : [0:0]
+n29--18:IADD : [1:1]
+n51--85:ERROR : [1:1]
+n43--28:ISHL : [1:1]
+n18--131:ERROR : [2:2]
+n20--41:ISHL : [2:2]
+n42--31:IADD : [2:2]
+n22--19:DMA_LOAD : [2:3]
+n37--97:ERROR : [3:3]
+n19--44:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n2--120:ERROR : [4:4]
+n23--32:DMA_LOAD : [4:5]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n16--45:DMA_LOAD : [6:7]
+n21--66:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n50--88:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n36--100:IAND : [8:8]
+n1--73:IXOR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n52--91:IUSHR : [8:8]
+n45--180:IADD : [8:8]
+n58--94:IMUL : [9:12]
+n41--102:ISHL : [9:9]
+n12--111:IAND : [9:9]
+n0--123:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n26--114:IUSHR : [10:10]
+n57--125:ISHL : [11:11]
+n17--134:IAND : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n38--148:ISHL : [13:13]
+n4--103:IXOR : [13:13]
+n56--117:IMUL : [13:16]
+n3--166:IXOR : [14:14]
+n35--169:IXOR : [15:15]
+n33--170:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n40--126:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n28--185:IXOR : [19:19]
+n27--188:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n44--189:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n5--207:IXOR : [24:24]
+n59--208:DMA_STORE : [25:26]
+n31--230:IXOR : [25:25]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [27:28]
+
+Found schedule of length 30 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n63--6:IFGE : [0:0]
+n62--235:IADD : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n43--28:ISHL : [0:0]
+n51--85:ERROR : [1:1]
+n20--41:ISHL : [1:1]
+n42--31:IADD : [1:1]
+n37--97:ERROR : [2:2]
+n19--44:IADD : [2:2]
+n30--15:ISHL : [2:2]
+n23--32:DMA_LOAD : [2:3]
+n18--131:ERROR : [3:3]
+n29--18:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n16--45:DMA_LOAD : [4:5]
+n2--120:ERROR : [4:4]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n1--73:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n22--19:DMA_LOAD : [6:7]
+n12--111:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n0--123:IAND : [8:8]
+n26--114:IUSHR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n21--66:IXOR : [8:8]
+n45--180:IADD : [8:8]
+n57--125:ISHL : [9:9]
+n50--88:IAND : [9:9]
+n56--117:IMUL : [9:12]
+n36--100:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n52--91:IUSHR : [10:10]
+n17--134:IAND : [11:11]
+n41--102:ISHL : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n58--94:IMUL : [13:16]
+n38--148:ISHL : [13:13]
+n40--126:IXOR : [13:13]
+n28--185:IXOR : [14:14]
+n27--188:IXOR : [15:15]
+n44--189:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n4--103:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n3--166:IXOR : [19:19]
+n35--169:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n33--170:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n31--230:IXOR : [24:24]
+n5--207:IXOR : [25:25]
+n59--208:DMA_STORE : [26:27]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [28:29]
+
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 17, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 25730
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Length is not equal, so Schedules can't be equal
+Found schedule of length 29 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n30--15:ISHL : [0:0]
+n63--6:IFGE : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n62--235:IADD : [0:0]
+n29--18:IADD : [1:1]
+n51--85:ERROR : [1:1]
+n43--28:ISHL : [1:1]
+n18--131:ERROR : [2:2]
+n20--41:ISHL : [2:2]
+n42--31:IADD : [2:2]
+n22--19:DMA_LOAD : [2:3]
+n37--97:ERROR : [3:3]
+n19--44:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n2--120:ERROR : [4:4]
+n23--32:DMA_LOAD : [4:5]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n16--45:DMA_LOAD : [6:7]
+n21--66:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n50--88:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n36--100:IAND : [8:8]
+n1--73:IXOR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n52--91:IUSHR : [8:8]
+n45--180:IADD : [8:8]
+n58--94:IMUL : [9:12]
+n41--102:ISHL : [9:9]
+n12--111:IAND : [9:9]
+n0--123:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n26--114:IUSHR : [10:10]
+n57--125:ISHL : [11:11]
+n17--134:IAND : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n38--148:ISHL : [13:13]
+n4--103:IXOR : [13:13]
+n56--117:IMUL : [13:16]
+n3--166:IXOR : [14:14]
+n35--169:IXOR : [15:15]
+n33--170:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n40--126:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n28--185:IXOR : [19:19]
+n27--188:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n44--189:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n5--207:IXOR : [24:24]
+n59--208:DMA_STORE : [25:26]
+n31--230:IXOR : [25:25]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [27:28]
+
+Found schedule of length 30 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n63--6:IFGE : [0:0]
+n62--235:IADD : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n43--28:ISHL : [0:0]
+n51--85:ERROR : [1:1]
+n20--41:ISHL : [1:1]
+n42--31:IADD : [1:1]
+n37--97:ERROR : [2:2]
+n19--44:IADD : [2:2]
+n30--15:ISHL : [2:2]
+n23--32:DMA_LOAD : [2:3]
+n18--131:ERROR : [3:3]
+n29--18:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n16--45:DMA_LOAD : [4:5]
+n2--120:ERROR : [4:4]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n1--73:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n22--19:DMA_LOAD : [6:7]
+n12--111:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n0--123:IAND : [8:8]
+n26--114:IUSHR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n21--66:IXOR : [8:8]
+n45--180:IADD : [8:8]
+n57--125:ISHL : [9:9]
+n50--88:IAND : [9:9]
+n56--117:IMUL : [9:12]
+n36--100:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n52--91:IUSHR : [10:10]
+n17--134:IAND : [11:11]
+n41--102:ISHL : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n58--94:IMUL : [13:16]
+n38--148:ISHL : [13:13]
+n40--126:IXOR : [13:13]
+n28--185:IXOR : [14:14]
+n27--188:IXOR : [15:15]
+n44--189:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n4--103:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n3--166:IXOR : [19:19]
+n35--169:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n33--170:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n31--230:IXOR : [24:24]
+n5--207:IXOR : [25:25]
+n59--208:DMA_STORE : [26:27]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [28:29]
+
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 151, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 25730
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Length is not equal, so Schedules can't be equal
+Found schedule of length 29 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n30--15:ISHL : [0:0]
+n63--6:IFGE : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n62--235:IADD : [0:0]
+n29--18:IADD : [1:1]
+n51--85:ERROR : [1:1]
+n43--28:ISHL : [1:1]
+n18--131:ERROR : [2:2]
+n20--41:ISHL : [2:2]
+n42--31:IADD : [2:2]
+n22--19:DMA_LOAD : [2:3]
+n37--97:ERROR : [3:3]
+n19--44:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n2--120:ERROR : [4:4]
+n23--32:DMA_LOAD : [4:5]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n16--45:DMA_LOAD : [6:7]
+n21--66:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n50--88:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n36--100:IAND : [8:8]
+n1--73:IXOR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n52--91:IUSHR : [8:8]
+n45--180:IADD : [8:8]
+n58--94:IMUL : [9:12]
+n41--102:ISHL : [9:9]
+n12--111:IAND : [9:9]
+n0--123:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n26--114:IUSHR : [10:10]
+n57--125:ISHL : [11:11]
+n17--134:IAND : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n38--148:ISHL : [13:13]
+n4--103:IXOR : [13:13]
+n56--117:IMUL : [13:16]
+n3--166:IXOR : [14:14]
+n35--169:IXOR : [15:15]
+n33--170:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n40--126:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n28--185:IXOR : [19:19]
+n27--188:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n44--189:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n5--207:IXOR : [24:24]
+n59--208:DMA_STORE : [25:26]
+n31--230:IXOR : [25:25]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [27:28]
+
+Found schedule of length 30 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n63--6:IFGE : [0:0]
+n62--235:IADD : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n43--28:ISHL : [0:0]
+n51--85:ERROR : [1:1]
+n20--41:ISHL : [1:1]
+n42--31:IADD : [1:1]
+n37--97:ERROR : [2:2]
+n19--44:IADD : [2:2]
+n30--15:ISHL : [2:2]
+n23--32:DMA_LOAD : [2:3]
+n18--131:ERROR : [3:3]
+n29--18:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n16--45:DMA_LOAD : [4:5]
+n2--120:ERROR : [4:4]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n1--73:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n22--19:DMA_LOAD : [6:7]
+n12--111:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n0--123:IAND : [8:8]
+n26--114:IUSHR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n21--66:IXOR : [8:8]
+n45--180:IADD : [8:8]
+n57--125:ISHL : [9:9]
+n50--88:IAND : [9:9]
+n56--117:IMUL : [9:12]
+n36--100:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n52--91:IUSHR : [10:10]
+n17--134:IAND : [11:11]
+n41--102:ISHL : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n58--94:IMUL : [13:16]
+n38--148:ISHL : [13:13]
+n40--126:IXOR : [13:13]
+n28--185:IXOR : [14:14]
+n27--188:IXOR : [15:15]
+n44--189:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n4--103:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n3--166:IXOR : [19:19]
+n35--169:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n33--170:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n31--230:IXOR : [24:24]
+n5--207:IXOR : [25:25]
+n59--208:DMA_STORE : [26:27]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [28:29]
+
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 17, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 26195
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Length is not equal, so Schedules can't be equal
+Found schedule of length 29 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n30--15:ISHL : [0:0]
+n63--6:IFGE : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n62--235:IADD : [0:0]
+n29--18:IADD : [1:1]
+n51--85:ERROR : [1:1]
+n43--28:ISHL : [1:1]
+n18--131:ERROR : [2:2]
+n20--41:ISHL : [2:2]
+n42--31:IADD : [2:2]
+n22--19:DMA_LOAD : [2:3]
+n37--97:ERROR : [3:3]
+n19--44:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n2--120:ERROR : [4:4]
+n23--32:DMA_LOAD : [4:5]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n16--45:DMA_LOAD : [6:7]
+n21--66:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n50--88:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n36--100:IAND : [8:8]
+n1--73:IXOR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n52--91:IUSHR : [8:8]
+n45--180:IADD : [8:8]
+n58--94:IMUL : [9:12]
+n41--102:ISHL : [9:9]
+n12--111:IAND : [9:9]
+n0--123:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n26--114:IUSHR : [10:10]
+n57--125:ISHL : [11:11]
+n17--134:IAND : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n38--148:ISHL : [13:13]
+n4--103:IXOR : [13:13]
+n56--117:IMUL : [13:16]
+n3--166:IXOR : [14:14]
+n35--169:IXOR : [15:15]
+n33--170:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n40--126:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n28--185:IXOR : [19:19]
+n27--188:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n44--189:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n5--207:IXOR : [24:24]
+n59--208:DMA_STORE : [25:26]
+n31--230:IXOR : [25:25]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [27:28]
+
+Found schedule of length 30 with 64 nodes
+
+n13--108:ERROR : [0:0]
+n63--6:IFGE : [0:0]
+n62--235:IADD : [0:0]
+n9--10:DMA_LOAD(ref) : [0:1]
+n43--28:ISHL : [0:0]
+n51--85:ERROR : [1:1]
+n20--41:ISHL : [1:1]
+n42--31:IADD : [1:1]
+n37--97:ERROR : [2:2]
+n19--44:IADD : [2:2]
+n30--15:ISHL : [2:2]
+n23--32:DMA_LOAD : [2:3]
+n18--131:ERROR : [3:3]
+n29--18:IADD : [3:3]
+n61--55:ISHL : [3:3]
+n14--58:IADD : [4:4]
+n49--196:ISHL : [4:4]
+n16--45:DMA_LOAD : [4:5]
+n2--120:ERROR : [4:4]
+n25--143:ERROR : [5:5]
+n48--199:IADD : [5:5]
+n54--216:ISHL : [5:5]
+n1--73:IXOR : [6:6]
+n10--219:IADD : [6:6]
+n53--158:ISHL : [6:6]
+n22--19:DMA_LOAD : [6:7]
+n12--111:IAND : [7:7]
+n34--161:IADD : [7:7]
+n55--177:ISHL : [7:7]
+n0--123:IAND : [8:8]
+n26--114:IUSHR : [8:8]
+n7--59:DMA_LOAD : [8:9]
+n21--66:IXOR : [8:8]
+n45--180:IADD : [8:8]
+n57--125:ISHL : [9:9]
+n50--88:IAND : [9:9]
+n56--117:IMUL : [9:12]
+n36--100:IAND : [10:10]
+n15--80:IXOR : [10:10]
+n52--91:IUSHR : [10:10]
+n17--134:IAND : [11:11]
+n41--102:ISHL : [11:11]
+n24--146:IAND : [12:12]
+n60--137:IUSHR : [12:12]
+n58--94:IMUL : [13:16]
+n38--148:ISHL : [13:13]
+n40--126:IXOR : [13:13]
+n28--185:IXOR : [14:14]
+n27--188:IXOR : [15:15]
+n44--189:DMA_STORE : [16:17]
+n47--140:IMUL : [17:20]
+n4--103:IXOR : [17:17]
+n39--224:IXOR : [18:18]
+n3--166:IXOR : [19:19]
+n35--169:IXOR : [20:20]
+n46--149:IXOR : [21:21]
+n33--170:DMA_STORE : [21:22]
+n32--227:IXOR : [22:22]
+n6--204:IXOR : [23:23]
+n31--230:IXOR : [24:24]
+n5--207:IXOR : [25:25]
+n59--208:DMA_STORE : [26:27]
+n11--233:IXOR : [26:26]
+n8--234:DMA_STORE : [28:29]
+
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 151, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 26195
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 17, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 151
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 20927 inspected nodes
+1324 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 7991 times
+Best latency found: 29
+Initial best latency: 30
+22 out of 64 DFG nodes could be skipped to find best schedule
+It took 184 milliseconds to converge
+Scheduling took 25730 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 20125 inspected nodes
+1324 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 7991 times
+Best latency found: 29
+Initial best latency: 30
+22 out of 64 DFG nodes could be skipped to find best schedule
+It took 158 milliseconds to converge
+Scheduling took 26195 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: false, 0 times
+Best latency found: 30
+Initial best latency: 30
+0 out of 64 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 17 milliseconds
+
+Print BULB tree: 
+TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated partial schedule: {}; 
+└── TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated n30--15:ISHL in [0:0]; investigated partial schedule: {0=[n30--15:ISHL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 31 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: false, 0 times
+Best latency found: 30
+Initial best latency: 30
+0 out of 64 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 151 milliseconds
+
+Print BULB tree: 
+TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated partial schedule: {}; 
+├── TOO CONSERVATIVE: l_bound: 38, u_bound: 37; investigated n30--15:ISHL in [16:16]; investigated partial schedule: {16=[n30--15:ISHL]}; 
+├── l_bound: 31, u_bound: 31; investigated n30--15:ISHL in [7:7]; investigated partial schedule: {7=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 41, u_bound: 40; investigated n30--15:ISHL in [19:19]; investigated partial schedule: {19=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 46, u_bound: 45; investigated n30--15:ISHL in [24:24]; investigated partial schedule: {24=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 45, u_bound: 44; investigated n30--15:ISHL in [23:23]; investigated partial schedule: {23=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 51, u_bound: 50; investigated n30--15:ISHL in [29:29]; investigated partial schedule: {29=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 50, u_bound: 49; investigated n30--15:ISHL in [28:28]; investigated partial schedule: {28=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 31; investigated n30--15:ISHL in [9:9]; investigated partial schedule: {9=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 34, u_bound: 31; investigated n30--15:ISHL in [10:10]; investigated partial schedule: {10=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 47, u_bound: 46; investigated n30--15:ISHL in [25:25]; investigated partial schedule: {25=[n30--15:ISHL]}; 
+├── l_bound: 32, u_bound: 32; investigated n30--15:ISHL in [8:8]; investigated partial schedule: {8=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 34, u_bound: 33; investigated n30--15:ISHL in [12:12]; investigated partial schedule: {12=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated n30--15:ISHL in [0:0]; investigated partial schedule: {0=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated n30--15:ISHL in [4:4]; investigated partial schedule: {4=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 34, u_bound: 30; investigated n30--15:ISHL in [6:6]; investigated partial schedule: {6=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated n30--15:ISHL in [2:2]; investigated partial schedule: {2=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 42, u_bound: 41; investigated n30--15:ISHL in [20:20]; investigated partial schedule: {20=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 32, u_bound: 30; investigated n30--15:ISHL in [1:1]; investigated partial schedule: {1=[n30--15:ISHL]}; 
+├── l_bound: 37, u_bound: 37; investigated n30--15:ISHL in [15:15]; investigated partial schedule: {15=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated n30--15:ISHL in [3:3]; investigated partial schedule: {3=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 35, u_bound: 34; investigated n30--15:ISHL in [13:13]; investigated partial schedule: {13=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 36, u_bound: 35; investigated n30--15:ISHL in [14:14]; investigated partial schedule: {14=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 44, u_bound: 43; investigated n30--15:ISHL in [22:22]; investigated partial schedule: {22=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 48, u_bound: 47; investigated n30--15:ISHL in [26:26]; investigated partial schedule: {26=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 32; investigated n30--15:ISHL in [11:11]; investigated partial schedule: {11=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 30; investigated n30--15:ISHL in [5:5]; investigated partial schedule: {5=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 49, u_bound: 48; investigated n30--15:ISHL in [27:27]; investigated partial schedule: {27=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 39, u_bound: 38; investigated n30--15:ISHL in [17:17]; investigated partial schedule: {17=[n30--15:ISHL]}; 
+├── TOO CONSERVATIVE: l_bound: 40, u_bound: 39; investigated n30--15:ISHL in [18:18]; investigated partial schedule: {18=[n30--15:ISHL]}; 
+└── TOO CONSERVATIVE: l_bound: 43, u_bound: 42; investigated n30--15:ISHL in [21:21]; investigated partial schedule: {21=[n30--15:ISHL]}; 
+

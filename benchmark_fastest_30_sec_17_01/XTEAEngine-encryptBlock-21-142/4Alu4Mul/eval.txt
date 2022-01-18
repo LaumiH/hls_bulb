@@ -1,0 +1,316 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 50
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 50, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 77
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 9, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 50
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 50
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 50, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 111
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 77
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: OWN, ALAPBound: lazyALAP -> 9
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 111
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 9, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 77
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 77
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 77, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 111
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: OWN, ALAPBound: lazyALAP -> 9
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 9, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 111
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 111
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 21 with 34 nodes
+
+n19--33:ISHL : [0:0]
+n30--68:DMA_LOAD(ref) : [0:1]
+n20--37:IUSHR : [0:0]
+n22--43:DMA_LOAD(ref) : [0:1]
+n13--78:IADD : [1:1]
+n18--38:IXOR : [1:1]
+n27--41:IADD : [2:2]
+n16--73:DMA_LOAD : [2:3]
+n2--108:DMA_LOAD : [2:3]
+n31--48:DMA_LOAD : [2:3]
+n29--133:DMA_LOAD : [3:4]
+n32--138:IADD : [4:4]
+n12--85:IFGE : [4:4]
+n11--49:IXOR : [4:4]
+n5--50:IADD : [5:5]
+n33--25:IFGE : [5:5]
+n8--58:ISHL : [6:6]
+n9--62:IUSHR : [6:6]
+n4--63:IXOR : [7:7]
+n3--66:IADD : [8:8]
+n15--74:IXOR : [9:9]
+n7--75:IADD : [10:10]
+n6--93:ISHL : [11:11]
+n10--97:IUSHR : [11:11]
+n21--98:IXOR : [12:12]
+n1--101:IADD : [13:13]
+n0--109:IXOR : [14:14]
+n14--110:IADD : [15:15]
+n24--118:ISHL : [16:16]
+n17--122:IUSHR : [16:16]
+n23--123:IXOR : [17:17]
+n28--126:IADD : [18:18]
+n26--134:IXOR : [19:19]
+n25--135:IADD : [20:20]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 21 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+33 out of 34 DFG nodes could be skipped to find best schedule
+It took 8 milliseconds to converge
+Scheduling took 50 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+├── l_bound: 39, u_bound: 39; investigated n22--43:DMA_LOAD(ref) in [18:19]; investigated partial schedule: {18=[n22--43:DMA_LOAD(ref)], 19=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 24, u_bound: 24; investigated n22--43:DMA_LOAD(ref) in [3:4]; investigated partial schedule: {3=[n22--43:DMA_LOAD(ref)], 4=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 28, u_bound: 28; investigated n22--43:DMA_LOAD(ref) in [7:8]; investigated partial schedule: {7=[n22--43:DMA_LOAD(ref)], 8=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 23, u_bound: 23; investigated n22--43:DMA_LOAD(ref) in [2:3]; investigated partial schedule: {2=[n22--43:DMA_LOAD(ref)], 3=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 40, u_bound: 40; investigated n22--43:DMA_LOAD(ref) in [19:20]; investigated partial schedule: {19=[n22--43:DMA_LOAD(ref)], 20=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 26, u_bound: 26; investigated n22--43:DMA_LOAD(ref) in [5:6]; investigated partial schedule: {5=[n22--43:DMA_LOAD(ref)], 6=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 32, u_bound: 32; investigated n22--43:DMA_LOAD(ref) in [11:12]; investigated partial schedule: {11=[n22--43:DMA_LOAD(ref)], 12=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 22, u_bound: 22; investigated n22--43:DMA_LOAD(ref) in [1:2]; investigated partial schedule: {1=[n22--43:DMA_LOAD(ref)], 2=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 30, u_bound: 30; investigated n22--43:DMA_LOAD(ref) in [9:10]; investigated partial schedule: {9=[n22--43:DMA_LOAD(ref)], 10=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 21; investigated n22--43:DMA_LOAD(ref) in [0:1]; investigated partial schedule: {0=[n22--43:DMA_LOAD(ref)], 1=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 35, u_bound: 35; investigated n22--43:DMA_LOAD(ref) in [14:15]; investigated partial schedule: {14=[n22--43:DMA_LOAD(ref)], 15=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 34, u_bound: 34; investigated n22--43:DMA_LOAD(ref) in [13:14]; investigated partial schedule: {13=[n22--43:DMA_LOAD(ref)], 14=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 38, u_bound: 38; investigated n22--43:DMA_LOAD(ref) in [17:18]; investigated partial schedule: {17=[n22--43:DMA_LOAD(ref)], 18=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 31, u_bound: 31; investigated n22--43:DMA_LOAD(ref) in [10:11]; investigated partial schedule: {10=[n22--43:DMA_LOAD(ref)], 11=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 33, u_bound: 33; investigated n22--43:DMA_LOAD(ref) in [12:13]; investigated partial schedule: {12=[n22--43:DMA_LOAD(ref)], 13=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 25, u_bound: 25; investigated n22--43:DMA_LOAD(ref) in [4:5]; investigated partial schedule: {4=[n22--43:DMA_LOAD(ref)], 5=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 29, u_bound: 29; investigated n22--43:DMA_LOAD(ref) in [8:9]; investigated partial schedule: {8=[n22--43:DMA_LOAD(ref)], 9=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 27, u_bound: 27; investigated n22--43:DMA_LOAD(ref) in [6:7]; investigated partial schedule: {6=[n22--43:DMA_LOAD(ref)], 7=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 36, u_bound: 36; investigated n22--43:DMA_LOAD(ref) in [15:16]; investigated partial schedule: {15=[n22--43:DMA_LOAD(ref)], 16=[n22--43:DMA_LOAD(ref)]}; 
+└── l_bound: 37, u_bound: 37; investigated n22--43:DMA_LOAD(ref) in [16:17]; investigated partial schedule: {16=[n22--43:DMA_LOAD(ref)], 17=[n22--43:DMA_LOAD(ref)]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+33 out of 34 DFG nodes could be skipped to find best schedule
+It took 3 milliseconds to converge
+Scheduling took 3 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+└── l_bound: 21, u_bound: 21; investigated n22--43:DMA_LOAD(ref) in [0:1]; investigated partial schedule: {0=[n22--43:DMA_LOAD(ref)], 1=[n22--43:DMA_LOAD(ref)]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 21 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+33 out of 34 DFG nodes could be skipped to find best schedule
+It took 10 milliseconds to converge
+Scheduling took 77 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+├── l_bound: 37, u_bound: 37; investigated n22--43:DMA_LOAD(ref) in [16:17]; investigated partial schedule: {16=[n22--43:DMA_LOAD(ref)], 17=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 26, u_bound: 26; investigated n22--43:DMA_LOAD(ref) in [5:6]; investigated partial schedule: {5=[n22--43:DMA_LOAD(ref)], 6=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 30, u_bound: 30; investigated n22--43:DMA_LOAD(ref) in [9:10]; investigated partial schedule: {9=[n22--43:DMA_LOAD(ref)], 10=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 25, u_bound: 25; investigated n22--43:DMA_LOAD(ref) in [4:5]; investigated partial schedule: {4=[n22--43:DMA_LOAD(ref)], 5=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 34, u_bound: 34; investigated n22--43:DMA_LOAD(ref) in [13:14]; investigated partial schedule: {13=[n22--43:DMA_LOAD(ref)], 14=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 24, u_bound: 24; investigated n22--43:DMA_LOAD(ref) in [3:4]; investigated partial schedule: {3=[n22--43:DMA_LOAD(ref)], 4=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 28, u_bound: 28; investigated n22--43:DMA_LOAD(ref) in [7:8]; investigated partial schedule: {7=[n22--43:DMA_LOAD(ref)], 8=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 31, u_bound: 31; investigated n22--43:DMA_LOAD(ref) in [10:11]; investigated partial schedule: {10=[n22--43:DMA_LOAD(ref)], 11=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 22, u_bound: 22; investigated n22--43:DMA_LOAD(ref) in [1:2]; investigated partial schedule: {1=[n22--43:DMA_LOAD(ref)], 2=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 27, u_bound: 27; investigated n22--43:DMA_LOAD(ref) in [6:7]; investigated partial schedule: {6=[n22--43:DMA_LOAD(ref)], 7=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 33, u_bound: 33; investigated n22--43:DMA_LOAD(ref) in [12:13]; investigated partial schedule: {12=[n22--43:DMA_LOAD(ref)], 13=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 35, u_bound: 35; investigated n22--43:DMA_LOAD(ref) in [14:15]; investigated partial schedule: {14=[n22--43:DMA_LOAD(ref)], 15=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 32, u_bound: 32; investigated n22--43:DMA_LOAD(ref) in [11:12]; investigated partial schedule: {11=[n22--43:DMA_LOAD(ref)], 12=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 29, u_bound: 29; investigated n22--43:DMA_LOAD(ref) in [8:9]; investigated partial schedule: {8=[n22--43:DMA_LOAD(ref)], 9=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 38, u_bound: 38; investigated n22--43:DMA_LOAD(ref) in [17:18]; investigated partial schedule: {17=[n22--43:DMA_LOAD(ref)], 18=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 40, u_bound: 40; investigated n22--43:DMA_LOAD(ref) in [19:20]; investigated partial schedule: {19=[n22--43:DMA_LOAD(ref)], 20=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 23, u_bound: 23; investigated n22--43:DMA_LOAD(ref) in [2:3]; investigated partial schedule: {2=[n22--43:DMA_LOAD(ref)], 3=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 36, u_bound: 36; investigated n22--43:DMA_LOAD(ref) in [15:16]; investigated partial schedule: {15=[n22--43:DMA_LOAD(ref)], 16=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 39, u_bound: 39; investigated n22--43:DMA_LOAD(ref) in [18:19]; investigated partial schedule: {18=[n22--43:DMA_LOAD(ref)], 19=[n22--43:DMA_LOAD(ref)]}; 
+└── l_bound: 21, u_bound: 21; investigated n22--43:DMA_LOAD(ref) in [0:1]; investigated partial schedule: {0=[n22--43:DMA_LOAD(ref)], 1=[n22--43:DMA_LOAD(ref)]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+33 out of 34 DFG nodes could be skipped to find best schedule
+It took 9 milliseconds to converge
+Scheduling took 9 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+└── l_bound: 21, u_bound: 21; investigated n22--43:DMA_LOAD(ref) in [0:1]; investigated partial schedule: {0=[n22--43:DMA_LOAD(ref)], 1=[n22--43:DMA_LOAD(ref)]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+33 out of 34 DFG nodes could be skipped to find best schedule
+It took 7 milliseconds to converge
+Scheduling took 7 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+└── l_bound: 21, u_bound: 21; investigated n22--43:DMA_LOAD(ref) in [0:1]; investigated partial schedule: {0=[n22--43:DMA_LOAD(ref)], 1=[n22--43:DMA_LOAD(ref)]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 21 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+33 out of 34 DFG nodes could be skipped to find best schedule
+It took 6 milliseconds to converge
+Scheduling took 111 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+├── l_bound: 21, u_bound: 37; investigated n22--43:DMA_LOAD(ref) in [16:17]; investigated partial schedule: {16=[n22--43:DMA_LOAD(ref)], 17=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 36; investigated n22--43:DMA_LOAD(ref) in [15:16]; investigated partial schedule: {15=[n22--43:DMA_LOAD(ref)], 16=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 25; investigated n22--43:DMA_LOAD(ref) in [4:5]; investigated partial schedule: {4=[n22--43:DMA_LOAD(ref)], 5=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 39; investigated n22--43:DMA_LOAD(ref) in [18:19]; investigated partial schedule: {18=[n22--43:DMA_LOAD(ref)], 19=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 38; investigated n22--43:DMA_LOAD(ref) in [17:18]; investigated partial schedule: {17=[n22--43:DMA_LOAD(ref)], 18=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 23; investigated n22--43:DMA_LOAD(ref) in [2:3]; investigated partial schedule: {2=[n22--43:DMA_LOAD(ref)], 3=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 24; investigated n22--43:DMA_LOAD(ref) in [3:4]; investigated partial schedule: {3=[n22--43:DMA_LOAD(ref)], 4=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 28; investigated n22--43:DMA_LOAD(ref) in [7:8]; investigated partial schedule: {7=[n22--43:DMA_LOAD(ref)], 8=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 26; investigated n22--43:DMA_LOAD(ref) in [5:6]; investigated partial schedule: {5=[n22--43:DMA_LOAD(ref)], 6=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 22; investigated n22--43:DMA_LOAD(ref) in [1:2]; investigated partial schedule: {1=[n22--43:DMA_LOAD(ref)], 2=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 33; investigated n22--43:DMA_LOAD(ref) in [12:13]; investigated partial schedule: {12=[n22--43:DMA_LOAD(ref)], 13=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 32; investigated n22--43:DMA_LOAD(ref) in [11:12]; investigated partial schedule: {11=[n22--43:DMA_LOAD(ref)], 12=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 34; investigated n22--43:DMA_LOAD(ref) in [13:14]; investigated partial schedule: {13=[n22--43:DMA_LOAD(ref)], 14=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 35; investigated n22--43:DMA_LOAD(ref) in [14:15]; investigated partial schedule: {14=[n22--43:DMA_LOAD(ref)], 15=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 21; investigated n22--43:DMA_LOAD(ref) in [0:1]; investigated partial schedule: {0=[n22--43:DMA_LOAD(ref)], 1=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 27; investigated n22--43:DMA_LOAD(ref) in [6:7]; investigated partial schedule: {6=[n22--43:DMA_LOAD(ref)], 7=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 30; investigated n22--43:DMA_LOAD(ref) in [9:10]; investigated partial schedule: {9=[n22--43:DMA_LOAD(ref)], 10=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 40; investigated n22--43:DMA_LOAD(ref) in [19:20]; investigated partial schedule: {19=[n22--43:DMA_LOAD(ref)], 20=[n22--43:DMA_LOAD(ref)]}; 
+├── l_bound: 21, u_bound: 29; investigated n22--43:DMA_LOAD(ref) in [8:9]; investigated partial schedule: {8=[n22--43:DMA_LOAD(ref)], 9=[n22--43:DMA_LOAD(ref)]}; 
+└── l_bound: 21, u_bound: 31; investigated n22--43:DMA_LOAD(ref) in [10:11]; investigated partial schedule: {10=[n22--43:DMA_LOAD(ref)], 11=[n22--43:DMA_LOAD(ref)]}; 
+

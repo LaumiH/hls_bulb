@@ -1,0 +1,270 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 26, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 195
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 195, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 271
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 27, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 195
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 26, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 271
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 27, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 271
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 25 with 92 nodes
+
+n24--145:IXOR : [0:0]
+n85--157:DMA_LOAD : [0:1]
+n89--126:ISUB : [0:0]
+n67--121:ISHL : [0:0]
+n68--127:IUSHR : [1:1]
+n23--147:IAND : [1:1]
+n22--142:IAND : [1:1]
+n21--148:IOR : [2:2]
+n56--150:IADD : [2:2]
+n45--154:IADD : [2:2]
+n66--128:IOR : [2:2]
+n14--158:IADD : [3:3]
+n13--161:IADD : [3:3]
+n65--180:ISUB : [3:3]
+n53--175:ISHL : [3:3]
+n28--202:ISUB : [4:4]
+n3--220:IXOR : [4:4]
+n54--181:IUSHR : [4:4]
+n12--162:IADD : [4:4]
+n27--203:IUSHR : [5:5]
+n2--222:IAND : [5:5]
+n72--197:ISHL : [5:5]
+n52--182:IOR : [5:5]
+n35--229:IADD : [6:6]
+n82--232:DMA_LOAD : [6:7]
+n60--217:IAND : [6:6]
+n71--204:IOR : [6:6]
+n58--249:ISHL : [7:7]
+n59--223:IOR : [7:7]
+n42--254:ISUB : [7:7]
+n47--233:IADD : [8:8]
+n36--293:IXOR : [8:8]
+n41--255:IUSHR : [8:8]
+n86--225:IADD : [8:8]
+n46--236:IADD : [9:9]
+n57--256:IOR : [9:9]
+n70--295:IAND : [9:9]
+n6--275:ISUB : [9:9]
+n69--302:IADD : [10:10]
+n5--237:IADD : [10:10]
+n76--290:IAND : [10:10]
+n34--305:DMA_LOAD : [10:11]
+n37--270:ISHL : [11:11]
+n4--276:IUSHR : [11:11]
+n31--296:IOR : [11:11]
+n80--298:IADD : [12:12]
+n30--277:IOR : [12:12]
+n84--328:ISUB : [12:12]
+n88--323:ISHL : [12:12]
+n29--306:IADD : [13:13]
+n83--329:IUSHR : [13:13]
+n50--350:ISUB : [13:13]
+n87--309:IADD : [13:13]
+n49--310:IADD : [14:14]
+n40--330:IOR : [14:14]
+n62--368:IXOR : [14:14]
+n44--380:DMA_LOAD : [14:15]
+n48--351:IUSHR : [15:15]
+n61--370:IAND : [15:15]
+n74--365:IAND : [15:15]
+n51--345:ISHL : [16:16]
+n43--373:IADD : [16:16]
+n75--403:ISUB : [16:16]
+n11--371:IOR : [16:16]
+n16--398:ISHL : [17:17]
+n17--404:IUSHR : [17:17]
+n10--352:IOR : [17:17]
+n55--384:IADD : [17:17]
+n26--424:ISUB : [18:18]
+n15--405:IOR : [18:18]
+n9--381:IADD : [18:18]
+n33--377:IADD : [18:18]
+n1--385:IADD : [19:19]
+n39--443:IXOR : [19:19]
+n8--455:DMA_LOAD : [19:20]
+n73--440:IAND : [19:19]
+n25--425:IUSHR : [20:20]
+n0--419:ISHL : [20:20]
+n38--445:IAND : [20:20]
+n81--477:ISUB : [21:21]
+n7--448:IADD : [21:21]
+n63--426:IOR : [21:21]
+n64--446:IOR : [21:21]
+n79--478:IUSHR : [22:22]
+n19--459:IADD : [22:22]
+n20--456:IADD : [22:22]
+n78--472:ISHL : [22:22]
+n90--483:IADD : [23:23]
+n18--460:IADD : [23:23]
+n91--108:IFGE : [23:23]
+n32--452:IADD : [23:23]
+n77--479:IOR : [24:24]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 25
+Initial best latency: 25
+91 out of 92 DFG nodes could be skipped to find best schedule
+It took 27 milliseconds to converge
+Scheduling took 27 milliseconds
+
+Print BULB tree: 
+l_bound: 25, u_bound: 25; investigated partial schedule: {}; 
+└── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [0:0]; investigated partial schedule: {0=[n24--145:IXOR]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 26 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 5 times
+Best latency found: 25
+Initial best latency: 25
+91 out of 92 DFG nodes could be skipped to find best schedule
+It took 25 milliseconds to converge
+Scheduling took 195 milliseconds
+
+Print BULB tree: 
+l_bound: 25, u_bound: 25; investigated partial schedule: {}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [2:2]; investigated partial schedule: {2=[n24--145:IXOR]}; 
+├── l_bound: 29, u_bound: 29; investigated n24--145:IXOR in [8:8]; investigated partial schedule: {8=[n24--145:IXOR]}; 
+├── l_bound: 32, u_bound: 32; investigated n24--145:IXOR in [11:11]; investigated partial schedule: {11=[n24--145:IXOR]}; 
+├── l_bound: 26, u_bound: 26; investigated n24--145:IXOR in [5:5]; investigated partial schedule: {5=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [0:0]; investigated partial schedule: {0=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [3:3]; investigated partial schedule: {3=[n24--145:IXOR]}; 
+├── l_bound: 34, u_bound: 34; investigated n24--145:IXOR in [13:13]; investigated partial schedule: {13=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [1:1]; investigated partial schedule: {1=[n24--145:IXOR]}; 
+├── l_bound: 45, u_bound: 45; investigated n24--145:IXOR in [24:24]; investigated partial schedule: {24=[n24--145:IXOR]}; 
+├── l_bound: 42, u_bound: 42; investigated n24--145:IXOR in [21:21]; investigated partial schedule: {21=[n24--145:IXOR]}; 
+├── l_bound: 37, u_bound: 37; investigated n24--145:IXOR in [16:16]; investigated partial schedule: {16=[n24--145:IXOR]}; 
+├── l_bound: 39, u_bound: 39; investigated n24--145:IXOR in [18:18]; investigated partial schedule: {18=[n24--145:IXOR]}; 
+├── l_bound: 30, u_bound: 30; investigated n24--145:IXOR in [9:9]; investigated partial schedule: {9=[n24--145:IXOR]}; 
+├── l_bound: 41, u_bound: 41; investigated n24--145:IXOR in [20:20]; investigated partial schedule: {20=[n24--145:IXOR]}; 
+├── l_bound: 43, u_bound: 43; investigated n24--145:IXOR in [22:22]; investigated partial schedule: {22=[n24--145:IXOR]}; 
+├── l_bound: 33, u_bound: 33; investigated n24--145:IXOR in [12:12]; investigated partial schedule: {12=[n24--145:IXOR]}; 
+├── l_bound: 40, u_bound: 40; investigated n24--145:IXOR in [19:19]; investigated partial schedule: {19=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [4:4]; investigated partial schedule: {4=[n24--145:IXOR]}; 
+├── l_bound: 28, u_bound: 28; investigated n24--145:IXOR in [7:7]; investigated partial schedule: {7=[n24--145:IXOR]}; 
+├── l_bound: 38, u_bound: 38; investigated n24--145:IXOR in [17:17]; investigated partial schedule: {17=[n24--145:IXOR]}; 
+├── l_bound: 35, u_bound: 35; investigated n24--145:IXOR in [14:14]; investigated partial schedule: {14=[n24--145:IXOR]}; 
+├── l_bound: 36, u_bound: 36; investigated n24--145:IXOR in [15:15]; investigated partial schedule: {15=[n24--145:IXOR]}; 
+├── l_bound: 27, u_bound: 27; investigated n24--145:IXOR in [6:6]; investigated partial schedule: {6=[n24--145:IXOR]}; 
+├── l_bound: 44, u_bound: 44; investigated n24--145:IXOR in [23:23]; investigated partial schedule: {23=[n24--145:IXOR]}; 
+└── l_bound: 31, u_bound: 31; investigated n24--145:IXOR in [10:10]; investigated partial schedule: {10=[n24--145:IXOR]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 25
+Initial best latency: 25
+91 out of 92 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 26 milliseconds
+
+Print BULB tree: 
+l_bound: 25, u_bound: 25; investigated partial schedule: {}; 
+└── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [0:0]; investigated partial schedule: {0=[n24--145:IXOR]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 26 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 5 times
+Best latency found: 25
+Initial best latency: 25
+91 out of 92 DFG nodes could be skipped to find best schedule
+It took 26 milliseconds to converge
+Scheduling took 271 milliseconds
+
+Print BULB tree: 
+l_bound: 25, u_bound: 25; investigated partial schedule: {}; 
+├── l_bound: 29, u_bound: 29; investigated n24--145:IXOR in [8:8]; investigated partial schedule: {8=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [4:4]; investigated partial schedule: {4=[n24--145:IXOR]}; 
+├── l_bound: 28, u_bound: 28; investigated n24--145:IXOR in [7:7]; investigated partial schedule: {7=[n24--145:IXOR]}; 
+├── l_bound: 26, u_bound: 26; investigated n24--145:IXOR in [5:5]; investigated partial schedule: {5=[n24--145:IXOR]}; 
+├── l_bound: 30, u_bound: 30; investigated n24--145:IXOR in [9:9]; investigated partial schedule: {9=[n24--145:IXOR]}; 
+├── l_bound: 45, u_bound: 45; investigated n24--145:IXOR in [24:24]; investigated partial schedule: {24=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [0:0]; investigated partial schedule: {0=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [2:2]; investigated partial schedule: {2=[n24--145:IXOR]}; 
+├── l_bound: 41, u_bound: 41; investigated n24--145:IXOR in [20:20]; investigated partial schedule: {20=[n24--145:IXOR]}; 
+├── l_bound: 42, u_bound: 42; investigated n24--145:IXOR in [21:21]; investigated partial schedule: {21=[n24--145:IXOR]}; 
+├── l_bound: 31, u_bound: 31; investigated n24--145:IXOR in [10:10]; investigated partial schedule: {10=[n24--145:IXOR]}; 
+├── l_bound: 27, u_bound: 27; investigated n24--145:IXOR in [6:6]; investigated partial schedule: {6=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [3:3]; investigated partial schedule: {3=[n24--145:IXOR]}; 
+├── l_bound: 35, u_bound: 35; investigated n24--145:IXOR in [14:14]; investigated partial schedule: {14=[n24--145:IXOR]}; 
+├── l_bound: 39, u_bound: 39; investigated n24--145:IXOR in [18:18]; investigated partial schedule: {18=[n24--145:IXOR]}; 
+├── l_bound: 40, u_bound: 40; investigated n24--145:IXOR in [19:19]; investigated partial schedule: {19=[n24--145:IXOR]}; 
+├── l_bound: 32, u_bound: 32; investigated n24--145:IXOR in [11:11]; investigated partial schedule: {11=[n24--145:IXOR]}; 
+├── l_bound: 36, u_bound: 36; investigated n24--145:IXOR in [15:15]; investigated partial schedule: {15=[n24--145:IXOR]}; 
+├── l_bound: 25, u_bound: 25; investigated n24--145:IXOR in [1:1]; investigated partial schedule: {1=[n24--145:IXOR]}; 
+├── l_bound: 34, u_bound: 34; investigated n24--145:IXOR in [13:13]; investigated partial schedule: {13=[n24--145:IXOR]}; 
+├── l_bound: 33, u_bound: 33; investigated n24--145:IXOR in [12:12]; investigated partial schedule: {12=[n24--145:IXOR]}; 
+├── l_bound: 37, u_bound: 37; investigated n24--145:IXOR in [16:16]; investigated partial schedule: {16=[n24--145:IXOR]}; 
+├── l_bound: 43, u_bound: 43; investigated n24--145:IXOR in [22:22]; investigated partial schedule: {22=[n24--145:IXOR]}; 
+├── l_bound: 44, u_bound: 44; investigated n24--145:IXOR in [23:23]; investigated partial schedule: {23=[n24--145:IXOR]}; 
+└── l_bound: 38, u_bound: 38; investigated n24--145:IXOR in [17:17]; investigated partial schedule: {17=[n24--145:IXOR]}; 
+

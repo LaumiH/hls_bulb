@@ -1,0 +1,300 @@
+Reading resource constraints from resources/vlsi/fpga_4Mul
+
+Available resources:
+RES00:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES05:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES06:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES07:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES08:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES09:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES10:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES11:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES12:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES13:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES14:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES15:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES16:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES17:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES18:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES19:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES20:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES21:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES22:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES23:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES24:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES25:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES26:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES27:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES28:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES29:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES30:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES31:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES32:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES33:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES34:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES35:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES36:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES37:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES38:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES39:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES40:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES41:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES42:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES43:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES44:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES45:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES46:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES47:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES48:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES49:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES50:		Mem, 
+RES51:		Mem, 
+RES52:		Div, Mul, 
+RES53:		Div, Mul, 
+RES54:		Div, Mul, 
+RES55:		Div, Mul, 
+
+Available operations:
+Mem:		RES50, RES51, 
+Add:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Sub:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Mul:		RES52, RES53, RES54, RES55, 
+Div:		RES52, RES53, RES54, RES55, 
+Shift:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+And:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Or:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Cmp:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Other:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/FIR-main-75-454.dot
+DOING ASAP SCHEDULE
+Found schedule of length 11 with 106 nodes
+
+n1--115:DMA_LOAD : [0:1]
+n90--414:DMA_LOAD : [0:1]
+n3--107:DMA_LOAD : [0:1]
+n92--123:DMA_LOAD : [0:1]
+n5--256:IADD : [0:0]
+n94--279:DMA_LOAD : [0:1]
+n7--160:DMA_LOAD : [0:1]
+n96--379:DMA_LOAD : [0:1]
+n8--164:DMA_LOAD : [0:1]
+n52--399:DMA_LOAD : [0:1]
+n51--90:DMA_LOAD : [0:1]
+n10--261:IADD : [0:0]
+n98--179:DMA_LOAD : [0:1]
+n97--383:DMA_LOAD : [0:1]
+n53--404:DMA_LOAD : [0:1]
+n99--183:DMA_LOAD : [0:1]
+n57--147:IREM : [0:0]
+n18--152:DMA_LOAD : [0:1]
+n19--156:DMA_LOAD : [0:1]
+n61--387:DMA_LOAD : [0:1]
+n60--139:DMA_LOAD : [0:1]
+n62--391:DMA_LOAD : [0:1]
+n67--312:DMA_LOAD : [0:1]
+n25--368:DMA_LOAD : [0:1]
+n69--175:DMA_LOAD : [0:1]
+n68--171:DMA_LOAD : [0:1]
+n26--372:DMA_LOAD : [0:1]
+n72--225:DMA_LOAD : [0:1]
+n71--220:DMA_LOAD : [0:1]
+n30--210:DMA_LOAD : [0:1]
+n74--304:DMA_LOAD : [0:1]
+n31--215:DMA_LOAD : [0:1]
+n33--328:DMA_LOAD : [0:1]
+n36--99:DMA_LOAD : [0:1]
+n79--360:DMA_LOAD : [0:1]
+n80--364:DMA_LOAD : [0:1]
+n82--131:DMA_LOAD : [0:1]
+n84--296:DMA_LOAD : [0:1]
+n43--349:DMA_LOAD : [0:1]
+n87--198:DMA_LOAD : [0:1]
+n89--409:DMA_LOAD : [0:1]
+n44--353:DMA_LOAD : [0:1]
+n88--202:DMA_LOAD : [0:1]
+n46--320:DMA_LOAD : [0:1]
+n100--190:DMA_LOAD : [0:1]
+n49--345:DMA_LOAD : [0:1]
+n48--341:DMA_LOAD : [0:1]
+n104--288:DMA_LOAD : [0:1]
+n101--194:DMA_LOAD : [0:1]
+n105--79:IFGE : [0:0]
+n4--258:IREM : [1:1]
+n9--336:IREM : [1:1]
+n58--450:IADD : [1:1]
+n28--148:I2F : [1:1]
+n102--268:IFGE : [1:1]
+n0--116:DMA_STORE : [2:3]
+n2--108:DMA_STORE : [2:3]
+n70--226:FMUL : [2:5]
+n91--124:DMA_STORE : [2:3]
+n6--165:FMUL : [2:5]
+n50--91:DMA_STORE : [2:3]
+n93--280:DMA_STORE : [2:3]
+n73--305:DMA_STORE : [2:3]
+n32--329:DMA_STORE : [2:3]
+n76--195:FMUL : [2:5]
+n12--384:FMUL : [2:5]
+n56--184:FMUL : [2:5]
+n78--365:FMUL : [2:5]
+n34--337:I2F : [2:2]
+n55--176:FMUL : [2:5]
+n77--203:FMUL : [2:5]
+n13--392:FMUL : [2:5]
+n35--100:DMA_STORE : [2:3]
+n16--415:FMUL : [2:5]
+n15--405:FMUL : [2:5]
+n59--140:DMA_STORE : [2:3]
+n17--157:FMUL : [2:5]
+n81--132:DMA_STORE : [2:3]
+n83--297:DMA_STORE : [2:3]
+n42--354:FMUL : [2:5]
+n45--321:DMA_STORE : [2:3]
+n23--445:IADD : [2:2]
+n66--313:DMA_STORE : [2:3]
+n47--346:FMUL : [2:5]
+n24--373:FMUL : [2:5]
+n27--149:DMA_STORE : [2:3]
+n29--216:FMUL : [2:5]
+n103--289:DMA_STORE : [2:3]
+n85--338:DMA_STORE : [3:4]
+n22--447:IREM : [3:3]
+n14--416:FADD : [6:6]
+n38--355:FADD : [6:6]
+n39--374:FADD : [6:6]
+n54--185:FADD : [6:6]
+n65--227:FADD : [6:6]
+n64--204:FADD : [6:6]
+n86--166:FADD : [6:6]
+n11--393:FADD : [6:6]
+n37--423:FADD : [7:7]
+n63--241:FADD : [7:7]
+n95--234:FADD : [7:7]
+n75--430:FADD : [7:7]
+n41--251:FADD : [8:8]
+n21--440:FADD : [8:8]
+n40--252:DMA_STORE : [9:10]
+n20--441:DMA_STORE : [9:10]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 11 with 106 nodes
+
+n90--414:DMA_LOAD : [0:1]
+n72--225:DMA_LOAD : [0:1]
+n71--220:DMA_LOAD : [0:1]
+n7--160:DMA_LOAD : [0:1]
+n8--164:DMA_LOAD : [0:1]
+n96--379:DMA_LOAD : [0:1]
+n52--399:DMA_LOAD : [0:1]
+n30--210:DMA_LOAD : [0:1]
+n98--179:DMA_LOAD : [0:1]
+n97--383:DMA_LOAD : [0:1]
+n53--404:DMA_LOAD : [0:1]
+n31--215:DMA_LOAD : [0:1]
+n99--183:DMA_LOAD : [0:1]
+n79--360:DMA_LOAD : [0:1]
+n18--152:DMA_LOAD : [0:1]
+n19--156:DMA_LOAD : [0:1]
+n80--364:DMA_LOAD : [0:1]
+n61--387:DMA_LOAD : [0:1]
+n62--391:DMA_LOAD : [0:1]
+n43--349:DMA_LOAD : [0:1]
+n87--198:DMA_LOAD : [0:1]
+n89--409:DMA_LOAD : [0:1]
+n44--353:DMA_LOAD : [0:1]
+n88--202:DMA_LOAD : [0:1]
+n69--175:DMA_LOAD : [0:1]
+n25--368:DMA_LOAD : [0:1]
+n100--190:DMA_LOAD : [0:1]
+n68--171:DMA_LOAD : [0:1]
+n49--345:DMA_LOAD : [0:1]
+n48--341:DMA_LOAD : [0:1]
+n26--372:DMA_LOAD : [0:1]
+n101--194:DMA_LOAD : [0:1]
+n70--226:FMUL : [2:5]
+n6--165:FMUL : [2:5]
+n76--195:FMUL : [2:5]
+n42--354:FMUL : [2:5]
+n78--365:FMUL : [2:5]
+n56--184:FMUL : [2:5]
+n12--384:FMUL : [2:5]
+n55--176:FMUL : [2:5]
+n77--203:FMUL : [2:5]
+n47--346:FMUL : [2:5]
+n24--373:FMUL : [2:5]
+n13--392:FMUL : [2:5]
+n16--415:FMUL : [2:5]
+n15--405:FMUL : [2:5]
+n29--216:FMUL : [2:5]
+n17--157:FMUL : [2:5]
+n14--416:FADD : [6:6]
+n38--355:FADD : [6:6]
+n39--374:FADD : [6:6]
+n65--227:FADD : [6:6]
+n54--185:FADD : [6:6]
+n10--261:IADD : [6:6]
+n64--204:FADD : [6:6]
+n86--166:FADD : [6:6]
+n11--393:FADD : [6:6]
+n1--115:DMA_LOAD : [7:8]
+n3--107:DMA_LOAD : [7:8]
+n92--123:DMA_LOAD : [7:8]
+n5--256:IADD : [7:7]
+n94--279:DMA_LOAD : [7:8]
+n82--131:DMA_LOAD : [7:8]
+n60--139:DMA_LOAD : [7:8]
+n74--304:DMA_LOAD : [7:8]
+n63--241:FADD : [7:7]
+n51--90:DMA_LOAD : [7:8]
+n84--296:DMA_LOAD : [7:8]
+n95--234:FADD : [7:7]
+n9--336:IREM : [7:7]
+n75--430:FADD : [7:7]
+n67--312:DMA_LOAD : [7:8]
+n33--328:DMA_LOAD : [7:8]
+n36--99:DMA_LOAD : [7:8]
+n46--320:DMA_LOAD : [7:8]
+n57--147:IREM : [7:7]
+n37--423:FADD : [7:7]
+n104--288:DMA_LOAD : [7:8]
+n4--258:IREM : [8:8]
+n41--251:FADD : [8:8]
+n21--440:FADD : [8:8]
+n34--337:I2F : [8:8]
+n28--148:I2F : [8:8]
+n0--116:DMA_STORE : [9:10]
+n2--108:DMA_STORE : [9:10]
+n81--132:DMA_STORE : [9:10]
+n91--124:DMA_STORE : [9:10]
+n50--91:DMA_STORE : [9:10]
+n83--297:DMA_STORE : [9:10]
+n93--280:DMA_STORE : [9:10]
+n85--338:DMA_STORE : [9:10]
+n40--252:DMA_STORE : [9:10]
+n73--305:DMA_STORE : [9:10]
+n32--329:DMA_STORE : [9:10]
+n20--441:DMA_STORE : [9:10]
+n45--321:DMA_STORE : [9:10]
+n23--445:IADD : [9:9]
+n66--313:DMA_STORE : [9:10]
+n35--100:DMA_STORE : [9:10]
+n27--149:DMA_STORE : [9:10]
+n59--140:DMA_STORE : [9:10]
+n103--289:DMA_STORE : [9:10]
+n22--447:IREM : [10:10]
+n58--450:IADD : [10:10]
+n102--268:IFGE : [10:10]
+n105--79:IFGE : [10:10]
+
+FINISHED ALAP SCHEDULE
+

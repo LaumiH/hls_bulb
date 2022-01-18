@@ -1,0 +1,43 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 65 with latency 29
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 75 with latency 29
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 66 with latency 29
+i=0; lower bound (30) > upper bound (29), the lower bound estimator was too conservative
+i=0; lower bound (30) > upper bound (29), the lower bound estimator was too conservative
+i=0; lower bound (30) > upper bound (29), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 64 with latency 29
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 491 with latency 28
+Timeout reached while computing ECOH256Digest-compress-839-1065.dot with fpga_4Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 429 with latency 28
+Timeout reached while computing ECOH256Digest-compress-839-1065.dot with fpga_4Mul
+Received timeout, aborting

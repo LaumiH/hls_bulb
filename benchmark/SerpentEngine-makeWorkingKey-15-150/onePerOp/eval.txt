@@ -1,0 +1,253 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 67
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+lBoundEstimator: OWN, ALAPBound: listSchedule took the same time as lBoundEstimator: PAPER, ALAPBound: listSchedule
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 67
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 67, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 62300
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 68
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: OWN, ALAPBound: lazyALAP took the same time as lBoundEstimator: PAPER, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 62300
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 68
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 68, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 62300
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 7, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 62300
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 21 with 42 nodes
+
+n16--33:DMA_LOAD : [0:1]
+n18--79:IADD : [0:0]
+n41--16:IFLE : [0:0]
+n25--57:IADD : [1:1]
+n32--83:IFLE : [1:1]
+n38--124:IADD : [2:2]
+n15--37:IAND : [2:2]
+n1--58:DMA_LOAD : [2:3]
+n26--111:IADD : [3:3]
+n33--40:ISHL : [3:3]
+n0--62:IAND : [4:4]
+n37--125:DMA_LOAD : [4:5]
+n3--44:IADD : [4:4]
+n8--137:IADD : [5:5]
+n12--65:ISHL : [5:5]
+n2--45:DMA_LOAD : [6:7]
+n31--129:IAND : [6:6]
+n23--70:IADD : [6:6]
+n13--132:ISHL : [7:7]
+n28--22:IADD : [7:7]
+n24--49:IAND : [8:8]
+n35--146:IADD : [8:8]
+n17--100:DMA_LOAD : [8:9]
+n40--89:IADD : [9:9]
+n34--52:ISHL : [9:9]
+n39--104:IAND : [10:10]
+n30--66:IOR : [10:10]
+n22--112:DMA_LOAD : [10:11]
+n19--107:ISHL : [11:11]
+n7--138:DMA_LOAD : [12:13]
+n21--116:IAND : [12:12]
+n20--119:ISHL : [13:13]
+n14--142:IAND : [14:14]
+n5--133:IOR : [14:14]
+n10--71:DMA_LOAD : [14:15]
+n6--120:IOR : [15:15]
+n4--143:IOR : [16:16]
+n9--75:IAND : [16:16]
+n27--145:DMA_STORE : [17:18]
+n11--53:IOR : [17:17]
+n29--76:IOR : [18:18]
+n36--78:DMA_STORE : [19:20]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 22 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 5 times
+Best latency found: 21
+Initial best latency: 21
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 8 milliseconds to converge
+Scheduling took 67 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+├── l_bound: 26, u_bound: 26; investigated n18--79:IADD in [11:11]; investigated partial schedule: {11=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [1:1]; investigated partial schedule: {1=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 31, u_bound: 30; investigated n18--79:IADD in [16:16]; investigated partial schedule: {16=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 35, u_bound: 34; investigated n18--79:IADD in [20:20]; investigated partial schedule: {20=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 22, u_bound: 21; investigated n18--79:IADD in [3:3]; investigated partial schedule: {3=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 22, u_bound: 21; investigated n18--79:IADD in [7:7]; investigated partial schedule: {7=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 22, u_bound: 21; investigated n18--79:IADD in [5:5]; investigated partial schedule: {5=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 29, u_bound: 28; investigated n18--79:IADD in [14:14]; investigated partial schedule: {14=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 34, u_bound: 33; investigated n18--79:IADD in [19:19]; investigated partial schedule: {19=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [4:4]; investigated partial schedule: {4=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 32; investigated n18--79:IADD in [18:18]; investigated partial schedule: {18=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [0:0]; investigated partial schedule: {0=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 27, u_bound: 26; investigated n18--79:IADD in [12:12]; investigated partial schedule: {12=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [6:6]; investigated partial schedule: {6=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 23, u_bound: 22; investigated n18--79:IADD in [8:8]; investigated partial schedule: {8=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 32, u_bound: 31; investigated n18--79:IADD in [17:17]; investigated partial schedule: {17=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 30, u_bound: 29; investigated n18--79:IADD in [15:15]; investigated partial schedule: {15=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 24, u_bound: 23; investigated n18--79:IADD in [9:9]; investigated partial schedule: {9=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 28, u_bound: 27; investigated n18--79:IADD in [13:13]; investigated partial schedule: {13=[n18--79:IADD]}; 
+├── TOO CONSERVATIVE: l_bound: 25, u_bound: 24; investigated n18--79:IADD in [10:10]; investigated partial schedule: {10=[n18--79:IADD]}; 
+└── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [2:2]; investigated partial schedule: {2=[n18--79:IADD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 22 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 8 times
+Best latency found: 21
+Initial best latency: 21
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 8 milliseconds to converge
+Scheduling took 68 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [6:6]; investigated partial schedule: {6=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 22; investigated n18--79:IADD in [8:8]; investigated partial schedule: {8=[n18--79:IADD]}; 
+├── l_bound: 30, u_bound: 34; investigated n18--79:IADD in [20:20]; investigated partial schedule: {20=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 23; investigated n18--79:IADD in [9:9]; investigated partial schedule: {9=[n18--79:IADD]}; 
+├── l_bound: 24, u_bound: 28; investigated n18--79:IADD in [14:14]; investigated partial schedule: {14=[n18--79:IADD]}; 
+├── l_bound: 25, u_bound: 29; investigated n18--79:IADD in [15:15]; investigated partial schedule: {15=[n18--79:IADD]}; 
+├── l_bound: 26, u_bound: 30; investigated n18--79:IADD in [16:16]; investigated partial schedule: {16=[n18--79:IADD]}; 
+├── l_bound: 29, u_bound: 33; investigated n18--79:IADD in [19:19]; investigated partial schedule: {19=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 24; investigated n18--79:IADD in [10:10]; investigated partial schedule: {10=[n18--79:IADD]}; 
+├── l_bound: 23, u_bound: 27; investigated n18--79:IADD in [13:13]; investigated partial schedule: {13=[n18--79:IADD]}; 
+├── l_bound: 22, u_bound: 26; investigated n18--79:IADD in [12:12]; investigated partial schedule: {12=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [4:4]; investigated partial schedule: {4=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [5:5]; investigated partial schedule: {5=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 26; investigated n18--79:IADD in [11:11]; investigated partial schedule: {11=[n18--79:IADD]}; 
+├── l_bound: 27, u_bound: 31; investigated n18--79:IADD in [17:17]; investigated partial schedule: {17=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [2:2]; investigated partial schedule: {2=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [3:3]; investigated partial schedule: {3=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [7:7]; investigated partial schedule: {7=[n18--79:IADD]}; 
+├── l_bound: 28, u_bound: 32; investigated n18--79:IADD in [18:18]; investigated partial schedule: {18=[n18--79:IADD]}; 
+├── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [0:0]; investigated partial schedule: {0=[n18--79:IADD]}; 
+└── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [1:1]; investigated partial schedule: {1=[n18--79:IADD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 7 milliseconds to converge
+Scheduling took 7 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+└── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [0:0]; investigated partial schedule: {0=[n18--79:IADD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 49130 inspected nodes
+26142 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 3589 times
+Best latency found: 21
+Initial best latency: 21
+30 out of 42 DFG nodes could be skipped to find best schedule
+It took 53 milliseconds to converge
+Scheduling took 62300 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 21
+Initial best latency: 21
+41 out of 42 DFG nodes could be skipped to find best schedule
+It took 7 milliseconds to converge
+Scheduling took 7 milliseconds
+
+Print BULB tree: 
+l_bound: 21, u_bound: 21; investigated partial schedule: {}; 
+└── l_bound: 21, u_bound: 21; investigated n18--79:IADD in [0:0]; investigated partial schedule: {0=[n18--79:IADD]}; 
+

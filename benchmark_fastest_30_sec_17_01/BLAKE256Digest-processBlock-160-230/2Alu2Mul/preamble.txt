@@ -1,0 +1,78 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/BLAKE256Digest-processBlock-160-230.dot
+DOING ASAP SCHEDULE
+Found schedule of length 13 with 21 nodes
+
+n14--175:IMUL : [0:3]
+n19--227:IADD : [0:0]
+n20--164:IFGE : [0:0]
+n16--181:DMA_LOAD : [4:5]
+n1--192:IADD : [4:4]
+n4--205:IADD : [4:4]
+n9--218:IADD : [4:4]
+n0--193:DMA_LOAD : [5:6]
+n3--206:DMA_LOAD : [5:6]
+n8--219:DMA_LOAD : [5:6]
+n15--185:IAND : [6:6]
+n2--197:IAND : [7:7]
+n17--223:IAND : [7:7]
+n6--188:ISHL : [7:7]
+n11--210:IAND : [7:7]
+n7--200:ISHL : [8:8]
+n10--213:ISHL : [8:8]
+n13--201:IOR : [9:9]
+n5--214:IOR : [9:9]
+n12--224:IOR : [10:10]
+n18--226:DMA_STORE : [11:12]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 13 with 21 nodes
+
+n14--175:IMUL : [0:3]
+n1--192:IADD : [4:4]
+n4--205:IADD : [4:4]
+n16--181:DMA_LOAD : [5:6]
+n0--193:DMA_LOAD : [5:6]
+n3--206:DMA_LOAD : [5:6]
+n9--218:IADD : [5:5]
+n8--219:DMA_LOAD : [6:7]
+n15--185:IAND : [7:7]
+n2--197:IAND : [7:7]
+n11--210:IAND : [7:7]
+n17--223:IAND : [8:8]
+n6--188:ISHL : [8:8]
+n7--200:ISHL : [8:8]
+n10--213:ISHL : [8:8]
+n13--201:IOR : [9:9]
+n5--214:IOR : [9:9]
+n12--224:IOR : [10:10]
+n18--226:DMA_STORE : [11:12]
+n19--227:IADD : [12:12]
+n20--164:IFGE : [12:12]
+
+FINISHED ALAP SCHEDULE
+

@@ -1,0 +1,302 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 11, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 28
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 5, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 28
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 4, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 28
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 28, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 52
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 21, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 28
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 5, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 11
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 4, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 11
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 11, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 52
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 11, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 21
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 5, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 52
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 5, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 21
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 4, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 52
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 4, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 21
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 21, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 52
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 13 with 11 nodes
+
+N1_MUL-- : [0:3]
+N10_ADD-- : [0:0]
+N2_MUL-- : [0:3]
+N11_CMP-- : [1:1]
+N6_MUL-- : [4:7]
+N3_MUL-- : [4:7]
+N7_MUL-- : [8:11]
+N4_SUB-- : [8:8]
+N8_MUL-- : [8:11]
+N9_ADD-- : [12:12]
+N5_SUB-- : [12:12]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 19 inspected nodes
+4 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+7 out of 11 DFG nodes could be skipped to find best schedule
+It took 7 milliseconds to converge
+Scheduling took 28 milliseconds
+
+Print BULB tree: 
+l_bound: 10, u_bound: 13; investigated partial schedule: {}; 
+└── l_bound: 10, u_bound: 13; investigated N1_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--]}; 
+    ├── l_bound: 10, u_bound: 14; investigated N2_MUL-- in [4:7]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 4=[N2_MUL--], 5=[N2_MUL--], 6=[N2_MUL--], 7=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 14; investigated N2_MUL-- in [1:4]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 13; investigated N2_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--]}; 
+    │   ├── l_bound: 10, u_bound: 13; investigated N6_MUL-- in [4:7]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 17; investigated N3_MUL-- in [6:9]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--, N3_MUL--], 7=[N6_MUL--, N3_MUL--], 8=[N3_MUL--], 9=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 17; investigated N3_MUL-- in [5:8]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--, N3_MUL--], 6=[N6_MUL--, N3_MUL--], 7=[N6_MUL--, N3_MUL--], 8=[N3_MUL--]}; 
+    │   │   ├── l_bound: 14, u_bound: 18; investigated N3_MUL-- in [10:13]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 10=[N3_MUL--], 11=[N3_MUL--], 12=[N3_MUL--], 13=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 14; investigated N3_MUL-- in [8:11]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 8=[N3_MUL--], 9=[N3_MUL--], 10=[N3_MUL--], 11=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 15; investigated N3_MUL-- in [9:12]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 9=[N3_MUL--], 10=[N3_MUL--], 11=[N3_MUL--], 12=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 17; investigated N3_MUL-- in [7:10]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--, N3_MUL--], 8=[N3_MUL--], 9=[N3_MUL--], 10=[N3_MUL--]}; 
+    │   │   └── l_bound: 13, u_bound: 13; investigated N3_MUL-- in [4:7]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--, N3_MUL--], 5=[N6_MUL--, N3_MUL--], 6=[N6_MUL--, N3_MUL--], 7=[N6_MUL--, N3_MUL--]}; 
+    │   ├── l_bound: 10, u_bound: 17; investigated N6_MUL-- in [6:9]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 8=[N6_MUL--], 9=[N6_MUL--]}; 
+    │   ├── l_bound: 11, u_bound: 17; investigated N6_MUL-- in [7:10]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 7=[N6_MUL--], 8=[N6_MUL--], 9=[N6_MUL--], 10=[N6_MUL--]}; 
+    │   ├── l_bound: 10, u_bound: 17; investigated N6_MUL-- in [5:8]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 8=[N6_MUL--]}; 
+    │   ├── l_bound: 12, u_bound: 17; investigated N6_MUL-- in [8:11]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 8=[N6_MUL--], 9=[N6_MUL--], 10=[N6_MUL--], 11=[N6_MUL--]}; 
+    ├── l_bound: 10, u_bound: 15; investigated N2_MUL-- in [2:5]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N2_MUL--], 5=[N2_MUL--]}; 
+    └── l_bound: 10, u_bound: 17; investigated N2_MUL-- in [3:6]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N2_MUL--], 5=[N2_MUL--], 6=[N2_MUL--]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 11 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+10 out of 11 DFG nodes could be skipped to find best schedule
+It took 3 milliseconds to converge
+Scheduling took 11 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+├── l_bound: 15, u_bound: 15; investigated N1_MUL-- in [2:5]; investigated partial schedule: {2=[N1_MUL--], 3=[N1_MUL--], 4=[N1_MUL--], 5=[N1_MUL--]}; 
+├── l_bound: 18, u_bound: 18; investigated N1_MUL-- in [8:11]; investigated partial schedule: {8=[N1_MUL--], 9=[N1_MUL--], 10=[N1_MUL--], 11=[N1_MUL--]}; 
+├── l_bound: 13, u_bound: 13; investigated N1_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--]}; 
+├── l_bound: 14, u_bound: 14; investigated N1_MUL-- in [1:4]; investigated partial schedule: {1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 4=[N1_MUL--]}; 
+├── l_bound: 16, u_bound: 18; investigated N1_MUL-- in [6:9]; investigated partial schedule: {6=[N1_MUL--], 7=[N1_MUL--], 8=[N1_MUL--], 9=[N1_MUL--]}; 
+├── l_bound: 16, u_bound: 17; investigated N1_MUL-- in [3:6]; investigated partial schedule: {3=[N1_MUL--], 4=[N1_MUL--], 5=[N1_MUL--], 6=[N1_MUL--]}; 
+├── l_bound: 15, u_bound: 18; investigated N1_MUL-- in [5:8]; investigated partial schedule: {5=[N1_MUL--], 6=[N1_MUL--], 7=[N1_MUL--], 8=[N1_MUL--]}; 
+├── l_bound: 17, u_bound: 18; investigated N1_MUL-- in [7:10]; investigated partial schedule: {7=[N1_MUL--], 8=[N1_MUL--], 9=[N1_MUL--], 10=[N1_MUL--]}; 
+├── l_bound: 14, u_bound: 14; investigated N1_MUL-- in [4:7]; investigated partial schedule: {4=[N1_MUL--], 5=[N1_MUL--], 6=[N1_MUL--], 7=[N1_MUL--]}; 
+└── l_bound: 19, u_bound: 19; investigated N1_MUL-- in [9:12]; investigated partial schedule: {9=[N1_MUL--], 10=[N1_MUL--], 11=[N1_MUL--], 12=[N1_MUL--]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+10 out of 11 DFG nodes could be skipped to find best schedule
+It took 5 milliseconds to converge
+Scheduling took 5 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+└── l_bound: 13, u_bound: 13; investigated N1_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+10 out of 11 DFG nodes could be skipped to find best schedule
+It took 4 milliseconds to converge
+Scheduling took 4 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+└── l_bound: 13, u_bound: 13; investigated N1_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 33 inspected nodes
+4 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+7 out of 11 DFG nodes could be skipped to find best schedule
+It took 8 milliseconds to converge
+Scheduling took 52 milliseconds
+
+Print BULB tree: 
+l_bound: 10, u_bound: 13; investigated partial schedule: {}; 
+├── l_bound: 10, u_bound: 17; investigated N1_MUL-- in [3:6]; investigated partial schedule: {3=[N1_MUL--], 4=[N1_MUL--], 5=[N1_MUL--], 6=[N1_MUL--]}; 
+├── l_bound: 10, u_bound: 14; investigated N1_MUL-- in [1:4]; investigated partial schedule: {1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 4=[N1_MUL--]}; 
+├── l_bound: 10, u_bound: 18; investigated N1_MUL-- in [5:8]; investigated partial schedule: {5=[N1_MUL--], 6=[N1_MUL--], 7=[N1_MUL--], 8=[N1_MUL--]}; 
+├── l_bound: 11, u_bound: 18; investigated N1_MUL-- in [7:10]; investigated partial schedule: {7=[N1_MUL--], 8=[N1_MUL--], 9=[N1_MUL--], 10=[N1_MUL--]}; 
+├── l_bound: 10, u_bound: 18; investigated N1_MUL-- in [6:9]; investigated partial schedule: {6=[N1_MUL--], 7=[N1_MUL--], 8=[N1_MUL--], 9=[N1_MUL--]}; 
+├── l_bound: 12, u_bound: 18; investigated N1_MUL-- in [8:11]; investigated partial schedule: {8=[N1_MUL--], 9=[N1_MUL--], 10=[N1_MUL--], 11=[N1_MUL--]}; 
+├── l_bound: 10, u_bound: 15; investigated N1_MUL-- in [2:5]; investigated partial schedule: {2=[N1_MUL--], 3=[N1_MUL--], 4=[N1_MUL--], 5=[N1_MUL--]}; 
+├── l_bound: 13, u_bound: 19; investigated N1_MUL-- in [9:12]; investigated partial schedule: {9=[N1_MUL--], 10=[N1_MUL--], 11=[N1_MUL--], 12=[N1_MUL--]}; 
+├── l_bound: 10, u_bound: 14; investigated N1_MUL-- in [4:7]; investigated partial schedule: {4=[N1_MUL--], 5=[N1_MUL--], 6=[N1_MUL--], 7=[N1_MUL--]}; 
+└── l_bound: 10, u_bound: 13; investigated N1_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--]}; 
+    ├── l_bound: 12, u_bound: 18; investigated N2_MUL-- in [8:11]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 8=[N2_MUL--], 9=[N2_MUL--], 10=[N2_MUL--], 11=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 18; investigated N2_MUL-- in [6:9]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 6=[N2_MUL--], 7=[N2_MUL--], 8=[N2_MUL--], 9=[N2_MUL--]}; 
+    ├── l_bound: 11, u_bound: 18; investigated N2_MUL-- in [7:10]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 7=[N2_MUL--], 8=[N2_MUL--], 9=[N2_MUL--], 10=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 15; investigated N2_MUL-- in [2:5]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N2_MUL--], 5=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 17; investigated N2_MUL-- in [3:6]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N2_MUL--], 5=[N2_MUL--], 6=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 13; investigated N2_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--]}; 
+    │   ├── l_bound: 10, u_bound: 13; investigated N6_MUL-- in [4:7]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 17; investigated N3_MUL-- in [7:10]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--, N3_MUL--], 8=[N3_MUL--], 9=[N3_MUL--], 10=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 17; investigated N3_MUL-- in [5:8]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--, N3_MUL--], 6=[N6_MUL--, N3_MUL--], 7=[N6_MUL--, N3_MUL--], 8=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 17; investigated N3_MUL-- in [6:9]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--, N3_MUL--], 7=[N6_MUL--, N3_MUL--], 8=[N3_MUL--], 9=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 15; investigated N3_MUL-- in [9:12]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 9=[N3_MUL--], 10=[N3_MUL--], 11=[N3_MUL--], 12=[N3_MUL--]}; 
+    │   │   ├── l_bound: 13, u_bound: 13; investigated N3_MUL-- in [4:7]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--, N3_MUL--], 5=[N6_MUL--, N3_MUL--], 6=[N6_MUL--, N3_MUL--], 7=[N6_MUL--, N3_MUL--]}; 
+    │   │   └── l_bound: 13, u_bound: 14; investigated N3_MUL-- in [8:11]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N6_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 8=[N3_MUL--], 9=[N3_MUL--], 10=[N3_MUL--], 11=[N3_MUL--]}; 
+    │   ├── l_bound: 10, u_bound: 17; investigated N6_MUL-- in [6:9]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 8=[N6_MUL--], 9=[N6_MUL--]}; 
+    │   ├── l_bound: 12, u_bound: 17; investigated N6_MUL-- in [8:11]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 8=[N6_MUL--], 9=[N6_MUL--], 10=[N6_MUL--], 11=[N6_MUL--]}; 
+    │   ├── l_bound: 10, u_bound: 17; investigated N6_MUL-- in [5:8]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 5=[N6_MUL--], 6=[N6_MUL--], 7=[N6_MUL--], 8=[N6_MUL--]}; 
+    │   ├── l_bound: 11, u_bound: 17; investigated N6_MUL-- in [7:10]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 7=[N6_MUL--], 8=[N6_MUL--], 9=[N6_MUL--], 10=[N6_MUL--]}; 
+    │   ├── l_bound: 13, u_bound: 18; investigated N6_MUL-- in [9:12]; investigated partial schedule: {0=[N1_MUL--, N2_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 9=[N6_MUL--], 10=[N6_MUL--], 11=[N6_MUL--], 12=[N6_MUL--]}; 
+    ├── l_bound: 10, u_bound: 14; investigated N2_MUL-- in [1:4]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--, N2_MUL--], 2=[N1_MUL--, N2_MUL--], 3=[N1_MUL--, N2_MUL--], 4=[N2_MUL--]}; 
+    ├── l_bound: 13, u_bound: 19; investigated N2_MUL-- in [9:12]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 9=[N2_MUL--], 10=[N2_MUL--], 11=[N2_MUL--], 12=[N2_MUL--]}; 
+    ├── l_bound: 10, u_bound: 14; investigated N2_MUL-- in [4:7]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 4=[N2_MUL--], 5=[N2_MUL--], 6=[N2_MUL--], 7=[N2_MUL--]}; 
+    └── l_bound: 10, u_bound: 18; investigated N2_MUL-- in [5:8]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 5=[N2_MUL--], 6=[N2_MUL--], 7=[N2_MUL--], 8=[N2_MUL--]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 11 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+10 out of 11 DFG nodes could be skipped to find best schedule
+It took 3 milliseconds to converge
+Scheduling took 21 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+├── l_bound: 16, u_bound: 18; investigated N1_MUL-- in [6:9]; investigated partial schedule: {6=[N1_MUL--], 7=[N1_MUL--], 8=[N1_MUL--], 9=[N1_MUL--]}; 
+├── l_bound: 18, u_bound: 18; investigated N1_MUL-- in [8:11]; investigated partial schedule: {8=[N1_MUL--], 9=[N1_MUL--], 10=[N1_MUL--], 11=[N1_MUL--]}; 
+├── l_bound: 15, u_bound: 18; investigated N1_MUL-- in [5:8]; investigated partial schedule: {5=[N1_MUL--], 6=[N1_MUL--], 7=[N1_MUL--], 8=[N1_MUL--]}; 
+├── l_bound: 15, u_bound: 15; investigated N1_MUL-- in [2:5]; investigated partial schedule: {2=[N1_MUL--], 3=[N1_MUL--], 4=[N1_MUL--], 5=[N1_MUL--]}; 
+├── l_bound: 19, u_bound: 19; investigated N1_MUL-- in [9:12]; investigated partial schedule: {9=[N1_MUL--], 10=[N1_MUL--], 11=[N1_MUL--], 12=[N1_MUL--]}; 
+├── l_bound: 14, u_bound: 14; investigated N1_MUL-- in [1:4]; investigated partial schedule: {1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--], 4=[N1_MUL--]}; 
+├── l_bound: 16, u_bound: 17; investigated N1_MUL-- in [3:6]; investigated partial schedule: {3=[N1_MUL--], 4=[N1_MUL--], 5=[N1_MUL--], 6=[N1_MUL--]}; 
+├── l_bound: 14, u_bound: 14; investigated N1_MUL-- in [4:7]; investigated partial schedule: {4=[N1_MUL--], 5=[N1_MUL--], 6=[N1_MUL--], 7=[N1_MUL--]}; 
+├── l_bound: 17, u_bound: 18; investigated N1_MUL-- in [7:10]; investigated partial schedule: {7=[N1_MUL--], 8=[N1_MUL--], 9=[N1_MUL--], 10=[N1_MUL--]}; 
+└── l_bound: 13, u_bound: 13; investigated N1_MUL-- in [0:3]; investigated partial schedule: {0=[N1_MUL--], 1=[N1_MUL--], 2=[N1_MUL--], 3=[N1_MUL--]}; 
+

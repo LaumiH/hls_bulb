@@ -1,0 +1,28 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout

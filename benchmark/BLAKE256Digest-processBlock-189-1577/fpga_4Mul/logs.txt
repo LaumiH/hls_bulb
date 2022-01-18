@@ -1,0 +1,49 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 1195 with latency 61
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 1198 with latency 61
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 1145 with latency 61
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+i=0; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 1198 with latency 61
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 213712 with latency 61
+Timeout reached while computing BLAKE256Digest-processBlock-189-1577.dot with fpga_4Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 215489 with latency 61
+Timeout reached while computing BLAKE256Digest-processBlock-189-1577.dot with fpga_4Mul
+Received timeout, aborting

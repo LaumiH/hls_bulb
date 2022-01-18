@@ -1,0 +1,158 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/SkipjackEngine-encryptBlock-97-392.dot
+DOING ASAP SCHEDULE
+Found schedule of length 35 with 59 nodes
+
+n58--101:IFGE : [0:0]
+n47--127:ISHR : [0:0]
+n46--184:DMA_LOAD(ref) : [0:1]
+n1--141:DMA_LOAD(ref) : [0:1]
+n37--137:IAND : [0:0]
+n17--241:IADD : [0:0]
+n7--203:DMA_LOAD(ref) : [0:1]
+n30--165:DMA_LOAD(ref) : [0:1]
+n23--238:IADD : [0:0]
+n34--234:IADD : [0:0]
+n44--147:DMA_LOAD(ref) : [0:1]
+n16--248:IFGE : [1:1]
+n26--381:IADD : [1:1]
+n20--131:IAND : [1:1]
+n53--388:IADD : [1:1]
+n22--385:IADD : [1:1]
+n27--354:DMA_LOAD : [2:3]
+n38--151:DMA_LOAD : [2:3]
+n49--298:DMA_LOAD : [2:3]
+n29--169:DMA_LOAD : [2:3]
+n5--335:DMA_LOAD : [2:3]
+n6--207:DMA_LOAD : [2:3]
+n42--188:DMA_LOAD : [2:3]
+n45--316:DMA_LOAD : [2:3]
+n36--152:IXOR : [4:4]
+n19--153:ERROR : [5:5]
+n18--155:IXOR : [6:6]
+n48--170:IXOR : [7:7]
+n43--171:ERROR : [8:8]
+n41--174:IXOR : [9:9]
+n40--189:IXOR : [10:10]
+n57--190:ERROR : [11:11]
+n21--193:IXOR : [12:12]
+n2--208:IXOR : [13:13]
+n28--219:ISHL : [13:13]
+n0--209:ERROR : [14:14]
+n52--212:IXOR : [15:15]
+n51--222:IADD : [16:16]
+n33--230:IXOR : [17:17]
+n9--235:IXOR : [18:18]
+n8--284:IAND : [19:19]
+n56--274:ISHR : [19:19]
+n12--299:IXOR : [20:20]
+n55--278:IAND : [20:20]
+n11--300:ERROR : [21:21]
+n54--302:IXOR : [22:22]
+n50--317:IXOR : [23:23]
+n35--318:ERROR : [24:24]
+n4--321:IXOR : [25:25]
+n3--336:IXOR : [26:26]
+n10--337:ERROR : [27:27]
+n39--340:IXOR : [28:28]
+n14--366:ISHL : [29:29]
+n32--355:IXOR : [29:29]
+n31--356:ERROR : [30:30]
+n15--359:IXOR : [31:31]
+n13--369:IADD : [32:32]
+n25--377:IXOR : [33:33]
+n24--382:IXOR : [34:34]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 35 with 59 nodes
+
+n44--147:DMA_LOAD(ref) : [0:1]
+n38--151:DMA_LOAD : [2:3]
+n1--141:DMA_LOAD(ref) : [3:4]
+n37--137:IAND : [3:3]
+n30--165:DMA_LOAD(ref) : [3:4]
+n36--152:IXOR : [4:4]
+n47--127:ISHR : [4:4]
+n29--169:DMA_LOAD : [5:6]
+n19--153:ERROR : [5:5]
+n20--131:IAND : [5:5]
+n46--184:DMA_LOAD(ref) : [6:7]
+n18--155:IXOR : [6:6]
+n48--170:IXOR : [7:7]
+n43--171:ERROR : [8:8]
+n42--188:DMA_LOAD : [8:9]
+n7--203:DMA_LOAD(ref) : [9:10]
+n41--174:IXOR : [9:9]
+n40--189:IXOR : [10:10]
+n57--190:ERROR : [11:11]
+n6--207:DMA_LOAD : [11:12]
+n21--193:IXOR : [12:12]
+n2--208:IXOR : [13:13]
+n0--209:ERROR : [14:14]
+n28--219:ISHL : [15:15]
+n52--212:IXOR : [15:15]
+n51--222:IADD : [16:16]
+n23--238:IADD : [17:17]
+n34--234:IADD : [17:17]
+n33--230:IXOR : [17:17]
+n49--298:DMA_LOAD : [18:19]
+n9--235:IXOR : [18:18]
+n8--284:IAND : [19:19]
+n12--299:IXOR : [20:20]
+n56--274:ISHR : [20:20]
+n45--316:DMA_LOAD : [21:22]
+n11--300:ERROR : [21:21]
+n55--278:IAND : [21:21]
+n54--302:IXOR : [22:22]
+n50--317:IXOR : [23:23]
+n35--318:ERROR : [24:24]
+n5--335:DMA_LOAD : [24:25]
+n4--321:IXOR : [25:25]
+n3--336:IXOR : [26:26]
+n27--354:DMA_LOAD : [27:28]
+n10--337:ERROR : [27:27]
+n39--340:IXOR : [28:28]
+n32--355:IXOR : [29:29]
+n31--356:ERROR : [30:30]
+n14--366:ISHL : [31:31]
+n15--359:IXOR : [31:31]
+n13--369:IADD : [32:32]
+n25--377:IXOR : [33:33]
+n26--381:IADD : [33:33]
+n17--241:IADD : [33:33]
+n58--101:IFGE : [34:34]
+n24--382:IXOR : [34:34]
+n16--248:IFGE : [34:34]
+n53--388:IADD : [34:34]
+n22--385:IADD : [34:34]
+
+FINISHED ALAP SCHEDULE
+

@@ -1,0 +1,278 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 17
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 17
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 17, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 20
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 17
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: listSchedule took the same time as lBoundEstimator: ASAP, ALAPBound: listSchedule
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: ASAP, ALAPBound: lazyALAP took the same time as lBoundEstimator: PAPER, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 20
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: ASAP, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 16
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 20
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 16
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 20
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: listSchedule -> 16, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 20
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 16
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 12 with 20 nodes
+
+n13--197:ISUB : [0:0]
+n16--204:ISUB : [0:0]
+n1--220:ISUB : [0:0]
+n3--212:ISUB : [0:0]
+n0--221:DMA_LOAD : [1:2]
+n2--213:DMA_LOAD : [1:2]
+n12--205:DMA_LOAD : [1:2]
+n11--198:DMA_LOAD : [1:2]
+n18--247:IADD : [3:3]
+n17--242:ISUB : [3:3]
+n19--183:IFGE : [3:3]
+n10--206:IXOR : [3:3]
+n5--214:IXOR : [4:4]
+n4--222:IXOR : [5:5]
+n14--226:IXOR : [6:6]
+n9--229:IXOR : [7:7]
+n7--237:ISHL : [8:8]
+n8--243:IUSHR : [8:8]
+n6--244:IOR : [9:9]
+n15--246:DMA_STORE : [10:11]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 13 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 12
+Initial best latency: 12
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 17 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 12; investigated partial schedule: {}; 
+├── l_bound: 14, u_bound: 14; investigated n13--197:ISUB in [2:2]; investigated partial schedule: {2=[n13--197:ISUB]}; 
+├── l_bound: 22, u_bound: 22; investigated n13--197:ISUB in [10:10]; investigated partial schedule: {10=[n13--197:ISUB]}; 
+├── l_bound: 18, u_bound: 18; investigated n13--197:ISUB in [6:6]; investigated partial schedule: {6=[n13--197:ISUB]}; 
+├── l_bound: 20, u_bound: 20; investigated n13--197:ISUB in [8:8]; investigated partial schedule: {8=[n13--197:ISUB]}; 
+├── l_bound: 21, u_bound: 21; investigated n13--197:ISUB in [9:9]; investigated partial schedule: {9=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 12; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+├── l_bound: 23, u_bound: 23; investigated n13--197:ISUB in [11:11]; investigated partial schedule: {11=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 13; investigated n13--197:ISUB in [1:1]; investigated partial schedule: {1=[n13--197:ISUB]}; 
+├── l_bound: 15, u_bound: 15; investigated n13--197:ISUB in [3:3]; investigated partial schedule: {3=[n13--197:ISUB]}; 
+├── l_bound: 16, u_bound: 16; investigated n13--197:ISUB in [4:4]; investigated partial schedule: {4=[n13--197:ISUB]}; 
+├── l_bound: 19, u_bound: 19; investigated n13--197:ISUB in [7:7]; investigated partial schedule: {7=[n13--197:ISUB]}; 
+└── l_bound: 17, u_bound: 17; investigated n13--197:ISUB in [5:5]; investigated partial schedule: {5=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 12
+Initial best latency: 12
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 2 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 12; investigated partial schedule: {}; 
+└── l_bound: 12, u_bound: 12; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 12
+Initial best latency: 12
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 3 milliseconds to converge
+Scheduling took 3 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 12; investigated partial schedule: {}; 
+└── l_bound: 12, u_bound: 12; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 13 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 12
+Initial best latency: 12
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 20 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 12; investigated partial schedule: {}; 
+├── l_bound: 17, u_bound: 17; investigated n13--197:ISUB in [5:5]; investigated partial schedule: {5=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 12; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+├── l_bound: 15, u_bound: 15; investigated n13--197:ISUB in [3:3]; investigated partial schedule: {3=[n13--197:ISUB]}; 
+├── l_bound: 19, u_bound: 19; investigated n13--197:ISUB in [7:7]; investigated partial schedule: {7=[n13--197:ISUB]}; 
+├── l_bound: 20, u_bound: 20; investigated n13--197:ISUB in [8:8]; investigated partial schedule: {8=[n13--197:ISUB]}; 
+├── l_bound: 18, u_bound: 18; investigated n13--197:ISUB in [6:6]; investigated partial schedule: {6=[n13--197:ISUB]}; 
+├── l_bound: 21, u_bound: 21; investigated n13--197:ISUB in [9:9]; investigated partial schedule: {9=[n13--197:ISUB]}; 
+├── l_bound: 14, u_bound: 14; investigated n13--197:ISUB in [2:2]; investigated partial schedule: {2=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 13; investigated n13--197:ISUB in [1:1]; investigated partial schedule: {1=[n13--197:ISUB]}; 
+├── l_bound: 16, u_bound: 16; investigated n13--197:ISUB in [4:4]; investigated partial schedule: {4=[n13--197:ISUB]}; 
+├── l_bound: 23, u_bound: 23; investigated n13--197:ISUB in [11:11]; investigated partial schedule: {11=[n13--197:ISUB]}; 
+└── l_bound: 22, u_bound: 22; investigated n13--197:ISUB in [10:10]; investigated partial schedule: {10=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 12
+Initial best latency: 12
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 3 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 12; investigated partial schedule: {}; 
+└── l_bound: 12, u_bound: 12; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 13 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 12
+Initial best latency: 12
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 16 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 12; investigated partial schedule: {}; 
+├── l_bound: 12, u_bound: 12; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 16; investigated n13--197:ISUB in [4:4]; investigated partial schedule: {4=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 17; investigated n13--197:ISUB in [5:5]; investigated partial schedule: {5=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 23; investigated n13--197:ISUB in [11:11]; investigated partial schedule: {11=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 21; investigated n13--197:ISUB in [9:9]; investigated partial schedule: {9=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 18; investigated n13--197:ISUB in [6:6]; investigated partial schedule: {6=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 20; investigated n13--197:ISUB in [8:8]; investigated partial schedule: {8=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 14; investigated n13--197:ISUB in [2:2]; investigated partial schedule: {2=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 13; investigated n13--197:ISUB in [1:1]; investigated partial schedule: {1=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 15; investigated n13--197:ISUB in [3:3]; investigated partial schedule: {3=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 19; investigated n13--197:ISUB in [7:7]; investigated partial schedule: {7=[n13--197:ISUB]}; 
+└── l_bound: 12, u_bound: 22; investigated n13--197:ISUB in [10:10]; investigated partial schedule: {10=[n13--197:ISUB]}; 
+

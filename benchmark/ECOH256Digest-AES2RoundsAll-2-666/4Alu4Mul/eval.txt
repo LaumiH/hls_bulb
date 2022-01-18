@@ -1,0 +1,386 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 42533, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 76916
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 42533, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 74260
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 42533, vs. lBoundEstimator: OWN, ALAPBound: lazyALAP -> 51873
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 42533, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 52978
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 42533, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 60275
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 74260, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 76916
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 51873, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 76916
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 52978, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 76916
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: listSchedule -> 60275, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 76916
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 51873, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 74260
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 52978, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 74260
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: listSchedule -> 60275, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 74260
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 51873, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 52978
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 51873, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 60275
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 52978, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 60275
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 61 with 179 nodes
+
+n24--17:DMA_LOAD(ref) : [0:1]
+n177--663:IADD : [0:0]
+n27--10:ISHL : [0:0]
+n178--5:IFGE : [0:0]
+n143--299:IADD : [1:1]
+n72--212:IADD : [1:1]
+n139--39:IADD : [1:1]
+n25--22:IADD : [2:2]
+n26--233:IADD : [2:2]
+n142--300:DMA_LOAD : [2:3]
+n151--125:IADD : [2:2]
+n125--282:IADD : [3:3]
+n158--126:DMA_LOAD : [3:4]
+n134--213:DMA_LOAD : [3:4]
+n91--320:IADD : [4:4]
+n51--60:IADD : [4:4]
+n117--108:IADD : [5:5]
+n43--195:IADD : [5:5]
+n75--40:DMA_LOAD : [5:6]
+n45--146:IADD : [5:5]
+n90--321:DMA_LOAD : [6:7]
+n92--147:DMA_LOAD : [6:7]
+n87--341:IADD : [6:6]
+n150--61:DMA_LOAD : [7:8]
+n140--109:DMA_LOAD : [7:8]
+n154--81:IADD : [8:8]
+n23--23:DMA_LOAD : [8:9]
+n130--283:DMA_LOAD : [9:10]
+n153--234:DMA_LOAD : [9:10]
+n135--254:IADD : [9:9]
+n138--167:IADD : [10:10]
+n149--196:DMA_LOAD : [10:11]
+n81--342:DMA_LOAD : [11:12]
+n41--13:DMA_LOAD(ref) : [11:12]
+n64--255:DMA_LOAD : [11:12]
+n47--30:DMA_LOAD(ref) : [12:13]
+n133--216:IUSHR : [13:13]
+n155--168:DMA_LOAD : [13:14]
+n166--82:DMA_LOAD : [13:14]
+n17--43:IUSHR : [14:14]
+n148--303:IUSHR : [14:14]
+n123--129:IUSHR : [15:15]
+n53--324:IUSHR : [15:15]
+n173--220:IAND : [15:15]
+n77--27:IAND : [15:15]
+n132--64:IUSHR : [16:16]
+n176--200:IAND : [16:16]
+n68--51:DMA_LOAD(ref) : [16:17]
+n16--47:IAND : [16:16]
+n152--237:IUSHR : [17:17]
+n175--113:IAND : [17:17]
+n114--150:IUSHR : [17:17]
+n167--307:IAND : [18:18]
+n146--287:IAND : [18:18]
+n113--133:IAND : [18:18]
+n80--345:IUSHR : [18:18]
+n52--328:IAND : [19:19]
+n63--258:IUSHR : [19:19]
+n95--171:IUSHR : [19:19]
+n32--72:DMA_LOAD(ref) : [19:20]
+n76--48:DMA_LOAD : [20:21]
+n20--134:DMA_LOAD : [20:21]
+n86--85:IUSHR : [20:20]
+n121--28:DMA_LOAD : [21:22]
+n69--241:IAND : [21:21]
+n58--288:DMA_LOAD : [22:23]
+n100--154:IAND : [22:22]
+n131--68:IAND : [22:22]
+n59--308:DMA_LOAD : [23:24]
+n115--201:DMA_LOAD : [23:24]
+n19--114:DMA_LOAD : [23:24]
+n116--221:DMA_LOAD : [24:25]
+n71--69:DMA_LOAD : [25:26]
+n82--329:DMA_LOAD : [25:26]
+n85--89:IAND : [25:25]
+n67--242:DMA_LOAD : [26:27]
+n33--262:IAND : [26:26]
+n39--175:IAND : [27:27]
+n127--349:IAND : [27:27]
+n99--155:DMA_LOAD : [27:28]
+n13--90:DMA_LOAD : [28:29]
+n35--176:DMA_LOAD : [28:29]
+n57--309:IXOR : [28:28]
+n18--135:IXOR : [29:29]
+n126--350:DMA_LOAD : [29:30]
+n70--49:IXOR : [30:30]
+n98--222:IXOR : [30:30]
+n31--263:DMA_LOAD : [30:31]
+n124--93:DMA_LOAD : [31:32]
+n30--243:IXOR : [31:31]
+n8--179:DMA_LOAD : [31:32]
+n128--330:IXOR : [32:32]
+n106--353:DMA_LOAD : [32:33]
+n162--266:DMA_LOAD : [33:34]
+n12--70:IXOR : [33:33]
+n34--156:IXOR : [33:33]
+n29--264:IXOR : [34:34]
+n147--351:IXOR : [34:34]
+n7--177:IXOR : [34:34]
+n15--269:IXOR : [35:35]
+n6--182:IXOR : [35:35]
+n10--356:IXOR : [35:35]
+n11--91:IXOR : [35:35]
+n141--511:IUSHR : [36:36]
+n137--384:IUSHR : [36:36]
+n119--448:IUSHR : [36:36]
+n22--96:IXOR : [36:36]
+n14--501:IAND : [37:37]
+n122--515:IAND : [37:37]
+n48--452:IAND : [37:37]
+n28--573:IUSHR : [37:37]
+n136--388:IAND : [38:38]
+n145--564:IAND : [38:38]
+n4--588:IUSHR : [38:38]
+n112--525:IUSHR : [38:38]
+n156--438:IAND : [39:39]
+n62--463:IUSHR : [39:39]
+n42--374:IAND : [39:39]
+n170--577:IAND : [39:39]
+n1--565:DMA_LOAD : [40:41]
+n2--578:DMA_LOAD : [40:41]
+n3--592:IAND : [40:40]
+n56--399:IUSHR : [40:40]
+n5--540:IUSHR : [41:41]
+n50--603:IUSHR : [41:41]
+n61--467:IAND : [42:42]
+n83--502:DMA_LOAD : [42:43]
+n40--375:DMA_LOAD : [42:43]
+n9--414:IUSHR : [42:42]
+n21--477:IUSHR : [43:43]
+n97--389:DMA_LOAD : [43:44]
+n111--529:IAND : [44:44]
+n79--439:DMA_LOAD : [44:45]
+n55--403:IAND : [44:44]
+n46--453:DMA_LOAD : [45:46]
+n108--516:DMA_LOAD : [45:46]
+n84--481:IAND : [45:45]
+n49--607:IAND : [46:46]
+n44--544:IAND : [46:46]
+n120--468:DMA_LOAD : [47:48]
+n164--530:DMA_LOAD : [47:48]
+n159--418:IAND : [47:47]
+n104--593:DMA_LOAD : [47:48]
+n118--404:DMA_LOAD : [48:49]
+n0--579:IXOR : [49:49]
+n174--419:DMA_LOAD : [49:50]
+n103--482:DMA_LOAD : [49:50]
+n107--517:IXOR : [50:50]
+n60--545:DMA_LOAD : [50:51]
+n96--390:IXOR : [51:51]
+n74--608:DMA_LOAD : [51:52]
+n78--454:IXOR : [51:51]
+n165--405:IXOR : [52:52]
+n110--469:IXOR : [52:52]
+n163--531:IXOR : [52:52]
+n37--554:IADD : [53:53]
+n169--420:IXOR : [53:53]
+n102--645:IADD : [53:53]
+n73--594:IXOR : [53:53]
+n38--609:IXOR : [54:54]
+n94--617:IADD : [54:54]
+n129--365:IADD : [54:54]
+n105--659:IADD : [54:54]
+n54--491:IADD : [55:55]
+n172--428:IADD : [55:55]
+n89--546:IXOR : [55:55]
+n109--483:IXOR : [55:55]
+n36--610:DMA_STORE : [56:57]
+n144--660:DMA_STORE : [56:57]
+n157--647:DMA_STORE : [56:57]
+n66--631:IADD : [56:56]
+n168--421:DMA_STORE : [57:58]
+n93--619:DMA_STORE : [58:59]
+n65--633:DMA_STORE : [58:59]
+n171--484:DMA_STORE : [58:59]
+n88--547:DMA_STORE : [59:60]
+n101--650:IFNE : [60:60]
+n161--636:IFNE : [60:60]
+n160--622:IFNE : [60:60]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 4213 inspected nodes
+976 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 6 times
+Best latency found: 61
+Initial best latency: 62
+12 out of 179 DFG nodes could be skipped to find best schedule
+It took 1743 milliseconds to converge
+Scheduling took 42533 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 5538 inspected nodes
+976 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 6 times
+Best latency found: 61
+Initial best latency: 62
+12 out of 179 DFG nodes could be skipped to find best schedule
+It took 2327 milliseconds to converge
+Scheduling took 76916 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 5538 inspected nodes
+976 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 6 times
+Best latency found: 61
+Initial best latency: 62
+12 out of 179 DFG nodes could be skipped to find best schedule
+It took 2141 milliseconds to converge
+Scheduling took 74260 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 4213 inspected nodes
+976 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 6 times
+Best latency found: 61
+Initial best latency: 62
+12 out of 179 DFG nodes could be skipped to find best schedule
+It took 2138 milliseconds to converge
+Scheduling took 51873 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 4213 inspected nodes
+976 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 6 times
+Best latency found: 61
+Initial best latency: 62
+12 out of 179 DFG nodes could be skipped to find best schedule
+It took 2185 milliseconds to converge
+Scheduling took 52978 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 5538 inspected nodes
+976 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 6 times
+Best latency found: 61
+Initial best latency: 62
+12 out of 179 DFG nodes could be skipped to find best schedule
+It took 1732 milliseconds to converge
+Scheduling took 60275 milliseconds
+
+Buld tree is huge, will not print it

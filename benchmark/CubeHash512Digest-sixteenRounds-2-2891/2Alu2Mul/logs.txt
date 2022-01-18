@@ -1,0 +1,48 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 74987 with latency 385
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with 2Alu2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 75223 with latency 385
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with 2Alu2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 72745 with latency 385
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with 2Alu2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 71961 with latency 385
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with 2Alu2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 56276 with latency 385
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with 2Alu2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 56572 with latency 385
+Timeout reached while computing CubeHash512Digest-sixteenRounds-2-2891.dot with 2Alu2Mul
+Received timeout, aborting

@@ -1,0 +1,82 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/GrayscaleFilter-filter-13-113.dot
+DOING ASAP SCHEDULE
+Found schedule of length 16 with 21 nodes
+
+n1--22:DMA_LOAD : [0:1]
+n19--110:IADD : [0:0]
+n20--16:IFGE : [0:0]
+n0--59:IAND : [2:2]
+n2--47:ISHR : [2:2]
+n3--29:IAND : [2:2]
+n12--36:ISHR : [2:2]
+n16--78:IMUL : [3:6]
+n7--40:IAND : [3:3]
+n9--51:IAND : [3:3]
+n13--72:IMUL : [4:7]
+n6--66:IMUL : [4:7]
+n15--73:IADD : [8:8]
+n5--79:IADD : [9:9]
+n4--82:ISHR : [10:10]
+n14--97:ISHL : [11:11]
+n17--91:ISHL : [11:11]
+n8--98:IOR : [11:11]
+n11--92:IOR : [12:12]
+n10--101:IOR : [13:13]
+n18--109:DMA_STORE : [14:15]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 16 with 21 nodes
+
+n1--22:DMA_LOAD : [0:1]
+n2--47:ISHR : [2:2]
+n12--36:ISHR : [2:2]
+n7--40:IAND : [3:3]
+n9--51:IAND : [3:3]
+n13--72:IMUL : [4:7]
+n0--59:IAND : [4:4]
+n6--66:IMUL : [4:7]
+n16--78:IMUL : [5:8]
+n15--73:IADD : [8:8]
+n5--79:IADD : [9:9]
+n4--82:ISHR : [10:10]
+n14--97:ISHL : [11:11]
+n3--29:IAND : [11:11]
+n17--91:ISHL : [11:11]
+n8--98:IOR : [12:12]
+n11--92:IOR : [12:12]
+n10--101:IOR : [13:13]
+n18--109:DMA_STORE : [14:15]
+n19--110:IADD : [15:15]
+n20--16:IFGE : [15:15]
+
+FINISHED ALAP SCHEDULE
+

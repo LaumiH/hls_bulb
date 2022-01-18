@@ -1,0 +1,204 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 6, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 123827
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: listSchedule took the same time as lBoundEstimator: OWN, ALAPBound: listSchedule
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 1, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 6
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 6
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 5, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 123827
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 1, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 123827
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 123827
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 1, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 5
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 5
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 7 with 23 nodes
+
+n1--693:ISHL : [0:0]
+n3--699:DMA_LOAD : [0:1]
+n4--704:ISUB : [0:0]
+n6--658:ISHL : [0:0]
+n0--695:ISUB : [1:1]
+n9--664:DMA_LOAD : [1:2]
+n10--669:ISUB : [1:1]
+n14--654:ISHL : [2:2]
+n2--705:ISHR : [2:2]
+n5--660:ISUB : [2:2]
+n17--689:ISHL : [3:3]
+n7--706:IAND : [3:3]
+n8--670:ISHR : [3:3]
+n12--717:ISHL : [3:3]
+n16--707:IOR : [4:4]
+n15--671:IAND : [4:4]
+n18--647:ISUB : [4:4]
+n19--633:IFEQ : [4:4]
+n13--672:IOR : [5:5]
+n21--723:ISUB : [5:5]
+n20--640:IFLT(sce) : [5:5]
+n11--718:DMA_STORE : [5:6]
+n22--679:IADD : [6:6]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 7 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 3 times
+Best latency found: 7
+Initial best latency: 7
+22 out of 23 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 6 milliseconds
+
+Print BULB tree: 
+l_bound: 7, u_bound: 7; investigated partial schedule: {}; 
+├── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [1:2]; investigated partial schedule: {1=[n3--699:DMA_LOAD], 2=[n3--699:DMA_LOAD]}; 
+├── l_bound: 8, u_bound: 8; investigated n3--699:DMA_LOAD in [3:4]; investigated partial schedule: {3=[n3--699:DMA_LOAD], 4=[n3--699:DMA_LOAD]}; 
+├── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [2:3]; investigated partial schedule: {2=[n3--699:DMA_LOAD], 3=[n3--699:DMA_LOAD]}; 
+├── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n3--699:DMA_LOAD], 1=[n3--699:DMA_LOAD]}; 
+├── l_bound: 9, u_bound: 9; investigated n3--699:DMA_LOAD in [4:5]; investigated partial schedule: {4=[n3--699:DMA_LOAD], 5=[n3--699:DMA_LOAD]}; 
+└── l_bound: 10, u_bound: 10; investigated n3--699:DMA_LOAD in [5:6]; investigated partial schedule: {5=[n3--699:DMA_LOAD], 6=[n3--699:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 945322 inspected nodes
+1549541 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 452044 times
+Best latency found: 7
+Initial best latency: 7
+21 out of 23 DFG nodes could be skipped to find best schedule
+It took 7 milliseconds to converge
+Scheduling took 123827 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 7 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 3 times
+Best latency found: 7
+Initial best latency: 7
+22 out of 23 DFG nodes could be skipped to find best schedule
+It took 1 milliseconds to converge
+Scheduling took 5 milliseconds
+
+Print BULB tree: 
+l_bound: 7, u_bound: 7; investigated partial schedule: {}; 
+├── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [1:2]; investigated partial schedule: {1=[n3--699:DMA_LOAD], 2=[n3--699:DMA_LOAD]}; 
+├── l_bound: 8, u_bound: 8; investigated n3--699:DMA_LOAD in [3:4]; investigated partial schedule: {3=[n3--699:DMA_LOAD], 4=[n3--699:DMA_LOAD]}; 
+├── l_bound: 9, u_bound: 9; investigated n3--699:DMA_LOAD in [4:5]; investigated partial schedule: {4=[n3--699:DMA_LOAD], 5=[n3--699:DMA_LOAD]}; 
+├── l_bound: 10, u_bound: 10; investigated n3--699:DMA_LOAD in [5:6]; investigated partial schedule: {5=[n3--699:DMA_LOAD], 6=[n3--699:DMA_LOAD]}; 
+├── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [2:3]; investigated partial schedule: {2=[n3--699:DMA_LOAD], 3=[n3--699:DMA_LOAD]}; 
+└── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n3--699:DMA_LOAD], 1=[n3--699:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 7
+Initial best latency: 7
+22 out of 23 DFG nodes could be skipped to find best schedule
+It took 1 milliseconds to converge
+Scheduling took 1 milliseconds
+
+Print BULB tree: 
+l_bound: 7, u_bound: 7; investigated partial schedule: {}; 
+└── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n3--699:DMA_LOAD], 1=[n3--699:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 7
+Initial best latency: 7
+22 out of 23 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 2 milliseconds
+
+Print BULB tree: 
+l_bound: 7, u_bound: 7; investigated partial schedule: {}; 
+└── l_bound: 7, u_bound: 7; investigated n3--699:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n3--699:DMA_LOAD], 1=[n3--699:DMA_LOAD]}; 
+

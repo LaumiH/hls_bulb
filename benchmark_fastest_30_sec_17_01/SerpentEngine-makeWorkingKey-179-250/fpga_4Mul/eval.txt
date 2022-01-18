@@ -1,0 +1,687 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 308
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 687
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 42
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 67
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: PAPER, ALAPBound: lazyALAP took the same time as lBoundEstimator: OWN, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 308, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 687
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 42, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 308
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 67, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 308
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 308
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 42, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 687
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 67, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 687
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 687
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 42, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 67
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 42
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 67
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 13 with 20 nodes
+
+n13--197:ISUB : [0:0]
+n16--204:ISUB : [0:0]
+n1--220:ISUB : [0:0]
+n18--247:IADD : [0:0]
+n3--212:ISUB : [0:0]
+n17--242:ISUB : [0:0]
+n19--183:IFGE : [0:0]
+n12--205:DMA_LOAD : [1:2]
+n11--198:DMA_LOAD : [1:2]
+n0--221:DMA_LOAD : [3:4]
+n2--213:DMA_LOAD : [3:4]
+n10--206:IXOR : [3:3]
+n5--214:IXOR : [5:5]
+n4--222:IXOR : [6:6]
+n14--226:IXOR : [7:7]
+n9--229:IXOR : [8:8]
+n7--237:ISHL : [9:9]
+n8--243:IUSHR : [9:9]
+n6--244:IOR : [10:10]
+n15--246:DMA_STORE : [11:12]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 10 milliseconds to converge
+Scheduling took 10 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+└── l_bound: 13, u_bound: 13; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 151 inspected nodes
+18 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 20 times
+Best latency found: 13
+Initial best latency: 13
+16 out of 20 DFG nodes could be skipped to find best schedule
+It took 39 milliseconds to converge
+Scheduling took 308 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 13; investigated partial schedule: {}; 
+└── l_bound: 12, u_bound: 13; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+    ├── l_bound: 12, u_bound: 14; investigated n16--204:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB], 1=[n16--204:ISUB]}; 
+    └── l_bound: 12, u_bound: 13; investigated n16--204:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB]}; 
+        ├── l_bound: 12, u_bound: 13; investigated n3--212:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB]}; 
+        │   ├── l_bound: 13, u_bound: 14; investigated n12--205:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 3=[n12--205:DMA_LOAD], 4=[n12--205:DMA_LOAD]}; 
+        │   ├── l_bound: 13, u_bound: 13; investigated n12--205:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n12--205:DMA_LOAD], 2=[n3--212:ISUB, n12--205:DMA_LOAD]}; 
+        │   └── l_bound: 13, u_bound: 14; investigated n12--205:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB, n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+        ├── l_bound: 12, u_bound: 13; investigated n3--212:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB]}; 
+        │   ├── l_bound: 12, u_bound: 14; investigated n12--205:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+        │   ├── l_bound: 12, u_bound: 14; investigated n12--205:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 3=[n12--205:DMA_LOAD], 4=[n12--205:DMA_LOAD]}; 
+        │   └── l_bound: 12, u_bound: 13; investigated n12--205:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD]}; 
+        │       ├── l_bound: 12, u_bound: 14; investigated n11--198:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 3=[n11--198:DMA_LOAD], 4=[n11--198:DMA_LOAD]}; 
+        │       ├── l_bound: 12, u_bound: 13; investigated n11--198:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+        │       │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+        │       │   │   └── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+        │       │   │       ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+        │       │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+        │       │   │   │   └── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+        │       │   │   └── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+        │       │   ├── l_bound: 12, u_bound: 17; investigated n1--220:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n1--220:ISUB]}; 
+        │       │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+        │       │   │   │   └── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+        │       │   │   └── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+        │       │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB]}; 
+        │       │   │   ├── l_bound: 13, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB, n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 13, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+        │       │   │   ├── l_bound: 13, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+        │       │   │   └── l_bound: 13, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+        │       │   ├── l_bound: 12, u_bound: 16; investigated n1--220:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n1--220:ISUB]}; 
+        │       │   ├── l_bound: 12, u_bound: 14; investigated n1--220:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n1--220:ISUB]}; 
+        │       │   └── l_bound: 12, u_bound: 15; investigated n1--220:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n1--220:ISUB]}; 
+        │       ├── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 5=[n11--198:DMA_LOAD], 6=[n11--198:DMA_LOAD]}; 
+        │       ├── l_bound: 12, u_bound: 14; investigated n11--198:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+        │       └── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 4=[n11--198:DMA_LOAD], 5=[n11--198:DMA_LOAD]}; 
+        └── l_bound: 12, u_bound: 13; investigated n3--212:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB]}; 
+            ├── l_bound: 12, u_bound: 14; investigated n12--205:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 3=[n12--205:DMA_LOAD], 4=[n12--205:DMA_LOAD]}; 
+            ├── l_bound: 12, u_bound: 13; investigated n12--205:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+            │   ├── l_bound: 13, u_bound: 15; investigated n11--198:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 4=[n11--198:DMA_LOAD], 5=[n11--198:DMA_LOAD]}; 
+            │   ├── l_bound: 13, u_bound: 14; investigated n11--198:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+            │   ├── l_bound: 13, u_bound: 13; investigated n11--198:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+            │   ├── l_bound: 13, u_bound: 16; investigated n11--198:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 5=[n11--198:DMA_LOAD], 6=[n11--198:DMA_LOAD]}; 
+            │   └── l_bound: 13, u_bound: 14; investigated n11--198:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n11--198:DMA_LOAD]}; 
+            └── l_bound: 12, u_bound: 13; investigated n12--205:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD]}; 
+                ├── l_bound: 12, u_bound: 14; investigated n11--198:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 3=[n11--198:DMA_LOAD], 4=[n11--198:DMA_LOAD]}; 
+                ├── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 4=[n11--198:DMA_LOAD], 5=[n11--198:DMA_LOAD]}; 
+                ├── l_bound: 12, u_bound: 13; investigated n11--198:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+                │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+                │   │   └── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+                │   │       ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+                │   │       └── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+                │   ├── l_bound: 12, u_bound: 14; investigated n1--220:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n1--220:ISUB]}; 
+                │   ├── l_bound: 12, u_bound: 17; investigated n1--220:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n1--220:ISUB]}; 
+                │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+                │   │   │   └── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+                │   │   └── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+                │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+                │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+                │   │   │   └── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+                │   │   └── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+                │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB]}; 
+                │   │   ├── l_bound: 13, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 13, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB, n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+                │   │   ├── l_bound: 13, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+                │   │   └── l_bound: 13, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+                │   ├── l_bound: 12, u_bound: 15; investigated n1--220:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n1--220:ISUB]}; 
+                │   └── l_bound: 12, u_bound: 16; investigated n1--220:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n1--220:ISUB]}; 
+                ├── l_bound: 12, u_bound: 13; investigated n11--198:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+                │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+                │   ├── l_bound: 13, u_bound: 14; investigated n1--220:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 4=[n1--220:ISUB]}; 
+                │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+                │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+                │   ├── l_bound: 13, u_bound: 15; investigated n1--220:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 5=[n1--220:ISUB]}; 
+                │   ├── l_bound: 13, u_bound: 16; investigated n1--220:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 6=[n1--220:ISUB]}; 
+                │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB, n11--198:DMA_LOAD]}; 
+                │   └── l_bound: 13, u_bound: 17; investigated n1--220:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 7=[n1--220:ISUB]}; 
+                └── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 5=[n11--198:DMA_LOAD], 6=[n11--198:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 271 inspected nodes
+18 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 20 times
+Best latency found: 13
+Initial best latency: 13
+16 out of 20 DFG nodes could be skipped to find best schedule
+It took 39 milliseconds to converge
+Scheduling took 687 milliseconds
+
+Print BULB tree: 
+l_bound: 12, u_bound: 13; investigated partial schedule: {}; 
+├── l_bound: 12, u_bound: 20; investigated n13--197:ISUB in [8:8]; investigated partial schedule: {8=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 23; investigated n13--197:ISUB in [11:11]; investigated partial schedule: {11=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 14; investigated n13--197:ISUB in [2:2]; investigated partial schedule: {2=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 22; investigated n13--197:ISUB in [10:10]; investigated partial schedule: {10=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 18; investigated n13--197:ISUB in [6:6]; investigated partial schedule: {6=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 19; investigated n13--197:ISUB in [7:7]; investigated partial schedule: {7=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 21; investigated n13--197:ISUB in [9:9]; investigated partial schedule: {9=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 24; investigated n13--197:ISUB in [12:12]; investigated partial schedule: {12=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 17; investigated n13--197:ISUB in [5:5]; investigated partial schedule: {5=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 16; investigated n13--197:ISUB in [4:4]; investigated partial schedule: {4=[n13--197:ISUB]}; 
+├── l_bound: 12, u_bound: 13; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 13; investigated n16--204:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 22; investigated n3--212:ISUB in [11:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 11=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 13; investigated n3--212:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB]}; 
+│   │   │   ├── l_bound: 12, u_bound: 17; investigated n12--205:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 6=[n12--205:DMA_LOAD], 7=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 19; investigated n12--205:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 8=[n12--205:DMA_LOAD], 9=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 20; investigated n12--205:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 9=[n12--205:DMA_LOAD], 10=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 13; investigated n12--205:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n11--198:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 7=[n11--198:DMA_LOAD], 8=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n11--198:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n11--198:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 5=[n11--198:DMA_LOAD], 6=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 20; investigated n11--198:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 9=[n11--198:DMA_LOAD], 10=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n11--198:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 22; investigated n11--198:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 11=[n11--198:DMA_LOAD], 12=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 21; investigated n11--198:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 10=[n11--198:DMA_LOAD], 11=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n11--198:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 15; investigated n11--198:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 4=[n11--198:DMA_LOAD], 5=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n11--198:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 6=[n11--198:DMA_LOAD], 7=[n11--198:DMA_LOAD]}; 
+│   │   │   │   └── l_bound: 13, u_bound: 19; investigated n11--198:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD], 8=[n11--198:DMA_LOAD], 9=[n11--198:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 22; investigated n12--205:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 11=[n12--205:DMA_LOAD], 12=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 21; investigated n12--205:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 10=[n12--205:DMA_LOAD], 11=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 16; investigated n12--205:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 5=[n12--205:DMA_LOAD], 6=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 14; investigated n12--205:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 3=[n12--205:DMA_LOAD], 4=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 13; investigated n12--205:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n11--198:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 9=[n11--198:DMA_LOAD], 10=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n11--198:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 6=[n11--198:DMA_LOAD], 7=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n11--198:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n1--220:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 4=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 19; investigated n1--220:ISUB in [9:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 9=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n1--220:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 6=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 20; investigated n1--220:ISUB in [10:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 10=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 22; investigated n1--220:ISUB in [12:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 12=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 15; investigated n1--220:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 5=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 21; investigated n1--220:ISUB in [11:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 11=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n1--220:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 7=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n1--220:ISUB in [8:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD], 8=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   └── l_bound: 13, u_bound: 13; investigated n1--220:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 22; investigated n11--198:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 11=[n11--198:DMA_LOAD], 12=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 4=[n11--198:DMA_LOAD], 5=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n11--198:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 7=[n11--198:DMA_LOAD], 8=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n11--198:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB, n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   └── l_bound: 13, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n1--220:ISUB in [10:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n1--220:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 22; investigated n1--220:ISUB in [12:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 12=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 20; investigated n0--221:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 11=[n0--221:DMA_LOAD], 12=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   └── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   └── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   └── l_bound: 13, u_bound: 20; investigated n0--221:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 11=[n0--221:DMA_LOAD], 12=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   └── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n1--220:ISUB in [9:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   └── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 20; investigated n0--221:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 11=[n0--221:DMA_LOAD], 12=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │       ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │       └── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n1--220:ISUB, n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n1--220:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n1--220:ISUB in [8:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n1--220:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 21; investigated n1--220:ISUB in [11:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n1--220:ISUB]}; 
+│   │   │   │   │   └── l_bound: 12, u_bound: 14; investigated n1--220:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n1--220:ISUB]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 5=[n11--198:DMA_LOAD], 6=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n11--198:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 8=[n11--198:DMA_LOAD], 9=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 21; investigated n11--198:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 10=[n11--198:DMA_LOAD], 11=[n11--198:DMA_LOAD]}; 
+│   │   │   │   └── l_bound: 12, u_bound: 14; investigated n11--198:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB, n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 3=[n11--198:DMA_LOAD], 4=[n11--198:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 16; investigated n12--205:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 4=[n12--205:DMA_LOAD], 5=[n12--205:DMA_LOAD]}; 
+│   │   │   └── l_bound: 12, u_bound: 18; investigated n12--205:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n3--212:ISUB], 7=[n12--205:DMA_LOAD], 8=[n12--205:DMA_LOAD]}; 
+│   │   ├── l_bound: 13, u_bound: 23; investigated n3--212:ISUB in [12:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 12=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 21; investigated n3--212:ISUB in [10:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 10=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 13; investigated n3--212:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB]}; 
+│   │   │   ├── l_bound: 12, u_bound: 13; investigated n12--205:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n11--198:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n11--198:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 3=[n11--198:DMA_LOAD], 4=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n11--198:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 7=[n11--198:DMA_LOAD], 8=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 5=[n11--198:DMA_LOAD], 6=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n11--198:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 6=[n11--198:DMA_LOAD], 7=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n11--198:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 4=[n11--198:DMA_LOAD], 5=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n11--198:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n1--220:ISUB in [8:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 13, u_bound: 22; investigated n1--220:ISUB in [12:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 12=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n1--220:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n1--220:ISUB in [10:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 21; investigated n1--220:ISUB in [11:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n1--220:ISUB in [9:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB, n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   └── l_bound: 13, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n1--220:ISUB], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 20; investigated n0--221:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 11=[n0--221:DMA_LOAD], 12=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   └── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   └── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n1--220:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n1--220:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n1--220:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n1--220:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n1--220:ISUB]}; 
+│   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 20; investigated n0--221:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 11=[n0--221:DMA_LOAD], 12=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   │   └── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │   └── l_bound: 12, u_bound: 13; investigated n1--220:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 13, u_bound: 21; investigated n2--213:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 11=[n2--213:DMA_LOAD], 12=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 19; investigated n2--213:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 9=[n2--213:DMA_LOAD], 10=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 13; investigated n2--213:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 15; investigated n0--221:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 6=[n0--221:DMA_LOAD], 7=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 14; investigated n0--221:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD], 6=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 16; investigated n0--221:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 7=[n0--221:DMA_LOAD], 8=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 17; investigated n0--221:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 8=[n0--221:DMA_LOAD], 9=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 18; investigated n0--221:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 9=[n0--221:DMA_LOAD], 10=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 19; investigated n0--221:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 10=[n0--221:DMA_LOAD], 11=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   ├── l_bound: 13, u_bound: 13; investigated n0--221:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n0--221:DMA_LOAD, n2--213:DMA_LOAD], 5=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       │   └── l_bound: 13, u_bound: 20; investigated n0--221:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 3=[n2--213:DMA_LOAD], 4=[n2--213:DMA_LOAD], 11=[n0--221:DMA_LOAD], 12=[n0--221:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 16; investigated n2--213:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 6=[n2--213:DMA_LOAD], 7=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 17; investigated n2--213:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 7=[n2--213:DMA_LOAD], 8=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 14; investigated n2--213:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 4=[n2--213:DMA_LOAD], 5=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 18; investigated n2--213:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 8=[n2--213:DMA_LOAD], 9=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       ├── l_bound: 12, u_bound: 20; investigated n2--213:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 10=[n2--213:DMA_LOAD], 11=[n2--213:DMA_LOAD]}; 
+│   │   │   │   │       └── l_bound: 12, u_bound: 15; investigated n2--213:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD, n11--198:DMA_LOAD], 2=[n1--220:ISUB, n12--205:DMA_LOAD, n11--198:DMA_LOAD], 5=[n2--213:DMA_LOAD], 6=[n2--213:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 20; investigated n11--198:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 9=[n11--198:DMA_LOAD], 10=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 13, u_bound: 22; investigated n11--198:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 11=[n11--198:DMA_LOAD], 12=[n11--198:DMA_LOAD]}; 
+│   │   │   │   ├── l_bound: 12, u_bound: 19; investigated n11--198:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 8=[n11--198:DMA_LOAD], 9=[n11--198:DMA_LOAD]}; 
+│   │   │   │   └── l_bound: 12, u_bound: 21; investigated n11--198:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 1=[n12--205:DMA_LOAD], 2=[n12--205:DMA_LOAD], 10=[n11--198:DMA_LOAD], 11=[n11--198:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 14; investigated n12--205:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 3=[n12--205:DMA_LOAD], 4=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 18; investigated n12--205:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 7=[n12--205:DMA_LOAD], 8=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 16; investigated n12--205:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 5=[n12--205:DMA_LOAD], 6=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 20; investigated n12--205:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 9=[n12--205:DMA_LOAD], 10=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 21; investigated n12--205:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 10=[n12--205:DMA_LOAD], 11=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 14; investigated n12--205:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 2=[n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 19; investigated n12--205:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 8=[n12--205:DMA_LOAD], 9=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 12, u_bound: 17; investigated n12--205:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 6=[n12--205:DMA_LOAD], 7=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 22; investigated n12--205:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 11=[n12--205:DMA_LOAD], 12=[n12--205:DMA_LOAD]}; 
+│   │   │   └── l_bound: 12, u_bound: 16; investigated n12--205:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB, n3--212:ISUB], 4=[n12--205:DMA_LOAD], 5=[n12--205:DMA_LOAD]}; 
+│   │   ├── l_bound: 12, u_bound: 14; investigated n3--212:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 3=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 18; investigated n3--212:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 7=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 15; investigated n3--212:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 4=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 13; investigated n3--212:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB]}; 
+│   │   │   ├── l_bound: 13, u_bound: 14; investigated n12--205:DMA_LOAD in [2:3]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB, n12--205:DMA_LOAD], 3=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 17; investigated n12--205:DMA_LOAD in [6:7]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 6=[n12--205:DMA_LOAD], 7=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 18; investigated n12--205:DMA_LOAD in [7:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 7=[n12--205:DMA_LOAD], 8=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 22; investigated n12--205:DMA_LOAD in [11:12]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 11=[n12--205:DMA_LOAD], 12=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 19; investigated n12--205:DMA_LOAD in [8:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 8=[n12--205:DMA_LOAD], 9=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 16; investigated n12--205:DMA_LOAD in [5:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 5=[n12--205:DMA_LOAD], 6=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 20; investigated n12--205:DMA_LOAD in [9:10]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 9=[n12--205:DMA_LOAD], 10=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 13; investigated n12--205:DMA_LOAD in [1:2]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 1=[n12--205:DMA_LOAD], 2=[n3--212:ISUB, n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 21; investigated n12--205:DMA_LOAD in [10:11]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 10=[n12--205:DMA_LOAD], 11=[n12--205:DMA_LOAD]}; 
+│   │   │   ├── l_bound: 13, u_bound: 14; investigated n12--205:DMA_LOAD in [3:4]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 3=[n12--205:DMA_LOAD], 4=[n12--205:DMA_LOAD]}; 
+│   │   │   └── l_bound: 13, u_bound: 16; investigated n12--205:DMA_LOAD in [4:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 2=[n3--212:ISUB], 4=[n12--205:DMA_LOAD], 5=[n12--205:DMA_LOAD]}; 
+│   │   ├── l_bound: 12, u_bound: 17; investigated n3--212:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 6=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 16; investigated n3--212:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 5=[n3--212:ISUB]}; 
+│   │   ├── l_bound: 12, u_bound: 19; investigated n3--212:ISUB in [8:8]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 8=[n3--212:ISUB]}; 
+│   │   └── l_bound: 12, u_bound: 20; investigated n3--212:ISUB in [9:9]; investigated partial schedule: {0=[n13--197:ISUB, n16--204:ISUB], 9=[n3--212:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 14; investigated n16--204:ISUB in [2:2]; investigated partial schedule: {0=[n13--197:ISUB], 2=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 15; investigated n16--204:ISUB in [3:3]; investigated partial schedule: {0=[n13--197:ISUB], 3=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 16; investigated n16--204:ISUB in [4:4]; investigated partial schedule: {0=[n13--197:ISUB], 4=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 18; investigated n16--204:ISUB in [6:6]; investigated partial schedule: {0=[n13--197:ISUB], 6=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 20; investigated n16--204:ISUB in [8:8]; investigated partial schedule: {0=[n13--197:ISUB], 8=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 21; investigated n16--204:ISUB in [9:9]; investigated partial schedule: {0=[n13--197:ISUB], 9=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 14; investigated n16--204:ISUB in [1:1]; investigated partial schedule: {0=[n13--197:ISUB], 1=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 22; investigated n16--204:ISUB in [10:10]; investigated partial schedule: {0=[n13--197:ISUB], 10=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 19; investigated n16--204:ISUB in [7:7]; investigated partial schedule: {0=[n13--197:ISUB], 7=[n16--204:ISUB]}; 
+│   ├── l_bound: 12, u_bound: 17; investigated n16--204:ISUB in [5:5]; investigated partial schedule: {0=[n13--197:ISUB], 5=[n16--204:ISUB]}; 
+│   ├── l_bound: 13, u_bound: 24; investigated n16--204:ISUB in [12:12]; investigated partial schedule: {0=[n13--197:ISUB], 12=[n16--204:ISUB]}; 
+│   └── l_bound: 12, u_bound: 23; investigated n16--204:ISUB in [11:11]; investigated partial schedule: {0=[n13--197:ISUB], 11=[n16--204:ISUB]}; 
+├── l_bound: 12, u_bound: 14; investigated n13--197:ISUB in [1:1]; investigated partial schedule: {1=[n13--197:ISUB]}; 
+└── l_bound: 12, u_bound: 15; investigated n13--197:ISUB in [3:3]; investigated partial schedule: {3=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 14 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 8 milliseconds to converge
+Scheduling took 42 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+├── l_bound: 20, u_bound: 20; investigated n13--197:ISUB in [8:8]; investigated partial schedule: {8=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 14; investigated n13--197:ISUB in [1:1]; investigated partial schedule: {1=[n13--197:ISUB]}; 
+├── l_bound: 15, u_bound: 15; investigated n13--197:ISUB in [3:3]; investigated partial schedule: {3=[n13--197:ISUB]}; 
+├── l_bound: 19, u_bound: 19; investigated n13--197:ISUB in [7:7]; investigated partial schedule: {7=[n13--197:ISUB]}; 
+├── l_bound: 22, u_bound: 22; investigated n13--197:ISUB in [10:10]; investigated partial schedule: {10=[n13--197:ISUB]}; 
+├── l_bound: 18, u_bound: 18; investigated n13--197:ISUB in [6:6]; investigated partial schedule: {6=[n13--197:ISUB]}; 
+├── l_bound: 21, u_bound: 21; investigated n13--197:ISUB in [9:9]; investigated partial schedule: {9=[n13--197:ISUB]}; 
+├── l_bound: 23, u_bound: 23; investigated n13--197:ISUB in [11:11]; investigated partial schedule: {11=[n13--197:ISUB]}; 
+├── l_bound: 17, u_bound: 17; investigated n13--197:ISUB in [5:5]; investigated partial schedule: {5=[n13--197:ISUB]}; 
+├── l_bound: 24, u_bound: 24; investigated n13--197:ISUB in [12:12]; investigated partial schedule: {12=[n13--197:ISUB]}; 
+├── l_bound: 14, u_bound: 14; investigated n13--197:ISUB in [2:2]; investigated partial schedule: {2=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 13; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+└── l_bound: 16, u_bound: 16; investigated n13--197:ISUB in [4:4]; investigated partial schedule: {4=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 14 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 9 milliseconds to converge
+Scheduling took 67 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+├── l_bound: 16, u_bound: 16; investigated n13--197:ISUB in [4:4]; investigated partial schedule: {4=[n13--197:ISUB]}; 
+├── l_bound: 24, u_bound: 24; investigated n13--197:ISUB in [12:12]; investigated partial schedule: {12=[n13--197:ISUB]}; 
+├── l_bound: 23, u_bound: 23; investigated n13--197:ISUB in [11:11]; investigated partial schedule: {11=[n13--197:ISUB]}; 
+├── l_bound: 17, u_bound: 17; investigated n13--197:ISUB in [5:5]; investigated partial schedule: {5=[n13--197:ISUB]}; 
+├── l_bound: 21, u_bound: 21; investigated n13--197:ISUB in [9:9]; investigated partial schedule: {9=[n13--197:ISUB]}; 
+├── l_bound: 22, u_bound: 22; investigated n13--197:ISUB in [10:10]; investigated partial schedule: {10=[n13--197:ISUB]}; 
+├── l_bound: 14, u_bound: 14; investigated n13--197:ISUB in [2:2]; investigated partial schedule: {2=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 14; investigated n13--197:ISUB in [1:1]; investigated partial schedule: {1=[n13--197:ISUB]}; 
+├── l_bound: 20, u_bound: 20; investigated n13--197:ISUB in [8:8]; investigated partial schedule: {8=[n13--197:ISUB]}; 
+├── l_bound: 15, u_bound: 15; investigated n13--197:ISUB in [3:3]; investigated partial schedule: {3=[n13--197:ISUB]}; 
+├── l_bound: 19, u_bound: 19; investigated n13--197:ISUB in [7:7]; investigated partial schedule: {7=[n13--197:ISUB]}; 
+├── l_bound: 13, u_bound: 13; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+└── l_bound: 18, u_bound: 18; investigated n13--197:ISUB in [6:6]; investigated partial schedule: {6=[n13--197:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 13
+Initial best latency: 13
+19 out of 20 DFG nodes could be skipped to find best schedule
+It took 10 milliseconds to converge
+Scheduling took 10 milliseconds
+
+Print BULB tree: 
+l_bound: 13, u_bound: 13; investigated partial schedule: {}; 
+└── l_bound: 13, u_bound: 13; investigated n13--197:ISUB in [0:0]; investigated partial schedule: {0=[n13--197:ISUB]}; 
+

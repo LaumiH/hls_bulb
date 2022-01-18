@@ -1,0 +1,48 @@
+Reading resource constraints from resources/vlsi/4Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, 
+Div:		RES04, RES05, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SerpentEngine-makeWorkingKey-150-172.dot
+DOING ASAP SCHEDULE
+Found schedule of length 5 with 5 nodes
+
+n2--166:IADD : [0:0]
+n3--169:IADD : [0:0]
+n4--154:IFGE : [0:0]
+n1--167:DMA_LOAD : [1:2]
+n0--168:DMA_STORE : [3:4]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 5 with 5 nodes
+
+n2--166:IADD : [0:0]
+n1--167:DMA_LOAD : [1:2]
+n0--168:DMA_STORE : [3:4]
+n3--169:IADD : [4:4]
+n4--154:IFGE : [4:4]
+
+FINISHED ALAP SCHEDULE
+

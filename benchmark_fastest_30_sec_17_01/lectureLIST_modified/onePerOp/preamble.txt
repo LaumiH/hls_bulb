@@ -1,0 +1,64 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/lectureLIST_modified.dot
+DOING ASAP SCHEDULE
+Found schedule of length 13 with 11 nodes
+
+N1_MUL-- : [0:3]
+N8_MUL-- : [0:3]
+N10_ADD-- : [0:0]
+N2_MUL-- : [0:3]
+N11_CMP-- : [1:1]
+N6_MUL-- : [4:7]
+N9_ADD-- : [4:4]
+N3_MUL-- : [4:7]
+N7_MUL-- : [8:11]
+N4_SUB-- : [8:8]
+N5_SUB-- : [12:12]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 13 with 11 nodes
+
+N2_MUL-- : [0:3]
+N1_MUL-- : [3:6]
+N6_MUL-- : [4:7]
+N3_MUL-- : [7:10]
+N7_MUL-- : [8:11]
+N8_MUL-- : [8:11]
+N4_SUB-- : [11:11]
+N10_ADD-- : [11:11]
+N9_ADD-- : [12:12]
+N11_CMP-- : [12:12]
+N5_SUB-- : [12:12]
+
+FINISHED ALAP SCHEDULE
+

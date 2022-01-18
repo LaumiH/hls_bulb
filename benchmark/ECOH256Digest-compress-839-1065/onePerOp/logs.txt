@@ -1,0 +1,69 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (44) > upper bound (43), the lower bound estimator was too conservative
+i=0; lower bound (45) > upper bound (43), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+i=0; lower bound (43) > upper bound (42), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (42) > upper bound (41), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 157 with latency 41
+Timeout reached while computing ECOH256Digest-compress-839-1065.dot with onePerOp
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 153 with latency 41
+Timeout reached while computing ECOH256Digest-compress-839-1065.dot with onePerOp
+Received timeout, aborting

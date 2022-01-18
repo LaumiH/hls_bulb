@@ -1,0 +1,616 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 37615, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 39166
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 836, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 39166
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 868, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 39166
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 836, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 37615
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 868, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 37615
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 836, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 868
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 90 with 308 nodes
+
+n264--539:ISHL : [0:0]
+n37--231:DMA_LOAD(ref) : [0:1]
+n301--384:ISHL : [0:0]
+n93--197:DMA_LOAD(ref) : [0:1]
+n302--216:ISHL : [1:1]
+n247--727:ISHL : [1:1]
+n258--371:ISHL : [2:2]
+n244--713:ISHL : [2:2]
+n72--552:ISHL : [2:2]
+n74--203:ISHL : [2:2]
+n263--541:IADD : [3:3]
+n126--716:IADD : [3:3]
+n201--218:IADD : [3:3]
+n94--730:IADD : [3:3]
+n71--554:IADD : [4:4]
+n218--373:IADD : [4:4]
+n73--205:IADD : [4:4]
+n282--386:IADD : [4:4]
+n243--387:DMA_LOAD : [5:6]
+n235--542:DMA_LOAD : [5:6]
+n125--717:DMA_LOAD : [5:6]
+n189--555:DMA_LOAD : [5:6]
+n92--731:DMA_LOAD : [7:8]
+n215--206:DMA_LOAD : [7:8]
+n76--219:DMA_LOAD : [7:8]
+n23--374:DMA_LOAD : [7:8]
+n253--566:DMA_LOAD : [9:10]
+n298--236:DMA_LOAD : [9:10]
+n251--742:DMA_LOAD : [9:10]
+n214--229:DMA_LOAD : [9:10]
+n217--573:DMA_LOAD : [11:12]
+n229--749:DMA_LOAD : [11:12]
+n105--404:DMA_LOAD : [11:12]
+n22--397:DMA_LOAD : [11:12]
+n58--750:IXOR : [13:13]
+n104--405:IXOR : [13:13]
+n124--574:IXOR : [13:13]
+n51--237:IXOR : [13:13]
+n57--751:IADD : [14:14]
+n276--406:IADD : [14:14]
+n50--238:IADD : [14:14]
+n85--575:IADD : [14:14]
+n165--752:IADD : [15:15]
+n137--407:IADD : [15:15]
+n135--239:IADD : [15:15]
+n84--576:IADD : [15:15]
+n206--244:IXOR : [16:16]
+n117--412:IXOR : [16:16]
+n20--759:IXOR : [16:16]
+n11--583:IXOR : [16:16]
+n118--425:ISUB : [17:17]
+n207--257:ISUB : [17:17]
+n21--772:ISUB : [17:17]
+n12--596:ISUB : [17:17]
+n114--258:ISHL : [18:18]
+n202--767:IUSHR : [18:18]
+n288--420:IUSHR : [18:18]
+n113--252:IUSHR : [18:18]
+n19--773:ISHL : [19:19]
+n245--591:IUSHR : [19:19]
+n116--426:ISHL : [19:19]
+n10--597:ISHL : [19:19]
+n112--259:IOR : [20:20]
+n216--427:IOR : [20:20]
+n260--774:IOR : [20:20]
+n171--598:IOR : [20:20]
+n46--435:IADD : [21:21]
+n1--606:IADD : [21:21]
+n238--782:IADD : [21:21]
+n88--267:IADD : [21:21]
+n0--613:IXOR : [22:22]
+n41--274:IXOR : [22:22]
+n271--789:IXOR : [22:22]
+n45--442:IXOR : [22:22]
+n286--802:ISUB : [23:23]
+n295--287:ISUB : [23:23]
+n142--455:ISUB : [23:23]
+n98--626:ISUB : [23:23]
+n154--803:ISHL : [24:24]
+n265--621:IUSHR : [24:24]
+n141--456:ISHL : [24:24]
+n153--797:IUSHR : [24:24]
+n211--288:ISHL : [25:25]
+n278--450:IUSHR : [25:25]
+n40--282:IUSHR : [25:25]
+n97--627:ISHL : [25:25]
+n14--628:IOR : [26:26]
+n110--289:IOR : [26:26]
+n48--457:IOR : [26:26]
+n67--804:IOR : [26:26]
+n242--468:DMA_LOAD : [27:28]
+n274--640:DMA_LOAD : [27:28]
+n156--816:DMA_LOAD : [27:28]
+n157--823:DMA_LOAD : [27:28]
+n234--647:DMA_LOAD : [29:30]
+n226--475:DMA_LOAD : [29:30]
+n75--300:DMA_LOAD : [29:30]
+n283--307:DMA_LOAD : [29:30]
+n155--824:IXOR : [31:31]
+n49--476:IXOR : [31:31]
+n304--648:IXOR : [31:31]
+n184--308:IXOR : [31:31]
+n47--477:IADD : [32:32]
+n166--825:IADD : [32:32]
+n305--649:IADD : [32:32]
+n183--309:IADD : [32:32]
+n163--310:IADD : [33:33]
+n164--826:IADD : [33:33]
+n136--478:IADD : [33:33]
+n62--650:IADD : [33:33]
+n132--483:IXOR : [34:34]
+n100--315:IXOR : [34:34]
+n225--833:IXOR : [34:34]
+n43--657:IXOR : [34:34]
+n168--328:ISUB : [35:35]
+n294--846:ISUB : [35:35]
+n292--496:ISUB : [35:35]
+n44--670:ISUB : [35:35]
+n241--665:IUSHR : [36:36]
+n131--491:IUSHR : [36:36]
+n224--841:IUSHR : [36:36]
+n167--329:ISHL : [36:36]
+n290--847:ISHL : [37:37]
+n259--497:ISHL : [37:37]
+n42--671:ISHL : [37:37]
+n99--323:IUSHR : [37:37]
+n196--330:IOR : [38:38]
+n120--848:IOR : [38:38]
+n17--672:IOR : [38:38]
+n56--498:IOR : [38:38]
+n68--856:IADD : [39:39]
+n111--338:IADD : [39:39]
+n15--680:IADD : [39:39]
+n55--506:IADD : [39:39]
+n25--345:IXOR : [40:40]
+n13--687:IXOR : [40:40]
+n9--513:IXOR : [40:40]
+n66--863:IXOR : [40:40]
+n284--876:ISUB : [41:41]
+n26--358:ISUB : [41:41]
+n257--700:ISUB : [41:41]
+n200--526:ISUB : [41:41]
+n187--877:ISHL : [42:42]
+n24--359:ISHL : [42:42]
+n186--871:IUSHR : [42:42]
+n279--695:IUSHR : [42:42]
+n256--701:ISHL : [43:43]
+n8--521:IUSHR : [43:43]
+n65--353:IUSHR : [43:43]
+n78--527:ISHL : [43:43]
+n90--878:IOR : [44:44]
+n148--702:IOR : [44:44]
+n30--528:IOR : [44:44]
+n64--360:IOR : [44:44]
+n210--1243:ISHL : [45:45]
+n240--1229:ISHL : [45:45]
+n296--1059:ISHL : [45:45]
+n179--1419:ISHL : [45:45]
+n300--1405:ISHL : [46:46]
+n228--889:ISHL : [46:46]
+n303--903:ISHL : [46:46]
+n291--1073:ISHL : [46:46]
+n177--892:IADD : [47:47]
+n188--1076:IADD : [47:47]
+n175--1062:IADD : [47:47]
+n178--1422:IADD : [47:47]
+n146--1246:IADD : [48:48]
+n239--1232:IADD : [48:48]
+n107--1408:IADD : [48:48]
+n219--906:IADD : [48:48]
+n297--1233:DMA_LOAD : [49:50]
+n35--1077:DMA_LOAD : [49:50]
+n174--1063:DMA_LOAD : [49:50]
+n38--907:DMA_LOAD : [49:50]
+n130--1423:DMA_LOAD : [51:52]
+n106--1409:DMA_LOAD : [51:52]
+n87--1247:DMA_LOAD : [51:52]
+n33--893:DMA_LOAD : [51:52]
+n36--924:DMA_LOAD : [53:54]
+n275--1434:DMA_LOAD : [53:54]
+n236--1441:DMA_LOAD : [53:54]
+n81--1265:DMA_LOAD : [53:54]
+n80--1258:DMA_LOAD : [55:56]
+n32--917:DMA_LOAD : [55:56]
+n172--1087:DMA_LOAD : [55:56]
+n173--1094:DMA_LOAD : [55:56]
+n79--1266:IXOR : [57:57]
+n266--925:IXOR : [57:57]
+n149--1095:IXOR : [57:57]
+n194--1442:IXOR : [57:57]
+n147--1096:IADD : [58:58]
+n63--1267:IADD : [58:58]
+n261--926:IADD : [58:58]
+n193--1443:IADD : [58:58]
+n121--927:IADD : [59:59]
+n197--1097:IADD : [59:59]
+n18--1444:IADD : [59:59]
+n60--1268:IADD : [59:59]
+n16--1451:IXOR : [60:60]
+n191--1102:IXOR : [60:60]
+n119--932:IXOR : [60:60]
+n77--1275:IXOR : [60:60]
+n134--1288:ISUB : [61:61]
+n128--945:ISUB : [61:61]
+n272--1464:ISUB : [61:61]
+n192--1115:ISUB : [61:61]
+n133--1289:ISHL : [62:62]
+n185--1283:IUSHR : [62:62]
+n246--940:IUSHR : [62:62]
+n39--1459:IUSHR : [62:62]
+n190--1116:ISHL : [63:63]
+n248--1110:IUSHR : [63:63]
+n127--946:ISHL : [63:63]
+n150--1465:ISHL : [63:63]
+n262--1117:IOR : [64:64]
+n123--1290:IOR : [64:64]
+n195--947:IOR : [64:64]
+n53--1466:IOR : [64:64]
+n91--1298:IADD : [65:65]
+n31--955:IADD : [65:65]
+n162--1125:IADD : [65:65]
+n181--1474:IADD : [65:65]
+n29--962:IXOR : [66:66]
+n161--1132:IXOR : [66:66]
+n89--1305:IXOR : [66:66]
+n109--1481:IXOR : [66:66]
+n221--1494:ISUB : [67:67]
+n203--975:ISUB : [67:67]
+n233--1145:ISUB : [67:67]
+n299--1318:ISUB : [67:67]
+n220--1495:ISHL : [68:68]
+n108--1489:IUSHR : [68:68]
+n96--1146:ISHL : [68:68]
+n95--1140:IUSHR : [68:68]
+n227--1313:IUSHR : [69:69]
+n151--970:IUSHR : [69:69]
+n170--976:ISHL : [69:69]
+n281--1319:ISHL : [69:69]
+n69--1320:IOR : [70:70]
+n169--977:IOR : [70:70]
+n3--1147:IOR : [70:70]
+n237--1496:IOR : [70:70]
+n273--1339:DMA_LOAD : [71:72]
+n269--988:DMA_LOAD : [71:72]
+n129--1508:DMA_LOAD : [71:72]
+n205--1515:DMA_LOAD : [71:72]
+n86--1332:DMA_LOAD : [73:74]
+n34--1158:DMA_LOAD : [73:74]
+n270--995:DMA_LOAD : [73:74]
+n209--1165:DMA_LOAD : [73:74]
+n268--996:IXOR : [75:75]
+n4--1166:IXOR : [75:75]
+n70--1340:IXOR : [75:75]
+n204--1516:IXOR : [75:75]
+n152--1517:IADD : [76:76]
+n2--1167:IADD : [76:76]
+n267--997:IADD : [76:76]
+n61--1341:IADD : [76:76]
+n199--998:IADD : [77:77]
+n59--1342:IADD : [77:77]
+n252--1168:IADD : [77:77]
+n54--1518:IADD : [77:77]
+n198--1003:IXOR : [78:78]
+n122--1349:IXOR : [78:78]
+n28--1173:IXOR : [78:78]
+n52--1525:IXOR : [78:78]
+n287--1538:ISUB : [79:79]
+n230--1016:ISUB : [79:79]
+n285--1186:ISUB : [79:79]
+n213--1362:ISUB : [79:79]
+n231--1533:IUSHR : [80:80]
+n144--1011:IUSHR : [80:80]
+n232--1539:ISHL : [80:80]
+n27--1181:IUSHR : [80:80]
+n145--1017:ISHL : [81:81]
+n223--1357:IUSHR : [81:81]
+n212--1363:ISHL : [81:81]
+n250--1187:ISHL : [81:81]
+n143--1018:IOR : [82:82]
+n222--1364:IOR : [82:82]
+n249--1188:IOR : [82:82]
+n182--1540:IOR : [82:82]
+n277--1026:IADD : [83:83]
+n83--1372:IADD : [83:83]
+n180--1548:IADD : [83:83]
+n280--1196:IADD : [83:83]
+n159--1033:IXOR : [84:84]
+n102--1203:IXOR : [84:84]
+n82--1379:IXOR : [84:84]
+n208--1555:IXOR : [84:84]
+n103--1216:ISUB : [85:85]
+n139--1392:ISUB : [85:85]
+n293--1568:ISUB : [85:85]
+n160--1046:ISUB : [85:85]
+n176--1211:IUSHR : [86:86]
+n158--1047:ISHL : [86:86]
+n115--1387:IUSHR : [86:86]
+n255--1041:IUSHR : [86:86]
+n101--1217:ISHL : [87:87]
+n6--1563:IUSHR : [87:87]
+n7--1569:ISHL : [87:87]
+n138--1393:ISHL : [87:87]
+n254--1048:IOR : [88:88]
+n5--1570:IOR : [88:88]
+n289--1218:IOR : [88:88]
+n306--1574:IADD : [88:88]
+n140--1394:IOR : [89:89]
+n307--193:IFGE : [89:89]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 91 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 47 times
+Best latency found: 90
+Initial best latency: 90
+307 out of 308 DFG nodes could be skipped to find best schedule
+It took 835 milliseconds to converge
+Scheduling took 37615 milliseconds
+
+Print BULB tree: 
+l_bound: 90, u_bound: 90; investigated partial schedule: {}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [30:30]; investigated partial schedule: {30=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [11:11]; investigated partial schedule: {11=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [35:35]; investigated partial schedule: {35=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [45:45]; investigated partial schedule: {45=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [41:41]; investigated partial schedule: {41=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [44:44]; investigated partial schedule: {44=[n264--539:ISHL]}; 
+├── l_bound: 97, u_bound: 97; investigated n264--539:ISHL in [54:54]; investigated partial schedule: {54=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [5:5]; investigated partial schedule: {5=[n264--539:ISHL]}; 
+├── l_bound: 98, u_bound: 98; investigated n264--539:ISHL in [55:55]; investigated partial schedule: {55=[n264--539:ISHL]}; 
+├── l_bound: 112, u_bound: 112; investigated n264--539:ISHL in [69:69]; investigated partial schedule: {69=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [2:2]; investigated partial schedule: {2=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [46:46]; investigated partial schedule: {46=[n264--539:ISHL]}; 
+├── l_bound: 95, u_bound: 95; investigated n264--539:ISHL in [52:52]; investigated partial schedule: {52=[n264--539:ISHL]}; 
+├── l_bound: 126, u_bound: 126; investigated n264--539:ISHL in [83:83]; investigated partial schedule: {83=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [40:40]; investigated partial schedule: {40=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [42:42]; investigated partial schedule: {42=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [37:37]; investigated partial schedule: {37=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [23:23]; investigated partial schedule: {23=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [26:26]; investigated partial schedule: {26=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [0:0]; investigated partial schedule: {0=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [34:34]; investigated partial schedule: {34=[n264--539:ISHL]}; 
+├── l_bound: 109, u_bound: 109; investigated n264--539:ISHL in [66:66]; investigated partial schedule: {66=[n264--539:ISHL]}; 
+├── l_bound: 124, u_bound: 124; investigated n264--539:ISHL in [81:81]; investigated partial schedule: {81=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [20:20]; investigated partial schedule: {20=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [36:36]; investigated partial schedule: {36=[n264--539:ISHL]}; 
+├── l_bound: 105, u_bound: 105; investigated n264--539:ISHL in [62:62]; investigated partial schedule: {62=[n264--539:ISHL]}; 
+├── l_bound: 113, u_bound: 113; investigated n264--539:ISHL in [70:70]; investigated partial schedule: {70=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [16:16]; investigated partial schedule: {16=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [12:12]; investigated partial schedule: {12=[n264--539:ISHL]}; 
+├── l_bound: 99, u_bound: 99; investigated n264--539:ISHL in [56:56]; investigated partial schedule: {56=[n264--539:ISHL]}; 
+├── l_bound: 127, u_bound: 127; investigated n264--539:ISHL in [84:84]; investigated partial schedule: {84=[n264--539:ISHL]}; 
+├── l_bound: 114, u_bound: 114; investigated n264--539:ISHL in [71:71]; investigated partial schedule: {71=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [14:14]; investigated partial schedule: {14=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [9:9]; investigated partial schedule: {9=[n264--539:ISHL]}; 
+├── l_bound: 132, u_bound: 132; investigated n264--539:ISHL in [89:89]; investigated partial schedule: {89=[n264--539:ISHL]}; 
+├── l_bound: 92, u_bound: 92; investigated n264--539:ISHL in [49:49]; investigated partial schedule: {49=[n264--539:ISHL]}; 
+├── l_bound: 130, u_bound: 130; investigated n264--539:ISHL in [87:87]; investigated partial schedule: {87=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [24:24]; investigated partial schedule: {24=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [10:10]; investigated partial schedule: {10=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [19:19]; investigated partial schedule: {19=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [22:22]; investigated partial schedule: {22=[n264--539:ISHL]}; 
+├── l_bound: 108, u_bound: 108; investigated n264--539:ISHL in [65:65]; investigated partial schedule: {65=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 91; investigated n264--539:ISHL in [47:47]; investigated partial schedule: {47=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [7:7]; investigated partial schedule: {7=[n264--539:ISHL]}; 
+├── l_bound: 131, u_bound: 131; investigated n264--539:ISHL in [88:88]; investigated partial schedule: {88=[n264--539:ISHL]}; 
+├── l_bound: 120, u_bound: 120; investigated n264--539:ISHL in [77:77]; investigated partial schedule: {77=[n264--539:ISHL]}; 
+├── l_bound: 122, u_bound: 122; investigated n264--539:ISHL in [79:79]; investigated partial schedule: {79=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [13:13]; investigated partial schedule: {13=[n264--539:ISHL]}; 
+├── l_bound: 107, u_bound: 107; investigated n264--539:ISHL in [64:64]; investigated partial schedule: {64=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [18:18]; investigated partial schedule: {18=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [38:38]; investigated partial schedule: {38=[n264--539:ISHL]}; 
+├── l_bound: 100, u_bound: 100; investigated n264--539:ISHL in [57:57]; investigated partial schedule: {57=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [43:43]; investigated partial schedule: {43=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [15:15]; investigated partial schedule: {15=[n264--539:ISHL]}; 
+├── l_bound: 104, u_bound: 104; investigated n264--539:ISHL in [61:61]; investigated partial schedule: {61=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [21:21]; investigated partial schedule: {21=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [25:25]; investigated partial schedule: {25=[n264--539:ISHL]}; 
+├── l_bound: 96, u_bound: 96; investigated n264--539:ISHL in [53:53]; investigated partial schedule: {53=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [8:8]; investigated partial schedule: {8=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [3:3]; investigated partial schedule: {3=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [32:32]; investigated partial schedule: {32=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [29:29]; investigated partial schedule: {29=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [33:33]; investigated partial schedule: {33=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [1:1]; investigated partial schedule: {1=[n264--539:ISHL]}; 
+├── l_bound: 116, u_bound: 116; investigated n264--539:ISHL in [73:73]; investigated partial schedule: {73=[n264--539:ISHL]}; 
+├── l_bound: 121, u_bound: 121; investigated n264--539:ISHL in [78:78]; investigated partial schedule: {78=[n264--539:ISHL]}; 
+├── l_bound: 93, u_bound: 93; investigated n264--539:ISHL in [50:50]; investigated partial schedule: {50=[n264--539:ISHL]}; 
+├── l_bound: 94, u_bound: 94; investigated n264--539:ISHL in [51:51]; investigated partial schedule: {51=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [31:31]; investigated partial schedule: {31=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [39:39]; investigated partial schedule: {39=[n264--539:ISHL]}; 
+├── l_bound: 102, u_bound: 102; investigated n264--539:ISHL in [59:59]; investigated partial schedule: {59=[n264--539:ISHL]}; 
+├── l_bound: 119, u_bound: 119; investigated n264--539:ISHL in [76:76]; investigated partial schedule: {76=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [4:4]; investigated partial schedule: {4=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [27:27]; investigated partial schedule: {27=[n264--539:ISHL]}; 
+├── l_bound: 128, u_bound: 128; investigated n264--539:ISHL in [85:85]; investigated partial schedule: {85=[n264--539:ISHL]}; 
+├── l_bound: 101, u_bound: 101; investigated n264--539:ISHL in [58:58]; investigated partial schedule: {58=[n264--539:ISHL]}; 
+├── l_bound: 91, u_bound: 92; investigated n264--539:ISHL in [48:48]; investigated partial schedule: {48=[n264--539:ISHL]}; 
+├── l_bound: 117, u_bound: 117; investigated n264--539:ISHL in [74:74]; investigated partial schedule: {74=[n264--539:ISHL]}; 
+├── l_bound: 106, u_bound: 106; investigated n264--539:ISHL in [63:63]; investigated partial schedule: {63=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [17:17]; investigated partial schedule: {17=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [6:6]; investigated partial schedule: {6=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [28:28]; investigated partial schedule: {28=[n264--539:ISHL]}; 
+├── l_bound: 118, u_bound: 118; investigated n264--539:ISHL in [75:75]; investigated partial schedule: {75=[n264--539:ISHL]}; 
+├── l_bound: 123, u_bound: 123; investigated n264--539:ISHL in [80:80]; investigated partial schedule: {80=[n264--539:ISHL]}; 
+├── l_bound: 125, u_bound: 125; investigated n264--539:ISHL in [82:82]; investigated partial schedule: {82=[n264--539:ISHL]}; 
+├── l_bound: 103, u_bound: 103; investigated n264--539:ISHL in [60:60]; investigated partial schedule: {60=[n264--539:ISHL]}; 
+├── l_bound: 115, u_bound: 115; investigated n264--539:ISHL in [72:72]; investigated partial schedule: {72=[n264--539:ISHL]}; 
+├── l_bound: 129, u_bound: 129; investigated n264--539:ISHL in [86:86]; investigated partial schedule: {86=[n264--539:ISHL]}; 
+├── l_bound: 110, u_bound: 110; investigated n264--539:ISHL in [67:67]; investigated partial schedule: {67=[n264--539:ISHL]}; 
+└── l_bound: 111, u_bound: 111; investigated n264--539:ISHL in [68:68]; investigated partial schedule: {68=[n264--539:ISHL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 90
+Initial best latency: 90
+307 out of 308 DFG nodes could be skipped to find best schedule
+It took 867 milliseconds to converge
+Scheduling took 868 milliseconds
+
+Print BULB tree: 
+l_bound: 90, u_bound: 90; investigated partial schedule: {}; 
+└── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [0:0]; investigated partial schedule: {0=[n264--539:ISHL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 91 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 47 times
+Best latency found: 90
+Initial best latency: 90
+307 out of 308 DFG nodes could be skipped to find best schedule
+It took 864 milliseconds to converge
+Scheduling took 39166 milliseconds
+
+Print BULB tree: 
+l_bound: 90, u_bound: 90; investigated partial schedule: {}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [11:11]; investigated partial schedule: {11=[n264--539:ISHL]}; 
+├── l_bound: 102, u_bound: 102; investigated n264--539:ISHL in [59:59]; investigated partial schedule: {59=[n264--539:ISHL]}; 
+├── l_bound: 95, u_bound: 95; investigated n264--539:ISHL in [52:52]; investigated partial schedule: {52=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [42:42]; investigated partial schedule: {42=[n264--539:ISHL]}; 
+├── l_bound: 114, u_bound: 114; investigated n264--539:ISHL in [71:71]; investigated partial schedule: {71=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [32:32]; investigated partial schedule: {32=[n264--539:ISHL]}; 
+├── l_bound: 101, u_bound: 101; investigated n264--539:ISHL in [58:58]; investigated partial schedule: {58=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [34:34]; investigated partial schedule: {34=[n264--539:ISHL]}; 
+├── l_bound: 116, u_bound: 116; investigated n264--539:ISHL in [73:73]; investigated partial schedule: {73=[n264--539:ISHL]}; 
+├── l_bound: 99, u_bound: 99; investigated n264--539:ISHL in [56:56]; investigated partial schedule: {56=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [10:10]; investigated partial schedule: {10=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [19:19]; investigated partial schedule: {19=[n264--539:ISHL]}; 
+├── l_bound: 105, u_bound: 105; investigated n264--539:ISHL in [62:62]; investigated partial schedule: {62=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [43:43]; investigated partial schedule: {43=[n264--539:ISHL]}; 
+├── l_bound: 103, u_bound: 103; investigated n264--539:ISHL in [60:60]; investigated partial schedule: {60=[n264--539:ISHL]}; 
+├── l_bound: 117, u_bound: 117; investigated n264--539:ISHL in [74:74]; investigated partial schedule: {74=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [38:38]; investigated partial schedule: {38=[n264--539:ISHL]}; 
+├── l_bound: 98, u_bound: 98; investigated n264--539:ISHL in [55:55]; investigated partial schedule: {55=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [24:24]; investigated partial schedule: {24=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [2:2]; investigated partial schedule: {2=[n264--539:ISHL]}; 
+├── l_bound: 107, u_bound: 107; investigated n264--539:ISHL in [64:64]; investigated partial schedule: {64=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [36:36]; investigated partial schedule: {36=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [0:0]; investigated partial schedule: {0=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [23:23]; investigated partial schedule: {23=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [9:9]; investigated partial schedule: {9=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [29:29]; investigated partial schedule: {29=[n264--539:ISHL]}; 
+├── l_bound: 119, u_bound: 119; investigated n264--539:ISHL in [76:76]; investigated partial schedule: {76=[n264--539:ISHL]}; 
+├── l_bound: 104, u_bound: 104; investigated n264--539:ISHL in [61:61]; investigated partial schedule: {61=[n264--539:ISHL]}; 
+├── l_bound: 123, u_bound: 123; investigated n264--539:ISHL in [80:80]; investigated partial schedule: {80=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [45:45]; investigated partial schedule: {45=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [8:8]; investigated partial schedule: {8=[n264--539:ISHL]}; 
+├── l_bound: 111, u_bound: 111; investigated n264--539:ISHL in [68:68]; investigated partial schedule: {68=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [35:35]; investigated partial schedule: {35=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [25:25]; investigated partial schedule: {25=[n264--539:ISHL]}; 
+├── l_bound: 126, u_bound: 126; investigated n264--539:ISHL in [83:83]; investigated partial schedule: {83=[n264--539:ISHL]}; 
+├── l_bound: 129, u_bound: 129; investigated n264--539:ISHL in [86:86]; investigated partial schedule: {86=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [4:4]; investigated partial schedule: {4=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [15:15]; investigated partial schedule: {15=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [1:1]; investigated partial schedule: {1=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [41:41]; investigated partial schedule: {41=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 91; investigated n264--539:ISHL in [47:47]; investigated partial schedule: {47=[n264--539:ISHL]}; 
+├── l_bound: 96, u_bound: 96; investigated n264--539:ISHL in [53:53]; investigated partial schedule: {53=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [3:3]; investigated partial schedule: {3=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [13:13]; investigated partial schedule: {13=[n264--539:ISHL]}; 
+├── l_bound: 92, u_bound: 92; investigated n264--539:ISHL in [49:49]; investigated partial schedule: {49=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [17:17]; investigated partial schedule: {17=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [18:18]; investigated partial schedule: {18=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [46:46]; investigated partial schedule: {46=[n264--539:ISHL]}; 
+├── l_bound: 127, u_bound: 127; investigated n264--539:ISHL in [84:84]; investigated partial schedule: {84=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [30:30]; investigated partial schedule: {30=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [27:27]; investigated partial schedule: {27=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [6:6]; investigated partial schedule: {6=[n264--539:ISHL]}; 
+├── l_bound: 110, u_bound: 110; investigated n264--539:ISHL in [67:67]; investigated partial schedule: {67=[n264--539:ISHL]}; 
+├── l_bound: 120, u_bound: 120; investigated n264--539:ISHL in [77:77]; investigated partial schedule: {77=[n264--539:ISHL]}; 
+├── l_bound: 125, u_bound: 125; investigated n264--539:ISHL in [82:82]; investigated partial schedule: {82=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [33:33]; investigated partial schedule: {33=[n264--539:ISHL]}; 
+├── l_bound: 112, u_bound: 112; investigated n264--539:ISHL in [69:69]; investigated partial schedule: {69=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [31:31]; investigated partial schedule: {31=[n264--539:ISHL]}; 
+├── l_bound: 131, u_bound: 131; investigated n264--539:ISHL in [88:88]; investigated partial schedule: {88=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [12:12]; investigated partial schedule: {12=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [40:40]; investigated partial schedule: {40=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [7:7]; investigated partial schedule: {7=[n264--539:ISHL]}; 
+├── l_bound: 128, u_bound: 128; investigated n264--539:ISHL in [85:85]; investigated partial schedule: {85=[n264--539:ISHL]}; 
+├── l_bound: 122, u_bound: 122; investigated n264--539:ISHL in [79:79]; investigated partial schedule: {79=[n264--539:ISHL]}; 
+├── l_bound: 100, u_bound: 100; investigated n264--539:ISHL in [57:57]; investigated partial schedule: {57=[n264--539:ISHL]}; 
+├── l_bound: 108, u_bound: 108; investigated n264--539:ISHL in [65:65]; investigated partial schedule: {65=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [37:37]; investigated partial schedule: {37=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [21:21]; investigated partial schedule: {21=[n264--539:ISHL]}; 
+├── l_bound: 115, u_bound: 115; investigated n264--539:ISHL in [72:72]; investigated partial schedule: {72=[n264--539:ISHL]}; 
+├── l_bound: 130, u_bound: 130; investigated n264--539:ISHL in [87:87]; investigated partial schedule: {87=[n264--539:ISHL]}; 
+├── l_bound: 97, u_bound: 97; investigated n264--539:ISHL in [54:54]; investigated partial schedule: {54=[n264--539:ISHL]}; 
+├── l_bound: 118, u_bound: 118; investigated n264--539:ISHL in [75:75]; investigated partial schedule: {75=[n264--539:ISHL]}; 
+├── l_bound: 121, u_bound: 121; investigated n264--539:ISHL in [78:78]; investigated partial schedule: {78=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [39:39]; investigated partial schedule: {39=[n264--539:ISHL]}; 
+├── l_bound: 132, u_bound: 132; investigated n264--539:ISHL in [89:89]; investigated partial schedule: {89=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [5:5]; investigated partial schedule: {5=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [28:28]; investigated partial schedule: {28=[n264--539:ISHL]}; 
+├── l_bound: 109, u_bound: 109; investigated n264--539:ISHL in [66:66]; investigated partial schedule: {66=[n264--539:ISHL]}; 
+├── l_bound: 124, u_bound: 124; investigated n264--539:ISHL in [81:81]; investigated partial schedule: {81=[n264--539:ISHL]}; 
+├── l_bound: 94, u_bound: 94; investigated n264--539:ISHL in [51:51]; investigated partial schedule: {51=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [22:22]; investigated partial schedule: {22=[n264--539:ISHL]}; 
+├── l_bound: 91, u_bound: 92; investigated n264--539:ISHL in [48:48]; investigated partial schedule: {48=[n264--539:ISHL]}; 
+├── l_bound: 106, u_bound: 106; investigated n264--539:ISHL in [63:63]; investigated partial schedule: {63=[n264--539:ISHL]}; 
+├── l_bound: 113, u_bound: 113; investigated n264--539:ISHL in [70:70]; investigated partial schedule: {70=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [14:14]; investigated partial schedule: {14=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [20:20]; investigated partial schedule: {20=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [16:16]; investigated partial schedule: {16=[n264--539:ISHL]}; 
+├── l_bound: 93, u_bound: 93; investigated n264--539:ISHL in [50:50]; investigated partial schedule: {50=[n264--539:ISHL]}; 
+├── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [26:26]; investigated partial schedule: {26=[n264--539:ISHL]}; 
+└── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [44:44]; investigated partial schedule: {44=[n264--539:ISHL]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 90
+Initial best latency: 90
+307 out of 308 DFG nodes could be skipped to find best schedule
+It took 835 milliseconds to converge
+Scheduling took 836 milliseconds
+
+Print BULB tree: 
+l_bound: 90, u_bound: 90; investigated partial schedule: {}; 
+└── l_bound: 90, u_bound: 90; investigated n264--539:ISHL in [0:0]; investigated partial schedule: {0=[n264--539:ISHL]}; 
+

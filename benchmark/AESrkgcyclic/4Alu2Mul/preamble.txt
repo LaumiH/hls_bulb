@@ -1,0 +1,86 @@
+Reading resource constraints from resources/vlsi/4Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, 
+Div:		RES04, RES05, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/AESrkgcyclic.dot
+DOING ASAP SCHEDULE
+Found schedule of length 13 with 24 nodes
+
+d9--d9 (Wk:6) - 39:IF_ICMPGE : [0:0]
+d56--d56 (WL:6) - 102:IINC : [1:1]
+d22--d22 (RO:1) - 58:BALOAD : [1:2]
+d13--d13 (Ss:2) - 47:ISHR : [1:1]
+d38--d38 (Ss:2) - 81:IADD : [1:1]
+d59--d59 (WL:4) - 105:IINC : [1:1]
+d48--d48 (Ss:3) - 95:IADD : [1:1]
+d18--d18 (Ss:3) - 53:IAND : [1:1]
+d28--d28 (Ss:1) - 67:IADD : [1:1]
+d15-- : [2:5]
+d24--d24 (Ss:255) - 62:IAND : [3:3]
+d29--d29 (RO:1) - 68:BALOAD : [3:4]
+d31-- : [5:5]
+d39-- : [5:6]
+d33-- : [6:6]
+d19-- : [6:6]
+d41-- : [7:7]
+d34--d34 (Ss:8) - 76:IOR : [7:7]
+d49-- : [7:8]
+d43--d43 (Ss:16) - 89:ISHL : [8:8]
+d51--d51 (Ss:24) - 99:ISHL : [9:9]
+d44-- : [9:9]
+d52-- : [10:10]
+d53-- : [11:12]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 13 with 24 nodes
+
+d9--d9 (Wk:6) - 39:IF_ICMPGE : [0:0]
+d22--d22 (RO:1) - 58:BALOAD : [1:2]
+d28--d28 (Ss:1) - 67:IADD : [2:2]
+d29--d29 (RO:1) - 68:BALOAD : [3:4]
+d38--d38 (Ss:2) - 81:IADD : [4:4]
+d13--d13 (Ss:2) - 47:ISHR : [5:5]
+d39-- : [5:6]
+d31-- : [6:6]
+d15-- : [6:9]
+d48--d48 (Ss:3) - 95:IADD : [6:6]
+d41-- : [7:7]
+d33-- : [7:7]
+d24--d24 (Ss:255) - 62:IAND : [7:7]
+d49-- : [7:8]
+d43--d43 (Ss:16) - 89:ISHL : [8:8]
+d34--d34 (Ss:8) - 76:IOR : [8:8]
+d51--d51 (Ss:24) - 99:ISHL : [9:9]
+d44-- : [9:9]
+d18--d18 (Ss:3) - 53:IAND : [9:9]
+d52-- : [10:10]
+d19-- : [10:10]
+d53-- : [11:12]
+d56--d56 (WL:6) - 102:IINC : [12:12]
+d59--d59 (WL:4) - 105:IINC : [12:12]
+
+FINISHED ALAP SCHEDULE
+

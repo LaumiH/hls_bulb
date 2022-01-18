@@ -1,0 +1,56 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/test.dot
+DOING ASAP SCHEDULE
+Found schedule of length 10 with 7 nodes
+
+N1_ADD-- : [0:0]
+N3_ADD-- : [1:1]
+N2_MUL-- : [1:4]
+N5_ADD-- : [2:2]
+N6_ADD-- : [3:3]
+N4_MUL-- : [5:8]
+N7_ADD-- : [9:9]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 10 with 7 nodes
+
+N1_ADD-- : [0:0]
+N2_MUL-- : [1:4]
+N4_MUL-- : [5:8]
+N3_ADD-- : [6:6]
+N5_ADD-- : [7:7]
+N6_ADD-- : [8:8]
+N7_ADD-- : [9:9]
+
+FINISHED ALAP SCHEDULE
+

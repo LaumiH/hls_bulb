@@ -1,0 +1,64 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/WhirlpoolDigest-processBlock-2-37.dot
+DOING ASAP SCHEDULE
+Found schedule of length 7 with 11 nodes
+
+n1--20:DMA_LOAD(ref) : [0:1]
+n5--25:DMA_LOAD(ref) : [0:1]
+n7--9:DMA_LOAD(ref) : [0:1]
+n8--14:DMA_LOAD(ref) : [0:1]
+n9--34:IADD : [0:0]
+n10--5:IFGE : [0:0]
+n2--29:DMA_LOAD64 : [2:3]
+n4--18:DMA_LOAD64 : [2:3]
+n0--31:DMA_STORE64 : [4:5]
+n3--32:LXOR : [4:4]
+n6--33:DMA_STORE64 : [5:6]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 7 with 11 nodes
+
+n5--25:DMA_LOAD(ref) : [0:1]
+n8--14:DMA_LOAD(ref) : [0:1]
+n2--29:DMA_LOAD64 : [2:3]
+n4--18:DMA_LOAD64 : [2:3]
+n1--20:DMA_LOAD(ref) : [3:4]
+n7--9:DMA_LOAD(ref) : [3:4]
+n3--32:LXOR : [4:4]
+n0--31:DMA_STORE64 : [5:6]
+n6--33:DMA_STORE64 : [5:6]
+n9--34:IADD : [6:6]
+n10--5:IFGE : [6:6]
+
+FINISHED ALAP SCHEDULE
+

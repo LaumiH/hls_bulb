@@ -1,0 +1,30 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Timeout reached while computing IDCT.dot with 4Alu4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Timeout reached while computing IDCT.dot with 4Alu4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Timeout reached while computing IDCT.dot with 4Alu4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Timeout reached while computing IDCT.dot with 4Alu4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Timeout reached while computing IDCT.dot with 4Alu4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Timeout reached while computing IDCT.dot with 4Alu4Mul

@@ -1,0 +1,136 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/ContrastFilter-filter-13-252.dot
+DOING ASAP SCHEDULE
+Found schedule of length 39 with 47 nodes
+
+n46--16:IFGE : [0:0]
+n38--79:DMA_LOAD : [0:1]
+n19--22:DMA_LOAD : [0:1]
+n6--71:DMA_LOAD : [0:1]
+n34--236:ISHL : [0:0]
+n45--249:IADD : [0:0]
+n33--230:ISHL : [0:0]
+n24--231:IOR : [1:1]
+n35--59:IAND : [2:2]
+n18--47:ISHR : [2:2]
+n29--29:IAND : [2:2]
+n20--36:ISHR : [2:2]
+n14--51:IAND : [3:3]
+n21--40:IAND : [3:3]
+n12--122:I2F : [3:3]
+n23--237:IOR : [3:3]
+n13--94:I2F : [4:4]
+n26--66:I2F : [4:4]
+n11--125:FDIV : [4:21]
+n22--240:IOR : [4:4]
+n25--69:FDIV : [5:22]
+n5--97:FDIV : [5:22]
+n42--248:DMA_STORE : [5:6]
+n1--130:FMUL : [22:25]
+n39--74:FMUL : [23:26]
+n4--102:FMUL : [23:26]
+n0--133:FSUB : [26:26]
+n37--77:FSUB : [27:27]
+n40--138:FMUL : [27:30]
+n32--105:FSUB : [27:27]
+n36--82:FMUL : [28:31]
+n15--110:FMUL : [28:31]
+n44--141:FADD : [31:31]
+n3--85:FADD : [32:32]
+n10--113:FADD : [32:32]
+n43--142:FMUL : [32:35]
+n2--86:FMUL : [33:36]
+n9--114:FMUL : [33:36]
+n28--143:F2I : [36:36]
+n27--178:IFGE : [37:37]
+n17--87:F2I : [37:37]
+n30--187:IFLE : [37:37]
+n8--115:F2I : [37:37]
+n16--152:IFGE : [38:38]
+n7--204:IFGE : [38:38]
+n41--161:IFLE : [38:38]
+n31--213:IFLE : [38:38]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 39 with 47 nodes
+
+n19--22:DMA_LOAD : [0:1]
+n18--47:ISHR : [2:2]
+n20--36:ISHR : [2:2]
+n14--51:IAND : [3:3]
+n35--59:IAND : [3:3]
+n21--40:IAND : [3:3]
+n13--94:I2F : [4:4]
+n26--66:I2F : [4:4]
+n12--122:I2F : [4:4]
+n25--69:FDIV : [5:22]
+n5--97:FDIV : [5:22]
+n11--125:FDIV : [5:22]
+n6--71:DMA_LOAD : [21:22]
+n1--130:FMUL : [23:26]
+n39--74:FMUL : [23:26]
+n4--102:FMUL : [23:26]
+n38--79:DMA_LOAD : [26:27]
+n0--133:FSUB : [27:27]
+n37--77:FSUB : [27:27]
+n32--105:FSUB : [27:27]
+n36--82:FMUL : [28:31]
+n15--110:FMUL : [28:31]
+n40--138:FMUL : [28:31]
+n3--85:FADD : [32:32]
+n10--113:FADD : [32:32]
+n44--141:FADD : [32:32]
+n2--86:FMUL : [33:36]
+n9--114:FMUL : [33:36]
+n43--142:FMUL : [33:36]
+n29--29:IAND : [34:34]
+n34--236:ISHL : [34:34]
+n33--230:ISHL : [34:34]
+n24--231:IOR : [35:35]
+n23--237:IOR : [35:35]
+n22--240:IOR : [36:36]
+n28--143:F2I : [37:37]
+n17--87:F2I : [37:37]
+n8--115:F2I : [37:37]
+n42--248:DMA_STORE : [37:38]
+n46--16:IFGE : [38:38]
+n16--152:IFGE : [38:38]
+n27--178:IFGE : [38:38]
+n7--204:IFGE : [38:38]
+n30--187:IFLE : [38:38]
+n41--161:IFLE : [38:38]
+n31--213:IFLE : [38:38]
+n45--249:IADD : [38:38]
+
+FINISHED ALAP SCHEDULE
+

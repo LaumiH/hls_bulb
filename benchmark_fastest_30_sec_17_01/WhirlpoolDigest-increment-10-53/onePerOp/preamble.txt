@@ -1,0 +1,66 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/WhirlpoolDigest-increment-10-53.dot
+DOING ASAP SCHEDULE
+Found schedule of length 9 with 12 nodes
+
+n7--15:DMA_LOAD(ref) : [0:1]
+n8--28:ERROR : [0:0]
+n10--50:IADD : [0:0]
+n11--11:IFLT : [0:0]
+n4--19:ERROR : [2:2]
+n3--23:IAND : [3:3]
+n5--29:IADD : [4:4]
+n2--31:IADD : [5:5]
+n1--47:IAND : [6:6]
+n9--36:IUSHR : [6:6]
+n0--48:I2S : [7:7]
+n6--49:ERROR : [8:8]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 9 with 12 nodes
+
+n7--15:DMA_LOAD(ref) : [0:1]
+n4--19:ERROR : [2:2]
+n3--23:IAND : [3:3]
+n8--28:ERROR : [3:3]
+n5--29:IADD : [4:4]
+n2--31:IADD : [5:5]
+n1--47:IAND : [6:6]
+n0--48:I2S : [7:7]
+n6--49:ERROR : [8:8]
+n9--36:IUSHR : [8:8]
+n10--50:IADD : [8:8]
+n11--11:IFLT : [8:8]
+
+FINISHED ALAP SCHEDULE
+

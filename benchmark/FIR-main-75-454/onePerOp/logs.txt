@@ -1,0 +1,52 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 37 with latency 128
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 22 with latency 128
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 50 with latency 128
+i=0; lower bound (129) > upper bound (128), the lower bound estimator was too conservative
+i=0; lower bound (130) > upper bound (129), the lower bound estimator was too conservative
+i=0; lower bound (129) > upper bound (128), the lower bound estimator was too conservative
+i=0; lower bound (130) > upper bound (129), the lower bound estimator was too conservative
+i=0; lower bound (129) > upper bound (128), the lower bound estimator was too conservative
+i=0; lower bound (130) > upper bound (129), the lower bound estimator was too conservative
+i=0; lower bound (129) > upper bound (128), the lower bound estimator was too conservative
+i=0; lower bound (130) > upper bound (129), the lower bound estimator was too conservative
+i=0; lower bound (129) > upper bound (128), the lower bound estimator was too conservative
+i=0; lower bound (130) > upper bound (129), the lower bound estimator was too conservative
+i=0; lower bound (129) > upper bound (128), the lower bound estimator was too conservative
+i=0; lower bound (130) > upper bound (129), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 51 with latency 128
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 790 with latency 128
+Timeout reached while computing FIR-main-75-454.dot with onePerOp
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 784 with latency 128
+Timeout reached while computing FIR-main-75-454.dot with onePerOp
+Received timeout, aborting

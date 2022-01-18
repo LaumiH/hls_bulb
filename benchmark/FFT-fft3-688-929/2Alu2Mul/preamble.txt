@@ -1,0 +1,136 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/FFT-fft3-688-929.dot
+DOING ASAP SCHEDULE
+Found schedule of length 12 with 50 nodes
+
+n47--696:DMA_LOAD(ref) : [0:1]
+n24--753:IADD : [0:0]
+n35--758:DMA_LOAD64 : [0:1]
+n49--692:IFGE : [0:0]
+n1--805:IADD : [0:0]
+n15--773:DMA_LOAD64 : [0:1]
+n17--717:DMA_LOAD64 : [0:1]
+n28--802:IADD : [0:0]
+n31--704:DMA_LOAD(ref) : [0:1]
+n33--725:DMA_LOAD64 : [0:1]
+n41--845:DMA_LOAD64 : [1:2]
+n10--837:DMA_LOAD64 : [1:2]
+n12--893:DMA_LOAD64 : [1:2]
+n44--812:IFGE : [1:1]
+n36--873:IADD : [1:1]
+n38--925:IADD : [1:1]
+n27--922:IADD : [1:1]
+n37--878:DMA_LOAD64 : [1:2]
+n16--709:DMA_LOAD64 : [2:3]
+n26--701:DMA_LOAD64 : [2:3]
+n9--821:DMA_LOAD64 : [2:3]
+n20--829:DMA_LOAD64 : [2:3]
+n25--718:DMUL : [4:7]
+n18--857:DMUL : [4:7]
+n19--864:DMUL : [4:7]
+n6--737:DMUL : [4:7]
+n7--744:DMUL : [4:7]
+n8--838:DMUL : [4:7]
+n30--846:DMUL : [4:7]
+n32--726:DMUL : [4:7]
+n13--865:DADD : [8:8]
+n29--847:DSUB : [8:8]
+n5--745:DADD : [8:8]
+n34--727:DSUB : [8:8]
+n14--776:DSUB : [9:9]
+n2--908:DADD : [9:9]
+n4--788:DADD : [9:9]
+n40--800:DADD : [9:9]
+n43--881:DSUB : [9:9]
+n45--761:DSUB : [9:9]
+n11--896:DSUB : [9:9]
+n22--920:DADD : [9:9]
+n46--762:DMA_STORE64 : [10:11]
+n0--909:DMA_STORE64 : [10:11]
+n48--897:DMA_STORE64 : [10:11]
+n3--789:DMA_STORE64 : [10:11]
+n39--801:DMA_STORE64 : [10:11]
+n21--921:DMA_STORE64 : [10:11]
+n42--882:DMA_STORE64 : [10:11]
+n23--777:DMA_STORE64 : [10:11]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 12 with 50 nodes
+
+n47--696:DMA_LOAD(ref) : [0:1]
+n31--704:DMA_LOAD(ref) : [0:1]
+n1--805:IADD : [1:1]
+n16--709:DMA_LOAD64 : [2:3]
+n26--701:DMA_LOAD64 : [2:3]
+n17--717:DMA_LOAD64 : [2:3]
+n41--845:DMA_LOAD64 : [2:3]
+n9--821:DMA_LOAD64 : [2:3]
+n10--837:DMA_LOAD64 : [2:3]
+n20--829:DMA_LOAD64 : [2:3]
+n33--725:DMA_LOAD64 : [2:3]
+n25--718:DMUL : [4:7]
+n18--857:DMUL : [4:7]
+n19--864:DMUL : [4:7]
+n6--737:DMUL : [4:7]
+n7--744:DMUL : [4:7]
+n8--838:DMUL : [4:7]
+n30--846:DMUL : [4:7]
+n32--726:DMUL : [4:7]
+n35--758:DMA_LOAD64 : [7:8]
+n15--773:DMA_LOAD64 : [7:8]
+n37--878:DMA_LOAD64 : [7:8]
+n12--893:DMA_LOAD64 : [7:8]
+n13--865:DADD : [8:8]
+n29--847:DSUB : [8:8]
+n5--745:DADD : [8:8]
+n34--727:DSUB : [8:8]
+n36--873:IADD : [9:9]
+n14--776:DSUB : [9:9]
+n24--753:IADD : [9:9]
+n2--908:DADD : [9:9]
+n4--788:DADD : [9:9]
+n40--800:DADD : [9:9]
+n43--881:DSUB : [9:9]
+n45--761:DSUB : [9:9]
+n11--896:DSUB : [9:9]
+n22--920:DADD : [9:9]
+n46--762:DMA_STORE64 : [10:11]
+n0--909:DMA_STORE64 : [10:11]
+n48--897:DMA_STORE64 : [10:11]
+n3--789:DMA_STORE64 : [10:11]
+n39--801:DMA_STORE64 : [10:11]
+n28--802:IADD : [10:10]
+n21--921:DMA_STORE64 : [10:11]
+n42--882:DMA_STORE64 : [10:11]
+n23--777:DMA_STORE64 : [10:11]
+n27--922:IADD : [11:11]
+n38--925:IADD : [11:11]
+n49--692:IFGE : [11:11]
+n44--812:IFGE : [11:11]
+
+FINISHED ALAP SCHEDULE
+

@@ -1,0 +1,101 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 230 with latency 66
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 208 with latency 66
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (68) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (68) > upper bound (66), the lower bound estimator was too conservative
+Setting initial convergence time at 668 with latency 66
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+i=0; lower bound (68) > upper bound (67), the lower bound estimator was too conservative
+i=0; lower bound (69) > upper bound (68), the lower bound estimator was too conservative
+i=0; lower bound (70) > upper bound (69), the lower bound estimator was too conservative
+i=0; lower bound (71) > upper bound (70), the lower bound estimator was too conservative
+i=0; lower bound (72) > upper bound (71), the lower bound estimator was too conservative
+i=0; lower bound (73) > upper bound (72), the lower bound estimator was too conservative
+i=0; lower bound (74) > upper bound (73), the lower bound estimator was too conservative
+i=0; lower bound (75) > upper bound (74), the lower bound estimator was too conservative
+i=0; lower bound (76) > upper bound (75), the lower bound estimator was too conservative
+i=0; lower bound (77) > upper bound (76), the lower bound estimator was too conservative
+i=0; lower bound (78) > upper bound (77), the lower bound estimator was too conservative
+i=0; lower bound (79) > upper bound (78), the lower bound estimator was too conservative
+i=0; lower bound (80) > upper bound (79), the lower bound estimator was too conservative
+i=0; lower bound (81) > upper bound (80), the lower bound estimator was too conservative
+i=0; lower bound (82) > upper bound (81), the lower bound estimator was too conservative
+i=0; lower bound (83) > upper bound (82), the lower bound estimator was too conservative
+i=0; lower bound (84) > upper bound (83), the lower bound estimator was too conservative
+i=0; lower bound (85) > upper bound (84), the lower bound estimator was too conservative
+i=0; lower bound (86) > upper bound (85), the lower bound estimator was too conservative
+i=0; lower bound (87) > upper bound (86), the lower bound estimator was too conservative
+i=0; lower bound (88) > upper bound (87), the lower bound estimator was too conservative
+i=0; lower bound (89) > upper bound (88), the lower bound estimator was too conservative
+i=0; lower bound (90) > upper bound (89), the lower bound estimator was too conservative
+i=0; lower bound (91) > upper bound (90), the lower bound estimator was too conservative
+i=0; lower bound (92) > upper bound (91), the lower bound estimator was too conservative
+i=0; lower bound (93) > upper bound (92), the lower bound estimator was too conservative
+i=0; lower bound (94) > upper bound (93), the lower bound estimator was too conservative
+i=0; lower bound (95) > upper bound (94), the lower bound estimator was too conservative
+i=0; lower bound (96) > upper bound (95), the lower bound estimator was too conservative
+i=0; lower bound (97) > upper bound (96), the lower bound estimator was too conservative
+i=0; lower bound (98) > upper bound (97), the lower bound estimator was too conservative
+i=0; lower bound (99) > upper bound (98), the lower bound estimator was too conservative
+i=0; lower bound (100) > upper bound (99), the lower bound estimator was too conservative
+i=0; lower bound (101) > upper bound (100), the lower bound estimator was too conservative
+i=0; lower bound (102) > upper bound (101), the lower bound estimator was too conservative
+i=0; lower bound (103) > upper bound (102), the lower bound estimator was too conservative
+i=0; lower bound (104) > upper bound (103), the lower bound estimator was too conservative
+i=0; lower bound (105) > upper bound (104), the lower bound estimator was too conservative
+i=0; lower bound (106) > upper bound (105), the lower bound estimator was too conservative
+i=0; lower bound (107) > upper bound (106), the lower bound estimator was too conservative
+i=0; lower bound (108) > upper bound (107), the lower bound estimator was too conservative
+i=0; lower bound (109) > upper bound (108), the lower bound estimator was too conservative
+i=0; lower bound (110) > upper bound (109), the lower bound estimator was too conservative
+i=0; lower bound (111) > upper bound (110), the lower bound estimator was too conservative
+i=0; lower bound (112) > upper bound (111), the lower bound estimator was too conservative
+i=0; lower bound (113) > upper bound (112), the lower bound estimator was too conservative
+i=0; lower bound (114) > upper bound (113), the lower bound estimator was too conservative
+i=0; lower bound (115) > upper bound (114), the lower bound estimator was too conservative
+i=0; lower bound (116) > upper bound (115), the lower bound estimator was too conservative
+i=0; lower bound (117) > upper bound (116), the lower bound estimator was too conservative
+i=0; lower bound (118) > upper bound (117), the lower bound estimator was too conservative
+i=0; lower bound (119) > upper bound (118), the lower bound estimator was too conservative
+i=0; lower bound (120) > upper bound (119), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (67) > upper bound (66), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 11777 with latency 66
+Timeout reached while computing ECOH256Digest-AES2RoundsAll-2-666.dot with fpga_2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 12800 with latency 66
+Timeout reached while computing ECOH256Digest-AES2RoundsAll-2-666.dot with fpga_2Mul
+Received timeout, aborting

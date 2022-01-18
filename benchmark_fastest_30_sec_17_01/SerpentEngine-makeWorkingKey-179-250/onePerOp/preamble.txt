@@ -1,0 +1,82 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SerpentEngine-makeWorkingKey-179-250.dot
+DOING ASAP SCHEDULE
+Found schedule of length 12 with 20 nodes
+
+n13--197:ISUB : [0:0]
+n16--204:ISUB : [0:0]
+n1--220:ISUB : [0:0]
+n18--247:IADD : [0:0]
+n3--212:ISUB : [0:0]
+n17--242:ISUB : [0:0]
+n19--183:IFGE : [0:0]
+n0--221:DMA_LOAD : [1:2]
+n2--213:DMA_LOAD : [1:2]
+n12--205:DMA_LOAD : [1:2]
+n11--198:DMA_LOAD : [1:2]
+n10--206:IXOR : [3:3]
+n5--214:IXOR : [4:4]
+n4--222:IXOR : [5:5]
+n14--226:IXOR : [6:6]
+n9--229:IXOR : [7:7]
+n7--237:ISHL : [8:8]
+n8--243:IUSHR : [8:8]
+n6--244:IOR : [9:9]
+n15--246:DMA_STORE : [10:11]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 12 with 20 nodes
+
+n13--197:ISUB : [0:0]
+n16--204:ISUB : [0:0]
+n3--212:ISUB : [1:1]
+n12--205:DMA_LOAD : [1:2]
+n11--198:DMA_LOAD : [1:2]
+n1--220:ISUB : [2:2]
+n2--213:DMA_LOAD : [2:3]
+n0--221:DMA_LOAD : [3:4]
+n10--206:IXOR : [3:3]
+n5--214:IXOR : [4:4]
+n4--222:IXOR : [5:5]
+n14--226:IXOR : [6:6]
+n17--242:ISUB : [7:7]
+n9--229:IXOR : [7:7]
+n7--237:ISHL : [8:8]
+n8--243:IUSHR : [8:8]
+n6--244:IOR : [9:9]
+n15--246:DMA_STORE : [10:11]
+n18--247:IADD : [11:11]
+n19--183:IFGE : [11:11]
+
+FINISHED ALAP SCHEDULE
+

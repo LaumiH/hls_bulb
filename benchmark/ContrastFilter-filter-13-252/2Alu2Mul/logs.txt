@@ -1,0 +1,66 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 26 with latency 57
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 24 with latency 57
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 23 with latency 57
+i=6; lower bound (59) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (59) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (59) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (60) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (60) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (60) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (61) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (62) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (62) > upper bound (58), the lower bound estimator was too conservative
+i=6; lower bound (63) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (59) > upper bound (57), the lower bound estimator was too conservative
+i=5; lower bound (59) > upper bound (57), the lower bound estimator was too conservative
+i=5; lower bound (59) > upper bound (57), the lower bound estimator was too conservative
+i=5; lower bound (59) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (61) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (61) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (61) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (61) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (64) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (64) > upper bound (58), the lower bound estimator was too conservative
+i=5; lower bound (64) > upper bound (58), the lower bound estimator was too conservative
+i=2; lower bound (59) > upper bound (57), the lower bound estimator was too conservative
+i=2; lower bound (59) > upper bound (57), the lower bound estimator was too conservative
+i=2; lower bound (59) > upper bound (57), the lower bound estimator was too conservative
+i=2; lower bound (64) > upper bound (61), the lower bound estimator was too conservative
+i=2; lower bound (64) > upper bound (61), the lower bound estimator was too conservative
+i=1; lower bound (58) > upper bound (57), the lower bound estimator was too conservative
+i=1; lower bound (58) > upper bound (57), the lower bound estimator was too conservative
+i=1; lower bound (58) > upper bound (57), the lower bound estimator was too conservative
+i=1; lower bound (62) > upper bound (61), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 24 with latency 57
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 35 with latency 57
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 34 with latency 57

@@ -1,0 +1,74 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/lectureExample.dot
+DOING ASAP SCHEDULE
+Found schedule of length 19 with 17 nodes
+
+d7--d7 (Wk:2) - 25:IF_ICMPGE : [0:0]
+d10--d10 (Ss:3) - 30:IADD : [1:1]
+d31-- : [1:4]
+d23--d23 (Ss:7) - 46:IMUL : [1:4]
+d15--d15 (Ss:2) - 36:IMUL : [1:4]
+d11-- : [2:3]
+d35-- : [4:5]
+d32--d32 (Ss:3) - 58:IADD : [5:5]
+d25-- : [5:8]
+d17-- : [5:8]
+d33-- : [6:7]
+d37-- : [8:9]
+d19-- : [9:12]
+d20-- : [13:13]
+d26-- : [14:14]
+d27--d27 (WL:4) - 50:ISTORE : [15:16]
+d39-- : [17:18]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 19 with 17 nodes
+
+d7--d7 (Wk:2) - 25:IF_ICMPGE : [0:0]
+d15--d15 (Ss:2) - 36:IMUL : [1:4]
+d17-- : [5:8]
+d23--d23 (Ss:7) - 46:IMUL : [6:9]
+d19-- : [9:12]
+d31-- : [10:13]
+d25-- : [10:13]
+d20-- : [13:13]
+d10--d10 (Ss:3) - 30:IADD : [14:14]
+d32--d32 (Ss:3) - 58:IADD : [14:14]
+d26-- : [14:14]
+d11-- : [15:16]
+d33-- : [15:16]
+d27--d27 (WL:4) - 50:ISTORE : [15:16]
+d35-- : [17:18]
+d37-- : [17:18]
+d39-- : [17:18]
+
+FINISHED ALAP SCHEDULE
+

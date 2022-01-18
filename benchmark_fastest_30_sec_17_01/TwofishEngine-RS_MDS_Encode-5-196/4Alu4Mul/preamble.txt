@@ -1,0 +1,128 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/TwofishEngine-RS_MDS_Encode-5-196.dot
+DOING ASAP SCHEDULE
+Found schedule of length 22 with 44 nodes
+
+n16--19:IUSHR : [0:0]
+n30--97:IADD : [0:0]
+n40--75:ISHL : [0:0]
+n43--8:IFGE : [0:0]
+n15--23:IAND : [1:1]
+n29--192:IADD : [1:1]
+n34--103:IFGE : [1:1]
+n14--54:IAND : [2:2]
+n35--32:IAND : [2:2]
+n1--51:IUSHR : [2:2]
+n19--27:ISHL : [2:2]
+n0--67:IXOR : [3:3]
+n21--43:IXOR : [3:3]
+n42--33:IFEQ : [3:3]
+n33--55:IFEQ : [3:3]
+n20--47:IAND : [4:4]
+n24--85:ISHL : [5:5]
+n23--69:IXOR : [5:5]
+n28--91:ISHL : [6:6]
+n41--80:ISHL : [6:6]
+n39--81:IXOR : [7:7]
+n37--86:IXOR : [8:8]
+n36--92:IXOR : [9:9]
+n6--94:IXOR : [10:10]
+n13--170:ISHL : [11:11]
+n5--114:IUSHR : [11:11]
+n8--118:IAND : [12:12]
+n38--146:IUSHR : [13:13]
+n7--122:ISHL : [13:13]
+n32--149:IAND : [13:13]
+n11--127:IAND : [13:13]
+n18--162:IXOR : [14:14]
+n10--138:IXOR : [14:14]
+n31--150:IFEQ : [14:14]
+n12--128:IFEQ : [14:14]
+n9--142:IAND : [15:15]
+n17--164:IXOR : [16:16]
+n4--180:ISHL : [16:16]
+n26--186:ISHL : [17:17]
+n22--175:ISHL : [17:17]
+n3--176:IXOR : [18:18]
+n2--181:IXOR : [19:19]
+n25--187:IXOR : [20:20]
+n27--189:IXOR : [21:21]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 22 with 44 nodes
+
+n16--19:IUSHR : [0:0]
+n15--23:IAND : [1:1]
+n19--27:ISHL : [2:2]
+n1--51:IUSHR : [3:3]
+n21--43:IXOR : [3:3]
+n0--67:IXOR : [4:4]
+n20--47:IAND : [4:4]
+n23--69:IXOR : [5:5]
+n41--80:ISHL : [6:6]
+n40--75:ISHL : [6:6]
+n24--85:ISHL : [7:7]
+n39--81:IXOR : [7:7]
+n37--86:IXOR : [8:8]
+n28--91:ISHL : [8:8]
+n36--92:IXOR : [9:9]
+n6--94:IXOR : [10:10]
+n5--114:IUSHR : [11:11]
+n8--118:IAND : [12:12]
+n7--122:ISHL : [13:13]
+n38--146:IUSHR : [14:14]
+n10--138:IXOR : [14:14]
+n18--162:IXOR : [15:15]
+n9--142:IAND : [15:15]
+n17--164:IXOR : [16:16]
+n13--170:ISHL : [17:17]
+n22--175:ISHL : [17:17]
+n3--176:IXOR : [18:18]
+n4--180:ISHL : [18:18]
+n26--186:ISHL : [19:19]
+n2--181:IXOR : [19:19]
+n25--187:IXOR : [20:20]
+n14--54:IAND : [20:20]
+n35--32:IAND : [20:20]
+n30--97:IADD : [20:20]
+n32--149:IAND : [20:20]
+n11--127:IAND : [20:20]
+n27--189:IXOR : [21:21]
+n29--192:IADD : [21:21]
+n43--8:IFGE : [21:21]
+n31--150:IFEQ : [21:21]
+n42--33:IFEQ : [21:21]
+n12--128:IFEQ : [21:21]
+n34--103:IFGE : [21:21]
+n33--55:IFEQ : [21:21]
+
+FINISHED ALAP SCHEDULE
+

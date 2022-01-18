@@ -1,0 +1,52 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/ADPCMn-decode-803-832.dot
+DOING ASAP SCHEDULE
+Found schedule of length 9 with 8 nodes
+
+n4--821:ISUB : [0:0]
+n5--829:IADD : [0:0]
+n6--806:IFGE : [0:0]
+n7--813:IADD : [0:0]
+n3--823:ISUB : [1:1]
+n2--826:IMUL : [2:5]
+n1--827:ISHR : [6:6]
+n0--828:DMA_STORE : [7:8]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 9 with 8 nodes
+
+n4--821:ISUB : [0:0]
+n3--823:ISUB : [1:1]
+n2--826:IMUL : [2:5]
+n1--827:ISHR : [6:6]
+n0--828:DMA_STORE : [7:8]
+n5--829:IADD : [8:8]
+n6--806:IFGE : [8:8]
+n7--813:IADD : [8:8]
+
+FINISHED ALAP SCHEDULE
+

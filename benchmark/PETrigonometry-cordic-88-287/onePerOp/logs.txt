@@ -1,0 +1,52 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 9 with latency 45
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 12 with latency 45
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (46), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (48), the lower bound estimator was too conservative
+i=0; lower bound (50) > upper bound (48), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (50) > upper bound (45), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 84 with latency 45
+Timeout reached while computing PETrigonometry-cordic-88-287.dot with onePerOp
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 87 with latency 45
+Timeout reached while computing PETrigonometry-cordic-88-287.dot with onePerOp
+Received timeout, aborting

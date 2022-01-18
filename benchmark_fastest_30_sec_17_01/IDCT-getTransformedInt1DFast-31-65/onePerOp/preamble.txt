@@ -1,0 +1,62 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/IDCT-getTransformedInt1DFast-31-65.dot
+DOING ASAP SCHEDULE
+Found schedule of length 11 with 10 nodes
+
+n2--41:DMA_LOAD(ref) : [0:1]
+n7--50:DMA_LOAD(ref) : [0:1]
+n8--62:IADD : [0:0]
+n9--35:IFGE : [0:0]
+n1--45:DMA_LOAD : [2:3]
+n4--54:DMA_LOAD : [2:3]
+n0--48:DMA_LOAD : [4:5]
+n3--57:DMA_LOAD : [4:5]
+n6--58:IMUL : [6:9]
+n5--59:IADD : [10:10]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 11 with 10 nodes
+
+n2--41:DMA_LOAD(ref) : [0:1]
+n7--50:DMA_LOAD(ref) : [0:1]
+n1--45:DMA_LOAD : [2:3]
+n4--54:DMA_LOAD : [2:3]
+n0--48:DMA_LOAD : [4:5]
+n3--57:DMA_LOAD : [4:5]
+n6--58:IMUL : [6:9]
+n5--59:IADD : [10:10]
+n8--62:IADD : [10:10]
+n9--35:IFGE : [10:10]
+
+FINISHED ALAP SCHEDULE
+

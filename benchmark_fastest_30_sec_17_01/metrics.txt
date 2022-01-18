@@ -1,0 +1,107 @@
+1101 tried combinations completed in given time
+8 tried combinations timed out
+	- benchmark/GrayscaleFilter-filter-13-113/onePerOp timed out with ASAP estimator, listSchedule ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-155/onePerOp timed out with ASAP estimator, listSchedule ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/4Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/4Alu4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/onePerOp timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/XTEAEngine-encryptBlock-21-142/onePerOp timed out with ASAP estimator, lazyALAP ALAPBound
+0 tried combinations threw an exception, please check!
+
+
+12 tried comparisons produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: ASAP, ALAPBound: lazyALAP with lBoundEstimator: ASAP, ALAPBound: listSchedule produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: ASAP, ALAPBound: lazyALAP with lBoundEstimator: OWN, ALAPBound: listSchedule produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: ASAP, ALAPBound: lazyALAP with lBoundEstimator: PAPER, ALAPBound: listSchedule produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: ASAP, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: ASAP, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: PAPER, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp: lBoundEstimator: PAPER, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-86-225/onePerOp: lBoundEstimator: OWN, ALAPBound: lazyALAP with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-86-225/onePerOp: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SerpentEngine-makeWorkingKey-86-225/onePerOp: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+
+
+
+no convergence in benchmark/SerpentEngine-makeWorkingKey-150-195-benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp
+no convergence in benchmark/SerpentEngine-makeWorkingKey-150-195-benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp
+no convergence in benchmark/SerpentEngine-makeWorkingKey-150-195-benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/onePerOp
+no convergence in benchmark/SerpentEngine-makeWorkingKey-15-82-benchmark/SerpentEngine-makeWorkingKey-15-82/onePerOp
+no convergence in benchmark/SerpentEngine-makeWorkingKey-15-82-benchmark/SerpentEngine-makeWorkingKey-15-82/onePerOp
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-155-benchmark/SerpentEngine-makeWorkingKey-86-155/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-155-benchmark/SerpentEngine-makeWorkingKey-86-155/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_2Mul
+no convergence in benchmark/SHA1Digest-processBlock-17-67-benchmark/SHA1Digest-processBlock-17-67/2Alu2Mul
+no convergence in benchmark/SHA1Digest-processBlock-17-67-benchmark/SHA1Digest-processBlock-17-67/2Alu2Mul
+
+
+
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 142 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 16 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 113 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: lazyALAP was faster 19 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 123 times
+ lBoundEstimator: ASAP, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 1 times
+ lBoundEstimator: ASAP, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 40 times
+ lBoundEstimator: ASAP, ALAPBound: listSchedule faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 55 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 43 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 142 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 152 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: lazyALAP was faster 22 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 155 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 31 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 57 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: PAPER, ALAPBound: lazyALAP was faster 5 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 51 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 45 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 142 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 10 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 147 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 157 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 29 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 54 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 32 times
+
+
+##########################################
+
+##########################################
+
+##########################################
+
+
+Execution times
+lBoundEstimator: ASAP, ALAPBound: lazyALAP: 5, 2, 5, 1, 5, 2, 1, 1, 3, 1, 3, 1, 1, 1, 3, 13, 3, 2, 1, 1, 1, 0, 1, 1, 1, 1, 3, 1, 2, 1, 2, 2, 98, 2536, 97, 81, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 3, 1, 3, 373, 15, 165, 2732, 2211, 1, 0, 3, 0, 3, 2, 1, 1, 4, 0, 4, 3, 0, 1, 0, 1, 1, 0, 1, 1, 235, 60, 209, 577, 0, 1, 1, 1, 0, 0, 3, 2, 9, 52, 5, 9, 2, 1, 66, 1479, 73, 49, 0, 1, 1, 0, 1, 0, 0, 1, 2, 9, 2, 2, 2, 4, 308, 70, 301, 1230, 2, 1, 294, 73, 311, 8558, 252, 3, 5, 30, 3, 27, 7, 9, 7, 50, 4, 24, 10, 2, 1, 6, 1, 5, 2, 1, 1, 23, 106, 23, 7, 3, 5, 37, 126, 35, 2, 2, 13, 1, 14, 23, 1, 5, 4, 4, 28, 6, 1, 0, 3, 0, 3, 7, 1, 0, 3, 1, 3, 1, 1, 1, 2, 0, 2, 1, 
+lBoundEstimator: ASAP, ALAPBound: listSchedule: 11, 5, 26, 5, 29, 7, 3, 3, 7, 2, 13, 13, 2, 2, 7, 14, 6, 6, 0, 2, 4, 1, 4, 1, 5, 4, 23, 3, 17, 4, 15, 7, 238, 6323, 236, 642, 0, 0, 1, 0, 1, 0, 2, 2, 14, 2, 14, 3, 34, 1877, 122, 1076, 13683, 5, 4, 22, 3, 22, 54, 5, 3, 24, 2, 22, 66, 0, 0, 0, 0, 0, 1, 9, 7, 309, 97, 272, 3903, 1, 1, 0, 1, 1, 0, 18, 13, 68, 33, 95, 121, 8, 6, 149, 4939, 156, 396, 1, 0, 4, 1, 3, 1, 2, 1, 8, 14, 8, 53, 16, 11, 687, 206, 638, 21139, 16, 12, 727, 212, 674, 519, 110, 75, 562, 82, 606, 109, 90, 51, 430, 63, 472, 78, 6, 4, 16, 3, 32, 7, 2, 1, 39, 109, 40, 426, 111, 59, 222, 287, 238, 53, 14, 137, 23, 207, 2543, 3, 9, 14, 7, 52, 209, 5, 2, 23, 3, 25, 106, 4, 4, 14, 3, 24, 5, 5, 4, 25, 2, 15, 5, 
+lBoundEstimator: OWN, ALAPBound: lazyALAP: 5, 2, 7, 2, 7, 3, 1, 2, 3, 1, 2, 1, 1, 1, 3, 1, 3, 1, 1, 1, 2, 1, 2, 1, 1, 1, 3, 1, 2, 1, 3, 3, 16, 2, 7, 4, 1, 0, 1, 1, 1, 1, 1, 1, 3, 0, 2, 1, 3, 3, 17, 2, 18, 5, 1, 1, 3, 1, 3, 1, 1, 1, 4, 1, 3, 2, 0, 0, 0, 0, 0, 0, 1, 1, 8, 1, 8, 3, 1, 0, 0, 0, 1, 0, 3, 2, 13, 2, 7, 4, 1, 2, 4, 2, 9, 3, 1, 0, 1, 1, 0, 1, 1, 1, 3, 1, 3, 1, 3, 2, 10, 2, 10, 3, 2, 2, 10, 2, 6, 4, 4, 5, 27, 239, 23, 12, 6, 4, 24, 4, 15, 8, 12, 10, 50, 9, 49, 13, 1, 1, 6, 1, 6, 1, 0, 1, 3, 1, 3, 2, 9, 10, 18, 190, 38, 14, 3, 2, 13, 2, 13, 5, 1, 1, 4, 1, 4, 1, 1, 0, 4, 0, 4, 1, 1, 1, 2, 1, 2, 1, 1, 1, 3, 0, 3, 1, 
+lBoundEstimator: OWN, ALAPBound: listSchedule: 29, 12, 48, 11, 33, 8, 8, 4, 7, 3, 17, 5, 1, 3, 8, 2, 7, 3, 1, 1, 5, 1, 5, 2, 5, 5, 31, 4, 19, 6, 31, 6, 81, 18, 48, 39, 0, 1, 1, 0, 1, 0, 3, 1, 14, 2, 6, 4, 34, 37, 109, 12, 104, 35, 4, 4, 21, 4, 23, 10, 5, 4, 20, 3, 25, 11, 0, 0, 1, 0, 0, 1, 11, 9, 32, 8, 52, 11, 0, 0, 0, 0, 0, 0, 12, 12, 40, 12, 42, 28, 4, 8, 52, 10, 55, 21, 1, 1, 3, 0, 3, 2, 3, 1, 8, 2, 8, 2, 20, 14, 67, 13, 65, 36, 17, 15, 67, 14, 47, 37, 24, 25, 191, 476, 144, 124, 263, 73, 631, 77, 558, 111, 105, 79, 441, 76, 437, 130, 6, 5, 34, 4, 35, 8, 3, 2, 15, 3, 14, 7, 77, 69, 262, 469, 250, 102, 35, 18, 151, 25, 136, 79, 3, 4, 14, 3, 21, 15, 5, 5, 24, 3, 26, 18, 5, 4, 26, 4, 30, 6, 5, 2, 29, 3, 26, 6, 
+lBoundEstimator: PAPER, ALAPBound: lazyALAP: 8, 4, 12, 2, 4, 2, 3, 1, 5, 1, 1, 2, 1, 1, 3, 1, 2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 3, 1, 3, 1, 3, 2, 14, 2, 14, 3, 1, 1, 1, 0, 1, 1, 1, 0, 3, 0, 1, 0, 2, 3, 8, 2, 18, 114, 1, 1, 3, 1, 2, 1, 1, 1, 3, 1, 4, 2, 0, 0, 0, 0, 1, 0, 1, 1, 6, 2, 8, 103, 0, 1, 1, 1, 1, 1, 1, 2, 12, 1, 6, 4, 2, 2, 8, 1, 9, 3, 1, 0, 1, 0, 1, 1, 0, 1, 2, 1, 2, 1, 3, 2, 10, 1, 10, 6, 2, 1, 9, 2, 10, 72, 5, 8, 28, 220, 28, 2684, 6, 3, 41, 3, 32, 7, 8, 10, 51, 8, 23, 14, 2, 1, 7, 1, 5, 1, 1, 1, 3, 1, 3, 1, 7, 8, 40, 197, 38, 21149, 2, 2, 16, 2, 15, 4, 0, 1, 4, 1, 5, 1, 2, 0, 4, 0, 4, 2, 1, 1, 3, 0, 2, 0, 1, 1, 3, 0, 3, 1, 
+lBoundEstimator: PAPER, ALAPBound: listSchedule: 34, 16, 42, 8, 17, 7, 10, 3, 13, 2, 14, 5, 3, 3, 7, 1, 8, 5, 2, 3, 6, 2, 6, 2, 6, 5, 11, 4, 16, 3, 25, 14, 57, 19, 66, 36, 1, 0, 2, 1, 1, 1, 4, 3, 9, 3, 7, 3, 37, 39, 109, 18, 136, 5929, 5, 4, 17, 3, 23, 9, 5, 4, 24, 4, 25, 12, 1, 0, 0, 0, 1, 1, 11, 7, 38, 9, 53, 608, 1, 0, 1, 1, 0, 1, 20, 17, 41, 15, 54, 42, 8, 7, 33, 11, 113, 21, 1, 1, 3, 1, 3, 1, 4, 1, 8, 2, 7, 14, 17, 14, 42, 15, 66, 1143, 19, 15, 70, 15, 42, 1184, 19, 25, 137, 480, 132, 114, 99, 607, 77, 634, 111, 116, 63, 518, 129, 431, 121, 6, 6, 37, 4, 34, 8, 3, 3, 15, 3, 15, 5, 50, 70, 262, 526, 314, 25079, 55, 19, 155, 26, 137, 52, 4, 5, 16, 5, 11, 17, 6, 5, 13, 5, 27, 20, 5, 5, 14, 4, 27, 8, 7, 4, 28, 3, 27, 7, 
+
+
+##########################################
+
+##########################################
+
+##########################################
+
+
+Convergence times
+lBoundEstimator: ASAP, ALAPBound: lazyALAP: 4, 2, 4, 1, 5, 2, 1, 0, 3, 1, 3, 1, 1, 0, 3, 2, 3, 1, 1, 1, 1, 0, 1, 0, 1, 1, 3, 1, 2, 1, 2, 1, 46, 5, 41, 13, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 2, 1, 3, 7, 15, 7, 60, 29, 0, 0, 3, 0, 3, 2, 1, 1, 4, 0, 4, 3, 0, 1, 0, 1, 0, 0, 1, 1, 14, 4, 27, 14, 0, 1, 0, 1, 0, 0, 2, 2, 9, 7, 5, 9, 2, 1, 29, 7, 24, 10, 0, 1, 1, 0, 1, 0, 0, 1, 2, 2, 2, -1, 2, 4, 39, 6, 38, 14, 2, 1, 19, 6, 38, 39, 54, 3, 5, 30, 3, 27, 7, 8, 6, 50, 4, 24, 10, 2, 1, 5, 1, 5, 1, 0, 1, 8, 2, 8, 4, 3, 5, 37, 63, 35, 2, 2, 13, 1, 13, 14, 1, 1, 4, 2, 7, 4, 1, 0, 3, 0, 3, 4, 1, 0, 3, 1, 3, 0, 1, 1, 2, 0, 2, 1, 
+lBoundEstimator: ASAP, ALAPBound: listSchedule: 4, 1, 5, 1, 4, 1, 1, 1, 2, 1, 2, 2, 1, 1, 3, 2, 2, 2, 0, 1, 1, 0, 1, 0, 1, 0, 2, 1, 2, 1, 2, 1, 31, 10, 45, 13, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1, 3, 0, 2, 11, 16, 7, 59, 1, 1, 3, 1, 3, 3, 1, 0, 3, 0, 3, 3, 0, 0, 0, 0, 0, 1, 1, 1, 28, 2, 14, 14, 1, 0, 0, 0, 1, 0, 2, 2, 12, 5, 60, 14, 1, 1, 21, 5, 26, 5, 1, 0, 1, 1, 1, 0, 1, 0, 2, 2, 2, 2, 2, 1, 39, 6, 37, 27, 2, 1, 40, 6, 97, 54, 4, 3, 31, 3, 29, 4, 9, 6, 51, 4, 48, 5, 1, 1, 4, 1, 5, 2, 0, 0, 8, 1, 7, 3, 6, 6, 16, 63, 35, 3, 1, 12, 1, 16, 15, 1, 1, 3, 1, 8, 4, 1, 0, 3, 1, 4, 4, 1, 1, 2, 1, 4, 0, 1, 1, 2, 0, 3, 0, 
+lBoundEstimator: OWN, ALAPBound: lazyALAP: 5, 2, 7, 2, 7, 2, 1, 2, 3, 1, 2, 1, 1, 1, 3, 1, 3, 1, 1, 1, 2, 1, 1, 1, 1, 1, 3, 1, 1, 1, 3, 3, 16, 2, 7, 4, 1, 0, 1, 1, 1, 1, 1, 1, 3, 0, 1, 1, 3, 3, 17, 2, 18, 5, 1, 1, 3, 1, 3, 1, 0, 1, 4, 1, 3, 2, 0, 0, 0, 0, 0, 0, 1, 1, 8, -1, 8, 3, 0, 0, 0, 0, 1, 0, 3, 2, 13, 2, 7, 4, 1, 2, 4, 1, 9, 2, 1, 0, 1, 0, 0, 1, 1, 1, 3, 1, 3, -1, 2, 2, 10, -1, 10, -1, 1, 2, 10, -1, 6, 4, 4, 5, -1, 60, -1, 12, 6, 4, 24, 4, 15, 8, 12, 10, 50, 9, 49, 13, 1, 1, 6, 1, 6, 1, 0, 1, 3, 0, 3, 2, 9, 10, 18, 58, 38, 14, 3, 2, 13, 1, 13, 5, 1, 1, 4, 1, 4, 1, 1, 0, 4, 0, 4, 1, 1, 1, 2, 0, 2, 1, 1, 0, 3, 0, 3, 1, 
+lBoundEstimator: OWN, ALAPBound: listSchedule: 7, 3, 9, 2, 7, 2, 3, 1, 2, 1, 3, 1, 1, 1, 3, 1, 3, 1, 0, 0, 1, 0, 2, 1, 1, 1, 3, 1, 2, 1, 4, 1, 16, 2, 14, 4, 0, 1, 1, 0, 1, 0, 1, 0, 3, 1, 1, 1, 3, 3, 17, 1, 13, 3, 1, 1, 2, 1, 3, 2, 1, 0, 3, 1, 4, 1, 0, 0, 1, 0, 0, 1, 2, 1, 7, 2, 7, 3, 0, 0, 0, 0, 0, 0, 2, 2, 8, 1, 7, 4, 0, 2, 9, 2, 9, 3, 1, 0, 0, 0, 1, 1, 1, 1, 2, 0, 2, 1, 2, 2, 9, 3, 9, 5, 2, 2, 11, 4, 8, 4, 4, 5, 44, 60, 40, 10, 4, 2, 15, 3, 28, 6, 11, 9, 52, 8, 51, 16, 1, 1, 6, 1, 6, 2, 1, 0, 3, 1, 4, 1, 10, 7, 40, 79, 37, 13, 1, 2, 16, 1, 14, 4, 1, 1, 3, 1, 3, 1, 1, 1, 4, 1, 4, 2, 0, 1, 2, 1, 3, 1, 0, 0, 3, 0, 2, 1, 
+lBoundEstimator: PAPER, ALAPBound: lazyALAP: 7, 3, 12, 1, 4, 2, 2, 1, 5, 1, 1, 1, 1, 1, 3, 1, 2, 1, 0, 1, 1, 0, 1, 1, 1, 0, 2, 0, 3, 0, 3, 2, 14, 2, 13, 3, 1, 0, 1, 0, 1, 1, 0, 0, 3, 0, 1, 0, 2, 3, 8, 2, 18, 22, 1, 1, 3, 0, 2, 1, 1, 1, 3, 1, 3, 2, 0, 0, 0, 0, 1, 0, 1, 1, 6, -1, 8, 12, 0, 1, 1, 0, 1, 1, 1, 2, 12, 1, 6, 4, 2, 1, 8, 1, 9, -1, 1, 0, 1, 0, 1, 1, 0, 1, 2, 0, 2, -1, 3, 2, 10, -1, 10, 6, 2, 1, 9, -1, 10, 18, 5, 8, -1, 34, -1, 79, 6, 3, 41, 3, 31, 7, 8, 9, 51, 8, 23, 14, 2, 1, 7, 1, 5, 1, 0, 1, 3, 1, 3, 1, 7, 8, 40, 74, 38, 92, 2, 2, 16, 2, 15, 4, 0, 1, 4, 1, 5, 1, 1, 0, 4, 0, 4, 2, 1, 1, 3, 0, 2, 0, 1, 1, 2, 0, 3, 1, 
+lBoundEstimator: PAPER, ALAPBound: listSchedule: 13, 3, 19, 2, 6, 1, 2, 1, 4, 1, 3, 2, 1, 1, 3, 1, 3, 2, 1, 2, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 3, 3, 15, 2, 11, 4, 0, 0, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 4, 4, 14, 2, 16, 25, 2, 1, 2, 0, 3, 2, 1, 1, 4, 1, 4, 2, 1, 0, 0, 0, 1, 1, 2, 1, 9, 3, 6, 14, 1, 0, 0, 1, 0, 0, 3, 3, 9, 2, 14, 5, 1, 1, 10, 2, 9, -1, 0, 1, 1, 1, 2, 0, 1, 1, 2, 1, 2, 2, 2, 2, 8, 4, 9, 8, 2, 2, 11, 4, 6, 18, 3, 4, -1, 62, -1, 6, 5, 34, 4, 28, 7, 14, 7, 50, 8, 44, 11, 2, 2, 7, 1, 6, 2, 1, 1, 4, 1, 4, 2, 8, 9, 41, 59, 42, 67, 4, 2, 15, 2, 15, 2, 1, 1, 3, 2, 3, 2, 2, 1, 4, 2, 5, 2, 1, 1, 3, 1, 3, 2, 1, 1, 4, 0, 3, 1, 

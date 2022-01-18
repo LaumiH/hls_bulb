@@ -1,0 +1,84 @@
+Reading resource constraints from resources/vlsi/4Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, 
+Div:		RES04, RES05, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/ECOH256Digest-compress-49-121.dot
+DOING ASAP SCHEDULE
+Found schedule of length 10 with 23 nodes
+
+n1--66:ISHL : [0:0]
+n18--56:DMA_LOAD(ref) : [0:1]
+n19--62:IADD : [0:0]
+n21--118:IADD : [0:0]
+n22--52:IFGE : [0:0]
+n0--110:DMA_LOAD : [1:2]
+n16--73:IADD : [1:1]
+n10--98:IADD : [1:1]
+n12--85:IADD : [1:1]
+n15--86:DMA_LOAD : [2:3]
+n3--99:DMA_LOAD : [2:3]
+n11--74:DMA_LOAD : [2:3]
+n4--114:IAND : [3:3]
+n2--103:IAND : [4:4]
+n8--78:IAND : [4:4]
+n9--90:IAND : [4:4]
+n6--81:ISHL : [5:5]
+n7--93:ISHL : [5:5]
+n20--106:ISHL : [5:5]
+n14--94:IOR : [6:6]
+n5--107:IOR : [6:6]
+n13--115:IOR : [7:7]
+n17--117:DMA_STORE : [8:9]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 10 with 23 nodes
+
+n1--66:ISHL : [0:0]
+n16--73:IADD : [1:1]
+n10--98:IADD : [1:1]
+n12--85:IADD : [1:1]
+n15--86:DMA_LOAD : [2:3]
+n3--99:DMA_LOAD : [2:3]
+n11--74:DMA_LOAD : [2:3]
+n0--110:DMA_LOAD : [3:4]
+n2--103:IAND : [4:4]
+n8--78:IAND : [4:4]
+n9--90:IAND : [4:4]
+n4--114:IAND : [5:5]
+n6--81:ISHL : [5:5]
+n7--93:ISHL : [5:5]
+n20--106:ISHL : [5:5]
+n14--94:IOR : [6:6]
+n18--56:DMA_LOAD(ref) : [6:7]
+n5--107:IOR : [6:6]
+n13--115:IOR : [7:7]
+n19--62:IADD : [7:7]
+n17--117:DMA_STORE : [8:9]
+n21--118:IADD : [9:9]
+n22--52:IFGE : [9:9]
+
+FINISHED ALAP SCHEDULE
+

@@ -1,0 +1,296 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 55
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: listSchedule -> 53, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 55
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 55
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 55
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 35, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 55
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 53
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: OWN, ALAPBound: lazyALAP took the same time as lBoundEstimator: ASAP, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: OWN, ALAPBound: lazyALAP took the same time as lBoundEstimator: PAPER, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 3, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 35
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: ASAP, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 53
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 53
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 35, vs. lBoundEstimator: ASAP, ALAPBound: listSchedule -> 53
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+lBoundEstimator: ASAP, ALAPBound: lazyALAP took the same time as lBoundEstimator: PAPER, ALAPBound: lazyALAP
+
+
+
+Comparing lBoundEstimator: ASAP, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: ASAP, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 35
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 2, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 35
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 19 with 17 nodes
+
+d7--d7 (Wk:2) - 25:IF_ICMPGE : [0:0]
+d10--d10 (Ss:3) - 30:IADD : [1:1]
+d31-- : [1:4]
+d23--d23 (Ss:7) - 46:IMUL : [1:4]
+d15--d15 (Ss:2) - 36:IMUL : [1:4]
+d11-- : [2:3]
+d35-- : [4:5]
+d32--d32 (Ss:3) - 58:IADD : [5:5]
+d25-- : [5:8]
+d17-- : [5:8]
+d33-- : [6:7]
+d37-- : [8:9]
+d19-- : [9:12]
+d20-- : [13:13]
+d26-- : [14:14]
+d27--d27 (WL:4) - 50:ISTORE : [15:16]
+d39-- : [17:18]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 20 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 19
+Initial best latency: 19
+16 out of 17 DFG nodes could be skipped to find best schedule
+It took 4 milliseconds to converge
+Scheduling took 55 milliseconds
+
+Print BULB tree: 
+l_bound: 19, u_bound: 19; investigated partial schedule: {}; 
+├── TOO CONSERVATIVE: l_bound: 20, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [1:1]; investigated partial schedule: {1=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 24, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [5:5]; investigated partial schedule: {5=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 22, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [3:3]; investigated partial schedule: {3=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 26, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [7:7]; investigated partial schedule: {7=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 29, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [10:10]; investigated partial schedule: {10=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 37, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [18:18]; investigated partial schedule: {18=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 31, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [12:12]; investigated partial schedule: {12=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 36, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [17:17]; investigated partial schedule: {17=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 32, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [13:13]; investigated partial schedule: {13=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 21, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [2:2]; investigated partial schedule: {2=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 28, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [9:9]; investigated partial schedule: {9=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 23, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [4:4]; investigated partial schedule: {4=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 27, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [8:8]; investigated partial schedule: {8=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [0:0]; investigated partial schedule: {0=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 35, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [16:16]; investigated partial schedule: {16=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 25, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [6:6]; investigated partial schedule: {6=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 34, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [15:15]; investigated partial schedule: {15=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [14:14]; investigated partial schedule: {14=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+└── TOO CONSERVATIVE: l_bound: 30, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [11:11]; investigated partial schedule: {11=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 19
+Initial best latency: 19
+16 out of 17 DFG nodes could be skipped to find best schedule
+It took 3 milliseconds to converge
+Scheduling took 3 milliseconds
+
+Print BULB tree: 
+l_bound: 19, u_bound: 19; investigated partial schedule: {}; 
+└── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [0:0]; investigated partial schedule: {0=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: listSchedule
+BULB tree contains 20 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 19 times
+Best latency found: 19
+Initial best latency: 19
+16 out of 17 DFG nodes could be skipped to find best schedule
+It took 3 milliseconds to converge
+Scheduling took 53 milliseconds
+
+Print BULB tree: 
+l_bound: 19, u_bound: 19; investigated partial schedule: {}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [2:2]; investigated partial schedule: {2=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [18:18]; investigated partial schedule: {18=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [9:9]; investigated partial schedule: {9=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [10:10]; investigated partial schedule: {10=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [11:11]; investigated partial schedule: {11=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [0:0]; investigated partial schedule: {0=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [15:15]; investigated partial schedule: {15=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [17:17]; investigated partial schedule: {17=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [4:4]; investigated partial schedule: {4=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [13:13]; investigated partial schedule: {13=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [14:14]; investigated partial schedule: {14=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [16:16]; investigated partial schedule: {16=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [5:5]; investigated partial schedule: {5=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [1:1]; investigated partial schedule: {1=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [3:3]; investigated partial schedule: {3=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [7:7]; investigated partial schedule: {7=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [6:6]; investigated partial schedule: {6=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [8:8]; investigated partial schedule: {8=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+└── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [12:12]; investigated partial schedule: {12=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: ASAP, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 19
+Initial best latency: 19
+16 out of 17 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 2 milliseconds
+
+Print BULB tree: 
+l_bound: 19, u_bound: 19; investigated partial schedule: {}; 
+└── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [0:0]; investigated partial schedule: {0=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 19
+Initial best latency: 19
+16 out of 17 DFG nodes could be skipped to find best schedule
+It took 2 milliseconds to converge
+Scheduling took 2 milliseconds
+
+Print BULB tree: 
+l_bound: 19, u_bound: 19; investigated partial schedule: {}; 
+└── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [0:0]; investigated partial schedule: {0=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 20 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 19
+Initial best latency: 19
+16 out of 17 DFG nodes could be skipped to find best schedule
+It took 1 milliseconds to converge
+Scheduling took 35 milliseconds
+
+Print BULB tree: 
+l_bound: 19, u_bound: 19; investigated partial schedule: {}; 
+├── TOO CONSERVATIVE: l_bound: 20, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [1:1]; investigated partial schedule: {1=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 25, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [6:6]; investigated partial schedule: {6=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 31, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [12:12]; investigated partial schedule: {12=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 22, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [3:3]; investigated partial schedule: {3=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 26, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [7:7]; investigated partial schedule: {7=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 37, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [18:18]; investigated partial schedule: {18=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 35, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [16:16]; investigated partial schedule: {16=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 23, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [4:4]; investigated partial schedule: {4=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 36, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [17:17]; investigated partial schedule: {17=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 28, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [9:9]; investigated partial schedule: {9=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 29, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [10:10]; investigated partial schedule: {10=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 30, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [11:11]; investigated partial schedule: {11=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 32, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [13:13]; investigated partial schedule: {13=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 27, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [8:8]; investigated partial schedule: {8=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 24, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [5:5]; investigated partial schedule: {5=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 34, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [15:15]; investigated partial schedule: {15=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── TOO CONSERVATIVE: l_bound: 33, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [14:14]; investigated partial schedule: {14=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+├── l_bound: 19, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [0:0]; investigated partial schedule: {0=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+└── TOO CONSERVATIVE: l_bound: 21, u_bound: 19; investigated d7--d7 (Wk:2) - 25:IF_ICMPGE in [2:2]; investigated partial schedule: {2=[d7--d7 (Wk:2) - 25:IF_ICMPGE]}; 
+

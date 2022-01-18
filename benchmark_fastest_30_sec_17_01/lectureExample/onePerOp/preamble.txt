@@ -1,0 +1,76 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/lectureExample.dot
+DOING ASAP SCHEDULE
+Found schedule of length 19 with 17 nodes
+
+d7--d7 (Wk:2) - 25:IF_ICMPGE : [0:0]
+d10--d10 (Ss:3) - 30:IADD : [1:1]
+d31-- : [1:4]
+d23--d23 (Ss:7) - 46:IMUL : [1:4]
+d15--d15 (Ss:2) - 36:IMUL : [1:4]
+d11-- : [2:3]
+d35-- : [4:5]
+d32--d32 (Ss:3) - 58:IADD : [5:5]
+d25-- : [5:8]
+d17-- : [5:8]
+d33-- : [6:7]
+d37-- : [8:9]
+d19-- : [9:12]
+d20-- : [13:13]
+d26-- : [14:14]
+d27--d27 (WL:4) - 50:ISTORE : [15:16]
+d39-- : [17:18]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 19 with 17 nodes
+
+d7--d7 (Wk:2) - 25:IF_ICMPGE : [0:0]
+d15--d15 (Ss:2) - 36:IMUL : [1:4]
+d17-- : [5:8]
+d23--d23 (Ss:7) - 46:IMUL : [6:9]
+d19-- : [9:12]
+d31-- : [10:13]
+d25-- : [10:13]
+d20-- : [13:13]
+d10--d10 (Ss:3) - 30:IADD : [14:14]
+d32--d32 (Ss:3) - 58:IADD : [14:14]
+d26-- : [14:14]
+d11-- : [15:16]
+d33-- : [15:16]
+d27--d27 (WL:4) - 50:ISTORE : [15:16]
+d35-- : [17:18]
+d37-- : [17:18]
+d39-- : [17:18]
+
+FINISHED ALAP SCHEDULE
+

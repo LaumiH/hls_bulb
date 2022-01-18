@@ -1,0 +1,54 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/FFT-#init#-14-53.dot
+DOING ASAP SCHEDULE
+Found schedule of length 8 with 9 nodes
+
+n1--21:ISHR : [0:0]
+n3--25:DMA_LOAD : [0:1]
+n8--16:IFEQ : [0:0]
+n0--35:IFEQ : [1:1]
+n7--40:ISHR : [1:1]
+n2--29:IADD : [2:2]
+n4--30:DMA_STORE : [3:4]
+n5--48:IADD : [5:5]
+n6--49:DMA_STORE : [6:7]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 8 with 9 nodes
+
+n3--25:DMA_LOAD : [0:1]
+n2--29:IADD : [2:2]
+n4--30:DMA_STORE : [3:4]
+n5--48:IADD : [5:5]
+n1--21:ISHR : [6:6]
+n6--49:DMA_STORE : [6:7]
+n0--35:IFEQ : [7:7]
+n7--40:ISHR : [7:7]
+n8--16:IFEQ : [7:7]
+
+FINISHED ALAP SCHEDULE
+

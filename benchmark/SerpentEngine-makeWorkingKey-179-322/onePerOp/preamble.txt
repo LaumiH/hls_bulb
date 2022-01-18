@@ -1,0 +1,122 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/SerpentEngine-makeWorkingKey-179-322.dot
+DOING ASAP SCHEDULE
+Found schedule of length 13 with 40 nodes
+
+n26--197:ISUB : [0:0]
+n17--220:ISUB : [0:0]
+n39--183:IFGE : [0:0]
+n4--247:IADD : [0:0]
+n7--242:ISUB : [0:0]
+n31--313:ISUB : [0:0]
+n11--212:ISUB : [0:0]
+n33--204:ISUB : [0:0]
+n25--198:DMA_LOAD : [1:2]
+n36--268:ISUB : [1:1]
+n16--221:DMA_LOAD : [1:2]
+n38--254:IFGE : [1:1]
+n15--291:ISUB : [1:1]
+n29--275:ISUB : [1:1]
+n10--213:DMA_LOAD : [1:2]
+n32--205:DMA_LOAD : [1:2]
+n12--318:IADD : [1:1]
+n23--283:ISUB : [1:1]
+n14--292:DMA_LOAD : [2:3]
+n27--269:DMA_LOAD : [2:3]
+n28--276:DMA_LOAD : [2:3]
+n22--284:DMA_LOAD : [2:3]
+n35--206:IXOR : [3:3]
+n37--214:IXOR : [4:4]
+n21--277:IXOR : [4:4]
+n30--222:IXOR : [5:5]
+n20--285:IXOR : [5:5]
+n2--226:IXOR : [6:6]
+n34--293:IXOR : [6:6]
+n24--297:IXOR : [7:7]
+n1--229:IXOR : [7:7]
+n13--300:IXOR : [8:8]
+n0--237:ISHL : [8:8]
+n6--243:IUSHR : [8:8]
+n19--244:IOR : [9:9]
+n8--308:ISHL : [9:9]
+n9--314:IUSHR : [9:9]
+n18--246:DMA_STORE : [10:11]
+n5--315:IOR : [10:10]
+n3--317:DMA_STORE : [11:12]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 13 with 40 nodes
+
+n4--247:IADD : [0:0]
+n36--268:ISUB : [1:1]
+n26--197:ISUB : [1:1]
+n29--275:ISUB : [1:1]
+n33--204:ISUB : [1:1]
+n25--198:DMA_LOAD : [2:3]
+n27--269:DMA_LOAD : [2:3]
+n28--276:DMA_LOAD : [2:3]
+n32--205:DMA_LOAD : [2:3]
+n23--283:ISUB : [2:2]
+n11--212:ISUB : [2:2]
+n15--291:ISUB : [3:3]
+n17--220:ISUB : [3:3]
+n10--213:DMA_LOAD : [3:4]
+n22--284:DMA_LOAD : [3:4]
+n14--292:DMA_LOAD : [4:5]
+n35--206:IXOR : [4:4]
+n16--221:DMA_LOAD : [4:5]
+n21--277:IXOR : [4:4]
+n37--214:IXOR : [5:5]
+n20--285:IXOR : [5:5]
+n30--222:IXOR : [6:6]
+n34--293:IXOR : [6:6]
+n24--297:IXOR : [7:7]
+n2--226:IXOR : [7:7]
+n13--300:IXOR : [8:8]
+n1--229:IXOR : [8:8]
+n7--242:ISUB : [8:8]
+n31--313:ISUB : [8:8]
+n0--237:ISHL : [9:9]
+n6--243:IUSHR : [9:9]
+n8--308:ISHL : [9:9]
+n9--314:IUSHR : [9:9]
+n19--244:IOR : [10:10]
+n5--315:IOR : [10:10]
+n18--246:DMA_STORE : [11:12]
+n3--317:DMA_STORE : [11:12]
+n38--254:IFGE : [12:12]
+n39--183:IFGE : [12:12]
+n12--318:IADD : [12:12]
+
+FINISHED ALAP SCHEDULE
+

@@ -1,0 +1,54 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/ADPCMn-decode-524-553.dot
+DOING ASAP SCHEDULE
+Found schedule of length 8 with 7 nodes
+
+n2--537:DMA_LOAD : [0:1]
+n3--542:DMA_LOAD : [0:1]
+n5--550:IADD : [0:0]
+n6--528:IFGE : [0:0]
+n1--543:IMUL : [2:5]
+n0--546:ISHR : [6:6]
+n4--547:IADD : [7:7]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 8 with 7 nodes
+
+n2--537:DMA_LOAD : [0:1]
+n3--542:DMA_LOAD : [0:1]
+n1--543:IMUL : [2:5]
+n0--546:ISHR : [6:6]
+n4--547:IADD : [7:7]
+n5--550:IADD : [7:7]
+n6--528:IFGE : [7:7]
+
+FINISHED ALAP SCHEDULE
+

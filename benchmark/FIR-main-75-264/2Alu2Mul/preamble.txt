@@ -1,0 +1,142 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/FIR-main-75-264.dot
+DOING ASAP SCHEDULE
+Found schedule of length 11 with 53 nodes
+
+n4--220:DMA_LOAD : [0:1]
+n5--225:DMA_LOAD : [0:1]
+n50--156:DMA_LOAD : [0:1]
+n52--79:IFGE : [0:0]
+n30--139:DMA_LOAD : [0:1]
+n51--261:IADD : [0:0]
+n12--179:DMA_LOAD : [0:1]
+n34--198:DMA_LOAD : [0:1]
+n11--99:DMA_LOAD : [0:1]
+n13--183:DMA_LOAD : [0:1]
+n35--202:DMA_LOAD : [0:1]
+n38--194:DMA_LOAD : [0:1]
+n37--190:DMA_LOAD : [0:1]
+n18--147:IREM : [0:0]
+n17--256:IADD : [0:0]
+n19--171:DMA_LOAD : [0:1]
+n41--160:DMA_LOAD : [0:1]
+n40--123:DMA_LOAD : [0:1]
+n20--175:DMA_LOAD : [0:1]
+n42--164:DMA_LOAD : [0:1]
+n23--210:DMA_LOAD : [0:1]
+n44--131:DMA_LOAD : [0:1]
+n24--215:DMA_LOAD : [0:1]
+n46--107:DMA_LOAD : [0:1]
+n49--152:DMA_LOAD : [0:1]
+n48--90:DMA_LOAD : [0:1]
+n28--115:DMA_LOAD : [0:1]
+n9--148:I2F : [1:1]
+n16--258:IREM : [1:1]
+n3--226:FMUL : [2:5]
+n6--176:FMUL : [2:5]
+n7--184:FMUL : [2:5]
+n8--149:DMA_STORE : [2:3]
+n10--100:DMA_STORE : [2:3]
+n32--165:FMUL : [2:5]
+n43--132:DMA_STORE : [2:3]
+n31--157:FMUL : [2:5]
+n45--108:DMA_STORE : [2:3]
+n33--203:FMUL : [2:5]
+n22--216:FMUL : [2:5]
+n36--195:FMUL : [2:5]
+n47--91:DMA_STORE : [2:3]
+n27--116:DMA_STORE : [2:3]
+n29--140:DMA_STORE : [2:3]
+n39--124:DMA_STORE : [2:3]
+n1--166:FADD : [6:6]
+n26--204:FADD : [6:6]
+n2--185:FADD : [6:6]
+n21--227:FADD : [6:6]
+n25--241:FADD : [7:7]
+n0--234:FADD : [7:7]
+n15--251:FADD : [8:8]
+n14--252:DMA_STORE : [9:10]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 11 with 53 nodes
+
+n4--220:DMA_LOAD : [0:1]
+n5--225:DMA_LOAD : [0:1]
+n50--156:DMA_LOAD : [0:1]
+n41--160:DMA_LOAD : [0:1]
+n20--175:DMA_LOAD : [0:1]
+n42--164:DMA_LOAD : [0:1]
+n12--179:DMA_LOAD : [0:1]
+n34--198:DMA_LOAD : [0:1]
+n23--210:DMA_LOAD : [0:1]
+n13--183:DMA_LOAD : [0:1]
+n35--202:DMA_LOAD : [0:1]
+n24--215:DMA_LOAD : [0:1]
+n38--194:DMA_LOAD : [0:1]
+n49--152:DMA_LOAD : [0:1]
+n37--190:DMA_LOAD : [0:1]
+n19--171:DMA_LOAD : [0:1]
+n36--195:FMUL : [2:5]
+n3--226:FMUL : [2:5]
+n6--176:FMUL : [2:5]
+n7--184:FMUL : [2:5]
+n32--165:FMUL : [2:5]
+n31--157:FMUL : [2:5]
+n33--203:FMUL : [2:5]
+n22--216:FMUL : [2:5]
+n26--204:FADD : [6:6]
+n1--166:FADD : [6:6]
+n2--185:FADD : [6:6]
+n21--227:FADD : [6:6]
+n25--241:FADD : [7:7]
+n46--107:DMA_LOAD : [7:8]
+n0--234:FADD : [7:7]
+n48--90:DMA_LOAD : [7:8]
+n18--147:IREM : [7:7]
+n28--115:DMA_LOAD : [7:8]
+n30--139:DMA_LOAD : [7:8]
+n40--123:DMA_LOAD : [7:8]
+n11--99:DMA_LOAD : [7:8]
+n44--131:DMA_LOAD : [7:8]
+n15--251:FADD : [8:8]
+n9--148:I2F : [8:8]
+n14--252:DMA_STORE : [9:10]
+n47--91:DMA_STORE : [9:10]
+n27--116:DMA_STORE : [9:10]
+n29--140:DMA_STORE : [9:10]
+n39--124:DMA_STORE : [9:10]
+n17--256:IADD : [9:9]
+n8--149:DMA_STORE : [9:10]
+n10--100:DMA_STORE : [9:10]
+n43--132:DMA_STORE : [9:10]
+n45--108:DMA_STORE : [9:10]
+n16--258:IREM : [10:10]
+n52--79:IFGE : [10:10]
+n51--261:IADD : [10:10]
+
+FINISHED ALAP SCHEDULE
+

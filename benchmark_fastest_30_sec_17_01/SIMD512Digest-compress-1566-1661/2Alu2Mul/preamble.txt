@@ -1,0 +1,74 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SIMD512Digest-compress-1566-1661.dot
+DOING ASAP SCHEDULE
+Found schedule of length 12 with 19 nodes
+
+n16--1582:DMA_LOAD(ref) : [0:1]
+n18--1571:IFGE : [0:0]
+n17--1658:IADD : [0:0]
+n7--1575:DMA_LOAD(ref) : [0:1]
+n6--1657:DMA_STORE : [2:3]
+n8--1580:DMA_LOAD : [2:3]
+n9--1587:DMA_LOAD : [2:3]
+n1--1588:IADD : [4:4]
+n14--1600:ISHR : [5:5]
+n0--1595:IAND : [5:5]
+n5--1601:IADD : [6:6]
+n3--1609:IAND : [7:7]
+n4--1614:ISHR : [7:7]
+n2--1615:ISUB : [8:8]
+n13--1628:ISHR : [9:9]
+n12--1623:IAND : [9:9]
+n11--1629:ISUB : [10:10]
+n15--1643:IFGT : [11:11]
+n10--1656:ISUB : [11:11]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 12 with 19 nodes
+
+n16--1582:DMA_LOAD(ref) : [0:1]
+n7--1575:DMA_LOAD(ref) : [0:1]
+n8--1580:DMA_LOAD : [2:3]
+n9--1587:DMA_LOAD : [2:3]
+n1--1588:IADD : [4:4]
+n14--1600:ISHR : [5:5]
+n0--1595:IAND : [5:5]
+n5--1601:IADD : [6:6]
+n3--1609:IAND : [7:7]
+n4--1614:ISHR : [7:7]
+n2--1615:ISUB : [8:8]
+n13--1628:ISHR : [9:9]
+n12--1623:IAND : [9:9]
+n6--1657:DMA_STORE : [10:11]
+n11--1629:ISUB : [10:10]
+n15--1643:IFGT : [11:11]
+n18--1571:IFGE : [11:11]
+n17--1658:IADD : [11:11]
+n10--1656:ISUB : [11:11]
+
+FINISHED ALAP SCHEDULE
+

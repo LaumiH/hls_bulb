@@ -1,0 +1,48 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/MD5Digest-processBlock-1896-1911.dot
+DOING ASAP SCHEDULE
+Found schedule of length 2 with 3 nodes
+
+n0--1908:IADD : [0:0]
+n1--1907:DMA_STORE : [0:1]
+n2--1900:IFEQ : [0:0]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 2 with 3 nodes
+
+n1--1907:DMA_STORE : [0:1]
+n0--1908:IADD : [1:1]
+n2--1900:IFEQ : [1:1]
+
+FINISHED ALAP SCHEDULE
+

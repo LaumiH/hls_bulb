@@ -1,0 +1,42 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (17) > upper bound (16), the lower bound estimator was too conservative
+i=0; lower bound (17) > upper bound (16), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (17) > upper bound (16), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (17) > upper bound (16), the lower bound estimator was too conservative
+Setting initial convergence time at 44 with latency 16
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (17) > upper bound (16), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 121 with latency 16
+Timeout reached while computing SerpentEngine-makeWorkingKey-86-225.dot with fpga_4Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 120 with latency 16
+Timeout reached while computing SerpentEngine-makeWorkingKey-86-225.dot with fpga_4Mul
+Received timeout, aborting

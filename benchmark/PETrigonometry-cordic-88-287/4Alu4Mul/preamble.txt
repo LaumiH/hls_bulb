@@ -1,0 +1,124 @@
+Reading resource constraints from resources/vlsi/4Alu4Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Div, Mul, 
+RES05:		Div, Mul, 
+RES06:		Div, Mul, 
+RES07:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, RES02, RES03, 
+Add:		RES00, RES01, RES02, RES03, 
+Sub:		RES00, RES01, RES02, RES03, 
+Mul:		RES04, RES05, RES06, RES07, 
+Div:		RES04, RES05, RES06, RES07, 
+Shift:		RES00, RES01, RES02, RES03, 
+And:		RES00, RES01, RES02, RES03, 
+Or:		RES00, RES01, RES02, RES03, 
+Cmp:		RES00, RES01, RES02, RES03, 
+Other:		RES00, RES01, RES02, RES03, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/PETrigonometry-cordic-88-287.dot
+DOING ASAP SCHEDULE
+Found schedule of length 36 with 42 nodes
+
+n13--224:I2D : [0:0]
+n37--167:DMA_LOAD(ref) : [0:1]
+n29--127:DMA_LOAD64 : [0:1]
+n17--125:I2D : [0:0]
+n4--133:F2D : [0:0]
+n6--181:FDIV : [0:17]
+n8--95:DMA_LOAD64 : [0:1]
+n41--91:IFGE : [0:0]
+n31--113:DMA_LOAD64 : [0:1]
+n22--184:IADD : [0:0]
+n40--190:IFGE : [1:1]
+n21--283:IADD : [1:1]
+n36--271:DMA_LOAD64 : [2:3]
+n18--172:DMA_LOAD64 : [2:3]
+n28--130:DMUL : [2:5]
+n3--149:DMUL : [2:5]
+n11--99:DCMPG : [2:2]
+n10--100:IFGT : [3:3]
+n16--272:DMUL : [4:7]
+n9--173:DMUL : [4:7]
+n2--153:DMUL : [6:9]
+n32--134:DMUL : [6:9]
+n7--174:DSUB : [8:8]
+n15--175:DMA_STORE64 : [9:10]
+n38--154:DADD : [10:10]
+n30--135:DSUB : [10:10]
+n14--136:DMA_STORE64 : [11:12]
+n24--198:DCMPG : [11:11]
+n26--155:DMA_STORE64 : [11:12]
+n1--273:DSUB : [11:11]
+n0--274:DMA_STORE64 : [12:13]
+n23--199:IFGT : [12:12]
+n12--248:DMUL : [13:16]
+n34--229:DMUL : [13:16]
+n35--232:F2D : [18:18]
+n5--280:FDIV : [18:35]
+n27--252:DMUL : [19:22]
+n33--233:DMUL : [19:22]
+n25--253:DADD : [23:23]
+n20--234:DSUB : [23:23]
+n39--254:DMA_STORE64 : [24:25]
+n19--235:DMA_STORE64 : [24:25]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 36 with 42 nodes
+
+n6--181:FDIV : [0:17]
+n29--127:DMA_LOAD64 : [12:13]
+n31--113:DMA_LOAD64 : [12:13]
+n17--125:I2D : [13:13]
+n3--149:DMUL : [14:17]
+n28--130:DMUL : [14:17]
+n4--133:F2D : [17:17]
+n2--153:DMUL : [18:21]
+n5--280:FDIV : [18:35]
+n32--134:DMUL : [18:21]
+n38--154:DADD : [22:22]
+n37--167:DMA_LOAD(ref) : [22:23]
+n30--135:DSUB : [22:22]
+n14--136:DMA_STORE64 : [23:24]
+n26--155:DMA_STORE64 : [23:24]
+n13--224:I2D : [24:24]
+n18--172:DMA_LOAD64 : [24:25]
+n12--248:DMUL : [25:28]
+n34--229:DMUL : [25:28]
+n9--173:DMUL : [26:29]
+n22--184:IADD : [26:26]
+n36--271:DMA_LOAD64 : [27:28]
+n35--232:F2D : [28:28]
+n8--95:DMA_LOAD64 : [28:29]
+n27--252:DMUL : [29:32]
+n16--272:DMUL : [29:32]
+n33--233:DMUL : [29:32]
+n7--174:DSUB : [30:30]
+n15--175:DMA_STORE64 : [31:32]
+n25--253:DADD : [33:33]
+n1--273:DSUB : [33:33]
+n20--234:DSUB : [33:33]
+n24--198:DCMPG : [34:34]
+n0--274:DMA_STORE64 : [34:35]
+n39--254:DMA_STORE64 : [34:35]
+n19--235:DMA_STORE64 : [34:35]
+n11--99:DCMPG : [34:34]
+n41--91:IFGE : [35:35]
+n40--190:IFGE : [35:35]
+n10--100:IFGT : [35:35]
+n21--283:IADD : [35:35]
+n23--199:IFGT : [35:35]
+
+FINISHED ALAP SCHEDULE
+

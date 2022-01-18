@@ -1,0 +1,108 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/SHA256Digest-processBlock-17-148.dot
+DOING ASAP SCHEDULE
+Found schedule of length 11 with 36 nodes
+
+n25--108:ISUB : [0:0]
+n13--141:ISUB : [0:0]
+n35--20:IFGT : [0:0]
+n26--48:ISUB : [0:0]
+n18--29:ISUB : [0:0]
+n29--81:ISUB : [0:0]
+n19--89:ISUB : [0:0]
+n34--145:IADD : [0:0]
+n11--66:ISUB : [0:0]
+n33--126:ISUB : [0:0]
+n28--82:DMA_LOAD : [1:2]
+n4--90:DMA_LOAD : [1:2]
+n9--30:DMA_LOAD : [1:2]
+n12--142:DMA_LOAD : [1:2]
+n24--109:ISHL : [3:3]
+n16--121:IUSHR : [3:3]
+n2--133:IUSHR : [3:3]
+n3--103:IUSHR : [3:3]
+n17--127:ISHL : [3:3]
+n6--43:IUSHR : [3:3]
+n7--49:ISHL : [3:3]
+n8--61:IUSHR : [3:3]
+n10--67:ISHL : [3:3]
+n23--74:IUSHR : [3:3]
+n27--68:IOR : [4:4]
+n15--128:IOR : [4:4]
+n5--50:IOR : [4:4]
+n20--110:IOR : [4:4]
+n1--130:IXOR : [5:5]
+n22--70:IXOR : [5:5]
+n0--134:IXOR : [6:6]
+n21--75:IXOR : [6:6]
+n14--83:IADD : [7:7]
+n30--136:IADD : [7:7]
+n31--143:IADD : [8:8]
+n32--144:DMA_STORE : [9:10]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 11 with 36 nodes
+
+n18--29:ISUB : [0:0]
+n19--89:ISUB : [0:0]
+n4--90:DMA_LOAD : [1:2]
+n9--30:DMA_LOAD : [1:2]
+n25--108:ISUB : [2:2]
+n26--48:ISUB : [2:2]
+n33--126:ISUB : [2:2]
+n11--66:ISUB : [2:2]
+n24--109:ISHL : [3:3]
+n16--121:IUSHR : [3:3]
+n17--127:ISHL : [3:3]
+n3--103:IUSHR : [3:3]
+n6--43:IUSHR : [3:3]
+n7--49:ISHL : [3:3]
+n8--61:IUSHR : [3:3]
+n10--67:ISHL : [3:3]
+n13--141:ISUB : [4:4]
+n27--68:IOR : [4:4]
+n15--128:IOR : [4:4]
+n29--81:ISUB : [4:4]
+n5--50:IOR : [4:4]
+n20--110:IOR : [4:4]
+n1--130:IXOR : [5:5]
+n2--133:IUSHR : [5:5]
+n28--82:DMA_LOAD : [5:6]
+n12--142:DMA_LOAD : [5:6]
+n23--74:IUSHR : [5:5]
+n22--70:IXOR : [5:5]
+n0--134:IXOR : [6:6]
+n21--75:IXOR : [6:6]
+n14--83:IADD : [7:7]
+n30--136:IADD : [7:7]
+n31--143:IADD : [8:8]
+n32--144:DMA_STORE : [9:10]
+n35--20:IFGT : [10:10]
+n34--145:IADD : [10:10]
+
+FINISHED ALAP SCHEDULE
+
