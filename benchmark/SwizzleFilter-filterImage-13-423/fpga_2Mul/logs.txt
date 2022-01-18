@@ -73,3 +73,13 @@ STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
 
 Finished first list scheduler run
 Setting initial convergence time at 1421 with latency 47
+Timeout reached while computing SwizzleFilter-filterImage-13-423.dot with fpga_2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 1252 with latency 47
+Timeout reached while computing SwizzleFilter-filterImage-13-423.dot with fpga_2Mul
+Received timeout, aborting

@@ -1,0 +1,442 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 115, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 4630
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 230, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 4630
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: listSchedule -> 4000, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 4630
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 115, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 230
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 115, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 4000
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 230, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 4000
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 56 with 204 nodes
+
+n203--3605:IFGE : [0:0]
+n189--4080:DMA_LOAD : [0:1]
+n124--3610:DMA_LOAD : [0:1]
+n23--4067:IADD : [0:0]
+n187--4537:IADD : [1:1]
+n174--4075:IFGE : [1:1]
+n107--3758:DMA_LOAD : [2:3]
+n173--4228:DMA_LOAD : [2:3]
+n123--3613:DMA_LOAD : [4:5]
+n41--4231:DMA_LOAD : [4:5]
+n63--4083:DMA_LOAD : [6:7]
+n40--4235:IAND : [6:6]
+n106--3761:DMA_LOAD : [6:7]
+n55--3617:IAND : [6:6]
+n70--3695:ISHR : [7:7]
+n92--3719:ISHR : [7:7]
+n80--3698:IAND : [7:7]
+n7--4276:IAND : [7:7]
+n71--4316:IAND : [7:7]
+n54--3658:IAND : [7:7]
+n140--4262:IAND : [7:7]
+n192--3641:ISHR : [7:7]
+n69--3722:IAND : [7:7]
+n163--4313:ISHR : [7:7]
+n120--4259:ISHR : [7:7]
+n39--4340:IAND : [7:7]
+n112--3644:IAND : [7:7]
+n157--4337:ISHR : [7:7]
+n129--4354:IAND : [7:7]
+n109--3736:IAND : [7:7]
+n1--4002:DMA_LOAD : [8:9]
+n6--4277:IFEQ : [8:8]
+n9--3765:IAND : [8:8]
+n95--3709:IXOR : [8:8]
+n183--3645:IFEQ : [8:8]
+n20--3655:IXOR : [8:8]
+n34--4087:IAND : [8:8]
+n89--4327:IXOR : [8:8]
+n11--3733:IXOR : [8:8]
+n182--4351:IXOR : [8:8]
+n143--3737:IFEQ : [8:8]
+n165--3699:IFEQ : [8:8]
+n68--4472:DMA_LOAD : [8:9]
+n136--4341:IFEQ : [8:8]
+n125--3659:IFEQ : [8:8]
+n169--4317:IFEQ : [8:8]
+n134--3723:IFEQ : [8:8]
+n119--4273:IXOR : [8:8]
+n139--4263:IFEQ : [8:8]
+n128--4355:IFEQ : [8:8]
+n94--3711:IXOR : [9:9]
+n8--3789:ISHR : [9:9]
+n62--3867:ISHR : [9:9]
+n73--3884:IAND : [9:9]
+n10--3747:IXOR : [9:9]
+n87--4168:IAND : [9:9]
+n162--4111:ISHR : [9:9]
+n33--4189:ISHR : [9:9]
+n88--4329:IXOR : [9:9]
+n160--3846:IAND : [9:9]
+n36--4165:ISHR : [9:9]
+n47--4206:IAND : [9:9]
+n144--4287:IXOR : [9:9]
+n166--4365:IXOR : [9:9]
+n38--4128:IAND : [9:9]
+n152--3806:IAND : [9:9]
+n186--4114:IAND : [9:9]
+n19--3669:IXOR : [9:9]
+n146--3792:IAND : [9:9]
+n108--4192:IAND : [9:9]
+n127--3843:ISHR : [9:9]
+n149--3870:IAND : [9:9]
+n0--4024:ISHL : [10:10]
+n5--3929:DMA_LOAD : [10:11]
+n72--3885:IFEQ : [10:10]
+n93--4399:DMA_LOAD : [10:11]
+n12--4005:ISHL : [10:10]
+n35--4179:IXOR : [10:10]
+n133--4367:IXOR : [10:10]
+n16--4203:IXOR : [10:10]
+n37--4129:IFEQ : [10:10]
+n114--4125:IXOR : [10:10]
+n113--3803:IXOR : [10:10]
+n116--3881:IXOR : [10:10]
+n61--3749:IXOR : [10:10]
+n151--3807:IFEQ : [10:10]
+n86--4169:IFEQ : [10:10]
+n67--4475:ISHL : [10:10]
+n45--4289:IXOR : [10:10]
+n193--4494:ISHL : [10:10]
+n171--3847:IFEQ : [10:10]
+n122--3671:IXOR : [10:10]
+n46--4207:IFEQ : [10:10]
+n188--4115:IFEQ : [10:10]
+n164--4193:IFEQ : [10:10]
+n126--3857:IXOR : [10:10]
+n148--3871:IFEQ : [10:10]
+n145--3793:IFEQ : [10:10]
+n121--3676:IAND : [11:11]
+n100--3895:IXOR : [11:11]
+n111--4372:IAND : [11:11]
+n15--4217:IXOR : [11:11]
+n60--3754:IAND : [11:11]
+n85--4139:IXOR : [11:11]
+n105--4181:IXOR : [11:11]
+n150--3817:IXOR : [11:11]
+n99--3859:IXOR : [11:11]
+n44--4294:IAND : [11:11]
+n79--4412:ISHL : [12:12]
+n175--4037:DMA_LOAD : [12:13]
+n18--3942:ISHL : [12:12]
+n29--3956:DMA_LOAD : [12:13]
+n3--4219:IXOR : [12:12]
+n4--3932:ISHL : [12:12]
+n168--3819:IXOR : [12:12]
+n84--4141:IXOR : [12:12]
+n98--3897:IXOR : [12:12]
+n78--4402:ISHL : [12:12]
+n132--3824:IAND : [13:13]
+n2--4224:IAND : [13:13]
+n202--4146:IAND : [13:13]
+n17--3923:IOR : [13:13]
+n179--3902:IAND : [13:13]
+n77--4393:IOR : [13:13]
+n57--4064:ISHL : [14:14]
+n28--3965:ISHL : [14:14]
+n102--4507:DMA_LOAD : [14:15]
+n65--4426:DMA_LOAD : [14:15]
+n75--3975:IOR : [15:15]
+n101--4534:ISHL : [16:16]
+n91--4522:DMA_LOAD : [16:17]
+n195--3919:DMA_LOAD : [16:17]
+n66--4435:ISHL : [16:16]
+n64--4445:IOR : [17:17]
+n14--4052:DMA_LOAD : [18:19]
+n90--4525:ISHL : [18:18]
+n194--3922:ISHL : [18:18]
+n181--3971:DMA_LOAD : [18:19]
+n32--4516:IOR : [19:19]
+n13--4055:ISHL : [20:20]
+n177--4042:DMA_LOAD : [20:21]
+n196--4389:DMA_LOAD : [20:21]
+n180--3974:ISHL : [20:20]
+n56--4046:IOR : [21:21]
+n176--4045:ISHL : [22:22]
+n185--3980:DMA_LOAD : [22:23]
+n59--4512:DMA_LOAD : [22:23]
+n50--4392:ISHL : [22:22]
+n138--4056:IOR : [23:23]
+n58--4515:ISHL : [24:24]
+n137--4065:IOR : [24:24]
+n104--4450:DMA_LOAD : [24:25]
+n156--4481:DMA_LOAD : [24:25]
+n184--3983:ISHL : [24:24]
+n76--3966:IOR : [25:25]
+n31--4526:IOR : [25:25]
+n155--4484:ISHL : [26:26]
+n200--4441:DMA_LOAD : [26:27]
+n118--4011:DMA_LOAD : [26:27]
+n30--4535:IOR : [26:26]
+n74--3984:IOR : [26:26]
+n53--4453:ISHL : [26:26]
+n142--4476:IOR : [27:27]
+n199--3914:DMA_LOAD : [28:29]
+n52--4444:ISHL : [28:28]
+n117--4014:ISHL : [28:28]
+n97--4466:DMA_LOAD : [28:29]
+n135--4006:IOR : [29:29]
+n51--4436:IOR : [29:29]
+n24--4454:IOR : [30:30]
+n49--4384:DMA_LOAD : [30:31]
+n167--3933:IOR : [30:30]
+n96--4485:IOR : [30:30]
+n43--3996:DMA_LOAD : [30:31]
+n27--3943:IOR : [31:31]
+n141--4495:IOR : [31:31]
+n154--4028:DMA_LOAD(ref) : [32:33]
+n48--4403:IOR : [32:32]
+n82--3987:DMA_LOAD(ref) : [32:33]
+n42--4015:IOR : [32:32]
+n159--4413:IOR : [33:33]
+n83--4025:IOR : [33:33]
+n26--3905:DMA_LOAD(ref) : [34:35]
+n22--3946:DMA_LOAD(ref) : [34:35]
+n110--4373:DMA_STORE : [36:37]
+n161--4242:DMA_STORE : [36:37]
+n198--4225:DMA_STORE : [38:39]
+n130--3755:DMA_STORE : [38:39]
+n131--3825:DMA_STORE : [40:41]
+n153--4536:DMA_STORE : [40:41]
+n197--3677:DMA_STORE : [42:43]
+n158--4414:DMA_STORE : [42:43]
+n115--3624:DMA_STORE : [44:45]
+n178--3903:DMA_STORE : [44:45]
+n81--4026:DMA_STORE : [46:47]
+n190--4066:DMA_STORE : [46:47]
+n191--3772:DMA_STORE : [48:49]
+n21--4455:DMA_STORE : [48:49]
+n172--3985:DMA_STORE : [50:51]
+n170--4295:DMA_STORE : [50:51]
+n25--3944:DMA_STORE : [52:53]
+n103--4094:DMA_STORE : [52:53]
+n147--4496:DMA_STORE : [54:55]
+n201--4147:DMA_STORE : [54:55]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 56
+Initial best latency: 56
+203 out of 204 DFG nodes could be skipped to find best schedule
+It took 230 milliseconds to converge
+Scheduling took 230 milliseconds
+
+Print BULB tree: 
+l_bound: 56, u_bound: 56; investigated partial schedule: {}; 
+└── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n189--4080:DMA_LOAD], 1=[n189--4080:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 56 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 23 times
+Best latency found: 56
+Initial best latency: 56
+203 out of 204 DFG nodes could be skipped to find best schedule
+It took 166 milliseconds to converge
+Scheduling took 4000 milliseconds
+
+Print BULB tree: 
+l_bound: 56, u_bound: 56; investigated partial schedule: {}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [39:40]; investigated partial schedule: {39=[n189--4080:DMA_LOAD], 40=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [34:35]; investigated partial schedule: {34=[n189--4080:DMA_LOAD], 35=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n189--4080:DMA_LOAD], 1=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [36:37]; investigated partial schedule: {36=[n189--4080:DMA_LOAD], 37=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [33:34]; investigated partial schedule: {33=[n189--4080:DMA_LOAD], 34=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [1:2]; investigated partial schedule: {1=[n189--4080:DMA_LOAD], 2=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [14:15]; investigated partial schedule: {14=[n189--4080:DMA_LOAD], 15=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [24:25]; investigated partial schedule: {24=[n189--4080:DMA_LOAD], 25=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [2:3]; investigated partial schedule: {2=[n189--4080:DMA_LOAD], 3=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [16:17]; investigated partial schedule: {16=[n189--4080:DMA_LOAD], 17=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [35:36]; investigated partial schedule: {35=[n189--4080:DMA_LOAD], 36=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [3:4]; investigated partial schedule: {3=[n189--4080:DMA_LOAD], 4=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [22:23]; investigated partial schedule: {22=[n189--4080:DMA_LOAD], 23=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [45:46]; investigated partial schedule: {45=[n189--4080:DMA_LOAD], 46=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 62, u_bound: 62; investigated n189--4080:DMA_LOAD in [50:51]; investigated partial schedule: {50=[n189--4080:DMA_LOAD], 51=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [8:9]; investigated partial schedule: {8=[n189--4080:DMA_LOAD], 9=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [23:24]; investigated partial schedule: {23=[n189--4080:DMA_LOAD], 24=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 58, u_bound: 58; investigated n189--4080:DMA_LOAD in [46:47]; investigated partial schedule: {46=[n189--4080:DMA_LOAD], 47=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [44:45]; investigated partial schedule: {44=[n189--4080:DMA_LOAD], 45=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [20:21]; investigated partial schedule: {20=[n189--4080:DMA_LOAD], 21=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [43:44]; investigated partial schedule: {43=[n189--4080:DMA_LOAD], 44=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 59, u_bound: 60; investigated n189--4080:DMA_LOAD in [47:48]; investigated partial schedule: {47=[n189--4080:DMA_LOAD], 48=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [40:41]; investigated partial schedule: {40=[n189--4080:DMA_LOAD], 41=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 64, u_bound: 64; investigated n189--4080:DMA_LOAD in [52:53]; investigated partial schedule: {52=[n189--4080:DMA_LOAD], 53=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [11:12]; investigated partial schedule: {11=[n189--4080:DMA_LOAD], 12=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [30:31]; investigated partial schedule: {30=[n189--4080:DMA_LOAD], 31=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 61, u_bound: 62; investigated n189--4080:DMA_LOAD in [49:50]; investigated partial schedule: {49=[n189--4080:DMA_LOAD], 50=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [5:6]; investigated partial schedule: {5=[n189--4080:DMA_LOAD], 6=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [19:20]; investigated partial schedule: {19=[n189--4080:DMA_LOAD], 20=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 66, u_bound: 66; investigated n189--4080:DMA_LOAD in [54:55]; investigated partial schedule: {54=[n189--4080:DMA_LOAD], 55=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [25:26]; investigated partial schedule: {25=[n189--4080:DMA_LOAD], 26=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [29:30]; investigated partial schedule: {29=[n189--4080:DMA_LOAD], 30=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [38:39]; investigated partial schedule: {38=[n189--4080:DMA_LOAD], 39=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [12:13]; investigated partial schedule: {12=[n189--4080:DMA_LOAD], 13=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [10:11]; investigated partial schedule: {10=[n189--4080:DMA_LOAD], 11=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [31:32]; investigated partial schedule: {31=[n189--4080:DMA_LOAD], 32=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [41:42]; investigated partial schedule: {41=[n189--4080:DMA_LOAD], 42=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 63, u_bound: 64; investigated n189--4080:DMA_LOAD in [51:52]; investigated partial schedule: {51=[n189--4080:DMA_LOAD], 52=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [37:38]; investigated partial schedule: {37=[n189--4080:DMA_LOAD], 38=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [21:22]; investigated partial schedule: {21=[n189--4080:DMA_LOAD], 22=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 65, u_bound: 65; investigated n189--4080:DMA_LOAD in [53:54]; investigated partial schedule: {53=[n189--4080:DMA_LOAD], 54=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [15:16]; investigated partial schedule: {15=[n189--4080:DMA_LOAD], 16=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [18:19]; investigated partial schedule: {18=[n189--4080:DMA_LOAD], 19=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [6:7]; investigated partial schedule: {6=[n189--4080:DMA_LOAD], 7=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [42:43]; investigated partial schedule: {42=[n189--4080:DMA_LOAD], 43=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [17:18]; investigated partial schedule: {17=[n189--4080:DMA_LOAD], 18=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [7:8]; investigated partial schedule: {7=[n189--4080:DMA_LOAD], 8=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [13:14]; investigated partial schedule: {13=[n189--4080:DMA_LOAD], 14=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [28:29]; investigated partial schedule: {28=[n189--4080:DMA_LOAD], 29=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [26:27]; investigated partial schedule: {26=[n189--4080:DMA_LOAD], 27=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 60, u_bound: 60; investigated n189--4080:DMA_LOAD in [48:49]; investigated partial schedule: {48=[n189--4080:DMA_LOAD], 49=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [27:28]; investigated partial schedule: {27=[n189--4080:DMA_LOAD], 28=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [9:10]; investigated partial schedule: {9=[n189--4080:DMA_LOAD], 10=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [32:33]; investigated partial schedule: {32=[n189--4080:DMA_LOAD], 33=[n189--4080:DMA_LOAD]}; 
+└── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [4:5]; investigated partial schedule: {4=[n189--4080:DMA_LOAD], 5=[n189--4080:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 56 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 23 times
+Best latency found: 56
+Initial best latency: 56
+203 out of 204 DFG nodes could be skipped to find best schedule
+It took 137 milliseconds to converge
+Scheduling took 4630 milliseconds
+
+Print BULB tree: 
+l_bound: 56, u_bound: 56; investigated partial schedule: {}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [4:5]; investigated partial schedule: {4=[n189--4080:DMA_LOAD], 5=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [30:31]; investigated partial schedule: {30=[n189--4080:DMA_LOAD], 31=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [13:14]; investigated partial schedule: {13=[n189--4080:DMA_LOAD], 14=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [1:2]; investigated partial schedule: {1=[n189--4080:DMA_LOAD], 2=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [9:10]; investigated partial schedule: {9=[n189--4080:DMA_LOAD], 10=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [3:4]; investigated partial schedule: {3=[n189--4080:DMA_LOAD], 4=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [42:43]; investigated partial schedule: {42=[n189--4080:DMA_LOAD], 43=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [31:32]; investigated partial schedule: {31=[n189--4080:DMA_LOAD], 32=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [20:21]; investigated partial schedule: {20=[n189--4080:DMA_LOAD], 21=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 62, u_bound: 62; investigated n189--4080:DMA_LOAD in [50:51]; investigated partial schedule: {50=[n189--4080:DMA_LOAD], 51=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [15:16]; investigated partial schedule: {15=[n189--4080:DMA_LOAD], 16=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [32:33]; investigated partial schedule: {32=[n189--4080:DMA_LOAD], 33=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [40:41]; investigated partial schedule: {40=[n189--4080:DMA_LOAD], 41=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [14:15]; investigated partial schedule: {14=[n189--4080:DMA_LOAD], 15=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [12:13]; investigated partial schedule: {12=[n189--4080:DMA_LOAD], 13=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [19:20]; investigated partial schedule: {19=[n189--4080:DMA_LOAD], 20=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [41:42]; investigated partial schedule: {41=[n189--4080:DMA_LOAD], 42=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [43:44]; investigated partial schedule: {43=[n189--4080:DMA_LOAD], 44=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 61, u_bound: 62; investigated n189--4080:DMA_LOAD in [49:50]; investigated partial schedule: {49=[n189--4080:DMA_LOAD], 50=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [16:17]; investigated partial schedule: {16=[n189--4080:DMA_LOAD], 17=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [25:26]; investigated partial schedule: {25=[n189--4080:DMA_LOAD], 26=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [36:37]; investigated partial schedule: {36=[n189--4080:DMA_LOAD], 37=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [34:35]; investigated partial schedule: {34=[n189--4080:DMA_LOAD], 35=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [17:18]; investigated partial schedule: {17=[n189--4080:DMA_LOAD], 18=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [21:22]; investigated partial schedule: {21=[n189--4080:DMA_LOAD], 22=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 64, u_bound: 64; investigated n189--4080:DMA_LOAD in [52:53]; investigated partial schedule: {52=[n189--4080:DMA_LOAD], 53=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 59, u_bound: 60; investigated n189--4080:DMA_LOAD in [47:48]; investigated partial schedule: {47=[n189--4080:DMA_LOAD], 48=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [6:7]; investigated partial schedule: {6=[n189--4080:DMA_LOAD], 7=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [26:27]; investigated partial schedule: {26=[n189--4080:DMA_LOAD], 27=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [45:46]; investigated partial schedule: {45=[n189--4080:DMA_LOAD], 46=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [11:12]; investigated partial schedule: {11=[n189--4080:DMA_LOAD], 12=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 60, u_bound: 60; investigated n189--4080:DMA_LOAD in [48:49]; investigated partial schedule: {48=[n189--4080:DMA_LOAD], 49=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [2:3]; investigated partial schedule: {2=[n189--4080:DMA_LOAD], 3=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [37:38]; investigated partial schedule: {37=[n189--4080:DMA_LOAD], 38=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [18:19]; investigated partial schedule: {18=[n189--4080:DMA_LOAD], 19=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [23:24]; investigated partial schedule: {23=[n189--4080:DMA_LOAD], 24=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [35:36]; investigated partial schedule: {35=[n189--4080:DMA_LOAD], 36=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n189--4080:DMA_LOAD], 1=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [29:30]; investigated partial schedule: {29=[n189--4080:DMA_LOAD], 30=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [38:39]; investigated partial schedule: {38=[n189--4080:DMA_LOAD], 39=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [28:29]; investigated partial schedule: {28=[n189--4080:DMA_LOAD], 29=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 66, u_bound: 66; investigated n189--4080:DMA_LOAD in [54:55]; investigated partial schedule: {54=[n189--4080:DMA_LOAD], 55=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 63, u_bound: 64; investigated n189--4080:DMA_LOAD in [51:52]; investigated partial schedule: {51=[n189--4080:DMA_LOAD], 52=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [8:9]; investigated partial schedule: {8=[n189--4080:DMA_LOAD], 9=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [39:40]; investigated partial schedule: {39=[n189--4080:DMA_LOAD], 40=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 65, u_bound: 65; investigated n189--4080:DMA_LOAD in [53:54]; investigated partial schedule: {53=[n189--4080:DMA_LOAD], 54=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 58; investigated n189--4080:DMA_LOAD in [33:34]; investigated partial schedule: {33=[n189--4080:DMA_LOAD], 34=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [7:8]; investigated partial schedule: {7=[n189--4080:DMA_LOAD], 8=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [24:25]; investigated partial schedule: {24=[n189--4080:DMA_LOAD], 25=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [5:6]; investigated partial schedule: {5=[n189--4080:DMA_LOAD], 6=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [10:11]; investigated partial schedule: {10=[n189--4080:DMA_LOAD], 11=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [22:23]; investigated partial schedule: {22=[n189--4080:DMA_LOAD], 23=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [44:45]; investigated partial schedule: {44=[n189--4080:DMA_LOAD], 45=[n189--4080:DMA_LOAD]}; 
+├── l_bound: 57, u_bound: 57; investigated n189--4080:DMA_LOAD in [27:28]; investigated partial schedule: {27=[n189--4080:DMA_LOAD], 28=[n189--4080:DMA_LOAD]}; 
+└── l_bound: 58, u_bound: 58; investigated n189--4080:DMA_LOAD in [46:47]; investigated partial schedule: {46=[n189--4080:DMA_LOAD], 47=[n189--4080:DMA_LOAD]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 56
+Initial best latency: 56
+203 out of 204 DFG nodes could be skipped to find best schedule
+It took 115 milliseconds to converge
+Scheduling took 115 milliseconds
+
+Print BULB tree: 
+l_bound: 56, u_bound: 56; investigated partial schedule: {}; 
+└── l_bound: 56, u_bound: 56; investigated n189--4080:DMA_LOAD in [0:1]; investigated partial schedule: {0=[n189--4080:DMA_LOAD], 1=[n189--4080:DMA_LOAD]}; 
+
