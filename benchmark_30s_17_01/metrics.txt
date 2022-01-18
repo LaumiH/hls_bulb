@@ -1,0 +1,210 @@
+710 tried combinations completed in given time
+80 tried combinations timed out
+	- benchmark/ADPCMn-decode-271-381/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ADPCMn-decode-631-729/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/AESrkgcyclic/2Alu2Mul timed out with ASAP estimator, listSchedule ALAPBound
+	- benchmark/BLAKE256Digest-processBlock-189-1577/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/BLAKE256Digest-processBlock-189-1577/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ContrastFilter-filter-13-252/2Alu2Mul timed out with ASAP estimator, listSchedule ALAPBound
+	- benchmark/CubeHash512Digest-sixteenRounds-2-2891/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/CubeHash512Digest-sixteenRounds-2-2891/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-AES2RoundsAll-2-666/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-AES2RoundsAll-2-666/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-compress-49-121/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-compress-839-1065/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-compress-839-1065/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-mixColumn-3-238/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/ECOH256Digest-mixColumn-3-238/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FFT-fft3-387-948/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FFT-fft3-387-948/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FFT-fft3-688-929/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FFT-fft3-688-929/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FIR-main-75-264/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FIR-main-75-264/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FIR-main-75-454/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/FIR-main-75-454/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/IDCT/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/IDCT/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/PETrigonometry-cordic-88-287/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/RadioGatun32Digest-processBlock-170-1524/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/RadioGatun32Digest-processBlock-170-1524/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SHA1Digest-processBlock-105-486/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SHA1Digest-processBlock-332-693/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SHA1Digest-processBlock-559-950/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SHA256Digest-processBlock-119-1722/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SHA256Digest-processBlock-119-1722/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SHA256Digest-processBlock-17-148/2Alu2Mul timed out with ASAP estimator, listSchedule ALAPBound
+	- benchmark/SIMD512Digest-compress-1682-2248/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-compress-1682-2248/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-compress-1878-2280/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-compress-1878-2280/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-compress-63-471/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-compress-63-471/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-fft64-1537-1965/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-fft64-1537-1965/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-fft64-3640-4116/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SIMD512Digest-fft64-3640-4116/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-encryptBlock-51-2815/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-encryptBlock-51-2815/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-15-150/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-15-150/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-179-322/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-179-322/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-245-1724/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-245-1724/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SkipjackEngine-encryptBlock-150-445/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SkipjackEngine-encryptBlock-97-392/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SkipjackEngine-init-45-238/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SkipjackEngine-init-45-238/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SwizzleFilter-filterImage-13-423/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/SwizzleFilter-filterImage-13-423/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-#init#-3600-4541/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-#init#-3600-4541/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-encryptBlock-90-1017/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-encryptBlock-90-1017/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-setKey-113-1859/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-setKey-113-1859/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-setKey-262-1953/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/TwofishEngine-setKey-262-1953/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-#init#-310-427/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-#init#-75-755/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-#init#-75-755/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-processBlock-359-635/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-processBlock-359-635/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-processBlock-50-321/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/WhirlpoolDigest-processBlock-50-321/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/XTEAEngine-setKey-4-123/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/XTEAEngine-setKey-4-123/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/XTEAEngine-setKey-70-169/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/XTEAEngine-setKey-70-169/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/serpent/2Alu2Mul timed out with ASAP estimator, lazyALAP ALAPBound
+	- benchmark/serpent/fpga_4Mul timed out with ASAP estimator, lazyALAP ALAPBound
+0 tried combinations threw an exception, please check!
+
+
+14 tried comparisons produced unequal schedules
+benchmark/FFT-fft3-688-929/fpga_4Mul: lBoundEstimator: OWN, ALAPBound: lazyALAP with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/FFT-fft3-688-929/fpga_4Mul: lBoundEstimator: OWN, ALAPBound: lazyALAP with lBoundEstimator: PAPER, ALAPBound: listSchedule produced unequal schedules
+benchmark/FFT-fft3-688-929/fpga_4Mul: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/FFT-fft3-688-929/fpga_4Mul: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: listSchedule produced unequal schedules
+benchmark/PETrigonometry-cordic-88-287/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: lazyALAP with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/PETrigonometry-cordic-88-287/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: lazyALAP with lBoundEstimator: OWN, ALAPBound: listSchedule produced unequal schedules
+benchmark/PETrigonometry-cordic-88-287/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/PETrigonometry-cordic-88-287/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: listSchedule produced unequal schedules
+benchmark/SIMD512Digest-compress-1878-2280/2Alu2Mul: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SIMD512Digest-compress-1878-2280/2Alu2Mul: lBoundEstimator: OWN, ALAPBound: listSchedule with lBoundEstimator: PAPER, ALAPBound: listSchedule produced unequal schedules
+benchmark/SIMD512Digest-compress-1878-2280/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: lazyALAP with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SIMD512Digest-compress-1878-2280/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: listSchedule with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: lazyALAP with lBoundEstimator: OWN, ALAPBound: lazyALAP produced unequal schedules
+benchmark/SwizzleFilter-filterImage-13-423/2Alu2Mul: lBoundEstimator: PAPER, ALAPBound: lazyALAP with lBoundEstimator: OWN, ALAPBound: listSchedule produced unequal schedules
+
+
+
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-322-benchmark/SerpentEngine-makeWorkingKey-179-322/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-322-benchmark/SerpentEngine-makeWorkingKey-179-322/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-179-322-benchmark/SerpentEngine-makeWorkingKey-179-322/fpga_4Mul
+no convergence in benchmark/WhirlpoolDigest-processBlock-50-321-benchmark/WhirlpoolDigest-processBlock-50-321/fpga_4Mul
+no convergence in benchmark/WhirlpoolDigest-processBlock-50-321-benchmark/WhirlpoolDigest-processBlock-50-321/fpga_4Mul
+no convergence in benchmark/SwizzleFilter-filterImage-13-423-benchmark/SwizzleFilter-filterImage-13-423/2Alu2Mul
+no convergence in benchmark/SwizzleFilter-filterImage-13-423-benchmark/SwizzleFilter-filterImage-13-423/2Alu2Mul
+no convergence in benchmark/ADPCMn-decode-271-381-benchmark/ADPCMn-decode-271-381/fpga_4Mul
+no convergence in benchmark/ADPCMn-decode-271-381-benchmark/ADPCMn-decode-271-381/fpga_4Mul
+no convergence in benchmark/FIR-main-75-264-benchmark/FIR-main-75-264/fpga_4Mul
+no convergence in benchmark/FIR-main-75-264-benchmark/FIR-main-75-264/fpga_4Mul
+no convergence in benchmark/WhirlpoolDigest-#init#-75-755-benchmark/WhirlpoolDigest-#init#-75-755/fpga_4Mul
+no convergence in benchmark/WhirlpoolDigest-#init#-75-755-benchmark/WhirlpoolDigest-#init#-75-755/fpga_4Mul
+no convergence in benchmark/WhirlpoolDigest-#init#-75-755-benchmark/WhirlpoolDigest-#init#-75-755/fpga_4Mul
+no convergence in benchmark/WhirlpoolDigest-#init#-75-755-benchmark/WhirlpoolDigest-#init#-75-755/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-155-benchmark/SerpentEngine-makeWorkingKey-86-155/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-155-benchmark/SerpentEngine-makeWorkingKey-86-155/2Alu2Mul
+no convergence in benchmark/SIMD512Digest-fft64-3640-4116-benchmark/SIMD512Digest-fft64-3640-4116/fpga_4Mul
+no convergence in benchmark/SIMD512Digest-fft64-3640-4116-benchmark/SIMD512Digest-fft64-3640-4116/fpga_4Mul
+no convergence in benchmark/ECOH256Digest-AES2RoundsAll-2-666-benchmark/ECOH256Digest-AES2RoundsAll-2-666/fpga_4Mul
+no convergence in benchmark/RadioGatun32Digest-processBlock-170-1524-benchmark/RadioGatun32Digest-processBlock-170-1524/fpga_4Mul
+no convergence in benchmark/RadioGatun32Digest-processBlock-170-1524-benchmark/RadioGatun32Digest-processBlock-170-1524/fpga_4Mul
+no convergence in benchmark/RadioGatun32Digest-processBlock-170-1524-benchmark/RadioGatun32Digest-processBlock-170-1524/fpga_4Mul
+no convergence in benchmark/RadioGatun32Digest-processBlock-170-1524-benchmark/RadioGatun32Digest-processBlock-170-1524/fpga_4Mul
+no convergence in benchmark/SkipjackEngine-init-45-238-benchmark/SkipjackEngine-init-45-238/fpga_4Mul
+no convergence in benchmark/SkipjackEngine-init-45-238-benchmark/SkipjackEngine-init-45-238/fpga_4Mul
+no convergence in benchmark/SkipjackEngine-init-45-238-benchmark/SkipjackEngine-init-45-238/fpga_4Mul
+no convergence in benchmark/SkipjackEngine-init-45-238-benchmark/SkipjackEngine-init-45-238/fpga_4Mul
+no convergence in benchmark/SIMD512Digest-fft64-1537-1965-benchmark/SIMD512Digest-fft64-1537-1965/fpga_4Mul
+no convergence in benchmark/SIMD512Digest-compress-1878-2280-benchmark/SIMD512Digest-compress-1878-2280/fpga_4Mul
+no convergence in benchmark/SIMD512Digest-compress-1878-2280-benchmark/SIMD512Digest-compress-1878-2280/fpga_4Mul
+no convergence in benchmark/SkipjackEngine-encryptBlock-97-392-benchmark/SkipjackEngine-encryptBlock-97-392/2Alu2Mul
+no convergence in benchmark/SkipjackEngine-encryptBlock-97-392-benchmark/SkipjackEngine-encryptBlock-97-392/2Alu2Mul
+no convergence in benchmark/SkipjackEngine-encryptBlock-97-392-benchmark/SkipjackEngine-encryptBlock-97-392/2Alu2Mul
+no convergence in benchmark/SkipjackEngine-encryptBlock-97-392-benchmark/SkipjackEngine-encryptBlock-97-392/2Alu2Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul
+no convergence in benchmark/SerpentEngine-makeWorkingKey-86-225-benchmark/SerpentEngine-makeWorkingKey-86-225/fpga_4Mul
+no convergence in benchmark/SHA1Digest-processBlock-17-67-benchmark/SHA1Digest-processBlock-17-67/2Alu2Mul
+no convergence in benchmark/SHA1Digest-processBlock-17-67-benchmark/SHA1Digest-processBlock-17-67/2Alu2Mul
+no convergence in benchmark/ECOH256Digest-compress-839-1065-benchmark/ECOH256Digest-compress-839-1065/2Alu2Mul
+no convergence in benchmark/ECOH256Digest-compress-839-1065-benchmark/ECOH256Digest-compress-839-1065/2Alu2Mul
+no convergence in benchmark/ECOH256Digest-compress-839-1065-benchmark/ECOH256Digest-compress-839-1065/2Alu2Mul
+
+
+
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 62 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 14 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 45 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: lazyALAP was faster 13 times
+ lBoundEstimator: ASAP, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 50 times
+ lBoundEstimator: ASAP, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 1 times
+ lBoundEstimator: ASAP, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 22 times
+ lBoundEstimator: ASAP, ALAPBound: listSchedule faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 26 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 22 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 61 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 125 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: lazyALAP was faster 31 times
+ lBoundEstimator: OWN, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 124 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 19 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 26 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 1 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: PAPER, ALAPBound: lazyALAP was faster 3 times
+ lBoundEstimator: OWN, ALAPBound: listSchedule faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 69 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 23 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 63 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 27 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 120 times
+ lBoundEstimator: PAPER, ALAPBound: lazyALAP faster than lBoundEstimator: PAPER, ALAPBound: listSchedule was faster 126 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: lazyALAP was faster 19 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: ASAP, ALAPBound: listSchedule was faster 27 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: lazyALAP was faster 1 times
+ lBoundEstimator: PAPER, ALAPBound: listSchedule faster than lBoundEstimator: OWN, ALAPBound: listSchedule was faster 31 times
+
+
+##########################################
+
+##########################################
+
+##########################################
+
+
+Execution times
+lBoundEstimator: ASAP, ALAPBound: lazyALAP: 48, 3, 0, 2, 1, 2, 8, 4, 1, 1, 2, 1, 22, 29953, 79, 2408, 18, 6913, 189, 0, 0, 2, 0, 15, 159, 3, 0, 3, 0, 0, 0, 32, 60, 210, 58, 39, 63, 12, 156, 1, 0, 12, 25, 73, 1532, 1, 0, 2, 8, 314, 69, 330, 73, 236, 809, 74, 32, 2, 51, 5, 27, 6, 1, 23, 106, 19, 133, 15, 1, 4, 4, 3, 0, 4, 1, 3, 0, 
+lBoundEstimator: ASAP, ALAPBound: listSchedule: 115, 19, 3, 9, 1, 4, 9, 12, 3, 0, 16, 3, 124, 345, 7664, 951, 960, 1, 1, 7, 1, 104, 1093, 19, 3, 11, 2, 0, 0, 147, 607, 302, 123, 547, 634, 73, 0, 0, 65, 57, 236, 5048, 3, 1, 8, 12, 668, 249, 705, 259, 557, 2502, 1212, 825, 79, 468, 50, 220, 26, 4, 34, 140, 263, 289, 140, 23, 14, 8, 25, 1, 31, 3, 30, 3, 
+lBoundEstimator: OWN, ALAPBound: lazyALAP: 12, 8, 4, 1, 2, 0, 2, 1, 5, 2, 0, 1, 3, 1, 23, 23, 17, 2, 1274, 920, 37, 53, 2559, 264, 53, 13, 2, 64, 12, 1, 0, 53, 6, 2, 1, 95, 9, 39, 5, 40, 5, 88, 9, 15, 2, 3, 1, 3, 1, 0, 1, 36, 263, 170, 73, 66, 34, 6, 2, 62, 28, 70, 41, 12, 115, 0, 0, 14, 1, 170, 23, 75, 19, 57, 5713, 127, 12, 61, 9292, 26, 4, 4, 1, 1, 1, 2, 1, 9, 2, 30, 5, 442, 106, 10, 2, 31, 247, 830, 10, 78, 31, 41, 559, 31, 3, 74, 16, 116, 60, 52, 8, 2888, 557, 78, 483, 30, 5, 66, 40, 45, 1, 4, 1, 63, 15, 53, 15, 46, 221, 116, 4, 13, 56, 14, 1, 4, 1, 4, 1, 4, 0, 3, 0, 
+lBoundEstimator: OWN, ALAPBound: listSchedule: 52, 32, 20, 3, 10, 2, 6, 1, 7, 9, 2, 0, 18, 3, 129, 84, 48, 18, 995, 601, 12762, 3259, 142, 20, 598, 146, 1, 1, 309, 100, 10, 2, 1155, 209, 314, 58, 270, 66, 2094, 233, 102, 18, 20, 4, 13, 3, 0, 1, 152, 457, 4408, 6228, 692, 385, 51, 8, 523, 265, 807, 471, 74, 248, 0, 0, 69, 12, 3818, 1268, 1840, 546, 559, 11045, 733, 266, 533, 17947, 115, 52, 27, 10, 1, 0, 8, 2, 68, 13, 126, 54, 20920, 6607, 69, 14, 146, 478, 2499, 104, 1415, 326, 273, 678, 626, 81, 1387, 253, 3835, 1990, 494, 103, 28248, 7949, 226, 68, 879, 2262, 38, 4, 14, 3, 695, 207, 758, 251, 275, 640, 443, 53, 75, 123, 156, 27, 15, 4, 26, 4, 30, 2, 32, 4, 
+lBoundEstimator: PAPER, ALAPBound: lazyALAP: 22, 2, 4, 1, 2, 1, 2, 1, 5, 1, 1, 1, 2, 1, 24, 25, 9, 2, 1279, 948, 20, 55, 2547, 277, 38, 12, 2, 64, 14, 1, 0, 24, 6, 3, 0, 95, 17, 2573, 6, 42, 5, 86, 16, 14, 2, 2, 1, 3, 0, 1, 1, 43, 171, 161, 101, 67, 33, 7, 1, 60, 25, 71, 20, 13, 128, 1, 0, 11, 1, 171, 91, 51, 4128, 5940, 61, 16, 113, 9761, 23, 5, 8, 1, 1, 1, 3, 1, 10, 2, 15, 5, 428, 103, 10, 1, 30, 255, 858, 11, 75, 31, 41, 552, 32, 4, 75, 10521, 138, 56, 52, 9, 2995, 575, 113, 523, 31, 5, 65, 36, 3, 1, 4, 1, 62, 10, 53, 16, 44, 225, 110, 4, 12, 71, 14, 2, 3, 0, 4, 1, 3, 1, 3, 1, 
+lBoundEstimator: PAPER, ALAPBound: listSchedule: 148, 40, 15, 4, 10, 1, 5, 1, 13, 8, 3, 1, 19, 3, 151, 95, 44, 9, 1574, 614, 12954, 3478, 84, 22, 754, 128, 2, 0, 391, 112, 9, 2, 1182, 230, 4018, 48, 278, 68, 2186, 284, 76, 16, 22, 4, 23, 4, 0, 1, 153, 288, 4480, 6625, 673, 398, 41, 7, 626, 265, 724, 530, 48, 264, 1, 1, 69, 14, 3942, 1413, 1810, 11018, 11618, 855, 277, 592, 19189, 120, 29, 39, 9, 4, 1, 9, 3, 70, 14, 141, 57, 21954, 7271, 71, 17, 124, 486, 2491, 118, 1438, 258, 272, 786, 625, 83, 1280, 3925, 2212, 479, 83, 28991, 9043, 229, 44, 789, 2492, 21, 4, 15, 4, 707, 347, 854, 269, 283, 489, 452, 28, 77, 105, 137, 28, 13, 15, 29, 4, 14, 5, 16, 6, 
+
+
+##########################################
+
+##########################################
+
+##########################################
+
+
+Convergence times
+lBoundEstimator: ASAP, ALAPBound: lazyALAP: -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+lBoundEstimator: ASAP, ALAPBound: listSchedule: -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+lBoundEstimator: OWN, ALAPBound: lazyALAP: -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+lBoundEstimator: OWN, ALAPBound: listSchedule: -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+lBoundEstimator: PAPER, ALAPBound: lazyALAP: -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+lBoundEstimator: PAPER, ALAPBound: listSchedule: -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 

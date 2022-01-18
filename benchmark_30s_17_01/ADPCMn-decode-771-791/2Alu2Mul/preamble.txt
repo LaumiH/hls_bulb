@@ -1,0 +1,46 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/ADPCMn-decode-771-791.dot
+DOING ASAP SCHEDULE
+Found schedule of length 5 with 5 nodes
+
+n2--785:ISUB : [0:0]
+n3--788:IADD : [0:0]
+n4--773:IFLE : [0:0]
+n1--786:DMA_LOAD : [1:2]
+n0--787:DMA_STORE : [3:4]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 5 with 5 nodes
+
+n2--785:ISUB : [0:0]
+n1--786:DMA_LOAD : [1:2]
+n0--787:DMA_STORE : [3:4]
+n3--788:IADD : [4:4]
+n4--773:IFLE : [4:4]
+
+FINISHED ALAP SCHEDULE
+

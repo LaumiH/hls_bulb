@@ -1,0 +1,37 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (65) > upper bound (64), the lower bound estimator was too conservative
+i=0; lower bound (65) > upper bound (64), the lower bound estimator was too conservative
+i=0; lower bound (65) > upper bound (64), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Timeout reached while computing FIR-main-75-454.dot with fpga_4Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Timeout reached while computing FIR-main-75-454.dot with fpga_4Mul
+Received timeout, aborting

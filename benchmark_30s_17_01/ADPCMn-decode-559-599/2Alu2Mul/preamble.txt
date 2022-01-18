@@ -1,0 +1,54 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/ADPCMn-decode-559-599.dot
+DOING ASAP SCHEDULE
+Found schedule of length 5 with 9 nodes
+
+n1--562:DMA_LOAD : [0:1]
+n4--592:DMA_LOAD : [0:1]
+n7--570:IADD : [0:0]
+n8--582:IADD : [0:0]
+n6--575:IFNE : [1:1]
+n0--566:IAND : [2:2]
+n3--594:ISHL : [2:2]
+n2--595:DMA_STORE : [3:4]
+n5--567:IFEQ : [3:3]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 5 with 9 nodes
+
+n4--592:DMA_LOAD : [0:1]
+n1--562:DMA_LOAD : [1:2]
+n3--594:ISHL : [2:2]
+n0--566:IAND : [3:3]
+n2--595:DMA_STORE : [3:4]
+n7--570:IADD : [3:3]
+n5--567:IFEQ : [4:4]
+n6--575:IFNE : [4:4]
+n8--582:IADD : [4:4]
+
+FINISHED ALAP SCHEDULE
+

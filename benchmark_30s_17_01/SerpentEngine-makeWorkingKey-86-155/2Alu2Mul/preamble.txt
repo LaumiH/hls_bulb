@@ -1,0 +1,78 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SerpentEngine-makeWorkingKey-86-155.dot
+DOING ASAP SCHEDULE
+Found schedule of length 12 with 21 nodes
+
+n14--102:ISUB : [0:0]
+n13--115:ISUB : [0:0]
+n15--108:ISUB : [0:0]
+n18--122:ISUB : [0:0]
+n17--147:ISUB : [0:0]
+n19--152:IADD : [0:0]
+n9--133:ISUB : [0:0]
+n20--90:IFGE : [0:0]
+n16--123:DMA_LOAD : [1:2]
+n4--116:DMA_LOAD : [1:2]
+n5--103:DMA_LOAD : [1:2]
+n6--109:DMA_LOAD : [1:2]
+n3--110:IXOR : [3:3]
+n2--117:IXOR : [4:4]
+n10--124:IXOR : [5:5]
+n8--128:IXOR : [6:6]
+n7--134:IXOR : [7:7]
+n12--148:IUSHR : [8:8]
+n11--142:ISHL : [8:8]
+n1--149:IOR : [9:9]
+n0--151:DMA_STORE : [10:11]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 12 with 21 nodes
+
+n14--102:ISUB : [0:0]
+n15--108:ISUB : [0:0]
+n13--115:ISUB : [1:1]
+n5--103:DMA_LOAD : [1:2]
+n6--109:DMA_LOAD : [1:2]
+n18--122:ISUB : [2:2]
+n4--116:DMA_LOAD : [2:3]
+n16--123:DMA_LOAD : [3:4]
+n3--110:IXOR : [3:3]
+n2--117:IXOR : [4:4]
+n10--124:IXOR : [5:5]
+n8--128:IXOR : [6:6]
+n9--133:ISUB : [6:6]
+n17--147:ISUB : [7:7]
+n7--134:IXOR : [7:7]
+n12--148:IUSHR : [8:8]
+n11--142:ISHL : [8:8]
+n1--149:IOR : [9:9]
+n0--151:DMA_STORE : [10:11]
+n19--152:IADD : [11:11]
+n20--90:IFGE : [11:11]
+
+FINISHED ALAP SCHEDULE
+

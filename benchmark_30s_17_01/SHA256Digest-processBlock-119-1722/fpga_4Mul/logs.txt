@@ -1,0 +1,30 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Timeout reached while computing SHA256Digest-processBlock-119-1722.dot with fpga_4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Timeout reached while computing SHA256Digest-processBlock-119-1722.dot with fpga_4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Timeout reached while computing SHA256Digest-processBlock-119-1722.dot with fpga_4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Timeout reached while computing SHA256Digest-processBlock-119-1722.dot with fpga_4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Timeout reached while computing SHA256Digest-processBlock-119-1722.dot with fpga_4Mul
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Timeout reached while computing SHA256Digest-processBlock-119-1722.dot with fpga_4Mul

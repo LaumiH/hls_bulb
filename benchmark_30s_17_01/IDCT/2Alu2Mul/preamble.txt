@@ -1,0 +1,62 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/IDCT.dot
+DOING ASAP SCHEDULE
+Found schedule of length 15 with 13 nodes
+
+d7--d7 (Wk:5) - 31:IF_ICMPGE : [0:0]
+d30--d30 (WL:5) - 64:IINC : [1:1]
+d21--d21 (Ss:8) - 55:IMUL : [1:4]
+d10-- : [1:1]
+d13--d13 (Ss:8) - 43:IMUL : [1:4]
+d18-- : [1:1]
+d23-- : [5:5]
+d15--d15 (Ss:5) - 46:IADD : [5:5]
+d24--d24 (RO:4) - 59:IALOAD : [6:7]
+d16-- : [6:7]
+d25-- : [8:11]
+d26--d26 (Ss:4) - 61:IADD : [12:12]
+d27-- : [13:14]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 15 with 13 nodes
+
+d7--d7 (Wk:5) - 31:IF_ICMPGE : [0:0]
+d21--d21 (Ss:8) - 55:IMUL : [1:4]
+d13--d13 (Ss:8) - 43:IMUL : [1:4]
+d10-- : [5:5]
+d23-- : [5:5]
+d15--d15 (Ss:5) - 46:IADD : [5:5]
+d18-- : [5:5]
+d24--d24 (RO:4) - 59:IALOAD : [6:7]
+d16-- : [6:7]
+d25-- : [8:11]
+d26--d26 (Ss:4) - 61:IADD : [12:12]
+d27-- : [13:14]
+d30--d30 (WL:5) - 64:IINC : [14:14]
+
+FINISHED ALAP SCHEDULE
+

@@ -1,0 +1,44 @@
+Reading resource constraints from BULB_resources/r/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/ECOH256Digest-engineReset-37-53.dot
+DOING ASAP SCHEDULE
+Found schedule of length 4 with 4 nodes
+
+n1--44:DMA_LOAD(ref) : [0:1]
+n2--50:IADD : [0:0]
+n3--40:IFGE : [0:0]
+n0--49:DMA_STORE : [2:3]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 4 with 4 nodes
+
+n1--44:DMA_LOAD(ref) : [0:1]
+n0--49:DMA_STORE : [2:3]
+n2--50:IADD : [3:3]
+n3--40:IFGE : [3:3]
+
+FINISHED ALAP SCHEDULE
+

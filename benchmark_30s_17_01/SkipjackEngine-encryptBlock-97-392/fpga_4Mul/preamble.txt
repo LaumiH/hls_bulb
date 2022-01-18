@@ -1,0 +1,206 @@
+Reading resource constraints from BULB_resources/r/fpga_4Mul
+
+Available resources:
+RES00:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES05:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES06:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES07:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES08:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES09:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES10:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES11:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES12:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES13:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES14:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES15:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES16:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES17:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES18:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES19:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES20:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES21:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES22:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES23:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES24:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES25:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES26:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES27:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES28:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES29:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES30:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES31:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES32:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES33:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES34:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES35:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES36:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES37:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES38:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES39:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES40:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES41:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES42:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES43:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES44:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES45:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES46:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES47:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES48:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES49:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES50:		Mem, 
+RES51:		Mem, 
+RES52:		Div, Mul, 
+RES53:		Div, Mul, 
+RES54:		Div, Mul, 
+RES55:		Div, Mul, 
+
+Available operations:
+Mem:		RES50, RES51, 
+Add:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Sub:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Mul:		RES52, RES53, RES54, RES55, 
+Div:		RES52, RES53, RES54, RES55, 
+Shift:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+And:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Or:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Cmp:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Other:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SkipjackEngine-encryptBlock-97-392.dot
+DOING ASAP SCHEDULE
+Found schedule of length 35 with 59 nodes
+
+n58--101:IFGE : [0:0]
+n47--127:ISHR : [0:0]
+n46--184:DMA_LOAD(ref) : [0:1]
+n1--141:DMA_LOAD(ref) : [0:1]
+n37--137:IAND : [0:0]
+n17--241:IADD : [0:0]
+n7--203:DMA_LOAD(ref) : [0:1]
+n30--165:DMA_LOAD(ref) : [0:1]
+n23--238:IADD : [0:0]
+n34--234:IADD : [0:0]
+n44--147:DMA_LOAD(ref) : [0:1]
+n16--248:IFGE : [1:1]
+n26--381:IADD : [1:1]
+n20--131:IAND : [1:1]
+n53--388:IADD : [1:1]
+n22--385:IADD : [1:1]
+n27--354:DMA_LOAD : [2:3]
+n38--151:DMA_LOAD : [2:3]
+n49--298:DMA_LOAD : [2:3]
+n29--169:DMA_LOAD : [2:3]
+n5--335:DMA_LOAD : [2:3]
+n6--207:DMA_LOAD : [2:3]
+n42--188:DMA_LOAD : [2:3]
+n45--316:DMA_LOAD : [2:3]
+n36--152:IXOR : [4:4]
+n19--153:ERROR : [5:5]
+n18--155:IXOR : [6:6]
+n48--170:IXOR : [7:7]
+n43--171:ERROR : [8:8]
+n41--174:IXOR : [9:9]
+n40--189:IXOR : [10:10]
+n57--190:ERROR : [11:11]
+n21--193:IXOR : [12:12]
+n2--208:IXOR : [13:13]
+n28--219:ISHL : [13:13]
+n0--209:ERROR : [14:14]
+n52--212:IXOR : [15:15]
+n51--222:IADD : [16:16]
+n33--230:IXOR : [17:17]
+n9--235:IXOR : [18:18]
+n8--284:IAND : [19:19]
+n56--274:ISHR : [19:19]
+n12--299:IXOR : [20:20]
+n55--278:IAND : [20:20]
+n11--300:ERROR : [21:21]
+n54--302:IXOR : [22:22]
+n50--317:IXOR : [23:23]
+n35--318:ERROR : [24:24]
+n4--321:IXOR : [25:25]
+n3--336:IXOR : [26:26]
+n10--337:ERROR : [27:27]
+n39--340:IXOR : [28:28]
+n14--366:ISHL : [29:29]
+n32--355:IXOR : [29:29]
+n31--356:ERROR : [30:30]
+n15--359:IXOR : [31:31]
+n13--369:IADD : [32:32]
+n25--377:IXOR : [33:33]
+n24--382:IXOR : [34:34]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 35 with 59 nodes
+
+n44--147:DMA_LOAD(ref) : [0:1]
+n38--151:DMA_LOAD : [2:3]
+n1--141:DMA_LOAD(ref) : [3:4]
+n37--137:IAND : [3:3]
+n30--165:DMA_LOAD(ref) : [3:4]
+n36--152:IXOR : [4:4]
+n47--127:ISHR : [4:4]
+n29--169:DMA_LOAD : [5:6]
+n19--153:ERROR : [5:5]
+n20--131:IAND : [5:5]
+n46--184:DMA_LOAD(ref) : [6:7]
+n18--155:IXOR : [6:6]
+n48--170:IXOR : [7:7]
+n43--171:ERROR : [8:8]
+n42--188:DMA_LOAD : [8:9]
+n7--203:DMA_LOAD(ref) : [9:10]
+n41--174:IXOR : [9:9]
+n40--189:IXOR : [10:10]
+n57--190:ERROR : [11:11]
+n6--207:DMA_LOAD : [11:12]
+n21--193:IXOR : [12:12]
+n2--208:IXOR : [13:13]
+n0--209:ERROR : [14:14]
+n28--219:ISHL : [15:15]
+n52--212:IXOR : [15:15]
+n51--222:IADD : [16:16]
+n23--238:IADD : [17:17]
+n34--234:IADD : [17:17]
+n33--230:IXOR : [17:17]
+n49--298:DMA_LOAD : [18:19]
+n9--235:IXOR : [18:18]
+n8--284:IAND : [19:19]
+n12--299:IXOR : [20:20]
+n56--274:ISHR : [20:20]
+n45--316:DMA_LOAD : [21:22]
+n11--300:ERROR : [21:21]
+n55--278:IAND : [21:21]
+n54--302:IXOR : [22:22]
+n50--317:IXOR : [23:23]
+n35--318:ERROR : [24:24]
+n5--335:DMA_LOAD : [24:25]
+n4--321:IXOR : [25:25]
+n3--336:IXOR : [26:26]
+n27--354:DMA_LOAD : [27:28]
+n10--337:ERROR : [27:27]
+n39--340:IXOR : [28:28]
+n32--355:IXOR : [29:29]
+n31--356:ERROR : [30:30]
+n14--366:ISHL : [31:31]
+n15--359:IXOR : [31:31]
+n13--369:IADD : [32:32]
+n25--377:IXOR : [33:33]
+n26--381:IADD : [33:33]
+n17--241:IADD : [33:33]
+n58--101:IFGE : [34:34]
+n24--382:IXOR : [34:34]
+n16--248:IFGE : [34:34]
+n53--388:IADD : [34:34]
+n22--385:IADD : [34:34]
+
+FINISHED ALAP SCHEDULE
+

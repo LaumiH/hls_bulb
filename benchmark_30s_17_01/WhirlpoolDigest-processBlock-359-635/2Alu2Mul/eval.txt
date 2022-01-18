@@ -1,0 +1,314 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 15, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 347
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 347
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 207, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 347
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: OWN, ALAPBound: lazyALAP -> 15
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 15, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 207
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 10, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 207
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 54 with 78 nodes
+
+n13--393:ISUB : [0:0]
+n17--388:DMA_LOAD(ref) : [0:1]
+n12--396:IAND : [1:1]
+n3--397:DMA_LOAD64 : [2:3]
+n70--425:ISUB : [2:2]
+n55--428:IAND : [3:3]
+n2--400:LUSHR : [4:4]
+n60--371:DMA_LOAD(ref) : [4:5]
+n74--457:ISUB : [5:5]
+n63--401:L2I : [6:6]
+n32--429:DMA_LOAD64 : [6:7]
+n58--405:IAND : [7:7]
+n18--460:IAND : [8:8]
+n29--432:LUSHR : [8:8]
+n25--489:ISUB : [9:9]
+n10--375:DMA_LOAD64 : [9:10]
+n16--461:DMA_LOAD64 : [10:11]
+n20--433:L2I : [11:11]
+n24--492:IAND : [12:12]
+n11--406:DMA_LOAD64 : [12:13]
+n1--464:LUSHR : [13:13]
+n19--437:IAND : [14:14]
+n9--407:LXOR : [14:14]
+n46--521:ISUB : [15:15]
+n0--465:L2I : [15:15]
+n28--493:DMA_LOAD64 : [16:17]
+n42--438:DMA_LOAD64 : [16:17]
+n41--496:LUSHR : [18:18]
+n54--469:IAND : [18:18]
+n45--524:IAND : [19:19]
+n23--439:LXOR : [19:19]
+n68--553:ISUB : [20:20]
+n48--470:DMA_LOAD64 : [20:21]
+n40--497:L2I : [21:21]
+n47--471:LXOR : [22:22]
+n64--525:DMA_LOAD64 : [22:23]
+n5--501:IAND : [23:23]
+n39--528:LUSHR : [24:24]
+n67--556:IAND : [24:24]
+n38--529:L2I : [25:25]
+n15--557:DMA_LOAD64 : [25:26]
+n4--502:DMA_LOAD64 : [26:27]
+n66--586:ISUB : [27:27]
+n14--560:LUSHR : [28:28]
+n59--503:LXOR : [28:28]
+n50--533:IAND : [29:29]
+n65--589:IAND : [29:29]
+n49--534:DMA_LOAD64 : [30:31]
+n22--366:DMA_LOAD(ref) : [30:31]
+n61--590:DMA_LOAD64 : [32:33]
+n44--561:L2I : [32:32]
+n37--619:ISUB : [33:33]
+n43--565:IAND : [34:34]
+n31--593:LUSHR : [34:34]
+n36--622:IAND : [35:35]
+n53--535:LXOR : [35:35]
+n30--594:L2I : [36:36]
+n62--566:DMA_LOAD64 : [36:37]
+n35--623:DMA_LOAD64 : [37:38]
+n27--567:LXOR : [38:38]
+n51--598:IAND : [39:39]
+n34--624:L2I : [39:39]
+n69--599:DMA_LOAD64 : [40:41]
+n57--628:IAND : [40:40]
+n8--629:DMA_LOAD64 : [41:42]
+n7--600:LXOR : [42:42]
+n26--568:DMA_STORE64 : [43:44]
+n6--630:LXOR : [43:43]
+n72--504:DMA_STORE64 : [44:45]
+n71--376:DMA_STORE64 : [45:46]
+n52--536:DMA_STORE64 : [46:47]
+n73--601:DMA_STORE64 : [47:48]
+n21--440:DMA_STORE64 : [48:49]
+n76--632:IADD : [49:49]
+n75--472:DMA_STORE64 : [50:51]
+n56--631:DMA_STORE64 : [50:51]
+n33--408:DMA_STORE64 : [52:53]
+n77--362:IFGE : [52:52]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 55 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 33 times
+Best latency found: 54
+Initial best latency: 54
+77 out of 78 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 347 milliseconds
+
+Print BULB tree: 
+l_bound: 54, u_bound: 54; investigated partial schedule: {}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [5:5]; investigated partial schedule: {5=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [31:31]; investigated partial schedule: {31=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [7:7]; investigated partial schedule: {7=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [12:12]; investigated partial schedule: {12=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [4:4]; investigated partial schedule: {4=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [26:26]; investigated partial schedule: {26=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [30:30]; investigated partial schedule: {30=[n13--393:ISUB]}; 
+├── l_bound: 71, u_bound: 74; investigated n13--393:ISUB in [52:52]; investigated partial schedule: {52=[n13--393:ISUB]}; 
+├── l_bound: 59, u_bound: 62; investigated n13--393:ISUB in [40:40]; investigated partial schedule: {40=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [10:10]; investigated partial schedule: {10=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [18:18]; investigated partial schedule: {18=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [22:22]; investigated partial schedule: {22=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [28:28]; investigated partial schedule: {28=[n13--393:ISUB]}; 
+├── l_bound: 72, u_bound: 75; investigated n13--393:ISUB in [53:53]; investigated partial schedule: {53=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [32:32]; investigated partial schedule: {32=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [19:19]; investigated partial schedule: {19=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [6:6]; investigated partial schedule: {6=[n13--393:ISUB]}; 
+├── l_bound: 63, u_bound: 66; investigated n13--393:ISUB in [44:44]; investigated partial schedule: {44=[n13--393:ISUB]}; 
+├── l_bound: 56, u_bound: 59; investigated n13--393:ISUB in [37:37]; investigated partial schedule: {37=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [16:16]; investigated partial schedule: {16=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [21:21]; investigated partial schedule: {21=[n13--393:ISUB]}; 
+├── l_bound: 61, u_bound: 64; investigated n13--393:ISUB in [42:42]; investigated partial schedule: {42=[n13--393:ISUB]}; 
+├── l_bound: 58, u_bound: 61; investigated n13--393:ISUB in [39:39]; investigated partial schedule: {39=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [24:24]; investigated partial schedule: {24=[n13--393:ISUB]}; 
+├── l_bound: 55, u_bound: 58; investigated n13--393:ISUB in [36:36]; investigated partial schedule: {36=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [13:13]; investigated partial schedule: {13=[n13--393:ISUB]}; 
+├── l_bound: 66, u_bound: 69; investigated n13--393:ISUB in [47:47]; investigated partial schedule: {47=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 56; investigated n13--393:ISUB in [34:34]; investigated partial schedule: {34=[n13--393:ISUB]}; 
+├── l_bound: 70, u_bound: 73; investigated n13--393:ISUB in [51:51]; investigated partial schedule: {51=[n13--393:ISUB]}; 
+├── l_bound: 64, u_bound: 67; investigated n13--393:ISUB in [45:45]; investigated partial schedule: {45=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [8:8]; investigated partial schedule: {8=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [20:20]; investigated partial schedule: {20=[n13--393:ISUB]}; 
+├── l_bound: 62, u_bound: 65; investigated n13--393:ISUB in [43:43]; investigated partial schedule: {43=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [9:9]; investigated partial schedule: {9=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [15:15]; investigated partial schedule: {15=[n13--393:ISUB]}; 
+├── l_bound: 68, u_bound: 71; investigated n13--393:ISUB in [49:49]; investigated partial schedule: {49=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [29:29]; investigated partial schedule: {29=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [11:11]; investigated partial schedule: {11=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [2:2]; investigated partial schedule: {2=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [25:25]; investigated partial schedule: {25=[n13--393:ISUB]}; 
+├── l_bound: 65, u_bound: 68; investigated n13--393:ISUB in [46:46]; investigated partial schedule: {46=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [1:1]; investigated partial schedule: {1=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [3:3]; investigated partial schedule: {3=[n13--393:ISUB]}; 
+├── l_bound: 60, u_bound: 63; investigated n13--393:ISUB in [41:41]; investigated partial schedule: {41=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [0:0]; investigated partial schedule: {0=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [27:27]; investigated partial schedule: {27=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [17:17]; investigated partial schedule: {17=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [23:23]; investigated partial schedule: {23=[n13--393:ISUB]}; 
+├── l_bound: 67, u_bound: 70; investigated n13--393:ISUB in [48:48]; investigated partial schedule: {48=[n13--393:ISUB]}; 
+├── l_bound: 69, u_bound: 72; investigated n13--393:ISUB in [50:50]; investigated partial schedule: {50=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 55; investigated n13--393:ISUB in [33:33]; investigated partial schedule: {33=[n13--393:ISUB]}; 
+├── l_bound: 57, u_bound: 60; investigated n13--393:ISUB in [38:38]; investigated partial schedule: {38=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [14:14]; investigated partial schedule: {14=[n13--393:ISUB]}; 
+└── l_bound: 54, u_bound: 57; investigated n13--393:ISUB in [35:35]; investigated partial schedule: {35=[n13--393:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 54
+Initial best latency: 54
+77 out of 78 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 15 milliseconds
+
+Print BULB tree: 
+l_bound: 54, u_bound: 54; investigated partial schedule: {}; 
+└── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [0:0]; investigated partial schedule: {0=[n13--393:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 54
+Initial best latency: 54
+77 out of 78 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 10 milliseconds
+
+Print BULB tree: 
+l_bound: 54, u_bound: 54; investigated partial schedule: {}; 
+└── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [0:0]; investigated partial schedule: {0=[n13--393:ISUB]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 55 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 32 times
+Best latency found: 54
+Initial best latency: 54
+77 out of 78 DFG nodes could be skipped to find best schedule
+It took -1 milliseconds to converge
+Scheduling took 207 milliseconds
+
+Print BULB tree: 
+l_bound: 54, u_bound: 54; investigated partial schedule: {}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [27:27]; investigated partial schedule: {27=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 72, u_bound: 71; investigated n13--393:ISUB in [49:49]; investigated partial schedule: {49=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [19:19]; investigated partial schedule: {19=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [21:21]; investigated partial schedule: {21=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 76, u_bound: 75; investigated n13--393:ISUB in [53:53]; investigated partial schedule: {53=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 66, u_bound: 65; investigated n13--393:ISUB in [43:43]; investigated partial schedule: {43=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 65, u_bound: 64; investigated n13--393:ISUB in [42:42]; investigated partial schedule: {42=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [24:24]; investigated partial schedule: {24=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 63, u_bound: 62; investigated n13--393:ISUB in [40:40]; investigated partial schedule: {40=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 71, u_bound: 70; investigated n13--393:ISUB in [48:48]; investigated partial schedule: {48=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [7:7]; investigated partial schedule: {7=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [14:14]; investigated partial schedule: {14=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 59, u_bound: 58; investigated n13--393:ISUB in [36:36]; investigated partial schedule: {36=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [13:13]; investigated partial schedule: {13=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [9:9]; investigated partial schedule: {9=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 75, u_bound: 74; investigated n13--393:ISUB in [52:52]; investigated partial schedule: {52=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [20:20]; investigated partial schedule: {20=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 58, u_bound: 57; investigated n13--393:ISUB in [35:35]; investigated partial schedule: {35=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 64, u_bound: 63; investigated n13--393:ISUB in [41:41]; investigated partial schedule: {41=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [16:16]; investigated partial schedule: {16=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [30:30]; investigated partial schedule: {30=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [11:11]; investigated partial schedule: {11=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [6:6]; investigated partial schedule: {6=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [12:12]; investigated partial schedule: {12=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 56, u_bound: 55; investigated n13--393:ISUB in [33:33]; investigated partial schedule: {33=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [25:25]; investigated partial schedule: {25=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 60, u_bound: 59; investigated n13--393:ISUB in [37:37]; investigated partial schedule: {37=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 62, u_bound: 61; investigated n13--393:ISUB in [39:39]; investigated partial schedule: {39=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 61, u_bound: 60; investigated n13--393:ISUB in [38:38]; investigated partial schedule: {38=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [18:18]; investigated partial schedule: {18=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [15:15]; investigated partial schedule: {15=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [8:8]; investigated partial schedule: {8=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 55, u_bound: 54; investigated n13--393:ISUB in [32:32]; investigated partial schedule: {32=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [4:4]; investigated partial schedule: {4=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [31:31]; investigated partial schedule: {31=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [2:2]; investigated partial schedule: {2=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 68, u_bound: 67; investigated n13--393:ISUB in [45:45]; investigated partial schedule: {45=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [29:29]; investigated partial schedule: {29=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [28:28]; investigated partial schedule: {28=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [26:26]; investigated partial schedule: {26=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [23:23]; investigated partial schedule: {23=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [5:5]; investigated partial schedule: {5=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 67, u_bound: 66; investigated n13--393:ISUB in [44:44]; investigated partial schedule: {44=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [0:0]; investigated partial schedule: {0=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 69, u_bound: 68; investigated n13--393:ISUB in [46:46]; investigated partial schedule: {46=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 73, u_bound: 72; investigated n13--393:ISUB in [50:50]; investigated partial schedule: {50=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [17:17]; investigated partial schedule: {17=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 70, u_bound: 69; investigated n13--393:ISUB in [47:47]; investigated partial schedule: {47=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 74, u_bound: 73; investigated n13--393:ISUB in [51:51]; investigated partial schedule: {51=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [22:22]; investigated partial schedule: {22=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [1:1]; investigated partial schedule: {1=[n13--393:ISUB]}; 
+├── TOO CONSERVATIVE: l_bound: 57, u_bound: 56; investigated n13--393:ISUB in [34:34]; investigated partial schedule: {34=[n13--393:ISUB]}; 
+├── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [3:3]; investigated partial schedule: {3=[n13--393:ISUB]}; 
+└── l_bound: 54, u_bound: 54; investigated n13--393:ISUB in [10:10]; investigated partial schedule: {10=[n13--393:ISUB]}; 
+

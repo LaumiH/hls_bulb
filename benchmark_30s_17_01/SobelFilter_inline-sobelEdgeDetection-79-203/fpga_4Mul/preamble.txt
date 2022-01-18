@@ -1,0 +1,142 @@
+Reading resource constraints from BULB_resources/r/fpga_4Mul
+
+Available resources:
+RES00:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES03:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES04:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES05:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES06:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES07:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES08:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES09:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES10:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES11:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES12:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES13:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES14:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES15:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES16:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES17:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES18:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES19:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES20:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES21:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES22:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES23:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES24:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES25:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES26:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES27:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES28:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES29:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES30:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES31:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES32:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES33:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES34:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES35:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES36:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES37:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES38:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES39:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES40:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES41:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES42:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES43:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES44:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES45:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES46:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES47:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES48:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES49:		Shift, Other, And, Or, Cmp, Add, Sub, 
+RES50:		Mem, 
+RES51:		Mem, 
+RES52:		Div, Mul, 
+RES53:		Div, Mul, 
+RES54:		Div, Mul, 
+RES55:		Div, Mul, 
+
+Available operations:
+Mem:		RES50, RES51, 
+Add:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Sub:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Mul:		RES52, RES53, RES54, RES55, 
+Div:		RES52, RES53, RES54, RES55, 
+Shift:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+And:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Or:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Cmp:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Other:		RES00, RES01, RES02, RES03, RES04, RES05, RES06, RES07, RES08, RES09, RES10, RES11, RES12, RES13, RES14, RES15, RES16, RES17, RES18, RES19, RES20, RES21, RES22, RES23, RES24, RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41, RES42, RES43, RES44, RES45, RES46, RES47, RES48, RES49, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/SobelFilter_inline-sobelEdgeDetection-79-203.dot
+DOING ASAP SCHEDULE
+Found schedule of length 44 with 27 nodes
+
+n25--200:IADD : [0:0]
+n24--175:DMA_LOAD(ref) : [0:1]
+n26--83:IFGE : [0:0]
+n18--89:DMA_LOAD : [0:1]
+n9--189:IMUL : [0:3]
+n17--92:IDIV : [2:19]
+n11--180:DMA_LOAD : [2:3]
+n8--190:ISUB : [4:4]
+n16--95:ISUB : [20:20]
+n3--119:ISUB : [21:21]
+n19--107:IADD : [21:21]
+n14--129:IFLE : [22:22]
+n13--108:IMUL : [22:25]
+n2--120:IFLT : [22:22]
+n1--109:ISUB : [26:26]
+n0--112:ISUB : [27:27]
+n5--139:ISUB : [28:28]
+n4--149:IFLE : [29:29]
+n21--162:IMUL : [29:32]
+n22--140:IFLT : [29:29]
+n20--165:IADD : [33:33]
+n7--168:ISUB : [34:34]
+n6--169:DMA_LOAD : [35:36]
+n15--191:ISHR : [37:37]
+n12--195:IAND : [38:38]
+n10--196:IMUL : [39:42]
+n23--197:IADD : [43:43]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 44 with 27 nodes
+
+n18--89:DMA_LOAD : [0:1]
+n17--92:IDIV : [2:19]
+n16--95:ISUB : [20:20]
+n19--107:IADD : [21:21]
+n13--108:IMUL : [22:25]
+n1--109:ISUB : [26:26]
+n0--112:ISUB : [27:27]
+n5--139:ISUB : [28:28]
+n21--162:IMUL : [29:32]
+n9--189:IMUL : [32:35]
+n20--165:IADD : [33:33]
+n7--168:ISUB : [34:34]
+n24--175:DMA_LOAD(ref) : [35:36]
+n6--169:DMA_LOAD : [35:36]
+n8--190:ISUB : [36:36]
+n15--191:ISHR : [37:37]
+n11--180:DMA_LOAD : [37:38]
+n12--195:IAND : [38:38]
+n10--196:IMUL : [39:42]
+n3--119:ISUB : [42:42]
+n14--129:IFLE : [43:43]
+n25--200:IADD : [43:43]
+n26--83:IFGE : [43:43]
+n2--120:IFLT : [43:43]
+n4--149:IFLE : [43:43]
+n23--197:IADD : [43:43]
+n22--140:IFLT : [43:43]
+
+FINISHED ALAP SCHEDULE
+
