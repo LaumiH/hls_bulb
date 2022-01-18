@@ -1,0 +1,7 @@
+7 tried combinations completed in given time
+0 tried combinations timed out
+1 tried combinations threw an exception, please check!
+	- benchmark/ECOH256Digest-compress-839-1065/ECOH256Digest-compress-839-1065__2Alu2Mul.txt threw an exception with ASAP estimator, normal alap, updateAlapBound=true
+
+
+0 tried comparisons produced unequal schedules

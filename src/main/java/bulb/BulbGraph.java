@@ -10,8 +10,8 @@ public class BulbGraph {
     private boolean lowerEqualsUpperReached = false;
     private String parameters;
     private int maxSkippedNodes;
-    private long executionTime;
-    private long convergenceTime;
+    private long executionTime = -1;
+    private long convergenceTime = -1;
     private int numberOfConvergences = 0;
     private int bestLatency;
     private int initialLatency;
@@ -38,7 +38,7 @@ public class BulbGraph {
 
     public String print() {
         StringBuilder builder = new StringBuilder();
-        if (this.nodes.size() > 2000) {
+        if (this.nodes.size() > 3000) {
             builder.append("Buld tree is huge, will not print it");
             return builder.toString();
         } else {
@@ -50,6 +50,7 @@ public class BulbGraph {
 
     public String printMetrics() {
         StringBuilder builder = new StringBuilder();
+        builder.append("\n###########################################################\n");
         builder.append("Printing BULB metrics for ").append(parameters).append("\n");
         if (receivedTimeout) {
             builder.append("Received timeout while executing").append("\n");
@@ -103,12 +104,17 @@ public class BulbGraph {
         return convergenceTime;
     }
 
-    public void setConvergenceTime(long convergenceTime, int u_bound) throws BULBException {
-        if (bestLatency > 0 && u_bound > bestLatency) {
-            throw new BULBException("Schedule converged later with better u_bound, is that plausible?");
+    public void setConvergenceTime(long convergenceTime, int u_bound) {
+        if (this.convergenceTime < 0) {
+            System.out.printf("Setting initial convergence time at %s with latency %d%n", convergenceTime, u_bound);
+            this.convergenceTime = convergenceTime;
         }
-
-        this.convergenceTime = convergenceTime;
+        if (u_bound < this.bestLatency) {
+            System.out.printf("Schedule converged at %s with latency %d%n", convergenceTime, u_bound);
+            this.convergenceTime = convergenceTime;
+        } else {
+            //System.out.println("Schedule converged with worse or equal latency");
+        }
     }
 
     public int getNumberOfConvergences() {
@@ -117,7 +123,7 @@ public class BulbGraph {
 
     public void incrementNumberOfConvergences() {
         numberOfConvergences++;
-        setLowerEqualsUpperReached(true);
+        lowerEqualsUpperReached = true;
     }
 
     public int getBestLatency() {
@@ -150,5 +156,22 @@ public class BulbGraph {
 
     public void setReceivedTimeout(boolean receivedTimeout) {
         this.receivedTimeout = receivedTimeout;
+    }
+
+    public void compare(BulbGraph toCompare) {
+        StringBuilder builder = new StringBuilder();
+        long exTime = toCompare.executionTime-this.executionTime;
+        if (exTime > 1) {
+            builder.append("faster: ").append(this.parameters).append(" -> ").append(this.executionTime).append(", vs. ")
+                    .append(toCompare.parameters).append(" -> ").append(toCompare.executionTime);
+        } else if (exTime < -1) {
+            builder.append("faster: ").append(toCompare.parameters).append(" -> ").append(toCompare.executionTime).append(", vs. ")
+                    .append(this.parameters).append(" -> ").append(this.executionTime);
+        } else {
+            builder.append(this.parameters).append(" took the same time as ").append(toCompare.getParameters());
+        }
+        builder.append("\n");
+        builder.append("\n");
+        System.out.println(builder);
     }
 }

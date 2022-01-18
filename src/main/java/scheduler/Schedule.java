@@ -1,6 +1,6 @@
 package scheduler;
 
-import bulb.BULBException;
+import bulb.BulbException;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -301,7 +301,7 @@ public class Schedule {
      *
      * @return null iff the schedule has no illegal overlaps, a conflicting node otherwise
      */
-    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) throws BULBException {
+    public Node validate(ResourceConstraint resourceConstraint, int nrOfNodes) throws BulbException {
         //System.out.println("########\nValidating schedule\n########");
         for (Node node : nodes.keySet()) {
             for (Node successor : node.successors()) {
@@ -313,11 +313,11 @@ public class Schedule {
             }
         }
         if (nodes().size() > nrOfNodes) {
-            throw new BULBException("There are more nodes scheduled than in the source graph");
+            throw new BulbException("There are more nodes scheduled than in the source graph");
         }
         if (resourceConstraint != null) {
             if (resources.keySet().size() != nodes().size()) {
-                throw new BULBException("Resource size does not match nodes size of schedule!");
+                throw new BulbException("Resource size does not match nodes size of schedule!");
             }
             Set<String> resNames = resourceConstraint.getAllRes().keySet();
             List<String> resUsed = new ArrayList<>();
@@ -330,15 +330,15 @@ public class Schedule {
                 for (Node n : nodesInStep) {
                     String resName = resources.get(n);
                     if (null == resName) {
-                        throw new BULBException("Node is scheduled in step, but does not have resource!");
+                        throw new BulbException("Node is scheduled in step, but does not have resource!");
                     }
                     if (resUsed.contains(resName)) {
-                        throw new BULBException("Resource " + resName + " is allocated twice in step " + step);
+                        throw new BulbException("Resource " + resName + " is allocated twice in step " + step);
                     }
                     resUsed.add(resources.get(n));
                 }
                 if (resNames.size() < resUsed.size()) {
-                    throw new BULBException("resNames.size() < resUsed.size()");
+                    throw new BulbException("resNames.size() < resUsed.size()");
                 }
                 resUsed.clear();
             }
@@ -356,7 +356,7 @@ public class Schedule {
     /**
      * @return a string with a textual representation of the schedule and the resources
      */
-    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) throws BULBException {
+    public String diagnose(ResourceConstraint resourceConstraint, int nrOfNodes) throws BulbException {
         if (nodes.keySet().size() <= 0) return "empty schedule";
 
         Formatter f = new Formatter();
@@ -498,5 +498,13 @@ public class Schedule {
         }
         if (equal) System.out.println("Schedules are equal");
         return equal;
+    }
+
+    public int latestSlot() {
+        int latestSlot = 0;
+        for (Integer i : slots.keySet()) {
+            latestSlot = Math.max(latestSlot, i);
+        }
+        return latestSlot;
     }
 }
