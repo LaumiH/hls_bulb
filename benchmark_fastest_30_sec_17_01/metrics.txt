@@ -27,9 +27,7 @@ benchmark/SerpentEngine-makeWorkingKey-86-225/onePerOp: lBoundEstimator: OWN, AL
 
 
 
-no convergence in benchmark/SerpentEngine-makeWorkingKey-150-195-benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp
-no convergence in benchmark/SerpentEngine-makeWorkingKey-150-195-benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp
-no convergence in benchmark/SerpentEngine-makeWorkingKey-150-195-benchmark/SerpentEngine-makeWorkingKey-150-195/onePerOp
+
 no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/2Alu2Mul
 no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/2Alu2Mul
 no convergence in benchmark/SerpentEngine-makeWorkingKey-179-250-benchmark/SerpentEngine-makeWorkingKey-179-250/onePerOp

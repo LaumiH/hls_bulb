@@ -17,7 +17,7 @@ public class Evaluator {
         List<File> logsPerGraph = List.of(Objects.requireNonNull(folder.listFiles()));
 
         for (File graphName : logsPerGraph) {
-            if (graphName.getName().contains("metrics.txt")) continue;
+            if (graphName.getName().contains("metrics.txt.bak")) continue;
             List<File> logsPerRes = List.of(Objects.requireNonNull(graphName.listFiles()));
             for (File resName : logsPerRes) {
                 for (File fileName : List.of(Objects.requireNonNull(resName.listFiles()))) {

@@ -42,7 +42,7 @@ public class Main {
                 }
                 PrintStream metrics = null;
                 try {
-                    metrics = new PrintStream("benchmark/metrics.txt");
+                    metrics = new PrintStream("benchmark/metrics.txt.bak");
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                     System.exit(-1);
