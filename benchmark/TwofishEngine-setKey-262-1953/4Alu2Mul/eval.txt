@@ -1,0 +1,415 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 234667, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 283642
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 222716, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 283642
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 222716, vs. lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 234667
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 112 with 331 nodes
+
+n130--837:DMA_LOAD : [0:1]
+n302--1902:DMA_LOAD : [0:1]
+n203--1750:DMA_LOAD : [0:1]
+n137--1826:DMA_LOAD : [0:1]
+n283--497:IMUL : [0:3]
+n56--403:IMUL : [0:3]
+n233--905:DMA_LOAD : [2:3]
+n19--1682:DMA_LOAD : [2:3]
+n98--981:DMA_LOAD : [2:3]
+n150--1057:DMA_LOAD : [2:3]
+n232--908:DMA_LOAD : [4:5]
+n202--1753:DMA_LOAD : [4:5]
+n18--1685:DMA_LOAD : [4:5]
+n136--1829:DMA_LOAD : [4:5]
+n159--959:IMUL : [4:7]
+n33--449:IMUL : [4:7]
+n129--840:DMA_LOAD : [6:7]
+n149--1060:DMA_LOAD : [6:7]
+n51--984:DMA_LOAD : [6:7]
+n294--1905:DMA_LOAD : [6:7]
+n169--885:IMUL : [8:11]
+n126--922:IUSHR : [8:8]
+n74--1843:IUSHR : [8:8]
+n326--1035:IMUL : [8:11]
+n261--1919:IUSHR : [8:8]
+n292--998:IUSHR : [8:8]
+n299--1767:IUSHR : [9:9]
+n91--464:DMA_LOAD : [9:10]
+n50--988:IAND : [9:9]
+n317--1074:IUSHR : [9:9]
+n180--1078:IAND : [10:10]
+n76--416:DMA_LOAD : [10:11]
+n160--1064:IAND : [10:10]
+n253--1909:IAND : [11:11]
+n275--1757:IAND : [11:11]
+n58--373:DMA_LOAD : [11:12]
+n121--819:IMUL : [12:15]
+n254--1923:IAND : [12:12]
+n298--1771:IAND : [12:12]
+n213--1002:IAND : [12:12]
+n324--362:IMUL : [12:15]
+n39--1833:IAND : [13:13]
+n316--830:DMA_LOAD : [13:14]
+n118--1743:DMA_LOAD : [13:14]
+n138--1309:DMA_LOAD : [13:14]
+n216--912:IAND : [14:14]
+n40--1847:IAND : [15:15]
+n173--1261:DMA_LOAD : [15:16]
+n319--1700:IAND : [15:15]
+n193--974:DMA_LOAD : [15:16]
+n265--855:IAND : [16:16]
+n188--844:IAND : [16:16]
+n284--898:DMA_LOAD : [17:18]
+n26--1689:IAND : [17:17]
+n125--926:IAND : [17:17]
+n269--1895:DMA_LOAD : [17:18]
+n321--512:DMA_LOAD : [18:19]
+n300--1675:DMA_LOAD : [18:19]
+n124--1819:DMA_LOAD : [19:20]
+n327--1357:DMA_LOAD : [19:20]
+n249--1218:DMA_LOAD : [20:21]
+n329--1050:DMA_LOAD : [20:21]
+n38--1849:IXOR : [21:21]
+n4--1104:IADD : [21:21]
+n133--1294:IMUL : [22:25]
+n252--1925:IXOR : [22:22]
+n179--1080:IXOR : [22:22]
+n119--1773:IXOR : [22:22]
+n215--928:IXOR : [22:22]
+n54--1804:IMUL : [22:25]
+n264--857:IXOR : [23:23]
+n90--467:DMA_LOAD : [23:24]
+n301--1702:IXOR : [23:23]
+n194--1004:IXOR : [23:23]
+n82--1312:DMA_LOAD : [24:25]
+n172--1264:DMA_LOAD : [24:25]
+n75--419:DMA_LOAD : [24:25]
+n89--1926:DMA_LOAD : [25:26]
+n57--376:DMA_LOAD : [26:27]
+n274--929:DMA_LOAD : [26:27]
+n80--1248:IMUL : [26:29]
+n239--1342:IMUL : [26:29]
+n171--1081:DMA_LOAD : [26:27]
+n164--1005:DMA_LOAD : [27:28]
+n211--515:DMA_LOAD : [28:29]
+n123--1850:DMA_LOAD : [28:29]
+n234--1221:DMA_LOAD : [28:29]
+n218--1703:DMA_LOAD : [29:30]
+n142--1730:IMUL : [30:33]
+n167--1880:IMUL : [30:33]
+n116--1360:DMA_LOAD : [30:31]
+n315--858:DMA_LOAD : [30:31]
+n117--1774:DMA_LOAD : [30:31]
+n1--1326:IUSHR : [31:31]
+n277--433:IUSHR : [32:32]
+n135--1864:IUSHR : [32:32]
+n183--1019:IUSHR : [32:32]
+n53--1095:IUSHR : [32:32]
+n100--529:IUSHR : [33:33]
+n314--1788:IUSHR : [33:33]
+n271--1940:IUSHR : [33:33]
+n23--943:IUSHR : [33:33]
+n14--1664:IMUL : [34:37]
+n165--1207:IMUL : [34:37]
+n320--1278:IUSHR : [34:34]
+n0--1330:IAND : [34:34]
+n103--481:IUSHR : [34:34]
+n127--1374:IUSHR : [34:34]
+n3--1426:DMA_LOAD : [35:36]
+n93--645:DMA_LOAD : [35:36]
+n52--1099:IAND : [35:35]
+n9--1300:DMA_LOAD(ref) : [35:36]
+n260--1944:IAND : [36:36]
+n132--1778:IAND : [37:37]
+n12--965:DMA_LOAD(ref) : [37:38]
+n99--533:IAND : [37:37]
+n182--1023:IAND : [37:37]
+n210--519:IAND : [38:38]
+n16--471:IAND : [38:38]
+n174--1041:DMA_LOAD(ref) : [38:39]
+n251--1792:IAND : [39:39]
+n296--1666:DMA_LOAD(ref) : [39:40]
+n258--1886:DMA_LOAD(ref) : [39:40]
+n17--485:IAND : [40:40]
+n134--821:DMA_LOAD(ref) : [40:41]
+n217--1707:IAND : [41:41]
+n61--873:IAND : [41:41]
+n60--862:IAND : [41:41]
+n290--613:DMA_LOAD : [42:43]
+n63--503:DMA_LOAD(ref) : [42:43]
+n170--1085:IAND : [42:42]
+n66--1623:DMA_LOAD : [42:43]
+n22--947:IAND : [43:43]
+n242--778:DMA_LOAD : [44:45]
+n25--933:IAND : [44:44]
+n163--1009:IAND : [44:44]
+n28--1591:DMA_LOAD : [44:45]
+n201--1348:DMA_LOAD(ref) : [45:46]
+n248--1490:DMA_LOAD : [45:46]
+n72--1252:DMA_LOAD(ref) : [46:47]
+n30--1364:IAND : [46:46]
+n154--437:IAND : [47:47]
+n198--581:DMA_LOAD : [47:48]
+n31--1378:IAND : [47:47]
+n199--455:DMA_LOAD(ref) : [48:49]
+n235--1559:DMA_LOAD : [48:49]
+n236--407:DMA_LOAD(ref) : [48:49]
+n115--423:IAND : [49:49]
+n313--552:DMA_LOAD : [50:51]
+n81--1316:IAND : [50:50]
+n238--1718:IAND : [50:50]
+n318--889:DMA_LOAD(ref) : [50:51]
+n85--1868:IAND : [51:51]
+n84--1854:IAND : [51:51]
+n220--1734:DMA_LOAD(ref) : [52:53]
+n187--746:DMA_LOAD : [52:53]
+n46--1530:DMA_LOAD : [52:53]
+n88--1930:IAND : [52:52]
+n262--1397:DMA_LOAD : [53:54]
+n48--364:DMA_LOAD(ref) : [54:55]
+n263--714:DMA_LOAD : [54:55]
+n147--1236:IAND : [54:54]
+n222--1268:IAND : [55:55]
+n223--1282:IAND : [55:55]
+n146--1225:IAND : [56:56]
+n107--380:IAND : [56:56]
+n229--1810:DMA_LOAD(ref) : [56:57]
+n108--391:IAND : [56:56]
+n105--1209:DMA_LOAD(ref) : [57:58]
+n304--1458:DMA_LOAD : [57:58]
+n309--685:DMA_LOAD : [57:58]
+n10--1332:IXOR : [58:58]
+n13--1025:IXOR : [59:59]
+n15--487:IXOR : [59:59]
+n59--875:IXOR : [59:59]
+n175--1101:IXOR : [59:59]
+n24--949:IXOR : [60:60]
+n29--1380:IXOR : [60:60]
+n259--1946:IXOR : [60:60]
+n64--535:IXOR : [60:60]
+n153--439:IXOR : [61:61]
+n83--1870:IXOR : [61:61]
+n237--1720:IXOR : [61:61]
+n73--1284:IXOR : [61:61]
+n221--1794:IXOR : [62:62]
+n49--393:IXOR : [62:62]
+n2--1429:DMA_LOAD : [62:63]
+n106--1238:IXOR : [62:62]
+n92--648:DMA_LOAD : [63:64]
+n8--1333:DMA_LOAD : [63:64]
+n181--781:DMA_LOAD : [63:64]
+n11--1026:DMA_LOAD : [64:65]
+n257--1947:DMA_LOAD : [65:66]
+n62--536:DMA_LOAD : [65:66]
+n219--1795:DMA_LOAD : [65:66]
+n21--284:DMA_LOAD : [66:67]
+n69--1201:DMA_LOAD(ref) : [67:68]
+n122--876:DMA_LOAD : [67:68]
+n65--1626:DMA_LOAD : [67:68]
+n27--1594:DMA_LOAD : [68:69]
+n246--1721:DMA_LOAD : [69:70]
+n200--1381:DMA_LOAD : [69:70]
+n289--616:DMA_LOAD : [69:70]
+n128--1400:DMA_LOAD : [70:71]
+n110--356:DMA_LOAD(ref) : [71:72]
+n71--1285:DMA_LOAD : [71:72]
+n162--1493:DMA_LOAD : [71:72]
+n35--813:DMA_LOAD(ref) : [72:73]
+n152--1562:DMA_LOAD : [73:74]
+n196--950:DMA_LOAD : [73:74]
+n37--1102:DMA_LOAD : [73:74]
+n197--584:DMA_LOAD : [74:75]
+n312--555:DMA_LOAD : [75:76]
+n190--440:DMA_LOAD : [75:76]
+n42--1658:DMA_LOAD(ref) : [75:76]
+n192--488:DMA_LOAD : [76:77]
+n47--394:DMA_LOAD : [77:78]
+n45--1533:DMA_LOAD : [77:78]
+n44--1871:DMA_LOAD : [77:78]
+n186--749:DMA_LOAD : [78:79]
+n104--1239:DMA_LOAD : [79:80]
+n225--717:DMA_LOAD : [79:80]
+n102--688:DMA_LOAD : [79:80]
+n303--1461:DMA_LOAD : [80:81]
+n177--1507:IUSHR : [81:81]
+n131--1250:IADD : [81:81]
+n55--405:IADD : [81:81]
+n166--1884:IADD : [82:82]
+n214--763:IUSHR : [82:82]
+n247--1346:IADD : [82:82]
+n256--630:IUSHR : [82:82]
+n244--1732:IADD : [83:83]
+n168--887:IADD : [83:83]
+n328--1443:IUSHR : [83:83]
+n325--795:IUSHR : [83:83]
+n70--1298:IADD : [84:84]
+n205--662:IUSHR : [84:84]
+n32--453:IADD : [84:84]
+n209--598:IUSHR : [84:84]
+n231--1608:IUSHR : [85:85]
+n36--1039:IADD : [85:85]
+n111--501:IADD : [85:85]
+n282--731:IUSHR : [85:85]
+n185--1640:IUSHR : [86:86]
+n158--963:IADD : [86:86]
+n157--1475:IUSHR : [86:86]
+n43--1808:IADD : [86:86]
+n6--588:IAND : [87:87]
+n7--602:IAND : [87:87]
+n96--1415:IAND : [87:87]
+n308--1576:IUSHR : [87:87]
+n176--1511:IAND : [88:88]
+n178--1149:IAND : [88:88]
+n95--1404:IAND : [88:88]
+n184--1644:IAND : [88:88]
+n255--634:IAND : [89:89]
+n212--1240:DMA_STORE : [89:90]
+n139--1133:IAND : [89:89]
+n293--338:IAND : [89:89]
+n243--1796:DMA_STORE : [90:91]
+n250--1598:IAND : [90:90]
+n20--1166:IAND : [90:90]
+n68--1334:DMA_STORE : [91:92]
+n287--559:IAND : [91:91]
+n240--1027:DMA_STORE : [91:92]
+n120--877:DMA_STORE : [92:93]
+n241--1286:DMA_STORE : [92:93]
+n285--1382:DMA_STORE : [93:94]
+n323--395:DMA_STORE : [93:94]
+n288--570:IAND : [94:94]
+n245--1722:DMA_STORE : [94:95]
+n206--1537:IAND : [95:95]
+n204--666:IAND : [95:95]
+n208--703:IAND : [95:95]
+n161--1497:IAND : [96:96]
+n34--1103:DMA_STORE : [96:97]
+n78--753:IAND : [96:96]
+n281--735:IAND : [96:96]
+n79--767:IAND : [97:97]
+n230--1612:IAND : [97:97]
+n114--1479:IAND : [97:97]
+n279--620:IAND : [98:98]
+n156--304:IAND : [98:98]
+n311--288:IAND : [98:98]
+n113--1465:IAND : [98:98]
+n191--489:DMA_STORE : [99:100]
+n41--1872:DMA_STORE : [99:100]
+n87--1183:IAND : [99:99]
+n195--951:DMA_STORE : [99:100]
+n151--1566:IAND : [100:100]
+n144--785:IAND : [101:101]
+n141--321:IAND : [101:101]
+n268--652:IAND : [101:101]
+n270--1948:DMA_STORE : [101:102]
+n224--721:IAND : [102:102]
+n148--1630:IAND : [102:102]
+n189--441:DMA_STORE : [102:103]
+n101--692:IAND : [103:103]
+n145--799:IAND : [103:103]
+n267--1580:IAND : [103:103]
+n228--1447:IAND : [104:104]
+n227--1433:IAND : [104:104]
+n109--537:DMA_STORE : [104:105]
+n307--1548:IAND : [104:104]
+n5--604:IXOR : [105:105]
+n94--1417:IXOR : [105:105]
+n97--1112:IFGE : [105:105]
+n330--267:IFGE : [106:106]
+n140--323:IFNE : [106:106]
+n280--1513:IXOR : [106:106]
+n77--769:IXOR : [106:106]
+n297--340:IFNE : [107:107]
+n155--306:IFNE : [107:107]
+n276--1614:IXOR : [107:107]
+n273--1949:IADD : [107:107]
+n295--1151:IFNE : [108:108]
+n310--289:IFNE : [108:108]
+n112--1481:IXOR : [108:108]
+n278--636:IXOR : [108:108]
+n272--1646:IXOR : [109:109]
+n86--1185:IFNE : [109:109]
+n67--1168:IFNE : [109:109]
+n291--668:IXOR : [109:109]
+n143--801:IXOR : [110:110]
+n286--572:IXOR : [110:110]
+n266--1582:IXOR : [110:110]
+n322--1134:IFNE : [110:110]
+n305--737:IXOR : [111:111]
+n306--1550:IXOR : [111:111]
+n207--705:IXOR : [111:111]
+n226--1449:IXOR : [111:111]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 14433 inspected nodes
+7231 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 8 times
+Best latency found: 112
+Initial best latency: 113
+124 out of 331 DFG nodes could be skipped to find best schedule
+It took 5658 milliseconds to converge
+Scheduling took 234667 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 18366 inspected nodes
+7231 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 8 times
+Best latency found: 112
+Initial best latency: 113
+124 out of 331 DFG nodes could be skipped to find best schedule
+It took 5270 milliseconds to converge
+Scheduling took 283642 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 14433 inspected nodes
+7231 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 8 times
+Best latency found: 112
+Initial best latency: 113
+124 out of 331 DFG nodes could be skipped to find best schedule
+It took 5144 milliseconds to converge
+Scheduling took 222716 milliseconds
+
+Buld tree is huge, will not print it

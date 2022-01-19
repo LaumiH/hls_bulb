@@ -1,0 +1,108 @@
+Reading resource constraints from resources/vlsi/2Alu2Mul
+
+Available resources:
+RES00:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES01:		Mem, Shift, Other, And, Or, Cmp, Add, Sub, 
+RES02:		Div, Mul, 
+RES03:		Div, Mul, 
+
+Available operations:
+Mem:		RES00, RES01, 
+Add:		RES00, RES01, 
+Sub:		RES00, RES01, 
+Mul:		RES02, RES03, 
+Div:		RES02, RES03, 
+Shift:		RES00, RES01, 
+And:		RES00, RES01, 
+Or:		RES00, RES01, 
+Cmp:		RES00, RES01, 
+Other:		RES00, RES01, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/WhirlpoolDigest-#init#-310-427.dot
+DOING ASAP SCHEDULE
+Found schedule of length 18 with 36 nodes
+
+n35--313:IFGT : [0:0]
+n17--320:ISUB : [0:0]
+n34--424:IADD : [0:0]
+n33--324:DMA_LOAD(ref) : [0:1]
+n13--321:IMUL : [1:4]
+n16--366:IADD : [5:5]
+n15--416:IADD : [5:5]
+n26--342:IADD : [5:5]
+n19--378:IADD : [5:5]
+n7--332:DMA_LOAD64 : [5:6]
+n9--354:IADD : [5:5]
+n12--390:IADD : [5:5]
+n11--403:IADD : [5:5]
+n14--417:DMA_LOAD64 : [6:7]
+n25--343:DMA_LOAD64 : [6:7]
+n1--367:DMA_LOAD64 : [6:7]
+n18--379:DMA_LOAD64 : [6:7]
+n8--355:DMA_LOAD64 : [6:7]
+n21--391:DMA_LOAD64 : [6:7]
+n10--404:DMA_LOAD64 : [6:7]
+n5--336:LAND : [7:7]
+n24--395:LAND : [8:8]
+n0--371:LAND : [8:8]
+n29--421:LAND : [8:8]
+n6--347:LAND : [8:8]
+n30--383:LAND : [8:8]
+n20--359:LAND : [8:8]
+n31--408:LAND : [8:8]
+n4--348:LXOR : [9:9]
+n3--360:LXOR : [10:10]
+n2--372:LXOR : [11:11]
+n23--384:LXOR : [12:12]
+n22--396:LXOR : [13:13]
+n28--409:LXOR : [14:14]
+n27--422:LXOR : [15:15]
+n32--423:DMA_STORE64 : [16:17]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 18 with 36 nodes
+
+n17--320:ISUB : [0:0]
+n13--321:IMUL : [1:4]
+n26--342:IADD : [5:5]
+n25--343:DMA_LOAD64 : [6:7]
+n7--332:DMA_LOAD64 : [6:7]
+n9--354:IADD : [6:6]
+n16--366:IADD : [7:7]
+n8--355:DMA_LOAD64 : [7:8]
+n1--367:DMA_LOAD64 : [8:9]
+n19--378:IADD : [8:8]
+n5--336:LAND : [8:8]
+n6--347:LAND : [8:8]
+n18--379:DMA_LOAD64 : [9:10]
+n4--348:LXOR : [9:9]
+n20--359:LAND : [9:9]
+n12--390:IADD : [9:9]
+n0--371:LAND : [10:10]
+n3--360:LXOR : [10:10]
+n21--391:DMA_LOAD64 : [10:11]
+n11--403:IADD : [10:10]
+n15--416:IADD : [11:11]
+n2--372:LXOR : [11:11]
+n30--383:LAND : [11:11]
+n10--404:DMA_LOAD64 : [11:12]
+n14--417:DMA_LOAD64 : [12:13]
+n24--395:LAND : [12:12]
+n23--384:LXOR : [12:12]
+n31--408:LAND : [13:13]
+n22--396:LXOR : [13:13]
+n29--421:LAND : [14:14]
+n28--409:LXOR : [14:14]
+n33--324:DMA_LOAD(ref) : [14:15]
+n27--422:LXOR : [15:15]
+n32--423:DMA_STORE64 : [16:17]
+n35--313:IFGT : [17:17]
+n34--424:IADD : [17:17]
+
+FINISHED ALAP SCHEDULE
+

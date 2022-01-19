@@ -1,0 +1,655 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: OWN, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 84, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 2448
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 84, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 2948
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: lazyALAP 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 54, vs. lBoundEstimator: OWN, ALAPBound: lazyALAP -> 84
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: listSchedule
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: listSchedule -> 2448, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 2948
+
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 54, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 2448
+
+
+
+Comparing lBoundEstimator: PAPER, ALAPBound: listSchedule 
+		 with lBoundEstimator: PAPER, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: PAPER, ALAPBound: lazyALAP -> 54, vs. lBoundEstimator: PAPER, ALAPBound: listSchedule -> 2948
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 114 with 333 nodes
+
+n296--1836:IMUL : [0:3]
+n37--1032:DMA_LOAD : [0:1]
+n48--200:DMA_LOAD : [0:1]
+n29--1037:DMA_LOAD : [0:1]
+n157--205:DMA_LOAD : [0:1]
+n45--128:IMUL : [0:3]
+n185--1800:IUSHR : [2:2]
+n70--222:DMA_LOAD : [2:3]
+n101--210:DMA_LOAD : [2:3]
+n184--1795:ISHL : [2:2]
+n135--1042:DMA_LOAD : [3:4]
+n183--1801:IOR : [3:3]
+n5--965:IADD : [4:4]
+n223--1047:DMA_LOAD : [4:5]
+n63--215:DMA_LOAD : [4:5]
+n318--119:IDIV : [4:21]
+n88--1818:IMUL : [4:7]
+n4--990:IUSHR : [5:5]
+n44--158:IUSHR : [5:5]
+n210--994:IAND : [6:6]
+n46--174:IUSHR : [6:6]
+n15--147:IAND : [6:6]
+n159--1609:DMA_LOAD : [6:7]
+n302--777:DMA_LOAD : [7:8]
+n266--979:IAND : [7:7]
+n83--1553:DMA_LOAD : [7:8]
+n139--1006:IUSHR : [8:8]
+n309--162:IAND : [8:8]
+n68--1022:IUSHR : [9:9]
+n230--178:IAND : [9:9]
+n158--1612:DMA_LOAD : [9:10]
+n291--721:DMA_LOAD : [9:10]
+n145--1010:IAND : [10:10]
+n300--794:IUSHR : [10:10]
+n102--190:IUSHR : [11:11]
+n50--1626:IUSHR : [11:11]
+n306--1673:DMA_LOAD : [11:12]
+n82--1555:DMA_LOAD : [11:12]
+n237--723:DMA_LOAD : [12:13]
+n326--841:DMA_LOAD : [12:13]
+n8--738:IAND : [13:13]
+n20--780:DMA_LOAD : [13:14]
+n7--727:IAND : [14:14]
+n195--1737:DMA_LOAD : [14:15]
+n67--1026:IAND : [14:14]
+n58--1630:IAND : [15:15]
+n89--1808:IADD : [15:15]
+n171--1559:IAND : [15:15]
+n132--194:IAND : [16:16]
+n320--844:DMA_LOAD : [16:17]
+n274--798:IAND : [16:16]
+n213--1616:IAND : [16:16]
+n28--1570:IAND : [17:17]
+n112--1690:IUSHR : [17:17]
+n19--784:IAND : [17:17]
+n91--1740:DMA_LOAD : [18:19]
+n228--905:DMA_LOAD : [18:19]
+n303--1676:DMA_LOAD : [18:19]
+n138--858:IUSHR : [18:18]
+n6--740:IXOR : [19:19]
+n57--714:DMA_LOAD : [20:21]
+n276--1135:DMA_LOAD : [20:21]
+n133--1680:IAND : [20:20]
+n34--848:IAND : [20:20]
+n35--862:IAND : [21:21]
+n141--1546:DMA_LOAD : [21:22]
+n142--1572:IXOR : [22:22]
+n136--770:DMA_LOAD : [22:23]
+n137--800:IXOR : [22:22]
+n258--922:IUSHR : [23:23]
+n299--303:DMA_LOAD : [23:24]
+n134--1694:IAND : [23:23]
+n124--1754:IUSHR : [24:24]
+n218--1166:DMA_LOAD : [24:25]
+n328--334:DMA_LOAD : [24:25]
+n227--908:DMA_LOAD : [25:26]
+n304--1632:IXOR : [25:25]
+n90--1744:IAND : [26:26]
+n32--1696:IXOR : [26:26]
+n329--1602:DMA_LOAD : [26:27]
+n76--801:DMA_LOAD : [27:28]
+n31--1666:DMA_LOAD : [27:28]
+n140--1573:DMA_LOAD : [27:28]
+n56--741:DMA_LOAD : [28:29]
+n242--834:DMA_LOAD : [29:30]
+n55--1633:DMA_LOAD : [29:30]
+n33--864:IXOR : [29:29]
+n275--1137:DMA_LOAD : [30:31]
+n36--1183:IUSHR : [30:30]
+n144--1202:DMA_LOAD : [31:32]
+n298--305:DMA_LOAD : [31:32]
+n232--815:IUSHR : [31:31]
+n24--1647:IUSHR : [32:32]
+n163--351:IUSHR : [32:32]
+n263--912:IAND : [33:33]
+n257--926:IAND : [33:33]
+n126--1826:IADD : [33:33]
+n212--1169:DMA_LOAD : [33:34]
+n245--1758:IAND : [34:34]
+n238--370:DMA_LOAD : [34:35]
+n319--337:DMA_LOAD : [34:35]
+n30--1697:DMA_LOAD : [35:36]
+n54--1637:IAND : [35:35]
+n75--805:IAND : [36:36]
+n283--341:IAND : [36:36]
+n162--355:IAND : [36:36]
+n231--819:IAND : [37:37]
+n79--928:IXOR : [37:37]
+n78--898:DMA_LOAD : [37:38]
+n281--1219:IUSHR : [37:37]
+n273--1141:IAND : [38:38]
+n114--1187:IAND : [38:38]
+n211--1173:IAND : [38:38]
+n190--1711:IUSHR : [39:39]
+n119--387:IUSHR : [39:39]
+n43--1152:IAND : [39:39]
+n173--865:DMA_LOAD : [39:40]
+n187--1730:DMA_LOAD : [40:41]
+n143--1205:DMA_LOAD : [40:41]
+n23--1651:IAND : [40:40]
+n47--879:IUSHR : [41:41]
+n287--1238:DMA_LOAD : [41:42]
+n188--1760:IXOR : [42:42]
+n221--320:IAND : [42:42]
+n49--1588:IAND : [42:42]
+n189--406:DMA_LOAD : [43:44]
+n288--309:IAND : [43:43]
+n201--1577:IAND : [43:43]
+n226--373:DMA_LOAD : [43:44]
+n208--745:IAND : [44:44]
+n209--756:IAND : [44:44]
+n1--409:DMA_LOAD : [45:46]
+n93--423:IUSHR : [45:45]
+n280--1223:IAND : [45:45]
+n77--929:DMA_LOAD : [45:46]
+n176--1126:DMA_LOAD(ref) : [46:47]
+n199--1241:DMA_LOAD : [46:47]
+n177--1154:IXOR : [47:47]
+n279--821:IXOR : [47:47]
+n255--294:DMA_LOAD(ref) : [48:49]
+n278--761:DMA_LOAD(ref) : [48:49]
+n256--322:IXOR : [48:48]
+n234--1775:IUSHR : [48:48]
+n61--883:IAND : [49:49]
+n60--869:IAND : [49:49]
+n41--1701:IAND : [50:50]
+n172--943:IUSHR : [50:50]
+n250--391:IAND : [50:50]
+n42--1715:IAND : [50:50]
+n264--1255:IUSHR : [51:51]
+n262--1537:DMA_LOAD(ref) : [51:52]
+n186--1761:DMA_LOAD : [51:52]
+n246--1209:IAND : [51:51]
+n203--1593:DMA_LOAD(ref) : [52:53]
+n225--377:IAND : [52:52]
+n200--1590:IXOR : [53:53]
+n129--357:IXOR : [53:53]
+n107--1189:IXOR : [53:53]
+n207--758:IXOR : [54:54]
+n204--1653:IXOR : [54:54]
+n128--325:DMA_LOAD(ref) : [54:55]
+n106--1157:DMA_LOAD(ref) : [54:55]
+n0--413:IAND : [55:55]
+n308--705:DMA_LOAD(ref) : [55:56]
+n92--427:IAND : [56:56]
+n260--1765:IAND : [56:56]
+n261--1591:DMA_LOAD : [56:57]
+n14--448:DMA_LOAD : [57:58]
+n253--1470:DMA_LOAD : [57:58]
+n12--1438:DMA_LOAD : [57:58]
+n330--475:DMA_LOAD : [58:59]
+n254--323:DMA_LOAD : [59:60]
+n131--539:DMA_LOAD : [59:60]
+n175--1155:DMA_LOAD : [59:60]
+n59--885:IXOR : [60:60]
+n233--1779:IAND : [61:61]
+n156--1852:ISUB : [61:61]
+n277--822:DMA_LOAD : [61:62]
+n217--1502:DMA_LOAD : [61:62]
+n314--1371:DMA_LOAD : [62:63]
+n315--670:DMA_LOAD : [62:63]
+n191--606:DMA_LOAD : [63:64]
+n40--1717:IXOR : [63:63]
+n150--933:IAND : [64:64]
+n294--1339:DMA_LOAD : [64:65]
+n151--947:IAND : [64:64]
+n25--1411:DMA_LOAD : [65:66]
+n121--1193:DMA_LOAD(ref) : [65:66]
+n170--1259:IAND : [65:65]
+n220--1307:DMA_LOAD : [66:67]
+n265--1280:DMA_LOAD : [66:67]
+n122--1225:IXOR : [67:67]
+n284--1657:DMA_LOAD(ref) : [67:68]
+n240--361:DMA_LOAD(ref) : [68:69]
+n241--393:IXOR : [68:68]
+n202--1654:DMA_LOAD : [68:69]
+n169--1245:IAND : [69:69]
+n168--638:DMA_LOAD : [69:70]
+n322--825:DMA_LOAD(ref) : [70:71]
+n206--579:DMA_LOAD : [70:71]
+n229--507:DMA_LOAD : [70:71]
+n127--358:DMA_LOAD : [71:72]
+n3--1356:IUSHR : [72:72]
+n105--1190:DMA_LOAD : [72:73]
+n307--759:DMA_LOAD : [72:73]
+n180--510:DMA_LOAD : [73:74]
+n98--1781:IXOR : [73:73]
+n10--1413:DMA_LOAD : [74:75]
+n161--429:IXOR : [74:74]
+n97--1721:DMA_LOAD(ref) : [74:75]
+n160--397:DMA_LOAD(ref) : [75:76]
+n11--1441:DMA_LOAD : [75:76]
+n297--1324:IUSHR : [76:76]
+n155--1853:IUSHR : [76:76]
+n13--450:DMA_LOAD : [77:78]
+n111--492:IUSHR : [77:77]
+n130--542:DMA_LOAD : [77:78]
+n295--687:IUSHR : [77:77]
+n252--1473:DMA_LOAD : [78:79]
+n18--1718:DMA_LOAD : [78:79]
+n313--1374:DMA_LOAD : [79:80]
+n236--673:DMA_LOAD : [79:80]
+n17--1655:IXOR : [80:80]
+n239--394:DMA_LOAD : [80:81]
+n118--1505:DMA_LOAD : [81:82]
+n316--823:IXOR : [81:81]
+n116--1282:DMA_LOAD : [81:82]
+n259--1487:IUSHR : [82:82]
+n219--1310:DMA_LOAD : [82:83]
+n290--359:IXOR : [83:83]
+n85--1519:IUSHR : [83:83]
+n62--556:IUSHR : [83:83]
+n65--1229:DMA_LOAD(ref) : [84:85]
+n87--1812:DMA_LOAD(ref) : [84:85]
+n66--1261:IXOR : [84:84]
+n22--623:IUSHR : [84:84]
+n165--1342:DMA_LOAD : [85:86]
+n100--1455:IUSHR : [85:85]
+n120--1226:DMA_LOAD : [86:87]
+n301--478:DMA_LOAD : [86:87]
+n125--1844:ISHL : [86:86]
+n103--655:IUSHR : [87:87]
+n224--1191:IXOR : [87:87]
+n104--609:DMA_LOAD : [88:89]
+n167--641:DMA_LOAD : [88:89]
+n321--886:DMA_LOAD : [88:89]
+n146--1388:IUSHR : [88:88]
+n327--889:DMA_LOAD(ref) : [89:90]
+n149--949:IXOR : [90:90]
+n205--581:DMA_LOAD : [90:91]
+n109--524:IUSHR : [90:90]
+n2--1360:IAND : [91:91]
+n96--1782:DMA_LOAD : [91:92]
+n9--1417:IAND : [91:91]
+n52--585:IAND : [92:92]
+n95--1428:IAND : [92:92]
+n53--596:IAND : [92:92]
+n16--1719:IXOR : [93:93]
+n178--242:IAND : [93:93]
+n181--546:IAND : [93:93]
+n99--1459:IAND : [93:93]
+n179--514:IAND : [94:94]
+n215--645:IAND : [94:94]
+n216--659:IAND : [94:94]
+n21--627:IAND : [94:94]
+n69--1074:IAND : [95:95]
+n286--1297:IAND : [95:95]
+n293--691:IAND : [95:95]
+n64--1262:DMA_LOAD : [95:96]
+n166--276:IAND : [96:96]
+n27--1091:IAND : [96:96]
+n164--1346:IAND : [96:96]
+n324--1328:IAND : [97:97]
+n123--1058:IAND : [97:97]
+n244--226:IAND : [97:97]
+n248--482:IAND : [97:97]
+n72--1378:IAND : [98:98]
+n74--259:IAND : [98:98]
+n73--1392:IAND : [98:98]
+n282--1314:IAND : [98:98]
+n154--430:DMA_LOAD : [99:100]
+n198--1491:IAND : [99:99]
+n110--496:IAND : [99:99]
+n153--395:IXOR : [99:99]
+n197--1477:IAND : [100:100]
+n235--677:IAND : [100:100]
+n39--1108:IAND : [100:100]
+n115--1286:IAND : [101:101]
+n81--613:IAND : [101:101]
+n311--560:IAND : [101:101]
+n117--1509:IAND : [101:101]
+n84--1523:IAND : [102:102]
+n271--1838:IADD : [102:102]
+n194--465:IAND : [102:102]
+n272--1854:IOR : [102:102]
+n268--887:IXOR : [103:103]
+n269--950:DMA_LOAD : [103:104]
+n148--1227:IXOR : [103:103]
+n193--454:IAND : [103:103]
+n222--1445:IAND : [104:104]
+n94--1430:IXOR : [104:104]
+n108--528:IAND : [104:104]
+n331--244:IFNE : [105:105]
+n71--1394:IXOR : [105:105]
+n51--598:IXOR : [105:105]
+n182--1059:IFNE : [105:105]
+n251--1076:IFNE : [106:106]
+n38--1110:IFNE : [106:106]
+n152--431:IXOR : [106:106]
+n174--1783:IXOR : [106:106]
+n196--1493:IXOR : [107:107]
+n312--1461:IXOR : [107:107]
+n214--661:IXOR : [107:107]
+n310--562:IXOR : [107:107]
+n332--1856:IADD : [108:108]
+n113--261:IFNE : [108:108]
+n80--629:IXOR : [108:108]
+n317--120:IFGE : [108:108]
+n86--1821:DMA_STORE : [109:110]
+n192--467:IXOR : [109:109]
+n270--1855:DMA_STORE : [109:110]
+n292--693:IXOR : [109:109]
+n243--227:IFNE : [110:110]
+n26--1093:IFNE : [110:110]
+n285--1299:IXOR : [111:111]
+n323--1330:IXOR : [111:111]
+n147--1263:IXOR : [111:111]
+n247--498:IXOR : [111:111]
+n267--951:IXOR : [112:112]
+n289--1362:IXOR : [112:112]
+n305--1525:IXOR : [112:112]
+n325--278:IFNE : [112:112]
+n249--530:IXOR : [113:113]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 114
+Initial best latency: 114
+332 out of 333 DFG nodes could be skipped to find best schedule
+It took 83 milliseconds to converge
+Scheduling took 84 milliseconds
+
+Print BULB tree: 
+l_bound: 114, u_bound: 114; investigated partial schedule: {}; 
+└── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [0:17]; investigated partial schedule: {0=[n318--119:IDIV], 1=[n318--119:IDIV], 2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: lazyALAP
+BULB tree contains 2 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 1 times
+Best latency found: 114
+Initial best latency: 114
+332 out of 333 DFG nodes could be skipped to find best schedule
+It took 53 milliseconds to converge
+Scheduling took 54 milliseconds
+
+Print BULB tree: 
+l_bound: 114, u_bound: 114; investigated partial schedule: {}; 
+└── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [0:17]; investigated partial schedule: {0=[n318--119:IDIV], 1=[n318--119:IDIV], 2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 98 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 96 times
+Best latency found: 114
+Initial best latency: 114
+332 out of 333 DFG nodes could be skipped to find best schedule
+It took 70 milliseconds to converge
+Scheduling took 2448 milliseconds
+
+Print BULB tree: 
+l_bound: 114, u_bound: 114; investigated partial schedule: {}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [74:91]; investigated partial schedule: {74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [88:105]; investigated partial schedule: {88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [37:54]; investigated partial schedule: {37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [84:101]; investigated partial schedule: {84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [56:73]; investigated partial schedule: {56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [79:96]; investigated partial schedule: {79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [32:49]; investigated partial schedule: {32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [36:53]; investigated partial schedule: {36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [65:82]; investigated partial schedule: {65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [90:107]; investigated partial schedule: {90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [12:29]; investigated partial schedule: {12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [16:33]; investigated partial schedule: {16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [41:58]; investigated partial schedule: {41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [40:57]; investigated partial schedule: {40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [91:108]; investigated partial schedule: {91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [89:106]; investigated partial schedule: {89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [57:74]; investigated partial schedule: {57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [59:76]; investigated partial schedule: {59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV]}; 
+├── l_bound: 115, u_bound: 115; investigated n318--119:IDIV in [96:113]; investigated partial schedule: {96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV], 111=[n318--119:IDIV], 112=[n318--119:IDIV], 113=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [27:44]; investigated partial schedule: {27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [50:67]; investigated partial schedule: {50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [3:20]; investigated partial schedule: {3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [1:18]; investigated partial schedule: {1=[n318--119:IDIV], 2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [33:50]; investigated partial schedule: {33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [11:28]; investigated partial schedule: {11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [30:47]; investigated partial schedule: {30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [8:25]; investigated partial schedule: {8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [83:100]; investigated partial schedule: {83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [17:34]; investigated partial schedule: {17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [2:19]; investigated partial schedule: {2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [13:30]; investigated partial schedule: {13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [87:104]; investigated partial schedule: {87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [29:46]; investigated partial schedule: {29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [51:68]; investigated partial schedule: {51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [69:86]; investigated partial schedule: {69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [52:69]; investigated partial schedule: {52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [49:66]; investigated partial schedule: {49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [6:23]; investigated partial schedule: {6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [7:24]; investigated partial schedule: {7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [46:63]; investigated partial schedule: {46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [72:89]; investigated partial schedule: {72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [95:112]; investigated partial schedule: {95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV], 111=[n318--119:IDIV], 112=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [48:65]; investigated partial schedule: {48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [38:55]; investigated partial schedule: {38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [58:75]; investigated partial schedule: {58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [82:99]; investigated partial schedule: {82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [55:72]; investigated partial schedule: {55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [64:81]; investigated partial schedule: {64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [24:41]; investigated partial schedule: {24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [22:39]; investigated partial schedule: {22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [23:40]; investigated partial schedule: {23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [73:90]; investigated partial schedule: {73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [86:103]; investigated partial schedule: {86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [31:48]; investigated partial schedule: {31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [68:85]; investigated partial schedule: {68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [43:60]; investigated partial schedule: {43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [60:77]; investigated partial schedule: {60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [70:87]; investigated partial schedule: {70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [28:45]; investigated partial schedule: {28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [42:59]; investigated partial schedule: {42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [80:97]; investigated partial schedule: {80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [67:84]; investigated partial schedule: {67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [45:62]; investigated partial schedule: {45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [63:80]; investigated partial schedule: {63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [47:64]; investigated partial schedule: {47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [93:110]; investigated partial schedule: {93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [66:83]; investigated partial schedule: {66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [78:95]; investigated partial schedule: {78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [62:79]; investigated partial schedule: {62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [15:32]; investigated partial schedule: {15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [21:38]; investigated partial schedule: {21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [75:92]; investigated partial schedule: {75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [35:52]; investigated partial schedule: {35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [44:61]; investigated partial schedule: {44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [0:17]; investigated partial schedule: {0=[n318--119:IDIV], 1=[n318--119:IDIV], 2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [76:93]; investigated partial schedule: {76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [92:109]; investigated partial schedule: {92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [85:102]; investigated partial schedule: {85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [25:42]; investigated partial schedule: {25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [19:36]; investigated partial schedule: {19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [4:21]; investigated partial schedule: {4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [53:70]; investigated partial schedule: {53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [71:88]; investigated partial schedule: {71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [94:111]; investigated partial schedule: {94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV], 111=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [26:43]; investigated partial schedule: {26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [10:27]; investigated partial schedule: {10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [20:37]; investigated partial schedule: {20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [39:56]; investigated partial schedule: {39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [54:71]; investigated partial schedule: {54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [5:22]; investigated partial schedule: {5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [18:35]; investigated partial schedule: {18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [61:78]; investigated partial schedule: {61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [81:98]; investigated partial schedule: {81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [9:26]; investigated partial schedule: {9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [77:94]; investigated partial schedule: {77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [14:31]; investigated partial schedule: {14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV]}; 
+└── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [34:51]; investigated partial schedule: {34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV]}; 
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: PAPER, ALAPBound: listSchedule
+BULB tree contains 98 inspected nodes
+0 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 96 times
+Best latency found: 114
+Initial best latency: 114
+332 out of 333 DFG nodes could be skipped to find best schedule
+It took 58 milliseconds to converge
+Scheduling took 2948 milliseconds
+
+Print BULB tree: 
+l_bound: 114, u_bound: 114; investigated partial schedule: {}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [49:66]; investigated partial schedule: {49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [76:93]; investigated partial schedule: {76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [26:43]; investigated partial schedule: {26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [22:39]; investigated partial schedule: {22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [42:59]; investigated partial schedule: {42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [90:107]; investigated partial schedule: {90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [24:41]; investigated partial schedule: {24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [86:103]; investigated partial schedule: {86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [89:106]; investigated partial schedule: {89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [68:85]; investigated partial schedule: {68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [45:62]; investigated partial schedule: {45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [88:105]; investigated partial schedule: {88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [65:82]; investigated partial schedule: {65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [23:40]; investigated partial schedule: {23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [72:89]; investigated partial schedule: {72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [31:48]; investigated partial schedule: {31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [64:81]; investigated partial schedule: {64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [71:88]; investigated partial schedule: {71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [2:19]; investigated partial schedule: {2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [41:58]; investigated partial schedule: {41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [34:51]; investigated partial schedule: {34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [10:27]; investigated partial schedule: {10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [55:72]; investigated partial schedule: {55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [92:109]; investigated partial schedule: {92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [27:44]; investigated partial schedule: {27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [7:24]; investigated partial schedule: {7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [62:79]; investigated partial schedule: {62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV]}; 
+├── l_bound: 115, u_bound: 115; investigated n318--119:IDIV in [96:113]; investigated partial schedule: {96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV], 111=[n318--119:IDIV], 112=[n318--119:IDIV], 113=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [52:69]; investigated partial schedule: {52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [40:57]; investigated partial schedule: {40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [60:77]; investigated partial schedule: {60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [35:52]; investigated partial schedule: {35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [37:54]; investigated partial schedule: {37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [39:56]; investigated partial schedule: {39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [77:94]; investigated partial schedule: {77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [61:78]; investigated partial schedule: {61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [38:55]; investigated partial schedule: {38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [13:30]; investigated partial schedule: {13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [1:18]; investigated partial schedule: {1=[n318--119:IDIV], 2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [70:87]; investigated partial schedule: {70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [3:20]; investigated partial schedule: {3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [56:73]; investigated partial schedule: {56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [28:45]; investigated partial schedule: {28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [75:92]; investigated partial schedule: {75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [33:50]; investigated partial schedule: {33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [12:29]; investigated partial schedule: {12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [19:36]; investigated partial schedule: {19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [6:23]; investigated partial schedule: {6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [5:22]; investigated partial schedule: {5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [80:97]; investigated partial schedule: {80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [47:64]; investigated partial schedule: {47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [54:71]; investigated partial schedule: {54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [51:68]; investigated partial schedule: {51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [83:100]; investigated partial schedule: {83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [53:70]; investigated partial schedule: {53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [50:67]; investigated partial schedule: {50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [57:74]; investigated partial schedule: {57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [59:76]; investigated partial schedule: {59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [82:99]; investigated partial schedule: {82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [11:28]; investigated partial schedule: {11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [14:31]; investigated partial schedule: {14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [17:34]; investigated partial schedule: {17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [21:38]; investigated partial schedule: {21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [91:108]; investigated partial schedule: {91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [63:80]; investigated partial schedule: {63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [84:101]; investigated partial schedule: {84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [78:95]; investigated partial schedule: {78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [81:98]; investigated partial schedule: {81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [8:25]; investigated partial schedule: {8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [44:61]; investigated partial schedule: {44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [29:46]; investigated partial schedule: {29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [85:102]; investigated partial schedule: {85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [0:17]; investigated partial schedule: {0=[n318--119:IDIV], 1=[n318--119:IDIV], 2=[n318--119:IDIV], 3=[n318--119:IDIV], 4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [66:83]; investigated partial schedule: {66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [48:65]; investigated partial schedule: {48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [20:37]; investigated partial schedule: {20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [9:26]; investigated partial schedule: {9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [32:49]; investigated partial schedule: {32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [95:112]; investigated partial schedule: {95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV], 111=[n318--119:IDIV], 112=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [58:75]; investigated partial schedule: {58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV], 64=[n318--119:IDIV], 65=[n318--119:IDIV], 66=[n318--119:IDIV], 67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [87:104]; investigated partial schedule: {87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [25:42]; investigated partial schedule: {25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [15:32]; investigated partial schedule: {15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [69:86]; investigated partial schedule: {69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [73:90]; investigated partial schedule: {73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [4:21]; investigated partial schedule: {4=[n318--119:IDIV], 5=[n318--119:IDIV], 6=[n318--119:IDIV], 7=[n318--119:IDIV], 8=[n318--119:IDIV], 9=[n318--119:IDIV], 10=[n318--119:IDIV], 11=[n318--119:IDIV], 12=[n318--119:IDIV], 13=[n318--119:IDIV], 14=[n318--119:IDIV], 15=[n318--119:IDIV], 16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [74:91]; investigated partial schedule: {74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [18:35]; investigated partial schedule: {18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [43:60]; investigated partial schedule: {43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [16:33]; investigated partial schedule: {16=[n318--119:IDIV], 17=[n318--119:IDIV], 18=[n318--119:IDIV], 19=[n318--119:IDIV], 20=[n318--119:IDIV], 21=[n318--119:IDIV], 22=[n318--119:IDIV], 23=[n318--119:IDIV], 24=[n318--119:IDIV], 25=[n318--119:IDIV], 26=[n318--119:IDIV], 27=[n318--119:IDIV], 28=[n318--119:IDIV], 29=[n318--119:IDIV], 30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [36:53]; investigated partial schedule: {36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [46:63]; investigated partial schedule: {46=[n318--119:IDIV], 47=[n318--119:IDIV], 48=[n318--119:IDIV], 49=[n318--119:IDIV], 50=[n318--119:IDIV], 51=[n318--119:IDIV], 52=[n318--119:IDIV], 53=[n318--119:IDIV], 54=[n318--119:IDIV], 55=[n318--119:IDIV], 56=[n318--119:IDIV], 57=[n318--119:IDIV], 58=[n318--119:IDIV], 59=[n318--119:IDIV], 60=[n318--119:IDIV], 61=[n318--119:IDIV], 62=[n318--119:IDIV], 63=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [94:111]; investigated partial schedule: {94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV], 111=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [79:96]; investigated partial schedule: {79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV], 85=[n318--119:IDIV], 86=[n318--119:IDIV], 87=[n318--119:IDIV], 88=[n318--119:IDIV], 89=[n318--119:IDIV], 90=[n318--119:IDIV], 91=[n318--119:IDIV], 92=[n318--119:IDIV], 93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [93:110]; investigated partial schedule: {93=[n318--119:IDIV], 94=[n318--119:IDIV], 95=[n318--119:IDIV], 96=[n318--119:IDIV], 97=[n318--119:IDIV], 98=[n318--119:IDIV], 99=[n318--119:IDIV], 100=[n318--119:IDIV], 101=[n318--119:IDIV], 102=[n318--119:IDIV], 103=[n318--119:IDIV], 104=[n318--119:IDIV], 105=[n318--119:IDIV], 106=[n318--119:IDIV], 107=[n318--119:IDIV], 108=[n318--119:IDIV], 109=[n318--119:IDIV], 110=[n318--119:IDIV]}; 
+├── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [67:84]; investigated partial schedule: {67=[n318--119:IDIV], 68=[n318--119:IDIV], 69=[n318--119:IDIV], 70=[n318--119:IDIV], 71=[n318--119:IDIV], 72=[n318--119:IDIV], 73=[n318--119:IDIV], 74=[n318--119:IDIV], 75=[n318--119:IDIV], 76=[n318--119:IDIV], 77=[n318--119:IDIV], 78=[n318--119:IDIV], 79=[n318--119:IDIV], 80=[n318--119:IDIV], 81=[n318--119:IDIV], 82=[n318--119:IDIV], 83=[n318--119:IDIV], 84=[n318--119:IDIV]}; 
+└── l_bound: 114, u_bound: 114; investigated n318--119:IDIV in [30:47]; investigated partial schedule: {30=[n318--119:IDIV], 31=[n318--119:IDIV], 32=[n318--119:IDIV], 33=[n318--119:IDIV], 34=[n318--119:IDIV], 35=[n318--119:IDIV], 36=[n318--119:IDIV], 37=[n318--119:IDIV], 38=[n318--119:IDIV], 39=[n318--119:IDIV], 40=[n318--119:IDIV], 41=[n318--119:IDIV], 42=[n318--119:IDIV], 43=[n318--119:IDIV], 44=[n318--119:IDIV], 45=[n318--119:IDIV], 46=[n318--119:IDIV], 47=[n318--119:IDIV]}; 
+

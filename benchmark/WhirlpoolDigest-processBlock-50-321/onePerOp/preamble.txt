@@ -1,0 +1,194 @@
+Reading resource constraints from resources/vlsi/onePerOp
+
+Available resources:
+RES00:		Other, 
+RES01:		Add, 
+RES02:		Sub, 
+RES03:		Div, 
+RES04:		Mul, 
+RES05:		Shift, 
+RES06:		And, 
+RES07:		Or, 
+RES08:		Cmp, 
+RES09:		Mem, 
+
+Available operations:
+Mem:		RES09, 
+Add:		RES01, 
+Sub:		RES02, 
+Mul:		RES04, 
+Div:		RES03, 
+Shift:		RES05, 
+And:		RES06, 
+Or:		RES07, 
+Cmp:		RES08, 
+Other:		RES00, 
+Slack:		
+A:		
+B:		
+
+PARSING INPUT GRAPH: graphs/timeout/WhirlpoolDigest-processBlock-50-321.dot
+DOING ASAP SCHEDULE
+Found schedule of length 19 with 76 nodes
+
+n69--305:ISUB : [0:0]
+n1--57:DMA_LOAD(ref) : [0:1]
+n15--74:DMA_LOAD(ref) : [0:1]
+n28--111:ISUB : [0:0]
+n72--272:ISUB : [0:0]
+n30--207:ISUB : [0:0]
+n74--318:IADD : [0:0]
+n73--175:ISUB : [0:0]
+n43--143:ISUB : [0:0]
+n20--239:ISUB : [0:0]
+n64--79:ISUB : [0:0]
+n75--53:IFGE : [0:0]
+n16--308:IAND : [1:1]
+n27--114:IAND : [1:1]
+n29--210:IAND : [1:1]
+n19--242:IAND : [1:1]
+n61--178:IAND : [1:1]
+n60--275:IAND : [1:1]
+n63--82:IAND : [1:1]
+n42--146:IAND : [1:1]
+n14--309:DMA_LOAD64 : [2:3]
+n47--211:DMA_LOAD64 : [2:3]
+n36--179:DMA_LOAD64 : [2:3]
+n13--276:DMA_LOAD64 : [2:3]
+n70--62:DMA_STORE64 : [2:3]
+n4--243:DMA_LOAD64 : [2:3]
+n9--115:DMA_LOAD64 : [2:3]
+n22--83:DMA_LOAD64 : [2:3]
+n66--147:DMA_LOAD64 : [2:3]
+n46--214:LUSHR : [4:4]
+n35--182:LUSHR : [4:4]
+n26--310:L2I : [4:4]
+n3--246:LUSHR : [4:4]
+n8--118:LUSHR : [4:4]
+n21--86:LUSHR : [4:4]
+n65--150:LUSHR : [4:4]
+n12--279:LUSHR : [4:4]
+n25--247:L2I : [5:5]
+n24--119:L2I : [5:5]
+n59--183:L2I : [5:5]
+n50--215:L2I : [5:5]
+n41--314:IAND : [5:5]
+n51--87:L2I : [5:5]
+n54--280:L2I : [5:5]
+n11--151:L2I : [5:5]
+n68--251:IAND : [6:6]
+n49--219:IAND : [6:6]
+n18--91:IAND : [6:6]
+n7--315:DMA_LOAD64 : [6:7]
+n32--187:IAND : [6:6]
+n10--155:IAND : [6:6]
+n53--284:IAND : [6:6]
+n23--123:IAND : [6:6]
+n48--220:DMA_LOAD64 : [7:8]
+n39--252:DMA_LOAD64 : [7:8]
+n17--92:DMA_LOAD64 : [7:8]
+n31--188:DMA_LOAD64 : [7:8]
+n56--156:DMA_LOAD64 : [7:8]
+n67--285:DMA_LOAD64 : [7:8]
+n34--124:DMA_LOAD64 : [7:8]
+n2--93:LXOR : [9:9]
+n0--94:DMA_STORE64 : [10:11]
+n33--125:LXOR : [10:10]
+n52--157:LXOR : [11:11]
+n40--126:DMA_STORE64 : [11:12]
+n62--158:DMA_STORE64 : [12:13]
+n45--189:LXOR : [12:12]
+n38--221:LXOR : [13:13]
+n44--190:DMA_STORE64 : [13:14]
+n57--222:DMA_STORE64 : [14:15]
+n37--253:LXOR : [14:14]
+n6--286:LXOR : [15:15]
+n71--254:DMA_STORE64 : [15:16]
+n58--287:DMA_STORE64 : [16:17]
+n5--316:LXOR : [16:16]
+n55--317:DMA_STORE64 : [17:18]
+
+FINISHED ASAP SCHEDULE
+
+DOING NORMAL ALAP SCHEDULE
+Found schedule of length 19 with 76 nodes
+
+n15--74:DMA_LOAD(ref) : [0:1]
+n64--79:ISUB : [0:0]
+n28--111:ISUB : [1:1]
+n63--82:IAND : [1:1]
+n27--114:IAND : [2:2]
+n43--143:ISUB : [2:2]
+n22--83:DMA_LOAD64 : [2:3]
+n73--175:ISUB : [3:3]
+n9--115:DMA_LOAD64 : [3:4]
+n42--146:IAND : [3:3]
+n61--178:IAND : [4:4]
+n30--207:ISUB : [4:4]
+n21--86:LUSHR : [4:4]
+n66--147:DMA_LOAD64 : [4:5]
+n36--179:DMA_LOAD64 : [5:6]
+n29--210:IAND : [5:5]
+n8--118:LUSHR : [5:5]
+n51--87:L2I : [5:5]
+n20--239:ISUB : [5:5]
+n47--211:DMA_LOAD64 : [6:7]
+n24--119:L2I : [6:6]
+n18--91:IAND : [6:6]
+n19--242:IAND : [6:6]
+n72--272:ISUB : [6:6]
+n65--150:LUSHR : [6:6]
+n35--182:LUSHR : [7:7]
+n17--92:DMA_LOAD64 : [7:8]
+n4--243:DMA_LOAD64 : [7:8]
+n60--275:IAND : [7:7]
+n23--123:IAND : [7:7]
+n11--151:L2I : [7:7]
+n69--305:ISUB : [8:8]
+n13--276:DMA_LOAD64 : [8:9]
+n46--214:LUSHR : [8:8]
+n59--183:L2I : [8:8]
+n10--155:IAND : [8:8]
+n34--124:DMA_LOAD64 : [8:9]
+n16--308:IAND : [9:9]
+n2--93:LXOR : [9:9]
+n3--246:LUSHR : [9:9]
+n50--215:L2I : [9:9]
+n32--187:IAND : [9:9]
+n56--156:DMA_LOAD64 : [9:10]
+n14--309:DMA_LOAD64 : [10:11]
+n25--247:L2I : [10:10]
+n49--219:IAND : [10:10]
+n31--188:DMA_LOAD64 : [10:11]
+n12--279:LUSHR : [10:10]
+n33--125:LXOR : [10:10]
+n68--251:IAND : [11:11]
+n48--220:DMA_LOAD64 : [11:12]
+n52--157:LXOR : [11:11]
+n54--280:L2I : [11:11]
+n26--310:L2I : [12:12]
+n39--252:DMA_LOAD64 : [12:13]
+n53--284:IAND : [12:12]
+n45--189:LXOR : [12:12]
+n38--221:LXOR : [13:13]
+n41--314:IAND : [13:13]
+n67--285:DMA_LOAD64 : [13:14]
+n37--253:LXOR : [14:14]
+n7--315:DMA_LOAD64 : [14:15]
+n1--57:DMA_LOAD(ref) : [15:16]
+n6--286:LXOR : [15:15]
+n5--316:LXOR : [16:16]
+n58--287:DMA_STORE64 : [17:18]
+n57--222:DMA_STORE64 : [17:18]
+n0--94:DMA_STORE64 : [17:18]
+n70--62:DMA_STORE64 : [17:18]
+n71--254:DMA_STORE64 : [17:18]
+n62--158:DMA_STORE64 : [17:18]
+n40--126:DMA_STORE64 : [17:18]
+n55--317:DMA_STORE64 : [17:18]
+n44--190:DMA_STORE64 : [17:18]
+n74--318:IADD : [18:18]
+n75--53:IFGE : [18:18]
+
+FINISHED ALAP SCHEDULE
+

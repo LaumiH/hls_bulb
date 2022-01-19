@@ -1,0 +1,40 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 566 with latency 134
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 840 with latency 134
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 456 with latency 134
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 463 with latency 134
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 46676 with latency 134
+Timeout reached while computing TwofishEngine-setKey-262-1953.dot with fpga_2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 47037 with latency 134
+Timeout reached while computing TwofishEngine-setKey-262-1953.dot with fpga_2Mul
+Received timeout, aborting

@@ -1,0 +1,261 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Comparison of schedules
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Comparing lBoundEstimator: OWN, ALAPBound: listSchedule 
+		 with lBoundEstimator: OWN, ALAPBound: lazyALAP
+--->  Schedules are equal
+faster: lBoundEstimator: OWN, ALAPBound: lazyALAP -> 104547, vs. lBoundEstimator: OWN, ALAPBound: listSchedule -> 176964
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing schedule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Found schedule of length 74 with 204 nodes
+
+n1--86:DMA_LOAD : [0:1]
+n202--752:IADD : [0:0]
+n203--79:IFGE : [0:0]
+n92--423:I2L : [0:0]
+n52--153:ISHL : [0:0]
+n91--426:LSHL : [1:1]
+n80--565:I2L : [1:1]
+n139--172:IXOR : [1:1]
+n79--568:LSHL : [2:2]
+n28--146:IXOR : [2:2]
+n191--631:I2L : [2:2]
+n60--494:I2L : [3:3]
+n184--634:LSHL : [3:3]
+n11--181:IXOR : [3:3]
+n48--497:LSHL : [4:4]
+n180--352:I2L : [4:4]
+n129--355:LSHL : [5:5]
+n62--707:I2L : [5:5]
+n61--710:LSHL : [6:6]
+n9--281:I2L : [6:6]
+n36--284:LSHL : [7:7]
+n54--210:I2L : [7:7]
+n21--560:I2L : [8:8]
+n53--213:LSHL : [8:8]
+n10--205:I2L : [9:9]
+n20--563:LSHL : [9:9]
+n130--569:LXOR : [10:10]
+n174--208:LSHL : [10:10]
+n88--276:I2L : [10:10]
+n133--489:I2L : [11:11]
+n35--279:LSHL : [11:11]
+n65--214:LXOR : [11:11]
+n14--285:LXOR : [12:12]
+n47--492:LSHL : [12:12]
+n103--702:I2L : [12:12]
+n46--498:LXOR : [13:13]
+n114--418:I2L : [13:13]
+n170--705:LSHL : [13:13]
+n189--347:I2L : [14:14]
+n101--711:LXOR : [14:14]
+n113--421:LSHL : [14:14]
+n144--427:LXOR : [15:15]
+n138--636:I2L : [15:15]
+n128--350:LSHL : [15:15]
+n185--639:LSHL : [16:16]
+n127--356:LXOR : [16:16]
+n84--287:I2L : [16:16]
+n110--640:LXOR : [17:17]
+n15--290:LSHL : [17:17]
+n87--571:I2L : [17:17]
+n13--291:LXOR : [18:18]
+n151--642:I2L : [18:18]
+n86--574:LSHL : [18:18]
+n25--358:I2L : [19:19]
+n111--645:LSHL : [19:19]
+n156--575:LXOR : [19:19]
+n24--361:LSHL : [20:20]
+n68--429:I2L : [20:20]
+n33--646:LXOR : [20:20]
+n26--713:I2L : [21:21]
+n118--362:LXOR : [21:21]
+n67--432:LSHL : [21:21]
+n123--433:LXOR : [22:22]
+n19--500:I2L : [22:22]
+n102--716:LSHL : [22:22]
+n100--717:LXOR : [23:23]
+n18--503:LSHL : [23:23]
+n106--216:I2L : [23:23]
+n164--504:LXOR : [24:24]
+n90--578:I2L : [24:24]
+n66--219:LSHL : [24:24]
+n30--507:I2L : [25:25]
+n64--220:LXOR : [25:25]
+n89--581:LSHL : [25:25]
+n29--510:LSHL : [26:26]
+n45--223:I2L : [26:26]
+n160--582:LXOR : [26:26]
+n199--294:I2L : [27:27]
+n179--511:LXOR : [27:27]
+n44--226:LSHL : [27:27]
+n196--227:LXOR : [28:28]
+n59--720:I2L : [28:28]
+n193--297:LSHL : [28:28]
+n58--723:LSHL : [29:29]
+n17--365:I2L : [29:29]
+n192--298:LXOR : [29:29]
+n132--724:LXOR : [30:30]
+n16--368:LSHL : [30:30]
+n116--436:I2L : [30:30]
+n115--439:LSHL : [31:31]
+n117--369:LXOR : [31:31]
+n109--649:I2L : [31:31]
+n122--440:LXOR : [32:32]
+n72--727:I2L : [32:32]
+n34--652:LSHL : [32:32]
+n73--730:LSHL : [33:33]
+n32--653:LXOR : [33:33]
+n43--656:I2L : [33:33]
+n131--731:LXOR : [34:34]
+n162--301:I2L : [34:34]
+n42--659:LSHL : [34:34]
+n190--304:LSHL : [35:35]
+n93--660:LXOR : [35:35]
+n181--372:I2L : [35:35]
+n143--375:LSHL : [36:36]
+n197--305:LXOR : [36:36]
+n12--585:I2L : [36:36]
+n154--443:I2L : [37:37]
+n112--588:LSHL : [37:37]
+n56--376:LXOR : [37:37]
+n38--230:I2L : [38:38]
+n163--446:LSHL : [38:38]
+n136--589:LXOR : [38:38]
+n37--233:LSHL : [39:39]
+n142--514:I2L : [39:39]
+n147--447:LXOR : [39:39]
+n166--234:LXOR : [40:40]
+n141--517:LSHL : [40:40]
+n0--379:I2L : [40:40]
+n57--382:LSHL : [41:41]
+n158--518:LXOR : [41:41]
+n3--237:I2L : [41:41]
+n2--240:LSHL : [42:42]
+n40--734:I2L : [42:42]
+n55--383:LXOR : [42:42]
+n165--241:LXOR : [43:43]
+n39--737:LSHL : [43:43]
+n173--308:I2L : [43:43]
+n134--738:LXOR : [44:44]
+n172--311:LSHL : [44:44]
+n31--592:I2L : [44:44]
+n120--595:LSHL : [45:45]
+n169--663:I2L : [45:45]
+n108--312:LXOR : [45:45]
+n159--450:I2L : [46:46]
+n70--596:LXOR : [46:46]
+n168--666:LSHL : [46:46]
+n148--453:LSHL : [47:47]
+n41--670:I2L : [47:47]
+n95--667:LXOR : [47:47]
+n125--454:LXOR : [48:48]
+n50--91:ISHL : [48:48]
+n140--599:I2L : [48:48]
+n188--110:IXOR : [49:49]
+n71--602:LSHL : [49:49]
+n99--457:I2L : [49:49]
+n69--603:LXOR : [50:50]
+n98--460:LSHL : [50:50]
+n182--386:I2L : [50:50]
+n187--244:I2L : [51:51]
+n124--461:LXOR : [51:51]
+n75--389:LSHL : [51:51]
+n155--741:I2L : [52:52]
+n74--390:LXOR : [52:52]
+n171--247:LSHL : [52:52]
+n135--744:LSHL : [53:53]
+n146--528:I2L : [53:53]
+n7--248:LXOR : [53:53]
+n82--745:LXOR : [54:54]
+n96--673:LSHL : [54:54]
+n105--315:I2L : [54:54]
+n104--318:LSHL : [55:55]
+n94--674:LXOR : [55:55]
+n83--748:I2L : [55:55]
+n145--531:LSHL : [56:56]
+n107--319:LXOR : [56:56]
+n8--251:I2L : [56:56]
+n81--749:LXOR : [57:57]
+n51--160:I2L : [57:57]
+n78--118:ISHL : [57:57]
+n121--164:ERROR : [58:58]
+n183--677:I2L : [58:58]
+n161--751:DMA_STORE64 : [58:59]
+n198--165:IFLT : [59:59]
+n6--252:LXOR : [59:59]
+n77--125:I2L : [59:59]
+n27--393:I2L : [60:60]
+n194--254:DMA_STORE64 : [60:61]
+n195--678:LXOR : [60:60]
+n153--394:LXOR : [61:61]
+n63--521:I2L : [61:61]
+n49--98:I2L : [62:62]
+n152--396:DMA_STORE64 : [62:63]
+n85--524:LSHL : [62:62]
+n97--129:ERROR : [62:62]
+n177--130:IFLT : [63:63]
+n126--535:I2L : [63:63]
+n157--525:LXOR : [63:63]
+n176--532:LXOR : [64:64]
+n167--606:I2L : [64:64]
+n200--680:DMA_STORE64 : [64:65]
+n175--536:LXOR : [65:65]
+n201--464:I2L : [65:65]
+n186--538:DMA_STORE64 : [66:67]
+n5--607:LXOR : [66:66]
+n119--322:I2L : [66:66]
+n150--465:LXOR : [67:67]
+n4--609:DMA_STORE64 : [68:69]
+n76--102:ERROR : [68:68]
+n137--103:IFLT : [69:69]
+n23--323:LXOR : [69:69]
+n178--137:IXOR : [70:70]
+n22--325:DMA_STORE64 : [70:71]
+n149--467:DMA_STORE64 : [72:73]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Printing BULB trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: lazyALAP
+BULB tree contains 6295 inspected nodes
+2271 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 54 times
+Best latency found: 74
+Initial best latency: 78
+109 out of 204 DFG nodes could be skipped to find best schedule
+It took 2677 milliseconds to converge
+Scheduling took 104547 milliseconds
+
+Buld tree is huge, will not print it
+
+###########################################################
+Printing BULB metrics for lBoundEstimator: OWN, ALAPBound: listSchedule
+BULB tree contains 8995 inspected nodes
+2271 tried intervals violated resource constraints and were not further inspected
+Lower == Upper reached: true, 54 times
+Best latency found: 74
+Initial best latency: 78
+109 out of 204 DFG nodes could be skipped to find best schedule
+It took 3393 milliseconds to converge
+Scheduling took 176964 milliseconds
+
+Buld tree is huge, will not print it

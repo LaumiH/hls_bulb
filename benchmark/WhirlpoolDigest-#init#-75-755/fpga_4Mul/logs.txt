@@ -1,0 +1,57 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (20) > upper bound (19), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (20) > upper bound (19), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+i=0; lower bound (20) > upper bound (19), the lower bound estimator was too conservative
+i=0; lower bound (21) > upper bound (20), the lower bound estimator was too conservative
+i=0; lower bound (22) > upper bound (21), the lower bound estimator was too conservative
+i=0; lower bound (23) > upper bound (22), the lower bound estimator was too conservative
+i=0; lower bound (24) > upper bound (23), the lower bound estimator was too conservative
+i=0; lower bound (25) > upper bound (24), the lower bound estimator was too conservative
+i=0; lower bound (26) > upper bound (25), the lower bound estimator was too conservative
+i=0; lower bound (27) > upper bound (26), the lower bound estimator was too conservative
+i=0; lower bound (28) > upper bound (27), the lower bound estimator was too conservative
+i=0; lower bound (29) > upper bound (28), the lower bound estimator was too conservative
+i=0; lower bound (30) > upper bound (29), the lower bound estimator was too conservative
+i=0; lower bound (31) > upper bound (30), the lower bound estimator was too conservative
+i=0; lower bound (32) > upper bound (31), the lower bound estimator was too conservative
+i=0; lower bound (33) > upper bound (32), the lower bound estimator was too conservative
+i=0; lower bound (34) > upper bound (33), the lower bound estimator was too conservative
+i=0; lower bound (35) > upper bound (34), the lower bound estimator was too conservative
+i=0; lower bound (36) > upper bound (35), the lower bound estimator was too conservative
+i=0; lower bound (37) > upper bound (36), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+i=0; lower bound (20) > upper bound (19), the lower bound estimator was too conservative
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 3462 with latency 19
+Timeout reached while computing WhirlpoolDigest-#init#-75-755.dot with fpga_4Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 4066 with latency 19
+Timeout reached while computing WhirlpoolDigest-#init#-75-755.dot with fpga_4Mul
+Received timeout, aborting

@@ -1,0 +1,40 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 6 with latency 27
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 5 with latency 27
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 4 with latency 27
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 5 with latency 27
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 43 with latency 27
+Timeout reached while computing WhirlpoolDigest-#init#-310-427.dot with 2Alu2Mul
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 44 with latency 27
+Timeout reached while computing WhirlpoolDigest-#init#-310-427.dot with 2Alu2Mul
+Received timeout, aborting

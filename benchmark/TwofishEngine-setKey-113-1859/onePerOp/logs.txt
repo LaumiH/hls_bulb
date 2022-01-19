@@ -1,0 +1,40 @@
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 215 with latency 248
+
+################################################################################
+STARTING BULB SCHEDULE with PAPER estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 212 with latency 248
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 202 with latency 248
+
+################################################################################
+STARTING BULB SCHEDULE with OWN estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 209 with latency 248
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, listSchedule alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 22732 with latency 248
+Timeout reached while computing TwofishEngine-setKey-113-1859.dot with onePerOp
+Received timeout, aborting
+
+################################################################################
+STARTING BULB SCHEDULE with ASAP estimator, lazyALAP alap bound
+
+Finished first list scheduler run
+Setting initial convergence time at 22442 with latency 248
+Timeout reached while computing TwofishEngine-setKey-113-1859.dot with onePerOp
+Received timeout, aborting
